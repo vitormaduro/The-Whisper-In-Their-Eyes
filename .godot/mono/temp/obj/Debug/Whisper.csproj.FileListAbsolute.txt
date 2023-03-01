@@ -1,0 +1,38 @@
+C:\Users\Vitor\Documents\Godot Stuff\The Whisper in Their Eyes\.godot\mono\temp\bin\Debug\Whisper.deps.json
+C:\Users\Vitor\Documents\Godot Stuff\The Whisper in Their Eyes\.godot\mono\temp\bin\Debug\Whisper.runtimeconfig.json
+C:\Users\Vitor\Documents\Godot Stuff\The Whisper in Their Eyes\.godot\mono\temp\bin\Debug\Whisper.dll
+C:\Users\Vitor\Documents\Godot Stuff\The Whisper in Their Eyes\.godot\mono\temp\bin\Debug\Whisper.pdb
+C:\Users\Vitor\Documents\Godot Stuff\The Whisper in Their Eyes\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\Vitor\Documents\Godot Stuff\The Whisper in Their Eyes\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\Vitor\Documents\Godot Stuff\The Whisper in Their Eyes\.godot\mono\temp\bin\Debug\ink-engine-runtime.dll
+C:\Users\Vitor\Documents\Godot Stuff\The Whisper in Their Eyes\.godot\mono\temp\bin\Debug\ink_compiler.dll
+C:\Users\Vitor\Documents\Godot Stuff\The Whisper in Their Eyes\.godot\mono\temp\obj\Debug\Whisper.csproj.AssemblyReference.cache
+C:\Users\Vitor\Documents\Godot Stuff\The Whisper in Their Eyes\.godot\mono\temp\obj\Debug\Whisper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Vitor\Documents\Godot Stuff\The Whisper in Their Eyes\.godot\mono\temp\obj\Debug\Whisper.AssemblyInfoInputs.cache
+C:\Users\Vitor\Documents\Godot Stuff\The Whisper in Their Eyes\.godot\mono\temp\obj\Debug\Whisper.AssemblyInfo.cs
+C:\Users\Vitor\Documents\Godot Stuff\The Whisper in Their Eyes\.godot\mono\temp\obj\Debug\Whisper.csproj.CoreCompileInputs.cache
+C:\Users\Vitor\Documents\Godot Stuff\The Whisper in Their Eyes\.godot\mono\temp\obj\Debug\Whisper.csproj.CopyComplete
+C:\Users\Vitor\Documents\Godot Stuff\The Whisper in Their Eyes\.godot\mono\temp\obj\Debug\Whisper.dll
+C:\Users\Vitor\Documents\Godot Stuff\The Whisper in Their Eyes\.godot\mono\temp\obj\Debug\refint\Whisper.dll
+C:\Users\Vitor\Documents\Godot Stuff\The Whisper in Their Eyes\.godot\mono\temp\obj\Debug\Whisper.pdb
+C:\Users\Vitor\Documents\Godot Stuff\The Whisper in Their Eyes\.godot\mono\temp\obj\Debug\Whisper.genruntimeconfig.cache
+C:\Users\Vitor\Documents\Godot Stuff\The Whisper in Their Eyes\.godot\mono\temp\obj\Debug\ref\Whisper.dll
+C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\bin\Debug\Whisper.deps.json
+C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\bin\Debug\Whisper.runtimeconfig.json
+C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\bin\Debug\Whisper.dll
+C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\bin\Debug\Whisper.pdb
+C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\bin\Debug\ink-engine-runtime.dll
+C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\bin\Debug\ink_compiler.dll
+C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\obj\Debug\Whisper.csproj.AssemblyReference.cache
+C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\obj\Debug\Whisper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\obj\Debug\Whisper.AssemblyInfoInputs.cache
+C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\obj\Debug\Whisper.AssemblyInfo.cs
+C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\obj\Debug\Whisper.csproj.CoreCompileInputs.cache
+C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\obj\Debug\Whisper.csproj.CopyComplete
+C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\obj\Debug\Whisper.dll
+C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\obj\Debug\refint\Whisper.dll
+C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\obj\Debug\Whisper.pdb
+C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\obj\Debug\Whisper.genruntimeconfig.cache
+C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\obj\Debug\ref\Whisper.dll
