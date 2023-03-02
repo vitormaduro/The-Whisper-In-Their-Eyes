@@ -6,3 +6,19 @@ SETTINGS,Settings,Configurações
 CREDITS,Credits,Créditos
 QUIT,Quit,Sair
 LANGUAGE,Language,Idioma
+BACK_MAIN,Back to Main Menu,Voltar ao Menu Inicial
+SLOW,Slow,Lento
+FAST,Fast,Rápido
+CHARACTERS_PER_SECOND,Characters per Second,Caracteres por Segundo
+TEXT_SPEED,Text Speed,Velocidade do Texto
+VOLUME,Volume,Volume
+DISPLAY_MODE,Display Mode,Modo de Exibição
+FULLSCREEN,Fullscreen,Tela Cheia
+WINDOWED,Windowed,Janela
+BORDERLESS,Borderless Window,Janela Sem Bordas
+GAME_TITLE,The Whisper in Their Eyes,O Sussurro em Seus Olhos
+NO_DATA,No Data,Sem Dados
+SAVE,Save,Salvar
+QUICK_SAVE,Quick Save,Salvamento Rápido
+QUICK_LOAD,Quick Load,Carregamento Rápido
+LOAD,Load,Carregar

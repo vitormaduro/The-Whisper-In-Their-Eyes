@@ -1,68 +1,150 @@
-[gd_scene load_steps=4 format=3 uid="uid://wngdvijb6rfq"]
+[gd_scene load_steps=8 format=3 uid="uid://wngdvijb6rfq"]
 
 [ext_resource type="Texture2D" uid="uid://gvblww4hm8tl" path="res://Backgrounds/cg.jpg" id="1_t5nw0"]
+[ext_resource type="Texture2D" uid="uid://cj40l8ndfsfmx" path="res://Art/UI/NVL box.png" id="2_phvt1"]
 [ext_resource type="Script" path="res://Scripts/InkHandler.cs" id="2_yinmn"]
 [ext_resource type="Resource" uid="uid://q322pwrel3kg" path="res://Ink/test.ink" id="3_h5xnh"]
+[ext_resource type="Texture2D" uid="uid://b4fp2s7ekashg" path="res://Art/UI/bookmark_idle.png" id="5_jlwb6"]
+[ext_resource type="Texture2D" uid="uid://bo7a5y2j54r1a" path="res://Art/UI/bookmark_hover.png" id="6_kxwq8"]
+[ext_resource type="Script" path="res://Scripts/MainButtons.cs" id="7_x5mtg"]
 
-[node name="MainScreen" type="Node2D"]
-
-[node name="GUI" type="Control" parent="."]
+[node name="GUI" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -960.0
-offset_top = -540.0
-offset_right = 960.0
-offset_bottom = 540.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Background" type="TextureRect" parent="GUI"]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 2
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("1_t5nw0")
 stretch_mode = 5
 
-[node name="ColorRect" type="ColorRect" parent="GUI"]
+[node name="ColorRect" type="ColorRect" parent="Background"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.635294)
+color = Color(0, 0, 0, 0.592157)
 
-[node name="MarginContainer" type="MarginContainer" parent="GUI"]
+[node name="NVLBox" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 50
-theme_override_constants/margin_right = 50
-theme_override_constants/margin_bottom = 50
+texture = ExtResource("2_phvt1")
 
-[node name="TextArea" type="RichTextLabel" parent="GUI/MarginContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="NVLBox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 150
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 150
+theme_override_constants/margin_bottom = 100
+
+[node name="TextArea" type="RichTextLabel" parent="NVLBox/MarginContainer"]
 layout_mode = 2
+theme_override_font_sizes/normal_font_size = 30
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tincidunt nunc pulvinar sapien et. At consectetur lorem donec massa sapien faucibus et molestie. Faucibus scelerisque eleifend donec pretium vulputate sapien nec. Augue neque gravida in fermentum et sollicitudin ac. Donec adipiscing tristique risus nec feugiat. Risus nec feugiat in fermentum posuere urna nec tincidunt praesent. Neque aliquam vestibulum morbi blandit. Dignissim diam quis enim lobortis scelerisque fermentum dui. Porta lorem mollis aliquam ut porttitor leo a diam. Consequat mauris nunc congue nisi. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. A iaculis at erat pellentesque adipiscing commodo. Lorem donec massa sapien faucibus. Diam vulputate ut pharetra sit amet aliquam. Non arcu risus quis varius quam quisque id.
+
+Nascetur ridiculus mus mauris vitae ultricies. Tellus orci ac auctor augue. Metus vulputate eu scelerisque felis imperdiet proin. Pulvinar pellentesque habitant morbi tristique. In eu mi bibendum neque egestas congue quisque egestas diam. Elit duis tristique sollicitudin nibh sit amet commodo nulla. Nunc vel risus commodo viverra maecenas. Vestibulum lectus mauris ultrices eros in cursus. Consectetur lorem donec massa sapien faucibus et molestie ac feugiat. Scelerisque mauris pellentesque pulvinar pellentesque. Ac tortor vitae purus faucibus ornare. Libero volutpat sed cras ornare arcu dui vivamus arcu felis. Porttitor massa id neque aliquam vestibulum morbi blandit cursus risus. Nunc non blandit massa enim nec dui nunc mattis enim. Ipsum consequat nisl vel pretium lectus quam. Pulvinar sapien et ligula ullamcorper malesuada proin libero nunc consequat. Tristique senectus et netus et malesuada fames."
 script = ExtResource("2_yinmn")
 story = ExtResource("3_h5xnh")
 
-[node name="QuickSave" type="Button" parent="GUI"]
+[node name="PageMarker" type="TextureButton" parent="."]
 layout_mode = 1
-anchors_preset = 6
+anchors_preset = -1
 anchor_left = 1.0
-anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -93.0
-offset_top = -15.5
-offset_bottom = 15.5
-grow_horizontal = 0
-grow_vertical = 2
-text = "Quick Save"
+offset_left = -102.0
+offset_bottom = 157.0
+pivot_offset = Vector2(96, 0)
+texture_normal = ExtResource("5_jlwb6")
+texture_hover = ExtResource("6_kxwq8")
+stretch_mode = 3
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Buttons" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -315.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("7_x5mtg")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Buttons"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.927
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.00500488
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="QuickSaveButton" type="Button" parent="Buttons/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "QUICK_SAVE"
+
+[node name="QuickLoadButton" type="Button" parent="Buttons/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "QUICK_LOAD"
+
+[node name="ManualSaveButton" type="MenuButton" parent="Buttons/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SAVE"
+flat = false
+item_count = 4
+popup/item_0/text = "SAVE"
+popup/item_0/id = 0
+popup/item_0/separator = true
+popup/item_1/text = "1"
+popup/item_1/id = 1
+popup/item_2/text = "2"
+popup/item_2/id = 2
+popup/item_3/text = "3"
+popup/item_3/id = 3
+
+[node name="ManualLoadButton" type="MenuButton" parent="Buttons/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "LOAD"
+flat = false
+item_count = 4
+popup/item_0/text = "LOAD"
+popup/item_0/id = 0
+popup/item_0/separator = true
+popup/item_1/text = "1"
+popup/item_1/id = 1
+popup/item_2/text = "2"
+popup/item_2/id = 2
+popup/item_3/text = "3"
+popup/item_3/id = 3
+
+[node name="QuitButton" type="Button" parent="Buttons/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "QUIT"

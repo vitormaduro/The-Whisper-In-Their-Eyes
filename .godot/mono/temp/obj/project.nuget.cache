@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WPGcuKC/1bTkYy7tTB/SLEh93RZ1bFHVERNqW8KsLgy48FEX0zDFk3sPseOmwddmbCtFa6hdq7XlNh9T2Scd1Q==",
+  "dgSpecHash": "pRpN+qZDR/YsX4B6tbcgbQaXSsrTHcoexuvGh+PYnsMwLDlPz+cqlhuH5ehydbyENH6stOLETTydtolCg59nxA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vitor\\Documents\\Godot Stuff\\The-Whisper-In-Their-Eyes\\Whisper.csproj",
+  "projectFilePath": "c:\\Users\\Vitor\\Documents\\Godot Stuff\\The-Whisper-In-Their-Eyes\\Whisper.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vitor\\.nuget\\packages\\godot.sourcegenerators\\4.0.0-rc.6\\godot.sourcegenerators.4.0.0-rc.6.nupkg.sha512",
     "C:\\Users\\Vitor\\.nuget\\packages\\godotsharp\\4.0.0-rc.6\\godotsharp.4.0.0-rc.6.nupkg.sha512",

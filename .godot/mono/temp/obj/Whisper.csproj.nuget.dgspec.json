@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vitor\\Documents\\Godot Stuff\\The-Whisper-In-Their-Eyes\\Whisper.csproj": {}
+    "c:\\Users\\Vitor\\Documents\\Godot Stuff\\The-Whisper-In-Their-Eyes\\Whisper.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vitor\\Documents\\Godot Stuff\\The-Whisper-In-Their-Eyes\\Whisper.csproj": {
+    "c:\\Users\\Vitor\\Documents\\Godot Stuff\\The-Whisper-In-Their-Eyes\\Whisper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vitor\\Documents\\Godot Stuff\\The-Whisper-In-Their-Eyes\\Whisper.csproj",
+        "projectUniqueName": "c:\\Users\\Vitor\\Documents\\Godot Stuff\\The-Whisper-In-Their-Eyes\\Whisper.csproj",
         "projectName": "Whisper",
-        "projectPath": "C:\\Users\\Vitor\\Documents\\Godot Stuff\\The-Whisper-In-Their-Eyes\\Whisper.csproj",
+        "projectPath": "c:\\Users\\Vitor\\Documents\\Godot Stuff\\The-Whisper-In-Their-Eyes\\Whisper.csproj",
         "packagesPath": "C:\\Users\\Vitor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vitor\\Documents\\Godot Stuff\\The-Whisper-In-Their-Eyes\\.godot\\mono\\temp\\obj\\",
+        "outputPath": "c:\\Users\\Vitor\\Documents\\Godot Stuff\\The-Whisper-In-Their-Eyes\\.godot\\mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Users\\Vitor\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder"

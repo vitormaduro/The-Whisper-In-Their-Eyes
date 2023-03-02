@@ -9,7 +9,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "C:\\Users\\Vitor\\Documents\\Godot 4.0 C#\\Godot_v4.0-rc3_mono_win64.exe",
+            "program": "C:\\Users\\Vitor\\Documents\\Godot 4.0 C#\\Godot_v4.0-rc6_mono_win64.exe",
             "console": "internalConsole",
             "stopAtEntry": false
         },
