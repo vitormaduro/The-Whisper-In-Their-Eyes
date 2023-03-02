@@ -5,7 +5,6 @@ using GodotInk;
 public partial class InkHandler : RichTextLabel
 {
 	[Export] private InkStory story;
-	[Export] private int charactersPerSecond = 100;
 
 	private double timer = 0f;
 	private bool canType = true;
@@ -26,7 +25,7 @@ public partial class InkHandler : RichTextLabel
 	{
 		timer += delta;
 
-		if(canType && timer >= (1f / charactersPerSecond))
+		if(canType && timer >= (1f / SettingsManager.TextSpeed))
 		{
 			timer = 0f;
 
@@ -45,7 +44,7 @@ public partial class InkHandler : RichTextLabel
 				this.VisibleCharacters = this.GetTotalCharacterCount();
 				canType = false;
 			}
-			else 
+			else
 			{
 				this.Text += ContinueStory();
 				canType = true;
@@ -60,6 +59,11 @@ public partial class InkHandler : RichTextLabel
 
 	private string ContinueStory()
 	{
+		if(!story.CanContinue)
+		{
+			return null;
+		}
+
 		var line = story.Continue();
 		var tags = story.CurrentTags;
 

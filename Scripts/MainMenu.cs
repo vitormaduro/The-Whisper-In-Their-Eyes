@@ -2,18 +2,19 @@ using Godot;
 
 public partial class MainMenu : Control
 {
-	public void NewGame()
+	public override void _Ready()
 	{
-		GetTree().ChangeSceneToFile("res://Scenes/main_screen.tscn");
+		GetNode<Button>("%NewGameButton").Pressed += () => LoadScene("main_screen");
+		GetNode<Button>("%LoadGameButton").Pressed += () => LoadScene("load_selection");
+		GetNode<Button>("%SettingsButton").Pressed += () => LoadScene("settings_menu");
+		GetNode<Button>("%CreditsButton").Pressed += () => LoadScene("credits");
+		GetNode<Button>("%QuitButton").Pressed += () => GetTree().Quit();
+
+		base._Ready();
 	}
 
-	public void OpenSettings()
+	private void LoadScene(string scene)
 	{
-		GetTree().ChangeSceneToFile("res://Scenes/settings_menu.tscn");
-	}
-
-	public void QuitGame()
-	{
-		GetTree().Quit();
+		GetTree().ChangeSceneToFile($"res://Scenes/{scene}.tscn");
 	}
 }

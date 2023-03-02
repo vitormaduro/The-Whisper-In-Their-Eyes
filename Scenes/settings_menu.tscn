@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cf2p8v320bmnu"]
+[gd_scene load_steps=3 format=3 uid="uid://cf2p8v320bmnu"]
 
 [ext_resource type="Script" path="res://Scripts/SettingsMenu.cs" id="1_q7jo3"]
+[ext_resource type="PackedScene" uid="uid://6673amislh6k" path="res://Scenes/Props/back_button.tscn" id="2_84ei0"]
 
 [node name="Settings" type="Control"]
 layout_mode = 3
@@ -25,6 +26,29 @@ theme_override_constants/margin_bottom = 100
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+theme_override_constants/separation = 33
+
+[node name="DisplayMode" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 61
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/DisplayMode"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+text = "DISPLAY_MODE"
+horizontal_alignment = 2
+
+[node name="DisplayModeSelect" type="OptionButton" parent="MarginContainer/VBoxContainer/DisplayMode"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+item_count = 2
+selected = 0
+popup/item_0/text = "BORDERLESS"
+popup/item_0/id = 0
+popup/item_1/text = "WINDOWED"
+popup/item_1/id = 1
 
 [node name="Language" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -38,6 +62,7 @@ text = "LANGUAGE"
 horizontal_alignment = 2
 
 [node name="LanguageSelect" type="OptionButton" parent="MarginContainer/VBoxContainer/Language"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 item_count = 2
@@ -47,5 +72,100 @@ popup/item_0/id = 0
 popup/item_1/text = "Português Brasileiro"
 popup/item_1/id = 1
 
-[connection signal="item_selected" from="MarginContainer/VBoxContainer/Language/LanguageSelect" to="." method="UpdateLanguage"]
-[connection signal="ready" from="MarginContainer/VBoxContainer/Language/LanguageSelect" to="." method="OnSettingsLoad"]
+[node name="TextSpeed" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 61
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/TextSpeed"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+text = "TEXT_SPEED"
+horizontal_alignment = 2
+
+[node name="TextSpeedSlider" type="HSlider" parent="MarginContainer/VBoxContainer/TextSpeed"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 50.0
+max_value = 500.0
+value = 50.0
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/TextSpeed/TextSpeedSlider"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_right = 46.0
+offset_bottom = 26.0
+grow_vertical = 0
+text = "SLOW"
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/TextSpeed/TextSpeedSlider"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -55.0
+offset_bottom = 26.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "FAST"
+horizontal_alignment = 2
+
+[node name="TextSpeedValue" type="Label" parent="MarginContainer/VBoxContainer/TextSpeed/TextSpeedSlider"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -19.0
+offset_right = 18.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "999"
+horizontal_alignment = 1
+
+[node name="Volume" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 61
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Volume"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+text = "VOLUME"
+horizontal_alignment = 2
+
+[node name="VolumeSlider" type="HSlider" parent="MarginContainer/VBoxContainer/Volume"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+value = 50.0
+
+[node name="VolumeValue" type="Label" parent="MarginContainer/VBoxContainer/Volume/VolumeSlider"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -19.0
+offset_right = 18.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "999"
+horizontal_alignment = 1
+
+[node name="BackButton" parent="." instance=ExtResource("2_84ei0")]
+unique_name_in_owner = true
+layout_mode = 1
