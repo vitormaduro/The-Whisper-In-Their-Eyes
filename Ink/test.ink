@@ -1,3 +1,5 @@
+>> change_bg test
+>> ost_on croak
 -> knot_1
 
 == knot_1 ==
@@ -8,6 +10,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 == knot_2 ==
 #KNOT:knot_2
 Ligula ullamcorper malesuada proin libero nunc consequat interdum varius sit. Nisl rhoncus mattis rhoncus urna neque viverra justo. Vel orci porta non pulvinar neque laoreet suspendisse. Tortor id aliquet lectus proin. Leo a diam sollicitudin tempor. Consequat id porta nibh venenatis cras sed felis. Placerat orci nulla pellentesque dignissim. Morbi tristique senectus et netus et. Mi in nulla posuere sollicitudin aliquam ultrices sagittis orci a. Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue. Vitae semper quis lectus nulla at volutpat diam. Egestas sed tempus urna et.
+>> change_bg cg
+>> ost_off
 -> knot_3
 
 == knot_3 ==

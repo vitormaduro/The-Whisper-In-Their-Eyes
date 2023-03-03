@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cootdhwhj0dk5"
+path="res://.godot/imported/The Ecstasy Of Crushing Agony.ogg-1599f66b9264ade5eeba16be765da77e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Soundtrack/The Ecstasy Of Crushing Agony.ogg"
+dest_files=["res://.godot/imported/The Ecstasy Of Crushing Agony.ogg-1599f66b9264ade5eeba16be765da77e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

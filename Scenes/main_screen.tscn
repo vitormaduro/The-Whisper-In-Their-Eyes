@@ -1,12 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://wngdvijb6rfq"]
+[gd_scene load_steps=10 format=3 uid="uid://wngdvijb6rfq"]
 
 [ext_resource type="Texture2D" uid="uid://gvblww4hm8tl" path="res://Backgrounds/cg.jpg" id="1_t5nw0"]
 [ext_resource type="Texture2D" uid="uid://cj40l8ndfsfmx" path="res://Art/UI/NVL box.png" id="2_phvt1"]
 [ext_resource type="Script" path="res://Scripts/InkHandler.cs" id="2_yinmn"]
 [ext_resource type="Resource" uid="uid://q322pwrel3kg" path="res://Ink/test.ink" id="3_h5xnh"]
-[ext_resource type="Texture2D" uid="uid://b4fp2s7ekashg" path="res://Art/UI/bookmark_idle.png" id="5_jlwb6"]
+[ext_resource type="Texture2D" uid="uid://bvslsn7l1wm1h" path="res://Art/UI/bookmark_idle_rev2.png" id="5_pwswo"]
 [ext_resource type="Texture2D" uid="uid://bo7a5y2j54r1a" path="res://Art/UI/bookmark_hover.png" id="6_kxwq8"]
 [ext_resource type="Script" path="res://Scripts/MainButtons.cs" id="7_x5mtg"]
+[ext_resource type="AudioStream" uid="uid://b2yspg26mwa77" path="res://Audio/Soundtrack/A Dying Man's Croak.ogg" id="8_vs3ls"]
+[ext_resource type="Script" path="res://Scripts/OstPlayer.cs" id="9_e3dsr"]
 
 [node name="GUI" type="Control"]
 layout_mode = 3
@@ -16,14 +18,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="BackgroundImage" type="TextureRect" parent="."]
+unique_name_in_owner = true
 layout_mode = 2
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("1_t5nw0")
 stretch_mode = 5
 
-[node name="ColorRect" type="ColorRect" parent="Background"]
+[node name="ColorRect" type="ColorRect" parent="BackgroundImage"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -56,9 +59,6 @@ theme_override_constants/margin_bottom = 100
 [node name="TextArea" type="RichTextLabel" parent="NVLBox/MarginContainer"]
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 30
-text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tincidunt nunc pulvinar sapien et. At consectetur lorem donec massa sapien faucibus et molestie. Faucibus scelerisque eleifend donec pretium vulputate sapien nec. Augue neque gravida in fermentum et sollicitudin ac. Donec adipiscing tristique risus nec feugiat. Risus nec feugiat in fermentum posuere urna nec tincidunt praesent. Neque aliquam vestibulum morbi blandit. Dignissim diam quis enim lobortis scelerisque fermentum dui. Porta lorem mollis aliquam ut porttitor leo a diam. Consequat mauris nunc congue nisi. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. A iaculis at erat pellentesque adipiscing commodo. Lorem donec massa sapien faucibus. Diam vulputate ut pharetra sit amet aliquam. Non arcu risus quis varius quam quisque id.
-
-Nascetur ridiculus mus mauris vitae ultricies. Tellus orci ac auctor augue. Metus vulputate eu scelerisque felis imperdiet proin. Pulvinar pellentesque habitant morbi tristique. In eu mi bibendum neque egestas congue quisque egestas diam. Elit duis tristique sollicitudin nibh sit amet commodo nulla. Nunc vel risus commodo viverra maecenas. Vestibulum lectus mauris ultrices eros in cursus. Consectetur lorem donec massa sapien faucibus et molestie ac feugiat. Scelerisque mauris pellentesque pulvinar pellentesque. Ac tortor vitae purus faucibus ornare. Libero volutpat sed cras ornare arcu dui vivamus arcu felis. Porttitor massa id neque aliquam vestibulum morbi blandit cursus risus. Nunc non blandit massa enim nec dui nunc mattis enim. Ipsum consequat nisl vel pretium lectus quam. Pulvinar sapien et ligula ullamcorper malesuada proin libero nunc consequat. Tristique senectus et netus et malesuada fames."
 script = ExtResource("2_yinmn")
 story = ExtResource("3_h5xnh")
 
@@ -68,9 +68,10 @@ anchors_preset = -1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -102.0
-offset_bottom = 157.0
+offset_top = -1.0
+offset_bottom = 166.0
 pivot_offset = Vector2(96, 0)
-texture_normal = ExtResource("5_jlwb6")
+texture_normal = ExtResource("5_pwswo")
 texture_hover = ExtResource("6_kxwq8")
 stretch_mode = 3
 
@@ -148,3 +149,8 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 text = "QUIT"
+
+[node name="OstPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("8_vs3ls")
+script = ExtResource("9_e3dsr")
