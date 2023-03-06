@@ -4,3 +4,4 @@ res://Scenes/settings_menu.tscn
 res://Scenes/credits.tscn
 res://Scenes/load_selection.tscn
 res://Scenes/Props/load_button.tscn
+res://Scripts/Ost.cs

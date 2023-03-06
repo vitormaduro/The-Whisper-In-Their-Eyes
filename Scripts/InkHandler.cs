@@ -51,6 +51,13 @@ public partial class InkHandler : RichTextLabel
 				{
 					GetNode<OstPlayer>("%OstPlayer").StopSong();
 				}
+			},
+			{
+				"sprite",
+				(string[] args) => 
+				{
+					GetNode<Stage>("%Stage").ShowCharacterAtPosition(args[0], args[1], args[2]);
+				}
 			}
 		};
 	}
