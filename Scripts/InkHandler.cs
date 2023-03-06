@@ -58,6 +58,13 @@ public partial class InkHandler : RichTextLabel
 				{
 					GetNode<Stage>("%Stage").ShowCharacterAtPosition(args[0], args[1], args[2]);
 				}
+			},
+			{
+				"sfx",
+				(string[] args) => 
+				{
+					GetNode<SfxPlayer>("%SfxPlayer").PlayEffectByTag(args[0]);
+				}
 			}
 		};
 	}

@@ -19,7 +19,7 @@ config/icon="res://icon.svg"
 
 SaveManager="*res://Scripts/SaveManager.cs"
 SettingsManager="*res://Scripts/SettingsManager.cs"
-Ost="*res://Scripts/Ost.cs"
+Ost="*res://Scripts/Global/Ost.cs"
 
 [display]
 
