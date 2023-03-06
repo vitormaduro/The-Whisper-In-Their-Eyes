@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://bvslsn7l1wm1h" path="res://Art/UI/bookmark_idle_rev2.png" id="5_pwswo"]
 [ext_resource type="Texture2D" uid="uid://bo7a5y2j54r1a" path="res://Art/UI/bookmark_hover.png" id="6_kxwq8"]
 [ext_resource type="Script" path="res://Scripts/MainButtons.cs" id="7_x5mtg"]
-[ext_resource type="AudioStream" uid="uid://b2yspg26mwa77" path="res://Audio/Soundtrack/A Dying Man's Croak.ogg" id="8_vs3ls"]
 [ext_resource type="Script" path="res://Scripts/OstPlayer.cs" id="9_e3dsr"]
+[ext_resource type="Script" path="res://Scripts/SfxPlayer.cs" id="9_hp68o"]
 
 [node name="GUI" type="Control"]
 layout_mode = 3
@@ -107,6 +107,7 @@ theme_override_constants/margin_bottom = 100
 [node name="TextArea" type="RichTextLabel" parent="NVLBox/MarginContainer"]
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
 script = ExtResource("2_yinmn")
 story = ExtResource("3_h5xnh")
 
@@ -198,7 +199,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 text = "QUIT"
 
+[node name="SfxPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+script = ExtResource("9_hp68o")
+
 [node name="OstPlayer" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
-stream = ExtResource("8_vs3ls")
 script = ExtResource("9_e3dsr")
