@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://db6rk3dt6l76c"
+path="res://.godot/imported/Lost and Not Found.ogg-943295d4851754a2a5e7f5de2a9c40a0.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Soundtrack/Lost and Not Found.ogg"
+dest_files=["res://.godot/imported/Lost and Not Found.ogg-943295d4851754a2a5e7f5de2a9c40a0.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

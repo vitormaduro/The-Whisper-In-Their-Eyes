@@ -1,0 +1,32 @@
+using System.Collections.Generic;
+using Godot;
+
+public partial class OstPlayer : AudioStreamPlayer
+{
+	private Dictionary<string, Ost> songs;
+
+	public override void _Ready()
+	{
+		songs = new Dictionary<string, Ost>()
+		{
+			{ "croak", new Ost("A Dying Man's Croak") }
+		};
+
+		base._Ready();
+	}
+
+	public string PlaySongByTag(string tag)
+	{
+		var song = songs[tag];
+
+		Stream = song.Audio;
+		Playing = true;
+
+		return song.AudioName;
+	}
+
+	public void StopSong()
+	{
+		Playing = false;
+	}
+}

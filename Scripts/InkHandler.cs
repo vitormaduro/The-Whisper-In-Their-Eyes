@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using Godot;
 using GodotInk;
@@ -8,6 +10,7 @@ public partial class InkHandler : RichTextLabel
 
 	private double timer = 0f;
 	private bool canType = true;
+	private Dictionary<string, Action<string[]>> commands;
 
 	public override void _Ready()
 	{
@@ -16,9 +19,54 @@ public partial class InkHandler : RichTextLabel
 			JumpToKnot(SaveManager.CurrentTag);
 		}
 
-		this.Text += ContinueStory();
+		InitialiseCommands();
+		ContinueStory();
 
 		base._Ready();
+	}
+
+	private void InitialiseCommands()
+	{
+		var res = "res:/";
+		
+		commands = new Dictionary<string, Action<string[]>>() 
+		{
+			{ 
+				"change_bg", 
+				(string[] args) => 
+				{
+					GetNode<TextureRect>("%BackgroundImage").Texture = (Texture2D) GD.Load($"{res}/Backgrounds/{args[0]}.jpg");
+				} 
+			},
+			{
+				"ost_on",
+				(string[] args) => 
+				{
+					GetNode<OstPlayer>("%OstPlayer").PlaySongByTag(args[0]);
+				}
+			},
+			{
+				"ost_off",
+				(string[] args) => 
+				{
+					GetNode<OstPlayer>("%OstPlayer").StopSong();
+				}
+			},
+			{
+				"sprite",
+				(string[] args) => 
+				{
+					GetNode<Stage>("%Stage").ShowCharacterAtPosition(args[0], args[1], args[2]);
+				}
+			},
+			{
+				"sfx",
+				(string[] args) => 
+				{
+					GetNode<SfxPlayer>("%SfxPlayer").PlayEffectByTag(args[0]);
+				}
+			}
+		};
 	}
 
 	public override void _Process(double delta)
@@ -46,8 +94,7 @@ public partial class InkHandler : RichTextLabel
 			}
 			else
 			{
-				this.Text += ContinueStory();
-				canType = true;
+				ContinueStory();
 			}
 		}
 	}
@@ -57,11 +104,11 @@ public partial class InkHandler : RichTextLabel
 		story.ChoosePathString(knotName);
 	}
 
-	private string ContinueStory()
+	private void ContinueStory()
 	{
 		if(!story.CanContinue)
 		{
-			return null;
+			return;
 		}
 
 		var line = story.Continue();
@@ -72,6 +119,21 @@ public partial class InkHandler : RichTextLabel
 			SaveManager.CurrentTag = tags.Where(t => t.StartsWith("KNOT")).First().Replace("KNOT:", "");
 		}
 
-		return Tr(line);
+		if(line.StartsWith(">>"))
+		{
+			var command = line.Replace(">> ", "").Replace("\n", "").Split(' ');
+
+			ExecuteCommand(command[0], command[1..]);
+		}
+		else
+		{
+			this.Text += Tr(line);
+			canType = true;
+		}
+	}
+
+	private void ExecuteCommand(string command, string[] args)
+	{
+		commands[command].Invoke(args);
 	}
 }

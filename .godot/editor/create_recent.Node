@@ -1,3 +1,7 @@
+TextureRect
+Control
+Node2D
+AudioStreamPlayer
 Label
 MenuButton
 Button
@@ -7,9 +11,7 @@ ConfirmationDialog
 AcceptDialog
 Popup
 HBoxContainer
-Control
 TextureButton
-TextureRect
 RichTextLabel
 VBoxContainer
 MarginContainer

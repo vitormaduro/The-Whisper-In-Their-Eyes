@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ct7nsql5uh5ph"
+path="res://.godot/imported/Growing Illness.ogg-e46220d6bee33b24bda91ae7fe5018e7.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Soundtrack/Growing Illness.ogg"
+dest_files=["res://.godot/imported/Growing Illness.ogg-e46220d6bee33b24bda91ae7fe5018e7.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

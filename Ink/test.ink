@@ -1,13 +1,17 @@
+>> change_bg test
 -> knot_1
 
 == knot_1 ==
 #KNOT:knot_1
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum dui faucibus in. Feugiat sed lectus vestibulum mattis ullamcorper. Cursus euismod quis viverra nibh. Porta lorem mollis aliquam ut porttitor leo a diam. Sed libero enim sed faucibus turpis in eu. Leo urna molestie at elementum eu facilisis sed odio morbi. Nulla facilisi nullam vehicula ipsum a arcu cursus. Elementum sagittis vitae et leo duis ut. Ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Ac turpis egestas integer eget aliquet nibh praesent tristique. Magna eget est lorem ipsum. Odio ut sem nulla pharetra diam. Dignissim enim sit amet venenatis urna cursus. Proin sagittis nisl rhoncus mattis. Tortor aliquam nulla facilisi cras fermentum odio eu feugiat. Arcu cursus vitae congue mauris rhoncus. Vulputate enim nulla aliquet porttitor lacus. Urna et pharetra pharetra massa massa. Enim ut tellus elementum sagittis vitae et leo duis.
+[b]Lorem ipsum dolor sit amet[/b], consectetur [color=red]adipiscing[/color] elit, sed do [font_size=15]eiusmod tempor[/font_size] incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum dui faucibus in. Feugiat sed lectus vestibulum mattis ullamcorper. Cursus euismod quis viverra nibh. Porta lorem mollis aliquam ut porttitor leo a diam. Sed libero enim sed faucibus turpis in eu. Leo urna molestie at elementum eu facilisis sed odio morbi. Nulla facilisi nullam vehicula ipsum a arcu cursus. Elementum sagittis vitae et leo duis ut. Ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Ac turpis egestas integer eget aliquet nibh praesent tristique. Magna eget est lorem ipsum. Odio ut sem nulla pharetra diam. Dignissim enim sit amet venenatis urna cursus. Proin sagittis nisl rhoncus mattis. Tortor aliquam nulla facilisi cras fermentum odio eu feugiat. Arcu cursus vitae congue mauris rhoncus. Vulputate enim nulla aliquet porttitor lacus. Urna et pharetra pharetra massa massa. Enim ut tellus elementum sagittis vitae et leo duis.
 -> knot_2
 
 == knot_2 ==
 #KNOT:knot_2
 Ligula ullamcorper malesuada proin libero nunc consequat interdum varius sit. Nisl rhoncus mattis rhoncus urna neque viverra justo. Vel orci porta non pulvinar neque laoreet suspendisse. Tortor id aliquet lectus proin. Leo a diam sollicitudin tempor. Consequat id porta nibh venenatis cras sed felis. Placerat orci nulla pellentesque dignissim. Morbi tristique senectus et netus et. Mi in nulla posuere sollicitudin aliquam ultrices sagittis orci a. Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue. Vitae semper quis lectus nulla at volutpat diam. Egestas sed tempus urna et.
+>> change_bg cg
+>> sprite kaede smiling left
+>> sprite kaede smiling right
 -> knot_3
 
 == knot_3 ==
