@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://b0ao4j5wl2np4"]
+
+[ext_resource type="FontFile" uid="uid://dof7x02seb0fw" path="res://Art/Fonts/JMH Typewriter.ttf" id="1_x5xbt"]
+
+[resource]
+font = ExtResource("1_x5xbt")
+font_size = 64
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)

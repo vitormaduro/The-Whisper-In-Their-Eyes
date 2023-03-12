@@ -1,12 +1,18 @@
-[gd_scene format=3 uid="uid://6673amislh6k"]
+[gd_scene load_steps=3 format=3 uid="uid://6673amislh6k"]
 
-[node name="BackButton" type="Button"]
-anchors_preset = 2
+[ext_resource type="Texture2D" uid="uid://b3cmyh1mdspa" path="res://Art/UI/Settings/return_idle.png" id="1_b1jak"]
+[ext_resource type="Texture2D" uid="uid://bgevp67kurqk6" path="res://Art/UI/Settings/return_hover.png" id="2_lawbi"]
+
+[node name="BackButton" type="TextureButton"]
+anchors_preset = 3
+anchor_left = 1.0
 anchor_top = 1.0
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 20.0
-offset_top = -70.0
-offset_right = 220.0
-offset_bottom = -20.0
+offset_left = -150.0
+offset_top = -150.0
+grow_horizontal = 0
 grow_vertical = 0
-text = "BACK_MAIN"
+texture_normal = ExtResource("1_b1jak")
+texture_hover = ExtResource("2_lawbi")
+stretch_mode = 3

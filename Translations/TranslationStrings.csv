@@ -11,7 +11,8 @@ SLOW,Slow,Lento
 FAST,Fast,Rápido
 CHARACTERS_PER_SECOND,Characters per Second,Caracteres por Segundo
 TEXT_SPEED,Text Speed,Velocidade do Texto
-VOLUME,Volume,Volume
+MUSIC_VOLUME,Music Volume,Volume da Música
+SFX_VOLUME,Sound Effects Volume,Volume dos Efeitos
 DISPLAY_MODE,Display Mode,Modo de Exibição
 FULLSCREEN,Fullscreen,Tela Cheia
 WINDOWED,Windowed,Janela

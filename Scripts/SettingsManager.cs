@@ -6,12 +6,14 @@ public partial class SettingsManager : Node
 {
 	private const string LOCALE = "Locale";
 	private const string TEXT_SPEED = "TextSpeed";
-	private const string VOLUME = "Volume";
+	private const string MUSIC_VOLUME = "MusicVolume";
+	private const string SFX_VOLUME = "SfxVolume";
 	private const string DISPLAY_MODE = "DisplayMode";
 
 	public static string Locale { get; set; } = null;
 	public static double TextSpeed { get; set; } = 100;
-	public static double Volume { get; set; } = 100;
+	public static double MusicVolume { get; set; } = 100;
+	public static double SfxVolume { get; set; } = 100;
 	public static Window.ModeEnum DisplayMode { get; set; } = Window.ModeEnum.Fullscreen;
 
 	public override void _Ready()
@@ -52,8 +54,9 @@ public partial class SettingsManager : Node
 			{
 				{ LOCALE, Locale },
 				{ TEXT_SPEED, TextSpeed.ToString() },
-				{ VOLUME, Volume.ToString() },
-				{ DISPLAY_MODE, DisplayMode.ToString() }
+				{ MUSIC_VOLUME, MusicVolume.ToString() },
+				{ SFX_VOLUME, SfxVolume.ToString() },
+				{ DISPLAY_MODE, DisplayMode.ToString() },
 			};
 
 			var json = Json.Stringify(saveData);
@@ -79,7 +82,8 @@ public partial class SettingsManager : Node
 
 				Locale = nodeData[LOCALE];
 				TextSpeed = double.Parse(nodeData[TEXT_SPEED]);
-				Volume = double.Parse(nodeData[VOLUME]);
+				MusicVolume = double.Parse(nodeData[MUSIC_VOLUME]);
+				SfxVolume = double.Parse(nodeData[SFX_VOLUME]);
 
 				if(Enum.TryParse(nodeData[DISPLAY_MODE], out Window.ModeEnum displayMode))
 				{

@@ -8,4 +8,10 @@ public partial class Enums : Node
 		Middle,
 		Right
 	}
+
+	public enum Language
+	{
+		English,
+		Portuguese
+	}
 }
