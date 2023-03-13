@@ -71,6 +71,11 @@ public partial class InkHandler : RichTextLabel
 
 	public override void _Process(double delta)
 	{
+		if(SettingsManager.IsGamePaused)
+		{
+			return;
+		}
+
 		timer += delta;
 
 		if(canType && timer >= (1f / SettingsManager.TextSpeed))

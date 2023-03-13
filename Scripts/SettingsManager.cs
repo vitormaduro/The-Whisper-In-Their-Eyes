@@ -15,6 +15,7 @@ public partial class SettingsManager : Node
 	public static double MusicVolume { get; set; } = 100;
 	public static double SfxVolume { get; set; } = 100;
 	public static Window.ModeEnum DisplayMode { get; set; } = Window.ModeEnum.Fullscreen;
+	public static bool IsGamePaused { get; set; } = false;
 
 	public override void _Ready()
 	{
