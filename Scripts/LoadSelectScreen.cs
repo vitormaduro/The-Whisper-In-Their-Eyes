@@ -6,7 +6,7 @@ public partial class LoadSelectScreen : Control
 {
 	public override void _Ready()
 	{
-		GetNode<Button>("%BackButton").Pressed += BackToMainMenu;
+		GetNode<TextureButton>("%BackButton").Pressed += BackToMainMenu;
 
 		for (var i = 1; i <= 3; i++)
 		{

@@ -1,11 +1,11 @@
 Label
+GridContainer
+TextureRect
 TextureButton
 CheckButton
 HBoxContainer
 Control
-GridContainer
 ItemList
-TextureRect
 Node2D
 AudioStreamPlayer
 MenuButton

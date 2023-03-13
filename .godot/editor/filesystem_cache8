@@ -1,5 +1,5 @@
 0b1263761226a5a55b49c82e7456acd5
-::res://::1678658959
+::res://::1678705354
 export_presets.cfg::TextFile::-1::1677782062::0::1::::<><>::
 icon.svg::CompressedTexture2D::992952571825391275::1677150435::1677150459::1::::<><>::
 ::res://addons/::1677781984
@@ -24,10 +24,15 @@ JMH Typewriter.ttf::FontFile::8154213123427119084::1678641760::1678641760::1::::
 ::res://Art/Sprites/::1678101983
 ::res://Art/Sprites/Kaede/::1678101983
 kaede.png::CompressedTexture2D::58141308990146514::1678101982::1678101983::1::::<><>::
-::res://Art/UI/::1678639626
+::res://Art/UI/::1678705427
 bookmark_hover.png::CompressedTexture2D::3435179459292906080::1677773168::1677773168::1::::<><>::
 bookmark_idle_rev2.png::CompressedTexture2D::3898245963648283355::1677850341::1677850343::1::::<><>::
 NVL box.png::CompressedTexture2D::5465947237045056323::1677772719::1677772719::1::::<><>::
+::res://Art/UI/Main Menu/::1678705477
+main menu_base.jpg::CompressedTexture2D::3011172920432203353::1678705433::1678705434::1::::<><>::
+photo 1.png::CompressedTexture2D::1916467846288549709::1678705476::1678705477::1::::<><>::
+photo 2.png::CompressedTexture2D::409568772039204424::1678705476::1678705477::1::::<><>::
+photo 3.png::CompressedTexture2D::5187268517124825834::1678705476::1678705477::1::::<><>::
 ::res://Art/UI/Settings/::1678658964
 button_idle.png::CompressedTexture2D::7645135824058594536::1678658955::1678658959::1::::<><>::
 button_selected.png::CompressedTexture2D::3628300261869642579::1678658964::1678658964::1::::<><>::
@@ -52,17 +57,17 @@ Whisper.deps.json::JSON::-1::1677782061::0::1::::<><>::
 Whisper.runtimeconfig.json::JSON::-1::1677782062::0::1::::<><>::
 ::res://Ink/::1678121515
 test.ink::Resource::1182512473176480514::1678121514::1678121515::1::::<><>::res://addons/GodotInk/Src/InkStory.cs
-::res://Scenes/::1678642947
-credits.tscn::PackedScene::7720295935689919175::1678642793::0::1::::<><>::res://Scripts/Credits.cs<>uid://6673amislh6k
-load_selection.tscn::PackedScene::2921220016249669378::1678642793::0::1::::<><>::res://Scripts/LoadSelectScreen.cs<>uid://6673amislh6k<>uid://c76ouyi7kv18w
-main_menu.tscn::PackedScene::7366018661771166401::1678642787::0::1::::<><>::res://Scripts/MainMenu.cs
-main_screen.tscn::PackedScene::1571362245938084774::1678642793::0::1::::<><>::uid://gvblww4hm8tl<>uid://cj40l8ndfsfmx<>res://Scripts/Stage.cs<>res://Scripts/InkHandler.cs<>uid://q322pwrel3kg<>uid://bvslsn7l1wm1h<>uid://bo7a5y2j54r1a<>res://Scripts/MainButtons.cs<>res://Scripts/OstPlayer.cs<>res://Scripts/SfxPlayer.cs
-settings_menu.tscn::PackedScene::5180494618531431670::1678642946::0::1::::<><>::res://Scripts/SettingsMenu.cs<>uid://b1mx21ttcgsen<>uid://6673amislh6k<>uid://bpwxql04k3ave<>uid://b0ao4j5wl2np4<>uid://dof7x02seb0fw<>uid://do5rxdaavcy0i
-::res://Scenes/Props/::1678642793
-back_button.tscn::PackedScene::2241842828078352828::1678642793::0::1::::<><>::uid://b3cmyh1mdspa<>uid://bgevp67kurqk6
-load_button.tscn::PackedScene::7083767102342912168::1678642793::0::1::::<><>::
+::res://Scenes/::1678706428
+credits.tscn::PackedScene::7720295935689919175::1678706428::0::1::::<><>::res://Scripts/Credits.cs<>uid://6673amislh6k
+load_selection.tscn::PackedScene::2921220016249669378::1678706428::0::1::::<><>::res://Scripts/LoadSelectScreen.cs<>uid://6673amislh6k<>uid://c76ouyi7kv18w
+main_menu.tscn::PackedScene::7366018661771166401::1678706423::0::1::::<><>::res://Scripts/MainMenu.cs<>uid://bi5vtwieud6ph<>uid://2kl7e6exwi3v<>uid://dof7x02seb0fw<>uid://f3nsj0euj3l1<>uid://cf50s4eke4gsg
+main_screen.tscn::PackedScene::1571362245938084774::1678706428::0::1::::<><>::uid://gvblww4hm8tl<>uid://cj40l8ndfsfmx<>res://Scripts/Stage.cs<>res://Scripts/InkHandler.cs<>uid://q322pwrel3kg<>uid://bvslsn7l1wm1h<>uid://bo7a5y2j54r1a<>res://Scripts/MainButtons.cs<>res://Scripts/OstPlayer.cs<>res://Scripts/SfxPlayer.cs
+settings_menu.tscn::PackedScene::5180494618531431670::1678706428::0::1::::<><>::res://Scripts/SettingsMenu.cs<>uid://b1mx21ttcgsen<>uid://6673amislh6k<>uid://bpwxql04k3ave<>uid://b0ao4j5wl2np4<>uid://dof7x02seb0fw<>uid://do5rxdaavcy0i<>uid://dg6mjggg1pymy<>uid://brxtts7edbw3l<>res://Scripts/ToggleButton.cs
+::res://Scenes/Props/::1678706428
+back_button.tscn::PackedScene::2241842828078352828::1678706428::0::1::::<><>::uid://b3cmyh1mdspa<>uid://bgevp67kurqk6
+load_button.tscn::PackedScene::7083767102342912168::1678706428::0::1::::<><>::
 scene_name_label.tres::LabelSettings::4142044120635522711::1678641914::0::1::::<><>::uid://dof7x02seb0fw
-::res://Scripts/::1678120775
+::res://Scripts/::1678660049
 Credits.cs::CSharpScript::-1::1677681393::0::1::::<><>::
 InkHandler.cs::CSharpScript::-1::1678120939::0::1::::<><>::
 LoadSelectScreen.cs::CSharpScript::-1::1677779513::0::1::::<><>::
@@ -70,15 +75,16 @@ MainButtons.cs::CSharpScript::-1::1677781431::0::1::::<><>::
 MainMenu.cs::CSharpScript::-1::1677781399::0::1::::<><>::
 OstPlayer.cs::CSharpScript::-1::1677855316::0::1::::<><>::
 SaveManager.cs::CSharpScript::-1::1677779636::0::1::::<><>::
-SettingsManager.cs::CSharpScript::-1::1677701641::0::1::::<><>::
-SettingsMenu.cs::CSharpScript::-1::1678642340::0::1::::<><>::
+SettingsManager.cs::CSharpScript::-1::1678661786::0::1::::<><>::
+SettingsMenu.cs::CSharpScript::-1::1678662007::0::1::::<><>::
 SfxPlayer.cs::CSharpScript::-1::1678120913::0::1::::<><>::
 Stage.cs::CSharpScript::-1::1678103277::0::1::::<><>::
+ToggleButton.cs::CSharpScript::-1::1678660860::0::1::::<><>::
 ::res://Scripts/Global/::1678104008
 Character.cs::CSharpScript::-1::1678104112::0::1::::<><>::
-Enums.cs::CSharpScript::-1::1678104076::0::1::::<><>::
+Enums.cs::CSharpScript::-1::1678661463::0::1::::<><>::
 Ost.cs::CSharpScript::-1::1678103333::0::1::::<><>::
-::res://Translations/::1678642976
-TranslationStrings.csv::Translation::3694103014179544243::1678642226::1678642227::1::::<><>::
-TranslationStrings.en.translation::OptimizedTranslation::2969568587310531778::1678642227::0::1::::<><>::
-TranslationStrings.pt_BR.translation::OptimizedTranslation::3694103014179544243::1678642227::0::1::::<><>::
+::res://Translations/::1678706536
+TranslationStrings.csv::Translation::3694103014179544243::1678706536::1678706538::1::::<><>::
+TranslationStrings.en.translation::OptimizedTranslation::2969568587310531778::1678706537::0::1::::<><>::
+TranslationStrings.pt_BR.translation::OptimizedTranslation::3694103014179544243::1678706538::0::1::::<><>::

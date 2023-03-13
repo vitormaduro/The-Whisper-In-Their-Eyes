@@ -1,7 +1,9 @@
-res://Scenes/settings_menu.tscn
 res://Scenes/main_menu.tscn
+res://Scenes/settings_menu.tscn
 res://Scenes/credits.tscn
 res://Scenes/load_selection.tscn
 res://Scenes/Props/load_button.tscn
 res://Scenes/main_screen.tscn
 res://Scenes/Props/back_button.tscn
+res://Translations/TranslationStrings.en.translation
+res://Translations/TranslationStrings.pt_BR.translation
