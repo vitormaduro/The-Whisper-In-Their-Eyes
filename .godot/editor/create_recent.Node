@@ -1,8 +1,13 @@
-TextureRect
+Label
+TextureButton
+CheckButton
+HBoxContainer
 Control
+GridContainer
+ItemList
+TextureRect
 Node2D
 AudioStreamPlayer
-Label
 MenuButton
 Button
 Window
@@ -10,8 +15,6 @@ SubViewport
 ConfirmationDialog
 AcceptDialog
 Popup
-HBoxContainer
-TextureButton
 RichTextLabel
 VBoxContainer
 MarginContainer

@@ -1,9 +1,11 @@
 using Godot;
+using static Enums;
 
 public partial class SettingsMenu : Control
 {
 	private Label textSpeedLabel;
-	private Label volumeLabel;
+	private Label musicVolumeLabel;
+	private Label sfxVolumeLabel;
 
 	/// <summary>
     /// 	Adds an Event Listener to every component in the Settings screen, triggering methods when they are changed
@@ -11,24 +13,33 @@ public partial class SettingsMenu : Control
 	public override void _Ready()
 	{
 		textSpeedLabel = GetNode<Label>("%TextSpeedValue");
-		volumeLabel = GetNode<Label>("%VolumeValue");
+		musicVolumeLabel = GetNode<Label>("%MusicVolumeValue");
+		sfxVolumeLabel = GetNode<Label>("%SfxVolumeValue");
 
-		GetNode<OptionButton>("%DisplayModeSelect").ItemSelected += (index) => UpdateDisplayMode(index);
+		GetNode<TextureButton>("%DisplayModeWindowed").Pressed += () => UpdateDisplayMode(Window.ModeEnum.Windowed);
+		GetNode<TextureButton>("%DisplayModeFullscreen").Pressed += () => UpdateDisplayMode(Window.ModeEnum.Fullscreen);
 
-		GetNode<OptionButton>("%LanguageSelect").ItemSelected += (index) => UpdateLanguage(index);
+		GetNode<TextureButton>("%LanguageEnglish").Pressed += () => UpdateLanguage(Language.English);
+		GetNode<TextureButton>("%LanguagePortuguese").Pressed += () => UpdateLanguage(Language.Portuguese);
 
 		GetNode<Slider>("%TextSpeedSlider").ValueChanged += (value) => UpdateTextSpeed(value);
 		GetNode<Slider>("%TextSpeedSlider").DragEnded += (value) => SettingsManager.SaveSettings();
 		GetNode<Slider>("%TextSpeedSlider").Value = SettingsManager.TextSpeed;
 
-		GetNode<Slider>("%VolumeSlider").ValueChanged += (value) => UpdateVolume(value);
-		GetNode<Slider>("%VolumeSlider").DragEnded += (value) => SettingsManager.SaveSettings();
-		GetNode<Slider>("%VolumeSlider").Value = SettingsManager.Volume;
+		GetNode<Slider>("%MusicVolumeSlider").ValueChanged += (value) => UpdateMusicVolume(value);
+		GetNode<Slider>("%MusicVolumeSlider").DragEnded += (value) => SettingsManager.SaveSettings();
+		GetNode<Slider>("%MusicVolumeSlider").Value = SettingsManager.MusicVolume;
 
-		GetNode<Button>("%BackButton").Pressed += BackToMainMenu;
+		GetNode<Slider>("%SfxVolumeSlider").ValueChanged += (value) => UpdateSfxVolume(value);
+		GetNode<Slider>("%SfxVolumeSlider").DragEnded += (value) => SettingsManager.SaveSettings();
+		GetNode<Slider>("%SfxVolumeSlider").Value = SettingsManager.SfxVolume;
 
-		GetNode<OptionButton>("%DisplayModeSelect").Selected = SettingsManager.DisplayMode == Window.ModeEnum.Fullscreen ? 0 : 1;
-		GetNode<OptionButton>("%LanguageSelect").Selected = SettingsManager.Locale == "pt_BR" ? 1 : 0;
+		GetNode<TextureButton>("%BackButton").Pressed += BackToMainMenu;
+
+		GetNode<ToggleButton>("%DisplayModeFullscreen").SetSelected(SettingsManager.DisplayMode == Window.ModeEnum.Fullscreen);
+		GetNode<ToggleButton>("%DisplayModeWindowed").SetSelected(SettingsManager.DisplayMode == Window.ModeEnum.Windowed);
+
+		//GetNode<OptionButton>("%LanguageSelect").Selected = SettingsManager.Locale == "pt_BR" ? 1 : 0;
 
 		base._Ready();
 	}
@@ -37,11 +48,14 @@ public partial class SettingsMenu : Control
     /// 	Updates the language of the game
     /// </summary>
     /// <param name="languageId">ID of the desired language (0: English; 1: PT-BR)</param>
-	public void UpdateLanguage(long languageId)
+	public void UpdateLanguage(Language language)
 	{
-		var locale = languageId == 0 ? "en" : "pt_BR";
+		var locale = language == Language.English ? "en" : "pt_BR";
 
 		SettingsManager.Locale = locale;
+
+		GetNode<ToggleButton>("%LanguageEnglish").SetSelected(language == Language.English);
+		GetNode<ToggleButton>("%LanguagePortuguese").SetSelected(language == Language.Portuguese);
 
 		TranslationServer.SetLocale(locale);
 		SettingsManager.SaveSettings();
@@ -65,37 +79,34 @@ public partial class SettingsMenu : Control
     /// 	Updates the volume of the sound effects
     /// </summary>
     /// <param name="volume">The new volume, ranging from 0 (no sound) to 100 (regular volume)</param>
-	public void UpdateVolume(double volume)
+	public void UpdateMusicVolume(double volume)
 	{
-		SettingsManager.Volume = volume;
+		SettingsManager.MusicVolume = volume;
 
-		volumeLabel.Text = $"{volume}";
+		musicVolumeLabel.Text = $"{volume}";
 	}
 
-	public void UpdateDisplayMode(long displayModeId)
+	public void UpdateSfxVolume(double volume)
 	{
-		var mode = displayModeId switch {
-			0 => Window.ModeEnum.Fullscreen,
-			_ => Window.ModeEnum.Windowed
-		};
+		SettingsManager.SfxVolume = volume;
 
-		UpdateDisplayMode(mode);
-
-		SettingsManager.SaveSettings();
+		sfxVolumeLabel.Text = $"{volume}";
 	}
 
 	private void UpdateDisplayMode(Window.ModeEnum mode)
 	{
 		var root = GetTree().Root;
 
-		if(mode == Window.ModeEnum.Windowed)
-		{
-			root.Borderless = false;
-		}
+		root.Borderless = mode != Window.ModeEnum.Windowed;
+
+		GetNode<ToggleButton>("%DisplayModeFullscreen").SetSelected(mode == Window.ModeEnum.Fullscreen);
+		GetNode<ToggleButton>("%DisplayModeWindowed").SetSelected(mode == Window.ModeEnum.Windowed);
 
 		root.Mode = mode;
 
 		SettingsManager.DisplayMode = mode;
+
+		SettingsManager.SaveSettings();
 	}
 
 	public void BackToMainMenu()
