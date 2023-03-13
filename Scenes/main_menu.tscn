@@ -137,6 +137,7 @@ icon = ExtResource("5_4odhc")
 flat = true
 
 [node name="Label" type="Label" parent="CreditsButton"]
+layout_mode = 0
 offset_left = 135.0
 offset_top = 323.0
 offset_right = 285.0
@@ -159,6 +160,7 @@ icon = ExtResource("6_ywfut")
 flat = true
 
 [node name="Label" type="Label" parent="GalleryButton"]
+layout_mode = 0
 offset_left = 169.0
 offset_top = 326.0
 offset_right = 319.0
@@ -181,6 +183,7 @@ icon = ExtResource("3_ww3wx")
 flat = true
 
 [node name="Label" type="Label" parent="QuitButton"]
+layout_mode = 0
 offset_left = 192.0
 offset_top = 352.0
 offset_right = 342.0

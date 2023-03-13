@@ -1,4 +1,11 @@
-[gd_scene format=3 uid="uid://c76ouyi7kv18w"]
+[gd_scene load_steps=4 format=3 uid="uid://c76ouyi7kv18w"]
+
+[ext_resource type="Texture2D" uid="uid://df3wsmfjqgpva" path="res://Art/UI/Load/black box.png" id="1_0k18k"]
+[ext_resource type="FontFile" uid="uid://dof7x02seb0fw" path="res://Art/Fonts/JMH Typewriter.ttf" id="1_o47ao"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_x5jii"]
+font = ExtResource("1_o47ao")
+font_size = 38
 
 [node name="LoadButton" type="Button"]
 anchors_preset = 15
@@ -10,15 +17,35 @@ size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 40.0
+offset_top = -54.0
+offset_right = 339.0
+offset_bottom = 54.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1, 0.978245)
 theme_override_font_sizes/font_size = 37
-text = "Date: yyyy-MM-dd hh:mm:ss
-act xx
-Completion: xx%"
+text = "Save data 01
+december 23, 14:05"
+label_settings = SubResource("LabelSettings_x5jii")
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 35.0
+offset_top = -85.0
+offset_right = 543.0
+offset_bottom = 165.0
+grow_vertical = 2
+scale = Vector2(0.674167, 0.674167)
+texture = ExtResource("1_0k18k")
