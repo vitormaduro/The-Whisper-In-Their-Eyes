@@ -4,7 +4,7 @@ public partial class Credits : Control
 {
 	public override void _Ready()
 	{
-		GetNode<Button>("BackButton").Pressed += BackToMainMenu;
+		GetNode<TextureButton>("BackButton").Pressed += BackToMainMenu;
 
 		base._Ready();
 	}
