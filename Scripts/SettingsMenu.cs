@@ -34,7 +34,7 @@ public partial class SettingsMenu : Control
 		GetNode<Slider>("%SfxVolumeSlider").DragEnded += (value) => SettingsManager.SaveSettings();
 		GetNode<Slider>("%SfxVolumeSlider").Value = SettingsManager.SfxVolume;
 
-		GetNode<TextureButton>("%BackButton").Pressed += BackToMainMenu;
+		GetNode<TextureButton>("%BackButton").Pressed += CloseScreen;
 
 		GetNode<ToggleButton>("%DisplayModeFullscreen").SetSelected(SettingsManager.DisplayMode == Window.ModeEnum.Fullscreen);
 		GetNode<ToggleButton>("%DisplayModeWindowed").SetSelected(SettingsManager.DisplayMode == Window.ModeEnum.Windowed);
@@ -109,8 +109,8 @@ public partial class SettingsMenu : Control
 		SettingsManager.SaveSettings();
 	}
 
-	public void BackToMainMenu()
+	public void CloseScreen()
 	{
-		GetTree().ChangeSceneToFile("res://Scenes/main_menu.tscn");
+		QueueFree();
 	}
 }

@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "WPGcuKC/1bTkYy7tTB/SLEh93RZ1bFHVERNqW8KsLgy48FEX0zDFk3sPseOmwddmbCtFa6hdq7XlNh9T2Scd1Q==",
+  "dgSpecHash": "8Ao1uLsGz2qMgKCHAy/9z4Isvj1aTIq35DSqAybXb33AJGKtJe6wnTlqCW3ahc4B3JKZFBwZiXR+gdUqCUaulA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Vitor\\Documents\\Godot Stuff\\The-Whisper-In-Their-Eyes\\Whisper.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Vitor\\.nuget\\packages\\godot.sourcegenerators\\4.0.0-rc.6\\godot.sourcegenerators.4.0.0-rc.6.nupkg.sha512",
-    "C:\\Users\\Vitor\\.nuget\\packages\\godotsharp\\4.0.0-rc.6\\godotsharp.4.0.0-rc.6.nupkg.sha512",
-    "C:\\Users\\Vitor\\.nuget\\packages\\godotsharpeditor\\4.0.0-rc.6\\godotsharpeditor.4.0.0-rc.6.nupkg.sha512"
+    "C:\\Users\\Vitor\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder\\godot.sourcegenerators\\4.0.0\\godot.sourcegenerators.4.0.0.nupkg.sha512",
+    "C:\\Users\\Vitor\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder\\godotsharp\\4.0.0\\godotsharp.4.0.0.nupkg.sha512",
+    "C:\\Users\\Vitor\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder\\godotsharpeditor\\4.0.0\\godotsharpeditor.4.0.0.nupkg.sha512"
   ],
   "logs": []
 }
