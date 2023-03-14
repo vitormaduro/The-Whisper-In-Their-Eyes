@@ -9,7 +9,12 @@ public partial class OstPlayer : AudioStreamPlayer
 	{
 		songs = new Dictionary<string, Ost>()
 		{
-			{ "croak", new Ost("A Dying Man's Croak") }
+			{ "croak", new Ost("A Dying Man's Croak") },
+			{ "agony", new Ost("The Ecstasy Of Crushing Agony") },
+			{ "photo1", new Ost("A photograph") },
+			{ "photo2", new Ost("A Photograph (reprise)") },
+			{ "lost", new Ost("Lost and Not Found") },
+			{ "illness", new Ost("Growing Illness") },
 		};
 
 		base._Ready();

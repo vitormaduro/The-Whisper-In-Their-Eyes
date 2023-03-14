@@ -5,11 +5,11 @@ using Godot.Collections;
 
 public partial class SaveManager : Node
 {
-	private const string CURRENT_TAG = "CurrentTag";
+	private const string CURRENT_SCENE = "CurrentScene";
 	private const string DATE = "Date";
 	private const string ACT = "Act";
 
-	public static string CurrentTag { get; set; } = null;
+	public static string CurrentScene { get; set; } = null;
 	public static string CurrentAct { get; set; }
 	public static DateTime SaveDate { get; private set; }
 	public static DateTime LastSaveDate { get; private set; }
@@ -20,7 +20,7 @@ public partial class SaveManager : Node
 		{
 			var saveData = new Dictionary<string, string>()
 			{
-				{ CURRENT_TAG, CurrentTag },
+				{ CURRENT_SCENE, CurrentScene },
 				{ DATE, DateTime.Now.ToString("yyyyMMddHHmmss") },
 				{ ACT, CurrentAct }
 			};
@@ -40,7 +40,7 @@ public partial class SaveManager : Node
 	{
 		var nodeData = GetSaveFileData("quick");
 
-		CurrentTag = nodeData[CURRENT_TAG];
+		CurrentScene = nodeData[CURRENT_SCENE];
 		CurrentAct = nodeData[ACT];
 
 		if(DateTime.TryParseExact(nodeData[DATE], "yyyyMMddHHmmss", CultureInfo.InvariantCulture, DateTimeStyles.None, out var date))
@@ -53,7 +53,7 @@ public partial class SaveManager : Node
 	{
 		var nodeData = GetSaveFileData($"slot_{slot}");
 
-		SaveManager.CurrentTag = nodeData["CurrentTag"];
+		SaveManager.CurrentScene = nodeData[CURRENT_SCENE];
 	}
 
 	public static Dictionary<string, string> GetSaveFileData(string fileName)
