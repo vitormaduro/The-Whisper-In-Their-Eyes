@@ -17,6 +17,7 @@ public partial class MainScene : Control
 		SettingsManager.IsGamePaused = true;
 
 		GetNode<Control>("%PauseMenu").Visible = true;
+		GetNode<AnimationPlayer>("%AnimationPlayer").SpeedScale = 0;
 	}
 
 	public void ResumeGame()
@@ -24,5 +25,7 @@ public partial class MainScene : Control
 		SettingsManager.IsGamePaused = false;
 
 		GetNode<Control>("%PauseMenu").Visible = false;
+
+		GetNode<AnimationPlayer>("%AnimationPlayer").SpeedScale = 1;
 	}
 }

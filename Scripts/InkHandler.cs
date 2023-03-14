@@ -15,9 +15,11 @@ public partial class InkHandler : RichTextLabel
 
 	public override void _Ready()
 	{
-		if(SaveManager.CurrentTag != null)
+		story.ResetState();
+		
+		if(SaveManager.CurrentScene != null)
 		{
-			JumpToKnot(SaveManager.CurrentTag);
+			JumpToScene(SaveManager.CurrentScene);
 		}
 
 		InitialiseCommands();
@@ -101,6 +103,24 @@ public partial class InkHandler : RichTextLabel
 
 					GetNode<Stage>("%Stage").HideAllCharacters();
 				}
+			},
+			{
+				"screen_shake",
+				(string[] args) =>
+				{
+					bool.TryParse(args[0], out var mode);
+
+					var animationPlayer = GetNode<AnimationPlayer>("%AnimationPlayer");
+
+					if(mode)
+					{
+						animationPlayer.Play("screen_shake");
+					}
+					else
+					{
+						animationPlayer.Stop();
+					}
+				}
 			}
 		};
 	}
@@ -141,9 +161,9 @@ public partial class InkHandler : RichTextLabel
 		}
 	}
 
-	public void JumpToKnot(string knotName)
+	public void JumpToScene(string sceneName)
 	{
-		story.ChoosePathString(knotName);
+		story.ChoosePathString($"Scene_{sceneName}");
 	}
 
 	private void ContinueStory()
@@ -155,6 +175,11 @@ public partial class InkHandler : RichTextLabel
 
 		var line = story.Continue().Replace("\n", "");
 		var tags = story.CurrentTags;
+
+		if(tags.Any(t => t.StartsWith("SCENE:")))
+		{
+			SaveManager.CurrentScene = tags.Where(t => t.StartsWith("SCENE:")).First().Replace("SCENE:", "");
+		}
 
 		if(line.StartsWith(">>"))
 		{

@@ -37,7 +37,21 @@ public partial class Stage : Control
 				{
 					{ "home_neutral", GD.Load<Texture2D>($"res://Art/Sprites/Ronan/ronan_home_neutral.png") },
 					{ "home_smile", GD.Load<Texture2D>($"res://Art/Sprites/Ronan/ronan_home_smile.png") },
-					{ "home_tired", GD.Load<Texture2D>($"res://Art/Sprites/Ronan/ronan_home_tired.png") }
+					{ "home_tired", GD.Load<Texture2D>($"res://Art/Sprites/Ronan/ronan_home_tired.png") },
+					{ "army_neutral", GD.Load<Texture2D>($"res://Art/Sprites/Ronan/ronan_home_neutral.png") },
+					{ "army_smile", GD.Load<Texture2D>($"res://Art/Sprites/Ronan/ronan_home_smile.png") },
+					{ "army_tired", GD.Load<Texture2D>($"res://Art/Sprites/Ronan/ronan_home_tired.png") },
+					{ "army_serious", GD.Load<Texture2D>($"res://Art/Sprites/Ronan/ronan_home_tired.png") },
+				}
+			},
+			new Character()
+			{
+				Id = "rikki",
+				Sprites = new Dictionary<string, Texture2D>()
+				{
+					{ "neutral", GD.Load<Texture2D>($"res://Art/Sprites/Ronan/ronan_home_neutral.png") },
+					{ "smile", GD.Load<Texture2D>($"res://Art/Sprites/Ronan/ronan_home_smile.png") },
+					{ "tired", GD.Load<Texture2D>($"res://Art/Sprites/Ronan/ronan_home_tired.png") }
 				}
 			}
 		};

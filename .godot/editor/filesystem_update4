@@ -1,9 +1,5 @@
-res://Translations/Act_1.en.translation
-res://Translations/Act_1.pt_BR.translation
 res://Scenes/main_menu.scn
 res://Scenes/settings_menu.scn
 res://Scenes/credits.scn
 res://Scenes/load_selection.scn
-res://Scenes/Props/load_button.tscn
-res://Scenes/Props/back_button.tscn
 res://Scenes/main_screen.scn

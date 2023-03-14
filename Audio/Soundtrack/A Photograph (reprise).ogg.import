@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c6ojwhyixxtto"
+path="res://.godot/imported/A Photograph (reprise).ogg-c6406bfa67eeb1af1ac10e1c396c709e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Soundtrack/A Photograph (reprise).ogg"
+dest_files=["res://.godot/imported/A Photograph (reprise).ogg-c6406bfa67eeb1af1ac10e1c396c709e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

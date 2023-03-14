@@ -1,6 +1,7 @@
--> Scene_4
+-> Scene_1
 
 == Scene_1 ==
+# SCENE:1
 >> disclaimer DISCLAIMER_1
 >> clear_text
 >> disclaimer DISCLAIMER_2
@@ -8,6 +9,7 @@
 >> disclaimer DISCLAIMER_3
 >> clear_text
 ACT_1_TITLE
+>> ost_on agony
 >> clear_text
 ACT_1_1.1
 ACT_1_1.2
@@ -28,7 +30,7 @@ ACT_1_2.5
 ACT_1_2.6
 ACT_1_2.7
 >> clear_text
->> sprite ronan home_smile middle
+>> sprite ronan army_smile middle
 ACT_1_3.1
 >> clear_text
 ACT_1_4.1
@@ -46,8 +48,8 @@ ACT_1_5.8
 ACT_1_5.9
 ACT_1_5.10
 >> clear_text
->> sprite ronan home_neutral middle
->> sprite ronan home_smile middle
+>> sprite ronan army_neutral middle
+>> sprite ronan army_smile middle
 ACT_1_6.1
 ACT_1_6.2
 ACT_1_6.3
@@ -83,7 +85,7 @@ ACT_1_10.4
 ACT_1_10.5
 ACT_1_10.6
 >> clear_text
->> sprite ronan home_neutral middle
+>> sprite ronan army_neutral middle
 ACT_1_11.1
 ACT_1_11.2
 ACT_1_11.3
@@ -106,7 +108,7 @@ ACT_1_13.4
 ACT_1_13.5
 ACT_1_13.6
 ACT_1_13.7
->> sprite ronan home_smile middle
+>> sprite ronan army_smile middle
 ACT_1_14.1
 ACT_1_14.2
 ACT_1_14.3
@@ -128,12 +130,13 @@ ACT_1_17.4
 ACT_1_17.5
 >> clear_text
 ACT_1_18.1
->> clear_sprites
->> clear_text
+>> ost_off
+>> clear_all
 ACT_1_19.1
 -> Scene_2
 
 == Scene_2 ==
+# SCENE:2
 >> change_bg office
 ACT_1_20.1
 ACT_1_20.2
@@ -149,7 +152,7 @@ ACT_1_22.2
 ACT_1_22.3
 ACT_1_22.4
 ACT_1_22.5
->> sprite ronan home_neutral middle
+>> sprite ronan army_neutral middle
 >> clear_text
 ACT_1_23.1
 ACT_1_23.2
@@ -169,7 +172,8 @@ ACT_1_26.2
 ACT_1_26.3
 >> clear_sprites
 >> clear_text
->> sprite ronan home_neutral left
+>> sprite ronan army_neutral left
+>> sprite rikki neutral right
 ACT_1_27.1
 ACT_1_27.2
 ACT_1_27.3
@@ -248,7 +252,8 @@ ACT_1_40.3
 ACT_1_40.4
 >> clear_text
 >> change_bg office
->> sprite ronan house_neutral left
+>> sprite ronan home_neutral left
+>> sprite rikki neutral right
 ACT_1_41.1
 ACT_1_41.2
 ACT_1_41.3
@@ -285,7 +290,7 @@ ACT_1_47.1
 >> clear_text
 ACT_1_48.1
 >> clear_all
->> sprite ronan home_neutral middle
+>> sprite ronan army_neutral middle
 ACT_1_49.1
 ACT_1_49.2
 ACT_1_49.3
@@ -323,7 +328,7 @@ ACT_1_55.2
 ACT_1_55.3
 ACT_1_55.4
 >> clear_text
->> sprite ronan home_smile middle
+>> sprite ronan army_smile middle
 ACT_1_56.1
 ACT_1_56.2
 ACT_1_56.3
@@ -331,7 +336,7 @@ ACT_1_56.3
 ACT_1_57.1
 ACT_1_57.2
 >> clear_text
->> sprite ronan home_neutral middle
+>> sprite ronan army_neutral middle
 ACT_1_58.1
 ACT_1_58.2
 >> clear_text
@@ -346,8 +351,9 @@ ACT_1_60.2
 -> Scene_3
 
 == Scene_3 ==
+# SCENE:3
 >> change_bg office
->> sprite ronan home_neutral middle
+>> sprite ronan army_neutral middle
 ACT_1_61.1
 ACT_1_61.2
 ACT_1_61.3
@@ -438,7 +444,7 @@ ACT_1_75.4
 ACT_1_75.5
 ACT_1_75.6
 >> clear_all
->> sprite ronan home_neutral middle
+>> sprite ronan army_neutral middle
 ACT_1_76.1
 ACT_1_76.2
 ACT_1_76.3
@@ -483,6 +489,7 @@ ACT_1_81.9
 -> Scene_4
 
 == Scene_4 ==
+# SCENE:4
 >> change_bg black
 >> sprite kaede smile middle
 ACT_1_82.1
@@ -496,6 +503,7 @@ ACT_1_83.3
 ACT_1_83.4
 ACT_1_83.5
 >> clear_all
+>> ost_on illness
 ACT_1_84.1
 ACT_1_84.2
 ACT_1_84.1
@@ -505,6 +513,302 @@ ACT_1_84.2
 ACT_1_84.1
 ACT_1_84.2
 ACT_1_84.3
+>> ost_off
 >> clear_text
 >> change_bg office
+>> screen_shake true
+>> sprite ronan army_neutral middle
+>> screen_shake false
+ACT_1_85.1
+ACT_1_85.2
+ACT_1_85.3
+ACT_1_85.4
+>> clear_text
+ACT_1_86.1
+ACT_1_86.2
+>> clear_text
+ACT_1_87.1
+ACT_1_87.2
+ACT_1_87.3
+>> clear_text
+ACT_1_88.1
+ACT_1_88.2
+>> clear_all
+>> change_bg black
+ACT_1_89.1
+ACT_1_89.2
+ACT_1_89.3
+ACT_1_89.4
+ACT_1_89.5
+>> clear_text
+ACT_1_90.1
+ACT_1_90.2
+ACT_1_90.3
+ACT_1_90.4
+ACT_1_90.5
+ACT_1_90.6
+ACT_1_90.7
+ACT_1_90.8
+ACT_1_90.9
+ACT_1_90.10
+ACT_1_90.11
+ACT_1_90.12
+ACT_1_90.13
+ACT_1_90.14
+ACT_1_90.15
+ACT_1_90.16
+ACT_1_90.17
+ACT_1_90.18
+>> clear_text
+>> change_bg office
+>> sprite ronan army_serious left
+>> sprite rikki neutral right
+ACT_1_91.1
+ACT_1_91.2
+ACT_1_91.3
+>> clear_text
+ACT_1_92.1
+ACT_1_92.2
+ACT_1_92.3
+ACT_1_92.4
+ACT_1_92.5
+>> clear_text
+ACT_1_93.1
+ACT_1_93.2
+ACT_1_93.3
+ACT_1_93.4
+ACT_1_93.5
+ACT_1_93.6
+ACT_1_93.7
+ACT_1_93.8
+>> clear_text
+ACT_1_94.1
+>> clear_text
+ACT_1_95.1
+ACT_1_95.2
+ACT_1_95.3
+ACT_1_95.4
+ACT_1_95.5
+ACT_1_95.6
+ACT_1_95.7
+>> clear_text
+ACT_1_96.1
+ACT_1_96.2
+ACT_1_96.3
+ACT_1_96.4
+ACT_1_96.5
+ACT_1_96.6
+ACT_1_96.7
+ACT_1_96.8
+>> clear_text
+ACT_1_97.1
+>> clear_all
+>> change_bg black
+>> sprite kaede smile middle
+ACT_1_98.1
+>> clear_text
+ACT_1_99.1
+>> clear_all
+-> Scene_5
+
+== Scene_5 ==
+# SCENE:5
+>> change_bg office
+ACT_1_100.1
+ACT_1_100.2
+ACT_1_100.3
+ACT_1_100.4
+ACT_1_100.5
+ACT_1_100.6
+ACT_1_100.7
+>> clear_text
+ACT_1_101.1
+ACT_1_101.2
+ACT_1_101.3
+>> clear_text
+>> sprite ronan army_serious left
+>> sprite rikki neutral right
+ACT_1_102.1
+ACT_1_102.2
+ACT_1_102.3
+>> clear_all
+>> disclaimer LAST_DISCLAIMER
+>> change_bg office
+ACT_1_103.1
+ACT_1_103.2
+ACT_1_103.3
+ACT_1_103.4
+ACT_1_103.5
+ACT_1_103.6
+ACT_1_103.7
+ACT_1_103.8
+ACT_1_103.9
+ACT_1_103.10
+ACT_1_103.11
+>> clear_text
+ACT_1_104.1
+ACT_1_104.2
+ACT_1_104.3
+ACT_1_104.4
+ACT_1_104.5
+ACT_1_104.6
+>> clear_text
+ACT_1_105.1
+ACT_1_105.2
+ACT_1_105.3
+ACT_1_105.4
+ACT_1_105.5
+ACT_1_105.6
+ACT_1_105.7
+>> clear_text
+ACT_1_106.1
+ACT_1_106.2
+ACT_1_106.3
+ACT_1_106.4
+ACT_1_106.5
+ACT_1_106.6
+>> clear_text
+ACT_1_107.1
+ACT_1_107.2
+ACT_1_107.3
+>> clear_text
+ACT_1_108.1
+ACT_1_108.2
+ACT_1_108.3
+ACT_1_108.4
+ACT_1_108.5
+ACT_1_108.6
+ACT_1_108.7
+ACT_1_108.8
+ACT_1_108.9
+ACT_1_108.10
+ACT_1_108.11
+ACT_1_108.12
+ACT_1_108.13
+>> clear_text
+ACT_1_109.1
+ACT_1_109.2
+ACT_1_109.3
+ACT_1_109.4
+ACT_1_109.5
+ACT_1_109.6
+ACT_1_109.7
+>> clear_text
+ACT_1_110.1
+ACT_1_110.2
+ACT_1_110.3
+ACT_1_110.4
+ACT_1_110.5
+ACT_1_110.6
+ACT_1_110.7
+>> clear_text
+ACT_1_111.1
+ACT_1_111.2
+ACT_1_111.3
+ACT_1_111.4
+ACT_1_111.5
+ACT_1_111.6
+ACT_1_111.7
+ACT_1_111.8
+ACT_1_111.9
+ACT_1_111.10
+>> clear_text
+ACT_1_112.1
+ACT_1_112.2
+ACT_1_112.3
+ACT_1_112.4
+ACT_1_112.5
+ACT_1_112.6
+ACT_1_112.7
+>> clear_text
+ACT_1_113.1
+ACT_1_113.1
+ACT_1_113.1
+ACT_1_113.1
+ACT_1_113.1
+ACT_1_113.1
+>> clear_text
+ACT_1_113.1
+ACT_1_113.1
+ACT_1_113.1
+ACT_1_113.1
+ACT_1_113.1
+ACT_1_113.1
+>> clear_text
+ACT_1_113.1
+ACT_1_113.1
+ACT_1_113.1
+ACT_1_113.1
+ACT_1_113.1
+ACT_1_113.1
+>> clear_text
+ACT_1_114.1
+ACT_1_114.2
+ACT_1_114.3
+ACT_1_114.4
+ACT_1_114.5
+>> clear_text
+ACT_1_115.1
+ACT_1_115.2
+ACT_1_115.3
+ACT_1_115.4
+ACT_1_115.5
+ACT_1_115.6
+>> clear_text
+ACT_1_116.1
+ACT_1_116.2
+ACT_1_116.3
+ACT_1_116.4
+ACT_1_116.5
+ACT_1_116.6
+ACT_1_116.7
+ACT_1_116.8
+ACT_1_116.9
+ACT_1_116.10
+>> clear_text
+ACT_1_117.1
+ACT_1_117.2
+ACT_1_117.3
+>> clear_all
+>> sprite ronan army_serious middle
+ACT_1_118.1
+ACT_1_118.2
+ACT_1_118.3
+ACT_1_118.4
+>> clear_text
+ACT_1_119.1
+ACT_1_119.2
+ACT_1_119.3
+ACT_1_119.4
+>> clear_text
+ACT_1_120.1
+ACT_1_120.2
+ACT_1_120.3
+ACT_1_120.4
+>> clear_text
+ACT_1_121.1
+ACT_1_121.2
+ACT_1_121.3
+ACT_1_121.4
+ACT_1_121.5
+ACT_1_121.6
+ACT_1_121.7
+ACT_1_121.8
+>> clear_text
+>> change_bg black
+ACT_1_122.1
+>> clear_text
+>> change_bg office
+ACT_1_123.1
+ACT_1_123.2
+ACT_1_123.3
+>> clear_text
+ACT_1_124.1
+ACT_1_124.2
+ACT_1_124.3
+>> clear_all
+>> change_bg black
+ACT_1_125.1
+>> sprite kaede smile middle
+ACT_1_126.1
 -> DONE
