@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3ftxfxqy3hu"
-path="res://.godot/imported/kaede.png-e07f57641d47b3736c89b0f5a33b38d1.ctex"
+uid="uid://bpt801iosj5sv"
+path="res://.godot/imported/office.jpg-f4cd31da02d503bc3757017fb9125bc9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Sprites/Kaede/kaede.png"
-dest_files=["res://.godot/imported/kaede.png-e07f57641d47b3736c89b0f5a33b38d1.ctex"]
+source_file="res://Art/Backgrounds/office.jpg"
+dest_files=["res://.godot/imported/office.jpg-f4cd31da02d503bc3757017fb9125bc9.ctex"]
 
 [params]
 

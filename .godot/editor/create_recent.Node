@@ -1,3 +1,6 @@
+AnimationPlayer
+CanvasLayer
+AudioStreamPlayer
 Button
 TextureButton
 Label
@@ -9,7 +12,6 @@ CheckButton
 HBoxContainer
 ItemList
 Node2D
-AudioStreamPlayer
 MenuButton
 Window
 SubViewport

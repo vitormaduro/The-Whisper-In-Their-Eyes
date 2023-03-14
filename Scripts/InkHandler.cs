@@ -10,13 +10,16 @@ public partial class InkHandler : RichTextLabel
 
 	private double timer = 0f;
 	private bool canType = true;
+	private bool isSkipping = false;
 	private Dictionary<string, Action<string[]>> commands;
 
 	public override void _Ready()
 	{
-		if(SaveManager.CurrentTag != null)
+		story.ResetState();
+		
+		if(SaveManager.CurrentScene != null)
 		{
-			JumpToKnot(SaveManager.CurrentTag);
+			JumpToScene(SaveManager.CurrentScene);
 		}
 
 		InitialiseCommands();
@@ -35,7 +38,7 @@ public partial class InkHandler : RichTextLabel
 				"change_bg", 
 				(string[] args) => 
 				{
-					GetNode<TextureRect>("%BackgroundImage").Texture = (Texture2D) GD.Load($"{res}/Backgrounds/{args[0]}.jpg");
+					GetNode<TextureRect>("%BackgroundImage").Texture = (Texture2D) GD.Load($"{res}/Art/Backgrounds/{args[0]}.jpg");
 				} 
 			},
 			{
@@ -65,6 +68,59 @@ public partial class InkHandler : RichTextLabel
 				{
 					GetNode<SfxPlayer>("%SfxPlayer").PlayEffectByTag(args[0]);
 				}
+			},
+			{
+				"clear_text",
+				(string[] args) =>
+				{
+					this.Clear();
+					this.VisibleCharacters = 0;
+				}
+			},
+			{
+				"clear_sprites",
+				(string[] args) => 
+				{
+					GetNode<Stage>("%Stage").HideAllCharacters();
+				}
+			},
+			{
+				"disclaimer",
+				(string[] args) =>
+				{
+					GetNode<TextureRect>("%BackgroundImage").Texture = GD.Load<Texture2D>("res://Art/Backgrounds/black.jpg");
+
+					this.Text = Tr(args[0]);
+					canType = true;
+				}
+			},
+			{
+				"clear_all",
+				(string[] args) => 
+				{
+					this.Clear();
+					this.VisibleCharacters = 0;
+
+					GetNode<Stage>("%Stage").HideAllCharacters();
+				}
+			},
+			{
+				"screen_shake",
+				(string[] args) =>
+				{
+					bool.TryParse(args[0], out var mode);
+
+					var animationPlayer = GetNode<AnimationPlayer>("%AnimationPlayer");
+
+					if(mode)
+					{
+						animationPlayer.Play("screen_shake");
+					}
+					else
+					{
+						animationPlayer.Stop();
+					}
+				}
 			}
 		};
 	}
@@ -76,9 +132,10 @@ public partial class InkHandler : RichTextLabel
 			return;
 		}
 
+		isSkipping = Input.IsActionPressed("skip_text");
 		timer += delta;
 
-		if(canType && timer >= (1f / SettingsManager.TextSpeed))
+		if(isSkipping || canType && timer >= (1f / SettingsManager.TextSpeed))
 		{
 			timer = 0f;
 
@@ -90,7 +147,7 @@ public partial class InkHandler : RichTextLabel
 			}
 		}
 
-		if(Input.IsActionJustPressed("text_advance"))
+		if(isSkipping || Input.IsActionJustPressed("text_advance"))
 		{
 			if(canType)
 			{
@@ -104,9 +161,9 @@ public partial class InkHandler : RichTextLabel
 		}
 	}
 
-	public void JumpToKnot(string knotName)
+	public void JumpToScene(string sceneName)
 	{
-		story.ChoosePathString(knotName);
+		story.ChoosePathString($"Scene_{sceneName}");
 	}
 
 	private void ContinueStory()
@@ -116,29 +173,29 @@ public partial class InkHandler : RichTextLabel
 			return;
 		}
 
-		var line = story.Continue();
+		var line = story.Continue().Replace("\n", "");
 		var tags = story.CurrentTags;
 
-		if(tags.Any(t => t.StartsWith("KNOT")))
+		if(tags.Any(t => t.StartsWith("SCENE:")))
 		{
-			SaveManager.CurrentTag = tags.Where(t => t.StartsWith("KNOT")).First().Replace("KNOT:", "");
+			SaveManager.CurrentScene = tags.Where(t => t.StartsWith("SCENE:")).First().Replace("SCENE:", "");
 		}
 
 		if(line.StartsWith(">>"))
 		{
-			var command = line.Replace(">> ", "").Replace("\n", "").Split(' ');
+			var command = line.Replace(">> ", "").Split(' ');
 
 			ExecuteCommand(command[0], command[1..]);
 		}
 		else
 		{
-			this.Text += Tr(line);
+			this.AppendText(" " + Tr(line));
 			canType = true;
 		}
 	}
 
-	private void ExecuteCommand(string command, string[] args)
+	private void ExecuteCommand(string cmd, string[] args)
 	{
-		commands[command].Invoke(args);
+		commands[cmd].Invoke(args);
 	}
 }

@@ -1,6 +1,4 @@
-using Godot;
-
-public partial class Enums : Node
+public class Enums
 {
 	public enum StagePosition
 	{
