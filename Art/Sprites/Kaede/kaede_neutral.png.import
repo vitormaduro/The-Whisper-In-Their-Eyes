@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctb628xdloh0q"
-path="res://.godot/imported/test.jpg-b8582ad6c93ce40c0743c7afce442245.ctex"
+uid="uid://dwpo27llh2xou"
+path="res://.godot/imported/kaede_neutral.png-ba27fcf53901d2570dd9a0b676a2492b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Backgrounds/test.jpg"
-dest_files=["res://.godot/imported/test.jpg-b8582ad6c93ce40c0743c7afce442245.ctex"]
+source_file="res://Art/Sprites/Kaede/kaede_neutral.png"
+dest_files=["res://.godot/imported/kaede_neutral.png-ba27fcf53901d2570dd9a0b676a2492b.ctex"]
 
 [params]
 
