@@ -1,2 +1,11 @@
+<<<<<<< HEAD
 ﻿62681
+=======
+<<<<<<< HEAD
+﻿56890
+C:/Users/Vitor/Documents/Godot 4.0 C#/Godot_v4.0-rc6_mono_win64.exe
+=======
+﻿49533
+>>>>>>> main
 C:/Users/Vitor/Documents/Godot 4.0 C#/Godot_v4.0-stable_mono_win64.exe
+>>>>>>> main

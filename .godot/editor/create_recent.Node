@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 RichTextLabel
+=======
+TextureRect
+>>>>>>> main
 Label
+<<<<<<< HEAD
+GridContainer
+=======
+>>>>>>> main
 TextureButton
 VBoxContainer
 TextureRect
