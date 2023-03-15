@@ -1,3 +1,4 @@
+RichTextLabel
 Label
 TextureButton
 VBoxContainer
@@ -18,7 +19,6 @@ SubViewport
 ConfirmationDialog
 AcceptDialog
 Popup
-RichTextLabel
 MarginContainer
 HSlider
 SpinBox
