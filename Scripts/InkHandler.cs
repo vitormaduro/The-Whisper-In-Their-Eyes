@@ -12,9 +12,12 @@ public partial class InkHandler : RichTextLabel
 	private bool canType = true;
 	private bool isSkipping = false;
 	private Dictionary<string, Action<string[]>> commands;
+	private RichTextLabel history;
 
 	public override void _Ready()
 	{
+		history = GetNode<RichTextLabel>("%History");
+
 		story.ResetState();
 		
 		if(SaveManager.CurrentScene != null)
@@ -24,8 +27,6 @@ public partial class InkHandler : RichTextLabel
 
 		InitialiseCommands();
 		ContinueStory();
-
-		base._Ready();
 	}
 
 	private void InitialiseCommands()
@@ -75,6 +76,7 @@ public partial class InkHandler : RichTextLabel
 				{
 					this.Clear();
 					this.VisibleCharacters = 0;
+					history.AppendText("\n\n");
 				}
 			},
 			{
@@ -90,8 +92,7 @@ public partial class InkHandler : RichTextLabel
 				{
 					GetNode<TextureRect>("%BackgroundImage").Texture = GD.Load<Texture2D>("res://Art/Backgrounds/black.jpg");
 
-					this.Text = Tr(args[0]);
-					canType = true;
+					PrintLine(args[0]);
 				}
 			},
 			{
@@ -102,6 +103,7 @@ public partial class InkHandler : RichTextLabel
 					this.VisibleCharacters = 0;
 
 					GetNode<Stage>("%Stage").HideAllCharacters();
+					history.AppendText("\n\n");
 				}
 			},
 			{
@@ -189,9 +191,18 @@ public partial class InkHandler : RichTextLabel
 		}
 		else
 		{
-			this.AppendText(" " + Tr(line));
-			canType = true;
+			PrintLine(line);
 		}
+	}
+
+	private void PrintLine(string lineId)
+	{
+			var translation = " " + Tr(lineId);
+
+			this.AppendText(translation);
+			history.AppendText(translation);
+
+			canType = true;
 	}
 
 	private void ExecuteCommand(string cmd, string[] args)
