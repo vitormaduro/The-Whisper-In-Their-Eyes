@@ -22,14 +22,17 @@ public partial class MainButtons : Control
 
 		GetNode<TextureButton>("%SettingsButton").Pressed += () =>
 		{
-			var scene = GD.Load<PackedScene>($"res://Scenes/settings_menu.scn");
+			var settings = GD.Load<PackedScene>($"res://Scenes/settings_menu.scn");
 
-			GetTree().Root.AddChild(scene.Instantiate());
+			GetNode<CanvasLayer>("/root/CanvasLayer").AddChild(settings.Instantiate());
 		};
 
 		GetNode<TextureButton>("%QuitButton").Pressed += () =>
 		{
-			GetTree().ChangeSceneToFile("res://Scenes/main_menu.scn");
+			var popup = GD.Load<PackedScene>($"res://Scenes/confirm_popup.scn");
+
+			GetNode<CanvasLayer>("/root/CanvasLayer").AddChild(popup.Instantiate());
+			GetNode<ConfirmPopup>("/root/CanvasLayer/ConfirmPopup").SetYesButtonAction(() => GetTree().ChangeSceneToFile("res://Scenes/main_menu.scn"));
 		};
 	}
 

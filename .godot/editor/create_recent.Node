@@ -1,11 +1,11 @@
+Label
+TextureButton
+VBoxContainer
+TextureRect
 AnimationPlayer
 CanvasLayer
 AudioStreamPlayer
 Button
-TextureButton
-Label
-VBoxContainer
-TextureRect
 Control
 GridContainer
 CheckButton
