@@ -8,7 +8,11 @@ public partial class MainMenu : Control
 		GetNode<Button>("%LoadGameButton").Pressed += () => LoadScene("load_selection");
 		GetNode<Button>("%SettingsButton").Pressed += () => OpenScene("settings_menu");
 		GetNode<Button>("%CreditsButton").Pressed += () => LoadScene("credits");
-		GetNode<Button>("%QuitButton").Pressed += () => GetTree().Quit();
+		GetNode<Button>("%QuitButton").Pressed += () =>
+		{
+			OpenScene("confirm_popup");
+			GetNode<ConfirmPopup>("../ConfirmPopup").SetYesButtonAction(() => GetTree().Quit());
+		};
 
 		base._Ready();
 	}

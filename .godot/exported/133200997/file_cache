@@ -1,8 +1,4 @@
 res://addons/GodotInk/Src/InkDock.tscn::6a8a490c1d4595ffec3a6196a0346cb9::1677151219::res://.godot/exported/133200997/export-779f1ade387f85431cb6ad964d040b93-InkDock.scn
-res://Scenes/main_menu.tscn::8fa59b70519134bf5c7205887eed20f0::1677782027::res://.godot/exported/133200997/export-502e6a9b269597544b234abf28958cd8-main_menu.scn
-res://Scenes/main_screen.tscn::7244477132dfe41d364bb888a57b926b::1677782027::res://.godot/exported/133200997/export-0b6b8ad440350d8210d0bb81c07a39d1-main_screen.scn
-res://Scenes/settings_menu.tscn::6e510829b72f18da7ad3018c6d9a4fcd::1677782027::res://.godot/exported/133200997/export-720abb139b32760e6890550d60fd22c2-settings_menu.scn
-res://Scenes/Props/back_button.tscn::cde316746b256f377aec23bd8453f8b1::1677683104::res://.godot/exported/133200997/export-754bebf6bd23bbba7a29ddd9dcbe5472-back_button.scn
-res://Scenes/Props/load_button.tscn::a3131757c3c74e260328d6d7ab523fc3::1677782028::res://.godot/exported/133200997/export-5175d26edfaf0450ce5c4afe616c688e-load_button.scn
-res://Scenes/credits.tscn::13f2eef632e712b0ec3966fb24a8b0ae::1677782028::res://.godot/exported/133200997/export-0176a4eac7dcdd588b63ce6086dedc2e-credits.scn
-res://Scenes/load_selection.tscn::9195b300f5193658972c3fd3c0e247d5::1677782028::res://.godot/exported/133200997/export-79c0b748ed7894315bffd8d3d1c4141e-load_selection.scn
+res://Scenes/Props/back_button.tscn::375cec68cf0f9c97a4d0247314a1c87b::1678823833::res://.godot/exported/133200997/export-754bebf6bd23bbba7a29ddd9dcbe5472-back_button.scn
+res://Scenes/Props/load_button.tscn::a3131757c3c74e260328d6d7ab523fc3::1678823832::res://.godot/exported/133200997/export-5175d26edfaf0450ce5c4afe616c688e-load_button.scn
+res://Scenes/Props/scene_name_label.tres::aec60353386a83254325525dd2023d63::1678641914::res://.godot/exported/133200997/export-c1d41bf4989d0f8b8cefa3bc3a7ca9f4-scene_name_label.res
