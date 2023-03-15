@@ -1,22 +1,29 @@
 TextureRect
 Label
+<<<<<<< HEAD
 GridContainer
+=======
+>>>>>>> main
 TextureButton
+VBoxContainer
+TextureRect
+AnimationPlayer
+CanvasLayer
+AudioStreamPlayer
+Button
+Control
+GridContainer
 CheckButton
 HBoxContainer
-Control
 ItemList
 Node2D
-AudioStreamPlayer
 MenuButton
-Button
 Window
 SubViewport
 ConfirmationDialog
 AcceptDialog
 Popup
 RichTextLabel
-VBoxContainer
 MarginContainer
 HSlider
 SpinBox

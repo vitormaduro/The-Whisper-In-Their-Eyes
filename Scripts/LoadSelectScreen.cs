@@ -24,12 +24,16 @@ public partial class LoadSelectScreen : Control
 				var dateTemplate = SettingsManager.Locale == "en" ? "MMMM dd, HH:mm" : "dd 'de' MMMM, HH:mm";
 
 				DateTime.TryParseExact(saveData["Date"], "yyyyMMddHHmmss", CultureInfo.InvariantCulture, DateTimeStyles.None, out var date);
+<<<<<<< HEAD
 				loadButton.GetNode<Label>("Label").Text = $"{Tr("SAVE_DATA")} 0{i}\n{date.ToString(dateTemplate)}";
+=======
+				loadButton.GetNode<Label>("Label").Text = $"Date: {date.ToString("yyyy-MM-dd HH:mm:ss")}\nAct: {saveData["Act"]}";
+>>>>>>> main
 
 				loadButton.Pressed += () =>
 				{
 					SaveManager.LoadSaveSlot(temp);
-					GetTree().ChangeSceneToFile("res://Scenes/main_screen.tscn");
+					GetTree().ChangeSceneToFile("res://Scenes/main_screen.scn");
 				};
 			}
 		}
@@ -39,6 +43,6 @@ public partial class LoadSelectScreen : Control
 	
 	public void BackToMainMenu()
 	{
-		GetTree().ChangeSceneToFile("res://Scenes/main_menu.tscn");
+		GetTree().ChangeSceneToFile("res://Scenes/main_menu.scn");
 	}
 }

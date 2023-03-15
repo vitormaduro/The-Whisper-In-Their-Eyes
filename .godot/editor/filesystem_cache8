@@ -1,8 +1,13 @@
 0b1263761226a5a55b49c82e7456acd5
+<<<<<<< HEAD
 ::res://::1678713906
 export_presets.cfg::TextFile::-1::1678706964::0::1::::<><>::
+=======
+::res://::1678882211
+export_presets.cfg::TextFile::-1::1678829612::0::1::::<><>::
+>>>>>>> main
 icon.svg::CompressedTexture2D::992952571825391275::1677150435::1677150459::1::::<><>::
-::res://addons/::1677781984
+::res://addons/::1678725160
 ::res://addons/GodotInk/::1677673623
 plugin.cfg::TextFile::-1::1677151219::0::1::::<><>::
 plugin.gd::GDScript::-1::1677151219::0::1::::<>EditorPlugin<>::
@@ -18,9 +23,15 @@ InkStoryImporter.cs::CSharpScript::-1::1677151219::0::1::::<><>::
 InvalidInkException.cs::CSharpScript::-1::1677151219::0::1::::<><>::
 MarshalUtils.cs::CSharpScript::-1::1677151219::0::1::::<><>::
 StubInkStory.cs::CSharpScript::-1::1677151219::0::1::::<><>::
-::res://Art/::1678640439
+::res://Animations/::1678820985
+screen_shake.res::Animation::4662135881675666241::1678820985::0::1::::<><>::
+::res://Art/::1678808008
+::res://Art/Backgrounds/::1678808191
+black.jpg::CompressedTexture2D::2540683812511795183::1678800216::1678808009::1::::<><>::
+office.jpg::CompressedTexture2D::3480526199825716377::1678808187::1678808191::1::::<><>::
 ::res://Art/Fonts/::1678641764
 JMH Typewriter.ttf::FontFile::8154213123427119084::1678641760::1678641760::1::::<><>::
+<<<<<<< HEAD
 ::res://Art/Sprites/::1678101983
 ::res://Art/Sprites/Kaede/::1678101983
 kaede.png::CompressedTexture2D::58141308990146514::1678101982::1678101983::1::::<><>::
@@ -30,11 +41,35 @@ bookmark_idle_rev2.png::CompressedTexture2D::3898245963648283355::1677850341::16
 NVL box.png::CompressedTexture2D::5465947237045056323::1677772719::1677772719::1::::<><>::
 ::res://Art/UI/Load/::1678709555
 black box.png::CompressedTexture2D::7569377402949067030::1678709555::1678709555::1::::<><>::
+=======
+::res://Art/Sprites/::1678796650
+::res://Art/Sprites/Kaede/::1678796769
+kaede_neutral.png::CompressedTexture2D::8735282230011360436::1678796768::1678796769::1::::<><>::
+kaede_scared.png::CompressedTexture2D::1094605637129001317::1678796768::1678796769::1::::<><>::
+kaede_sick.png::CompressedTexture2D::694992977944215833::1678796768::1678796769::1::::<><>::
+kaede_smile.png::CompressedTexture2D::8098735425136924663::1678796768::1678796769::1::::<><>::
+::res://Art/Sprites/Ronan/::1678796660
+ronan_home_neutral.png::CompressedTexture2D::3024932603385743431::1678796659::1678796660::1::::<><>::
+ronan_home_smile.png::CompressedTexture2D::2772595873635066389::1678796659::1678796660::1::::<><>::
+ronan_home_tired.png::CompressedTexture2D::6636599907992601157::1678796659::1678796660::1::::<><>::
+::res://Art/UI/::1678883407
+bookmark_hover.png::CompressedTexture2D::3435179459292906080::1677773168::1677773168::1::::<><>::
+bookmark_idle_rev2.png::CompressedTexture2D::3898245963648283355::1677850341::1677850343::1::::<><>::
+NVL box.png::CompressedTexture2D::5465947237045056323::1677772719::1677772719::1::::<><>::
+::res://Art/UI/ConfirmPopup/::1678883415
+button_hover(1).png::CompressedTexture2D::7091254451251423408::1678883414::1678883414::1::::<><>::
+button_idle(2).png::CompressedTexture2D::4674266192632735734::1678883414::1678883414::1::::<><>::
+yes no screen_base.png::CompressedTexture2D::913865829731617415::1678883414::1678883415::1::::<><>::
+>>>>>>> main
 ::res://Art/UI/Main Menu/::1678705477
 main menu_base.jpg::CompressedTexture2D::3011172920432203353::1678705433::1678705434::1::::<><>::
 photo 1.png::CompressedTexture2D::1916467846288549709::1678705476::1678705477::1::::<><>::
 photo 2.png::CompressedTexture2D::409568772039204424::1678705476::1678705477::1::::<><>::
 photo 3.png::CompressedTexture2D::5187268517124825834::1678705476::1678705477::1::::<><>::
+::res://Art/UI/Pause/::1678714577
+button_hover.png::CompressedTexture2D::1872788835890116139::1678714577::1678714577::1::::<><>::
+button_idle(1).png::CompressedTexture2D::3999034997729108091::1678714574::1678714574::1::::<><>::
+pause_base.png::CompressedTexture2D::4682429827256381014::1678714285::1678714286::1::::<><>::
 ::res://Art/UI/Settings/::1678658964
 button_idle.png::CompressedTexture2D::7645135824058594536::1678658955::1678658959::1::::<><>::
 button_selected.png::CompressedTexture2D::3628300261869642579::1678658964::1678658964::1::::<><>::
@@ -44,15 +79,21 @@ settings_base.png::CompressedTexture2D::4237549254424311373::1678639623::1678639
 slider_1.png::CompressedTexture2D::8204910614368613018::1678639943::1678639944::1::::<><>::
 slider_2.png::CompressedTexture2D::3486095330098062766::1678640154::1678640154::1::::<><>::
 ::res://Audio/::1677854133
-::res://Audio/Soundtrack/::1677854146
+::res://Audio/Soundtrack/::1678825548
 A Dying Man's Croak.ogg::AudioStreamOggVorbis::4332184579070999920::1677854145::1677854146::1::::<><>::
+A Photograph (reprise).ogg::AudioStreamOggVorbis::6978182954256751496::1678825547::1678825548::1::::<><>::
+A photograph.ogg::AudioStreamOggVorbis::3576296004382126151::1678825547::1678825548::1::::<><>::
 Growing Illness.ogg::AudioStreamOggVorbis::6173311808591533045::1677854145::1677854146::1::::<><>::
 Lost and Not Found.ogg::AudioStreamOggVorbis::7294498128102654600::1677854145::1677854146::1::::<><>::
 The Ecstasy Of Crushing Agony.ogg::AudioStreamOggVorbis::5785545849099979446::1677854145::1677854146::1::::<><>::
+<<<<<<< HEAD
 ::res://Backgrounds/::1677852981
 cg.jpg::CompressedTexture2D::464566546216062341::1677159867::1677159869::1::::<><>::
 test.jpg::CompressedTexture2D::6110425986426691262::1677852970::1677852981::1::::<><>::
 ::res://bin/::1678707029
+=======
+::res://bin/::1678829654
+>>>>>>> main
 ::res://bin/v0.1/::1677782051
 ::res://bin/v0.1/data_Whisper_x86_64/::1677782062
 Whisper.deps.json::JSON::-1::1677782061::0::1::::<><>::
@@ -61,6 +102,7 @@ Whisper.runtimeconfig.json::JSON::-1::1677782062::0::1::::<><>::
 ::res://bin/v0.2/data_Whisper_x86_64/::1678706964
 Whisper.deps.json::JSON::-1::1678706963::0::1::::<><>::
 Whisper.runtimeconfig.json::JSON::-1::1678706964::0::1::::<><>::
+<<<<<<< HEAD
 ::res://Ink/::1678121515
 test.ink::Resource::1182512473176480514::1678121514::1678121515::1::::<><>::res://addons/GodotInk/Src/InkStory.cs
 ::res://Scenes/::1678710462
@@ -83,14 +125,55 @@ OstPlayer.cs::CSharpScript::-1::1677855316::0::1::::<><>::
 SaveManager.cs::CSharpScript::-1::1677779636::0::1::::<><>::
 SettingsManager.cs::CSharpScript::-1::1678661786::0::1::::<><>::
 SettingsMenu.cs::CSharpScript::-1::1678662007::0::1::::<><>::
+=======
+::res://bin/v0.3/::1678829607
+::res://bin/v0.3/data_Whisper_x86_64/::1678829612
+Whisper.deps.json::JSON::-1::1678829612::0::1::::<><>::
+Whisper.runtimeconfig.json::JSON::-1::1678829612::0::1::::<><>::
+::res://Ink/::1678828683
+act_1.ink::Resource::4855125479462900396::1678828680::1678828683::1::::<><>::res://addons/GodotInk/Src/InkStory.cs
+::res://Scenes/::1678885027
+confirm_popup.scn::PackedScene::1203024953402029042::1678885027::0::1::::<><>::uid://naxibvgltxc6<>uid://b0ao4j5wl2np4<>uid://dof7x02seb0fw
+credits.scn::PackedScene::7730312945649105101::1678885026::0::1::::<><>::res://Scripts/Credits.cs<>uid://6673amislh6k
+load_selection.scn::PackedScene::409816516586736241::1678885026::0::1::::<><>::res://Scripts/LoadSelectScreen.cs<>uid://c76ouyi7kv18w<>uid://6673amislh6k
+main_menu.scn::PackedScene::676841895129598253::1678885026::0::1::::<><>::res://Scripts/MainMenu.cs<>uid://bi5vtwieud6ph<>uid://2kl7e6exwi3v<>uid://dof7x02seb0fw<>uid://f3nsj0euj3l1<>uid://cf50s4eke4gsg
+main_screen.scn::PackedScene::6710313073095269189::1678885027::0::1::::<><>::res://Scripts/MainScene.cs<>uid://bpt801iosj5sv<>res://Scripts/Stage.cs<>uid://cj40l8ndfsfmx<>res://Scripts/InkHandler.cs<>uid://cbf4hbv44eu5q<>uid://bvslsn7l1wm1h<>uid://bo7a5y2j54r1a<>res://Scripts/SfxPlayer.cs<>res://Scripts/OstPlayer.cs<>res://Scripts/MainButtons.cs<>uid://b7yg62a4y0tt3<>uid://bw8fr0uo4ks32<>uid://1xgs8vv88vr4<>res://Scripts/HoverButton.cs<>uid://dof7x02seb0fw<>uid://b7omxxr83eir6
+settings_menu.scn::PackedScene::1687269107511605398::1678885026::0::1::::<><>::res://Scripts/SettingsMenu.cs<>uid://b1mx21ttcgsen<>uid://b0ao4j5wl2np4<>uid://dof7x02seb0fw<>uid://dg6mjggg1pymy<>res://Scripts/ToggleButton.cs<>uid://brxtts7edbw3l<>uid://bpwxql04k3ave<>uid://do5rxdaavcy0i<>uid://6673amislh6k
+::res://Scenes/Props/::1678823833
+back_button.tscn::PackedScene::2241842828078352828::1678823833::0::1::::<><>::uid://b3cmyh1mdspa<>uid://bgevp67kurqk6
+load_button.tscn::PackedScene::7083767102342912168::1678823832::0::1::::<><>::
+scene_name_label.tres::LabelSettings::4142044120635522711::1678641914::0::1::::<><>::uid://dof7x02seb0fw
+::res://Scripts/::1678725410
+Credits.cs::CSharpScript::-1::1678706706::0::1::::<><>::
+HoverButton.cs::CSharpScript::-1::1678725272::0::1::::<><>::
+InkHandler.cs::CSharpScript::-1::1678828995::0::1::::<><>::
+LoadSelectScreen.cs::CSharpScript::-1::1678828883::0::1::::<><>::
+MainButtons.cs::CSharpScript::-1::1678729890::0::1::::<><>::
+MainMenu.cs::CSharpScript::-1::1678729899::0::1::::<><>::
+MainScene.cs::CSharpScript::-1::1678822816::0::1::::<><>::
+OstPlayer.cs::CSharpScript::-1::1678825718::0::1::::<><>::
+SaveManager.cs::CSharpScript::-1::1678828473::0::1::::<><>::
+SettingsManager.cs::CSharpScript::-1::1678725473::0::1::::<><>::
+SettingsMenu.cs::CSharpScript::-1::1678726742::0::1::::<><>::
+>>>>>>> main
 SfxPlayer.cs::CSharpScript::-1::1678120913::0::1::::<><>::
-Stage.cs::CSharpScript::-1::1678103277::0::1::::<><>::
+Stage.cs::CSharpScript::-1::1678823256::0::1::::<><>::
 ToggleButton.cs::CSharpScript::-1::1678660860::0::1::::<><>::
-::res://Scripts/Global/::1678104008
+::res://Scripts/Global/::1678725408
 Character.cs::CSharpScript::-1::1678104112::0::1::::<><>::
-Enums.cs::CSharpScript::-1::1678661463::0::1::::<><>::
+Enums.cs::CSharpScript::-1::1678799148::0::1::::<><>::
 Ost.cs::CSharpScript::-1::1678103333::0::1::::<><>::
+<<<<<<< HEAD
 ::res://Translations/::1678710547
 TranslationStrings.csv::Translation::3694103014179544243::1678710445::1678710447::1::::<><>::
 TranslationStrings.en.translation::OptimizedTranslation::2969568587310531778::1678710447::0::1::::<><>::
 TranslationStrings.pt_BR.translation::OptimizedTranslation::3694103014179544243::1678710447::0::1::::<><>::
+=======
+::res://Translations/::1678885185
+Act_1.csv::::-1::1678823829::1678812137::1::::<><>::
+Act_1.en.translation::OptimizedTranslation::5861413308953747245::1678812137::0::1::::<><>::
+Act_1.pt_BR.translation::OptimizedTranslation::2390090004873988470::1678812137::0::1::::<><>::
+TranslationStrings.csv::Translation::3694103014179544243::1678885185::1678885187::1::::<><>::
+TranslationStrings.en.translation::OptimizedTranslation::2969568587310531778::1678885187::0::1::::<><>::
+TranslationStrings.pt_BR.translation::OptimizedTranslation::3694103014179544243::1678885187::0::1::::<><>::
+>>>>>>> main

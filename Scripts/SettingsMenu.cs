@@ -34,14 +34,15 @@ public partial class SettingsMenu : Control
 		GetNode<Slider>("%SfxVolumeSlider").DragEnded += (value) => SettingsManager.SaveSettings();
 		GetNode<Slider>("%SfxVolumeSlider").Value = SettingsManager.SfxVolume;
 
-		GetNode<TextureButton>("%BackButton").Pressed += BackToMainMenu;
+		GetNode<TextureButton>("%BackButton").Pressed += CloseScreen;
 
 		GetNode<ToggleButton>("%DisplayModeFullscreen").SetSelected(SettingsManager.DisplayMode == Window.ModeEnum.Fullscreen);
 		GetNode<ToggleButton>("%DisplayModeWindowed").SetSelected(SettingsManager.DisplayMode == Window.ModeEnum.Windowed);
 
-		//GetNode<OptionButton>("%LanguageSelect").Selected = SettingsManager.Locale == "pt_BR" ? 1 : 0;
+		GetNode<ToggleButton>("%LanguageEnglish").SetSelected(SettingsManager.Locale == "en");
+		GetNode<ToggleButton>("%LanguagePortuguese").SetSelected(SettingsManager.Locale == "pt_BR");
 
-		base._Ready();
+		textSpeedLabel.Text = $"{SettingsManager.TextSpeed} {Tr("CHARACTERS_PER_SECOND")}";
 	}
 
 	/// <summary>
@@ -109,8 +110,8 @@ public partial class SettingsMenu : Control
 		SettingsManager.SaveSettings();
 	}
 
-	public void BackToMainMenu()
+	public void CloseScreen()
 	{
-		GetTree().ChangeSceneToFile("res://Scenes/main_menu.tscn");
+		QueueFree();
 	}
 }

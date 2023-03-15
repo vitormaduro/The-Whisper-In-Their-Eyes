@@ -24,4 +24,12 @@ QUICK_SAVE,Quick Save,Salvamento Rápido
 QUICK_LOAD,Quick Load,Carregamento Rápido
 LOAD,Load,Carregar
 GALLERY,Gallery,Galeria
+<<<<<<< HEAD
 SAVE_DATA,Save Data,Dados Salvos
+=======
+MAIN_MENU,Main Menu,Menu Principal
+WARNING,Warning,Aviso
+CONFIRM_QUIT,Are you sure you want to quit?,Tem certeza que deseja sair?
+YES,Yes,Sim
+NO,No,Não
+>>>>>>> main

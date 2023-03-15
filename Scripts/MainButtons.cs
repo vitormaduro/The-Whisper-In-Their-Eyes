@@ -17,12 +17,22 @@ public partial class MainButtons : Control
 		GetNode<MenuButton>("%ManualLoadButton").GetPopup().IdPressed += (id) =>
 		{
 			SaveManager.LoadSaveSlot((int) id);
-			GetTree().ChangeSceneToFile("res://Scenes/main_screen.tscn");
+			GetTree().ChangeSceneToFile("res://Scenes/main_screen.scn");
 		};
 
-		GetNode<Button>("%QuitButton").Pressed += () =>
+		GetNode<TextureButton>("%SettingsButton").Pressed += () =>
 		{
-			GetTree().ChangeSceneToFile("res://Scenes/main_menu.tscn");
+			var settings = GD.Load<PackedScene>($"res://Scenes/settings_menu.scn");
+
+			GetNode<CanvasLayer>("/root/CanvasLayer").AddChild(settings.Instantiate());
+		};
+
+		GetNode<TextureButton>("%QuitButton").Pressed += () =>
+		{
+			var popup = GD.Load<PackedScene>($"res://Scenes/confirm_popup.scn");
+
+			GetNode<CanvasLayer>("/root/CanvasLayer").AddChild(popup.Instantiate());
+			GetNode<ConfirmPopup>("/root/CanvasLayer/ConfirmPopup").SetYesButtonAction(() => GetTree().ChangeSceneToFile("res://Scenes/main_menu.scn"));
 		};
 	}
 
@@ -31,9 +41,9 @@ public partial class MainButtons : Control
 		var manualSaveButton = GetNode<MenuButton>("%ManualSaveButton");
 		var manualLoadButton = GetNode<MenuButton>("%ManualLoadButton");
 
-		for (var i = 1; i <= 3; i++)
+		for (var i = 0; i < 3; i++)
 		{
-			var temp = i;
+			var temp = i + 1;
 			var saveFile = SaveManager.GetSaveFileData($"slot_{temp}");
 			var savePopup = manualSaveButton.GetPopup();
 			var loadPopup = manualLoadButton.GetPopup();
@@ -42,15 +52,15 @@ public partial class MainButtons : Control
 			{
 				DateTime.TryParseExact(saveFile["Date"], "yyyyMMddHHmmss", CultureInfo.InvariantCulture, DateTimeStyles.None, out var saveDate);
 
-				savePopup.SetItemText(temp, $"{temp} - {saveDate.ToString("yyyy-MM-dd HH:mm:ss")}");
-				loadPopup.SetItemText(temp, $"{temp} - {saveDate.ToString("yyyy-MM-dd HH:mm:ss")}");
-				loadPopup.SetItemDisabled(temp, false);
+				savePopup.SetItemText(i, $"{temp} - {saveDate.ToString("yyyy-MM-dd HH:mm:ss")}");
+				loadPopup.SetItemText(i, $"{temp} - {saveDate.ToString("yyyy-MM-dd HH:mm:ss")}");
+				loadPopup.SetItemDisabled(i, false);
 			}
 			else
 			{
-				savePopup.SetItemText(temp, $"{temp} - {Tr("NO_DATA")}");
-				loadPopup.SetItemText(temp, $"{temp} - {Tr("NO_DATA")}");
-				loadPopup.SetItemDisabled(temp, true);
+				savePopup.SetItemText(i, $"{temp} - {Tr("NO_DATA")}");
+				loadPopup.SetItemText(i, $"{temp} - {Tr("NO_DATA")}");
+				loadPopup.SetItemDisabled(i, true);
 			}
 		}
 	}
