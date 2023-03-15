@@ -1,24 +1,14 @@
-using System;
-using System.Globalization;
 using Godot;
+using static Enums;
 
 public partial class MainButtons : Control
 {
 	public override void _Ready()
 	{
-		UpdateSlotButtonLabel();
-
-		GetNode<MenuButton>("%ManualSaveButton").GetPopup().IdPressed += (id) =>
-		{
-			SaveManager.SaveGameAt($"slot_{id}");
-			UpdateSlotButtonLabel();
-		};
-
-		GetNode<MenuButton>("%ManualLoadButton").GetPopup().IdPressed += (id) =>
-		{
-			SaveManager.LoadSaveSlot((int) id);
-			GetTree().ChangeSceneToFile("res://Scenes/main_screen.scn");
-		};
+		GetNode<TextureButton>("%QuickSaveButton").Pressed += () => SaveManager.SaveGameAt("quick");
+		GetNode<TextureButton>("%QuickLoadButton").Pressed += SaveManager.LoadQuickSave;
+		GetNode<TextureButton>("%ManualSaveButton").Pressed += () => OpenSaveLoadScene(SceneMode.Save);
+		GetNode<TextureButton>("%ManualLoadButton").Pressed += () => OpenSaveLoadScene(SceneMode.Load);
 
 		GetNode<TextureButton>("%SettingsButton").Pressed += () =>
 		{
@@ -36,32 +26,36 @@ public partial class MainButtons : Control
 		};
 	}
 
-	private void UpdateSlotButtonLabel()
+	private void OpenSaveLoadScene(SceneMode mode)
 	{
-		var manualSaveButton = GetNode<MenuButton>("%ManualSaveButton");
-		var manualLoadButton = GetNode<MenuButton>("%ManualLoadButton");
+		SettingsManager.IsGamePaused = true;
 
-		for (var i = 0; i < 3; i++)
+		var saveLoadScreen = GD.Load<PackedScene>($"res://Scenes/load_selection.scn");
+
+		GetNode<CanvasLayer>("/root/CanvasLayer").AddChild(saveLoadScreen.Instantiate());
+
+		var instance = GetNode<LoadSelectScreen>("/root/CanvasLayer/SaveLoadScreen");
+
+		instance.SetScreenMode(mode);
+		instance.GameLoaded += () =>
 		{
-			var temp = i + 1;
-			var saveFile = SaveManager.GetSaveFileData($"slot_{temp}");
-			var savePopup = manualSaveButton.GetPopup();
-			var loadPopup = manualLoadButton.GetPopup();
+			GetNode<InkHandler>("%TextArea").JumpToScene(SaveManager.CurrentScene);
+		};
+	}
 
-			if(saveFile != null)
-			{
-				DateTime.TryParseExact(saveFile["Date"], "yyyyMMddHHmmss", CultureInfo.InvariantCulture, DateTimeStyles.None, out var saveDate);
-
-				savePopup.SetItemText(i, $"{temp} - {saveDate.ToString("yyyy-MM-dd HH:mm:ss")}");
-				loadPopup.SetItemText(i, $"{temp} - {saveDate.ToString("yyyy-MM-dd HH:mm:ss")}");
-				loadPopup.SetItemDisabled(i, false);
-			}
-			else
-			{
-				savePopup.SetItemText(i, $"{temp} - {Tr("NO_DATA")}");
-				loadPopup.SetItemText(i, $"{temp} - {Tr("NO_DATA")}");
-				loadPopup.SetItemDisabled(i, true);
-			}
+	public override void _Input(InputEvent @event)
+	{
+		if(@event.IsActionPressed("save"))
+		{
+			OpenSaveLoadScene(SceneMode.Save);
+		}
+		else if(@event.IsActionPressed("load"))
+		{
+			OpenSaveLoadScene(SceneMode.Load);
+		}
+		else if(@event.IsActionPressed("quick_save"))
+		{
+			SaveManager.SaveGameAt("quick");
 		}
 	}
 }

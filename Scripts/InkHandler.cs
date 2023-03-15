@@ -40,6 +40,8 @@ public partial class InkHandler : RichTextLabel
 				(string[] args) => 
 				{
 					GetNode<TextureRect>("%BackgroundImage").Texture = (Texture2D) GD.Load($"{res}/Art/Backgrounds/{args[0]}.jpg");
+
+					SaveManager.CurrentBg = args[0];
 				} 
 			},
 			{

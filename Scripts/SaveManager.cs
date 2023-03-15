@@ -8,9 +8,11 @@ public partial class SaveManager : Node
 	private const string CURRENT_SCENE = "CurrentScene";
 	private const string DATE = "Date";
 	private const string ACT = "Act";
+	private const string CURRENT_BG = "CurrentBg";
 
 	public static string CurrentScene { get; set; } = null;
 	public static string CurrentAct { get; set; }
+	public static string CurrentBg { get; set; } = "black";
 	public static DateTime SaveDate { get; private set; }
 	public static DateTime LastSaveDate { get; private set; }
 
@@ -22,7 +24,8 @@ public partial class SaveManager : Node
 			{
 				{ CURRENT_SCENE, CurrentScene },
 				{ DATE, DateTime.Now.ToString("yyyyMMddHHmmss") },
-				{ ACT, CurrentAct }
+				{ ACT, CurrentAct },
+				{ CURRENT_BG, CurrentBg }
 			};
 
 			var json = Json.Stringify(saveData);
@@ -36,7 +39,7 @@ public partial class SaveManager : Node
 	/// <summary>
     /// 	Loads a specified save file
     /// </summary>
-	public void LoadQuickSave()
+	public static void LoadQuickSave()
 	{
 		var nodeData = GetSaveFileData("quick");
 

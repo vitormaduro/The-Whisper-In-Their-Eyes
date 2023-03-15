@@ -4,8 +4,8 @@ public partial class MainMenu : Control
 {
 	public override void _Ready()
 	{
-		GetNode<Button>("%NewGameButton").Pressed += () => LoadScene("main_screen");
-		GetNode<Button>("%LoadGameButton").Pressed += () => LoadScene("load_selection");
+		GetNode<Button>("%NewGameButton").Pressed += StartNewGame;
+		GetNode<Button>("%LoadGameButton").Pressed += () => OpenScene("load_selection");
 		GetNode<Button>("%SettingsButton").Pressed += () => OpenScene("settings_menu");
 		GetNode<Button>("%CreditsButton").Pressed += () => LoadScene("credits");
 		GetNode<Button>("%QuitButton").Pressed += () =>
@@ -15,6 +15,14 @@ public partial class MainMenu : Control
 		};
 
 		base._Ready();
+	}
+
+	private void StartNewGame()
+	{
+		SaveManager.CurrentScene = null;
+		SaveManager.CurrentAct = "1";
+
+		LoadScene("main_screen");
 	}
 
 	private void LoadScene(string scene)

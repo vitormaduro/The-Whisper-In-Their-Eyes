@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-RichTextLabel
-=======
-TextureRect
->>>>>>> main
-Label
-<<<<<<< HEAD
-GridContainer
-=======
->>>>>>> main
 TextureButton
-VBoxContainer
 TextureRect
+RichTextLabel
+Label
+GridContainer
+VBoxContainer
 AnimationPlayer
 CanvasLayer
 AudioStreamPlayer
