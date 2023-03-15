@@ -9,6 +9,7 @@ public partial class SettingsManager : Node
 	private const string MUSIC_VOLUME = "MusicVolume";
 	private const string SFX_VOLUME = "SfxVolume";
 	private const string DISPLAY_MODE = "DisplayMode";
+	private const string GALLERY_UNLOCKED = "GalleryUnlocked";
 
 	public static string Locale { get; set; } = null;
 	public static double TextSpeed { get; set; } = 100;
@@ -16,6 +17,7 @@ public partial class SettingsManager : Node
 	public static double SfxVolume { get; set; } = 100;
 	public static Window.ModeEnum DisplayMode { get; set; } = Window.ModeEnum.Fullscreen;
 	public static bool IsGamePaused { get; set; } = false;
+	public static bool IsGalleryUnlocked { get; set; } = false;
 
 	public override void _Ready()
 	{

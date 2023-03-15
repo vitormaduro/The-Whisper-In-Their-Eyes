@@ -1,6 +1,7 @@
 using Godot;
+using System;
 
-public partial class Credits : Control
+public partial class Gallery : Control
 {
 	public override void _Ready()
 	{

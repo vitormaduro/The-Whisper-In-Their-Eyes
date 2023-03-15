@@ -7,14 +7,17 @@ public partial class MainMenu : Control
 		GetNode<Button>("%NewGameButton").Pressed += StartNewGame;
 		GetNode<Button>("%LoadGameButton").Pressed += () => OpenScene("load_selection");
 		GetNode<Button>("%SettingsButton").Pressed += () => OpenScene("settings_menu");
-		GetNode<Button>("%CreditsButton").Pressed += () => LoadScene("credits");
+		GetNode<Button>("%CreditsButton").Pressed += () => OpenScene("credits");
 		GetNode<Button>("%QuitButton").Pressed += () =>
 		{
 			OpenScene("confirm_popup");
 			GetNode<ConfirmPopup>("../ConfirmPopup").SetYesButtonAction(() => GetTree().Quit());
 		};
 
-		base._Ready();
+		var galleryButton = GetNode<Button>("%GalleryButton");
+
+		galleryButton.Visible = SettingsManager.IsGalleryUnlocked;
+		galleryButton.Pressed += () => OpenScene("gallery");
 	}
 
 	private void StartNewGame()
