@@ -1,12 +1,9 @@
-TextureRect
-Label
-<<<<<<< HEAD
-GridContainer
-=======
->>>>>>> main
 TextureButton
-VBoxContainer
 TextureRect
+RichTextLabel
+Label
+GridContainer
+VBoxContainer
 AnimationPlayer
 CanvasLayer
 AudioStreamPlayer
@@ -23,7 +20,6 @@ SubViewport
 ConfirmationDialog
 AcceptDialog
 Popup
-RichTextLabel
 MarginContainer
 HSlider
 SpinBox

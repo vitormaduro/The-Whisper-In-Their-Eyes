@@ -12,4 +12,10 @@ public class Enums
 		English,
 		Portuguese
 	}
+
+	public enum SceneMode
+	{
+		Save,
+		Load
+	}
 }

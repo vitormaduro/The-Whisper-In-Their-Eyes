@@ -1,18 +1,11 @@
-<<<<<<< HEAD
-res://Scenes/Props/load_button.tscn
-res://Scenes/main_menu.tscn
-res://Scenes/settings_menu.tscn
-res://Scenes/credits.tscn
-res://Scenes/load_selection.tscn
-res://Scenes/main_screen.tscn
-res://Scenes/Props/back_button.tscn
-=======
->>>>>>> main
-res://Translations/TranslationStrings.en.translation
-res://Translations/TranslationStrings.pt_BR.translation
-res://Scenes/confirm_popup.scn
+res://Translations/Act_1.en.translation
+res://Translations/Act_1.pt_BR.translation
 res://Scenes/main_menu.scn
 res://Scenes/settings_menu.scn
 res://Scenes/credits.scn
 res://Scenes/load_selection.scn
 res://Scenes/main_screen.scn
+res://Scenes/confirm_popup.scn
+res://Scenes/Props/load_button.tscn
+res://Translations/TranslationStrings.en.translation
+res://Translations/TranslationStrings.pt_BR.translation
