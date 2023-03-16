@@ -1,9 +1,11 @@
+Sprite2D
+AnimatedSprite2D
 TextureRect
-TextureButton
-RichTextLabel
 Label
-GridContainer
+TextureButton
 VBoxContainer
+RichTextLabel
+GridContainer
 AnimationPlayer
 CanvasLayer
 AudioStreamPlayer

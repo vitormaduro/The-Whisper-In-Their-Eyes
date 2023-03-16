@@ -1,5 +1,5 @@
 0b1263761226a5a55b49c82e7456acd5
-::res://::1678911525
+::res://::1678965705
 export_presets.cfg::TextFile::-1::1678829612::0::1::::<><>::
 icon.svg::CompressedTexture2D::992952571825391275::1678890905::1678890905::1::::<><>::
 ::res://addons/::1678890905
@@ -18,8 +18,8 @@ InkStoryImporter.cs::CSharpScript::-1::1678890905::0::1::::<><>::
 InvalidInkException.cs::CSharpScript::-1::1678890905::0::1::::<><>::
 MarshalUtils.cs::CSharpScript::-1::1678890905::0::1::::<><>::
 StubInkStory.cs::CSharpScript::-1::1678890905::0::1::::<><>::
-::res://Animations/::1678899010
-screen_shake.res::Animation::4662135881675666241::1678899010::0::1::::<><>::
+::res://Animations/::1678965534
+screen_shake.res::Animation::4662135881675666241::1678965534::0::1::::<><>::
 ::res://Art/::1678890958
 ::res://Art/Backgrounds/::1678890958
 black.jpg::CompressedTexture2D::2540683812511795183::1678890958::1678890958::1::::<><>::
@@ -36,7 +36,7 @@ kaede_smile.png::CompressedTexture2D::8098735425136924663::1678890958::167889095
 ronan_home_neutral.png::CompressedTexture2D::3024932603385743431::1678890958::1678890958::1::::<><>::
 ronan_home_smile.png::CompressedTexture2D::2772595873635066389::1678890958::1678890958::1::::<><>::
 ronan_home_tired.png::CompressedTexture2D::6636599907992601157::1678890958::1678890958::1::::<><>::
-::res://Art/UI/::1678912224
+::res://Art/UI/::1678965534
 bookmark_hover.png::CompressedTexture2D::3435179459292906080::1678890905::1678890905::1::::<><>::
 bookmark_idle_rev2.png::CompressedTexture2D::3898245963648283355::1678890905::1678890905::1::::<><>::
 NVL box.png::CompressedTexture2D::5465947237045056323::1678890905::1678890905::1::::<><>::
@@ -44,8 +44,10 @@ NVL box.png::CompressedTexture2D::5465947237045056323::1678890905::1678890905::1
 button_hover(1).png::CompressedTexture2D::7091254451251423408::1678890958::1678890958::1::::<><>::
 button_idle(2).png::CompressedTexture2D::4674266192632735734::1678890958::1678890958::1::::<><>::
 yes no screen_base.png::CompressedTexture2D::913865829731617415::1678890958::1678890958::1::::<><>::
-::res://Art/UI/Gallery/::1678912232
-gallery_base.png::CompressedTexture2D::4598878618849699558::1678912232::1678912232::1::::<><>::
+::res://Art/UI/Gallery/::1678966164
+button_idle(3).png::CompressedTexture2D::8526631659126995222::1678966164::1678966164::1::::<><>::
+button_selected(1).png::CompressedTexture2D::4150882119822522695::1678966164::1678966164::1::::<><>::
+gallery_base.png::CompressedTexture2D::4598878618849699558::1678965534::1678965534::1::::<><>::
 ::res://Art/UI/Load/::1678898358
 black box.png::CompressedTexture2D::7569377402949067030::1678891476::1678891476::1::::<><>::
 save load_base.png::CompressedTexture2D::661713137992756740::1678898358::1678898358::1::::<><>::
@@ -89,29 +91,31 @@ Whisper.deps.json::JSON::-1::1678829612::0::1::::<><>::
 Whisper.runtimeconfig.json::JSON::-1::1678829612::0::1::::<><>::
 ::res://Ink/::1678891582
 act_1.ink::Resource::4855125479462900396::1678890958::1678891582::1::::<><>::res://addons/GodotInk/Src/InkStory.cs
-::res://Scenes/::1678912188
-confirm_popup.scn::PackedScene::1203024953402029042::1678912188::0::1::::<><>::res://Scripts/ConfirmPopup.cs<>uid://naxibvgltxc6<>uid://b0ao4j5wl2np4<>uid://dof7x02seb0fw<>uid://b7uiqml8siemo<>uid://c8bb6pbbi21tk<>res://Scripts/HoverButton.cs
-credits.scn::PackedScene::7730312945649105101::1678912187::0::1::::<><>::res://Scripts/Credits.cs<>uid://6673amislh6k
-load_selection.scn::PackedScene::409816516586736241::1678912187::0::1::::<><>::res://Scripts/LoadSelectScreen.cs<>uid://josk3onj1g01<>uid://b0ao4j5wl2np4<>uid://c76ouyi7kv18w<>uid://6673amislh6k
-main_menu.scn::PackedScene::676841895129598253::1678912187::0::1::::<><>::res://Scripts/MainMenu.cs<>uid://bi5vtwieud6ph<>uid://2kl7e6exwi3v<>uid://dof7x02seb0fw<>uid://f3nsj0euj3l1<>uid://cf50s4eke4gsg
-main_screen.scn::PackedScene::6710313073095269189::1678912187::0::1::::<><>::res://Scripts/MainScene.cs<>uid://bpt801iosj5sv<>res://Scripts/Stage.cs<>uid://cj40l8ndfsfmx<>res://Scripts/InkHandler.cs<>uid://cbf4hbv44eu5q<>uid://bvslsn7l1wm1h<>uid://bo7a5y2j54r1a<>res://Scripts/SfxPlayer.cs<>res://Scripts/OstPlayer.cs<>res://Scripts/MainButtons.cs<>uid://b7yg62a4y0tt3<>uid://bw8fr0uo4ks32<>uid://1xgs8vv88vr4<>res://Scripts/HoverButton.cs<>uid://dof7x02seb0fw<>uid://b7omxxr83eir6
-settings_menu.scn::PackedScene::1687269107511605398::1678912187::0::1::::<><>::res://Scripts/SettingsMenu.cs<>uid://b1mx21ttcgsen<>uid://b0ao4j5wl2np4<>uid://dof7x02seb0fw<>uid://dg6mjggg1pymy<>uid://brxtts7edbw3l<>res://Scripts/ToggleButton.cs<>uid://bpwxql04k3ave<>uid://do5rxdaavcy0i<>uid://6673amislh6k
-::res://Scenes/Props/::1678912188
+::res://Scenes/::1678965534
+confirm_popup.scn::PackedScene::1203024953402029042::1678965534::0::1::::<><>::res://Scripts/ConfirmPopup.cs<>uid://naxibvgltxc6<>uid://b0ao4j5wl2np4<>uid://dof7x02seb0fw<>uid://b7uiqml8siemo<>uid://c8bb6pbbi21tk<>res://Scripts/HoverButton.cs
+credits.scn::PackedScene::7730312945649105101::1678965534::0::1::::<><>::res://Scripts/Credits.cs<>uid://6673amislh6k
+gallery.scn::PackedScene::247590450909609472::1678965534::0::1::::<><>::res://Scripts/Gallery.cs<>uid://b6ry4g7c8dj0i<>uid://b0ao4j5wl2np4<>uid://6673amislh6k
+load_selection.scn::PackedScene::409816516586736241::1678965534::0::1::::<><>::res://Scripts/LoadSelectScreen.cs<>uid://josk3onj1g01<>uid://b0ao4j5wl2np4<>uid://c76ouyi7kv18w<>uid://6673amislh6k
+main_menu.scn::PackedScene::676841895129598253::1678965534::0::1::::<><>::res://Scripts/MainMenu.cs<>uid://bi5vtwieud6ph<>uid://2kl7e6exwi3v<>uid://dof7x02seb0fw<>uid://f3nsj0euj3l1<>uid://cf50s4eke4gsg
+main_screen.scn::PackedScene::6710313073095269189::1678965534::0::1::::<><>::res://Scripts/MainScene.cs<>uid://bpt801iosj5sv<>res://Scripts/Stage.cs<>uid://cj40l8ndfsfmx<>res://Scripts/InkHandler.cs<>uid://cbf4hbv44eu5q<>uid://bvslsn7l1wm1h<>uid://bo7a5y2j54r1a<>res://Scripts/SfxPlayer.cs<>res://Scripts/OstPlayer.cs<>res://Scripts/MainButtons.cs<>uid://b7yg62a4y0tt3<>uid://bw8fr0uo4ks32<>uid://1xgs8vv88vr4<>res://Scripts/HoverButton.cs<>uid://dof7x02seb0fw<>uid://b7omxxr83eir6
+settings_menu.scn::PackedScene::1687269107511605398::1678965534::0::1::::<><>::res://Scripts/SettingsMenu.cs<>uid://b1mx21ttcgsen<>uid://b0ao4j5wl2np4<>uid://dof7x02seb0fw<>uid://dg6mjggg1pymy<>uid://brxtts7edbw3l<>res://Scripts/ToggleButton.cs<>uid://bpwxql04k3ave<>uid://do5rxdaavcy0i<>uid://6673amislh6k
+::res://Scenes/Props/::1678913298
 back_button.tscn::PackedScene::2241842828078352828::1678890905::0::1::::<><>::uid://b3cmyh1mdspa<>uid://bgevp67kurqk6
-load_button.tscn::PackedScene::7083767102342912168::1678912188::0::1::::<><>::uid://dof7x02seb0fw<>uid://bcgyxraw1uak2
+load_button.tscn::PackedScene::7083767102342912168::1678913298::0::1::::<><>::uid://dof7x02seb0fw<>uid://bcgyxraw1uak2
 scene_name_label.tres::LabelSettings::4142044120635522711::1678890905::0::1::::<><>::uid://dof7x02seb0fw
-::res://Scripts/::1678898358
+::res://Scripts/::1678965534
 ConfirmPopup.cs::CSharpScript::-1::1678890958::0::1::::<><>::
-Credits.cs::CSharpScript::-1::1678911984::0::1::::<><>::
+Credits.cs::CSharpScript::-1::1678965534::0::1::::<><>::
+Gallery.cs::CSharpScript::-1::1678965534::0::1::::<><>::
 HoverButton.cs::CSharpScript::-1::1678890958::0::1::::<><>::
 InkHandler.cs::CSharpScript::-1::1678898358::0::1::::<><>::
 LoadSelectScreen.cs::CSharpScript::-1::1678898358::0::1::::<><>::
 MainButtons.cs::CSharpScript::-1::1678898358::0::1::::<><>::
-MainMenu.cs::CSharpScript::-1::1678912184::0::1::::<><>::
+MainMenu.cs::CSharpScript::-1::1678965534::0::1::::<><>::
 MainScene.cs::CSharpScript::-1::1678898358::0::1::::<><>::
 OstPlayer.cs::CSharpScript::-1::1678890958::0::1::::<><>::
 SaveManager.cs::CSharpScript::-1::1678898358::0::1::::<><>::
-SettingsManager.cs::CSharpScript::-1::1678911697::0::1::::<><>::
+SettingsManager.cs::CSharpScript::-1::1678965534::0::1::::<><>::
 SettingsMenu.cs::CSharpScript::-1::1678890958::0::1::::<><>::
 SfxPlayer.cs::CSharpScript::-1::1678890905::0::1::::<><>::
 Stage.cs::CSharpScript::-1::1678890958::0::1::::<><>::
@@ -120,10 +124,13 @@ ToggleButton.cs::CSharpScript::-1::1678890958::0::1::::<><>::
 Character.cs::CSharpScript::-1::1678890905::0::1::::<><>::
 Enums.cs::CSharpScript::-1::1678898358::0::1::::<><>::
 Ost.cs::CSharpScript::-1::1678890905::0::1::::<><>::
-::res://Translations/::1678898369
+::res://Translations/::1678965691
 Act_1.csv::Translation::1114975360317956785::1678890958::1678891518::1::::<><>::
 Act_1.en.translation::OptimizedTranslation::5861413308953747245::1678898358::0::1::::<><>::
 Act_1.pt_BR.translation::OptimizedTranslation::2390090004873988470::1678898358::0::1::::<><>::
-TranslationStrings.csv::Translation::3694103014179544243::1678898358::1678898369::1::::<><>::
-TranslationStrings.en.translation::OptimizedTranslation::2969568587310531778::1678898369::0::1::::<><>::
-TranslationStrings.pt_BR.translation::OptimizedTranslation::3694103014179544243::1678898369::0::1::::<><>::
+Act_2.csv::Translation::8853754086768950980::1678922324::1678965691::1::::<><>::
+Act_2.en.translation::OptimizedTranslation::2213875032133664076::1678965691::0::1::::<><>::
+Act_2.pt_BR.translation::OptimizedTranslation::5037948564481693627::1678965691::0::1::::<><>::
+TranslationStrings.csv::Translation::3694103014179544243::1678898358::1678965240::1::::<><>::
+TranslationStrings.en.translation::OptimizedTranslation::2969568587310531778::1678965534::0::1::::<><>::
+TranslationStrings.pt_BR.translation::OptimizedTranslation::3694103014179544243::1678965534::0::1::::<><>::
