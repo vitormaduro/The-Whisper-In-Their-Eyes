@@ -6,6 +6,7 @@ public partial class TextArea : RichTextLabel
 	private bool isSkipping = true;
 	private double timer = 0;
 	private InkHandler inkManager;
+	private RichTextLabel history;
 	private bool isWaiting = false;
 
 	public override void _Ready()
@@ -13,23 +14,35 @@ public partial class TextArea : RichTextLabel
 		var cmdManager = GetNode<InkCommandsManager>("%InkCommandsManager");
 
 		inkManager = GetNode<InkHandler>("%InkScriptManager");
+		history = GetNode<RichTextLabel>("../History");
 
 		cmdManager.TextCleared += ClearText;
 		cmdManager.ScreenCleared += ClearText;
-		cmdManager.DisclaimerDisplayed += (string line) => PrintLine(Tr(line));
+		cmdManager.DisclaimerDisplayed += (string line) => PrintLine(Tr(line), true);
+		cmdManager.StaticTriggered += (string mode) => ClearText();
 	}
 
 	private void ClearText()
 	{
 		Clear();
+
+		history.AppendText("\n\n");
+
 		VisibleCharacters = 0;
 	}
 
-	private void PrintLine(string line)
+	private void PrintLine(string line, bool printAtOnce = false)
 	{
 		AppendText(" " + line);
 
+		history.AppendText(" " + line);
+
 		canType = true;
+
+		if(printAtOnce)
+		{
+			VisibleCharacters = -1;
+		}
 	}
 
 	public override void _Process(double delta)
@@ -43,7 +56,7 @@ public partial class TextArea : RichTextLabel
 
 		timer += delta;
 
-		if(isSkipping || canType && timer >= (1f / SettingsManager.TextSpeed))
+		if(isSkipping || (canType && timer >= (1f / SettingsManager.TextSpeed) && VisibleCharacters >= 0))
 		{
 			timer = 0f;
 

@@ -92,7 +92,8 @@ public partial class InkCommandsManager : Control
 			{
 				Command = "disclaimer",
 				Signal = SignalName.DisclaimerDisplayed,
-				ParamsNumber = 1
+				ParamsNumber = 1,
+				CanAutoAdvance = false
 			},
 			new InkCommand()
 			{
@@ -120,15 +121,15 @@ public partial class InkCommandsManager : Control
 			},
 			new InkCommand()
 			{
-				Command = "bg_zoom_in",
+				Command = "sprite_zoom_in",
 				Signal = SignalName.SpriteWasZoomedIn,
-				ParamsNumber = 2
+				ParamsNumber = 3
 			},
 			new InkCommand()
 			{
-				Command = "bg_zoom_out",
+				Command = "sprite_zoom_out",
 				Signal = SignalName.SpriteWasZoomedOut,
-				ParamsNumber = 0
+				ParamsNumber = 1
 			},
 			new InkCommand()
 			{
