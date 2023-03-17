@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xy1ewpj1klhu"
-path="res://.godot/imported/ronan_army_pokertired.png-6c1b9e29432b59b0f7412b3b57005be2.ctex"
+uid="uid://b0eyol5ywmdo6"
+path="res://.godot/imported/button_selected(1).png-3571894f9cc913bbd7f99df445340950.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Sprites/Ronan/ronan_army_pokertired.png"
-dest_files=["res://.godot/imported/ronan_army_pokertired.png-6c1b9e29432b59b0f7412b3b57005be2.ctex"]
+source_file="res://Art/UI/Gallery/button_selected(1).png"
+dest_files=["res://.godot/imported/button_selected(1).png-3571894f9cc913bbd7f99df445340950.ctex"]
 
 [params]
 
