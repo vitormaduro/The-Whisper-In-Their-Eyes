@@ -1,5 +1,10 @@
-TextureButton
+Control
+Timer
+Camera2D
+Sprite2D
 TextureRect
+AnimatedSprite2D
+TextureButton
 RichTextLabel
 Label
 GridContainer
@@ -8,7 +13,6 @@ AnimationPlayer
 CanvasLayer
 AudioStreamPlayer
 Button
-Control
 GridContainer
 CheckButton
 HBoxContainer
@@ -26,6 +30,3 @@ SpinBox
 ProgressBar
 ColorRect
 OptionButton
-Camera2D
-Node
-CanvasModulate

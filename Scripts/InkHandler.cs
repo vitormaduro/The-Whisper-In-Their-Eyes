@@ -1,22 +1,19 @@
-using System;
-using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Godot;
 using GodotInk;
 
-public partial class InkHandler : RichTextLabel
+public partial class InkHandler : Node
 {
 	[Export] private InkStory story;
 
-	private double timer = 0f;
-	private bool canType = true;
-	private bool isSkipping = false;
-	private Dictionary<string, Action<string[]>> commands;
-	private RichTextLabel history;
+	[Signal] public delegate void CommandReceivedEventHandler(string commandName, string[] args);
+	
+	private InkCommandsManager cmdManager;
 
 	public override void _Ready()
 	{
-		history = GetNode<RichTextLabel>("%History");
+		cmdManager = GetNode<InkCommandsManager>("%InkCommandsManager");
 
 		story.ResetState();
 		
@@ -24,191 +21,44 @@ public partial class InkHandler : RichTextLabel
 		{
 			JumpToScene(SaveManager.CurrentScene);
 		}
-
-		InitialiseCommands();
-		ContinueStory();
 	}
 
-	private void InitialiseCommands()
+	public void JumpToScene(string scene)
 	{
-		var res = "res:/";
-		
-		commands = new Dictionary<string, Action<string[]>>() 
-		{
-			{ 
-				"change_bg", 
-				(string[] args) => 
-				{
-					GetNode<TextureRect>("%BackgroundImage").Texture = (Texture2D) GD.Load($"{res}/Art/Backgrounds/{args[0]}.jpg");
-
-					SaveManager.CurrentBg = args[0];
-				} 
-			},
-			{
-				"ost_on",
-				(string[] args) => 
-				{
-					GetNode<OstPlayer>("%OstPlayer").PlaySongByTag(args[0]);
-				}
-			},
-			{
-				"ost_off",
-				(string[] args) => 
-				{
-					GetNode<OstPlayer>("%OstPlayer").StopSong();
-				}
-			},
-			{
-				"sprite",
-				(string[] args) => 
-				{
-					GetNode<Stage>("%Stage").ShowCharacterAtPosition(args[0], args[1], args[2]);
-				}
-			},
-			{
-				"sfx",
-				(string[] args) => 
-				{
-					GetNode<SfxPlayer>("%SfxPlayer").PlayEffectByTag(args[0]);
-				}
-			},
-			{
-				"clear_text",
-				(string[] args) =>
-				{
-					this.Clear();
-					this.VisibleCharacters = 0;
-					history.AppendText("\n\n");
-				}
-			},
-			{
-				"clear_sprites",
-				(string[] args) => 
-				{
-					GetNode<Stage>("%Stage").HideAllCharacters();
-				}
-			},
-			{
-				"disclaimer",
-				(string[] args) =>
-				{
-					GetNode<TextureRect>("%BackgroundImage").Texture = GD.Load<Texture2D>("res://Art/Backgrounds/black.jpg");
-
-					PrintLine(args[0]);
-				}
-			},
-			{
-				"clear_all",
-				(string[] args) => 
-				{
-					this.Clear();
-					this.VisibleCharacters = 0;
-
-					GetNode<Stage>("%Stage").HideAllCharacters();
-					history.AppendText("\n\n");
-				}
-			},
-			{
-				"screen_shake",
-				(string[] args) =>
-				{
-					bool.TryParse(args[0], out var mode);
-
-					var animationPlayer = GetNode<AnimationPlayer>("%AnimationPlayer");
-
-					if(mode)
-					{
-						animationPlayer.Play("screen_shake");
-					}
-					else
-					{
-						animationPlayer.Stop();
-					}
-				}
-			}
-		};
+		story.ChoosePathString($"Scene_{scene}");
 	}
 
-	public override void _Process(double delta)
-	{
-		if(SettingsManager.IsGamePaused)
-		{
-			return;
-		}
-
-		isSkipping = Input.IsActionPressed("skip_text");
-		timer += delta;
-
-		if(isSkipping || canType && timer >= (1f / SettingsManager.TextSpeed))
-		{
-			timer = 0f;
-
-			this.VisibleCharacters++;
-
-			if(this.VisibleRatio == 1)
-			{
-				canType = false;
-			}
-		}
-
-		if(isSkipping || Input.IsActionJustPressed("text_advance"))
-		{
-			if(canType)
-			{
-				this.VisibleCharacters = this.GetTotalCharacterCount();
-				canType = false;
-			}
-			else
-			{
-				ContinueStory();
-			}
-		}
-	}
-
-	public void JumpToScene(string sceneName)
-	{
-		story.ChoosePathString($"Scene_{sceneName}");
-	}
-
-	private void ContinueStory()
+	public async Task<string> ContinueStory()
 	{
 		if(!story.CanContinue)
 		{
-			return;
+			return null;
 		}
 
-		var line = story.Continue().Replace("\n", "");
-		var tags = story.CurrentTags;
+		var line = "";
 
-		if(tags.Any(t => t.StartsWith("SCENE:")))
+		do
 		{
-			SaveManager.CurrentScene = tags.Where(t => t.StartsWith("SCENE:")).First().Replace("SCENE:", "");
-		}
+			line = story.Continue().Replace("\n", "");
 
-		if(line.StartsWith(">>"))
-		{
-			var command = line.Replace(">> ", "").Split(' ');
+			var tags = story.CurrentTags;
 
-			ExecuteCommand(command[0], command[1..]);
-		}
-		else
-		{
-			PrintLine(line);
-		}
-	}
+			if (tags.Any(t => t.StartsWith("SCENE:")))
+			{
+				SaveManager.CurrentScene = tags.Where(t => t.StartsWith("SCENE:")).First().Replace("SCENE:", "");
+			}
 
-	private void PrintLine(string lineId)
-	{
-			var translation = " " + Tr(lineId);
+			if(line.StartsWith(">>"))
+			{
+				var command = line.Replace(">> ", "").Split(' ');
 
-			this.AppendText(translation);
-			history.AppendText(translation);
+				EmitSignal(SignalName.CommandReceived, command[0], command[1..]);
 
-			canType = true;
-	}
+				await ToSignal(cmdManager, "CommandFinishedExecuting");
+			}
+		} 
+		while(line.StartsWith(">>"));
 
-	private void ExecuteCommand(string cmd, string[] args)
-	{
-		commands[cmd].Invoke(args);
+		return Tr(line);
 	}
 }

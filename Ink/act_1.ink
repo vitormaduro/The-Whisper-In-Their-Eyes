@@ -1,4 +1,6 @@
--> Scene_1
+INCLUDE Ink/act_2.ink
+
+-> Scene_7
 
 == Scene_1 ==
 # SCENE:1
@@ -811,4 +813,4 @@ ACT_1_124.3
 ACT_1_125.1
 >> sprite kaede smile middle
 ACT_1_126.1
--> DONE
+-> Scene_6
