@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xy1ewpj1klhu"
-path="res://.godot/imported/ronan_army_pokertired.png-6c1b9e29432b59b0f7412b3b57005be2.ctex"
+uid="uid://cw1fndnredfyh"
+path="res://.godot/imported/rikki_curious.png-1d6616e32d835f811a16a4498b829d32.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Sprites/Ronan/ronan_army_pokertired.png"
-dest_files=["res://.godot/imported/ronan_army_pokertired.png-6c1b9e29432b59b0f7412b3b57005be2.ctex"]
+source_file="res://Art/Sprites/Rikki/rikki_curious.png"
+dest_files=["res://.godot/imported/rikki_curious.png-1d6616e32d835f811a16a4498b829d32.ctex"]
 
 [params]
 

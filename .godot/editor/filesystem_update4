@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-res://Translations/Act_2.en.translation
-res://Translations/Act_2.pt_BR.translation
-=======
+res://Translations/TranslationStrings.en.translation
+res://Translations/TranslationStrings.pt_BR.translation
 res://Scenes/main_menu.scn
 res://Scenes/settings_menu.scn
 res://Scenes/credits.scn
@@ -9,4 +7,4 @@ res://Scenes/load_selection.scn
 res://Scenes/main_screen.scn
 res://Scenes/confirm_popup.scn
 res://Scenes/Props/load_button.tscn
->>>>>>> 25-act-2
+res://Scenes/gallery.scn
