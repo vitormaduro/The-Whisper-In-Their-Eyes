@@ -1,6 +1,6 @@
 0b1263761226a5a55b49c82e7456acd5
-::res://::1679013366
-export_presets.cfg::TextFile::-1::1678829612::0::1::::<><>::
+::res://::1679050909
+export_presets.cfg::TextFile::-1::1679016683::0::1::::<><>::
 icon.svg::CompressedTexture2D::992952571825391275::1678890905::1678890905::1::::<><>::
 ::res://addons/::1678890905
 ::res://addons/GodotInk/::1678890905
@@ -87,7 +87,7 @@ A photograph.ogg::AudioStreamOggVorbis::3576296004382126151::1678890958::1678890
 Growing Illness.ogg::AudioStreamOggVorbis::6173311808591533045::1678890905::1678890905::1::::<><>::
 Lost and Not Found.ogg::AudioStreamOggVorbis::7294498128102654600::1678890905::1678890905::1::::<><>::
 The Ecstasy Of Crushing Agony.ogg::AudioStreamOggVorbis::5785545849099979446::1678890905::1678890905::1::::<><>::
-::res://bin/::1678829654
+::res://bin/::1679017123
 ::res://bin/v0.1/::1677782051
 ::res://bin/v0.1/data_Whisper_x86_64/::1677782062
 Whisper.deps.json::JSON::-1::1677782061::0::1::::<><>::
@@ -100,28 +100,32 @@ Whisper.runtimeconfig.json::JSON::-1::1678706964::0::1::::<><>::
 ::res://bin/v0.3/data_Whisper_x86_64/::1678829612
 Whisper.deps.json::JSON::-1::1678829612::0::1::::<><>::
 Whisper.runtimeconfig.json::JSON::-1::1678829612::0::1::::<><>::
-::res://Ink/::1679014305
-act_1.ink::Resource::4855125479462900396::1679014402::1679014405::1::::<><>::res://addons/GodotInk/Src/InkStory.cs
+::res://bin/v0.4/::1679016684
+::res://bin/v0.4/data_Whisper_x86_64/::1679016691
+Whisper.deps.json::JSON::-1::1679016690::0::1::::<><>::
+Whisper.runtimeconfig.json::JSON::-1::1679016691::0::1::::<><>::
+::res://Ink/::1679054905
+act_1.ink::Resource::4855125479462900396::1679058337::1679058343::1::::<><>::res://addons/GodotInk/Src/InkStory.cs
 act_2.ink::Resource::5345122850184148053::1679003563::1679003602::1::::<><>::res://addons/GodotInk/Src/StubInkStory.cs
-::res://Scenes/::1679014306
-confirm_popup.scn::PackedScene::1203024953402029042::1679014306::0::1::::<><>::res://Scripts/ConfirmPopup.cs<>uid://naxibvgltxc6<>uid://b0ao4j5wl2np4<>uid://dof7x02seb0fw<>uid://b7uiqml8siemo<>uid://c8bb6pbbi21tk<>res://Scripts/HoverButton.cs
-credits.scn::PackedScene::7730312945649105101::1679014306::0::1::::<><>::res://Scripts/Credits.cs<>uid://6673amislh6k
-load_selection.scn::PackedScene::409816516586736241::1679014306::0::1::::<><>::res://Scripts/LoadSelectScreen.cs<>uid://josk3onj1g01<>uid://b0ao4j5wl2np4<>uid://c76ouyi7kv18w<>uid://6673amislh6k
-main_menu.scn::PackedScene::676841895129598253::1679014306::0::1::::<><>::res://Scripts/MainMenu.cs<>uid://bi5vtwieud6ph<>uid://2kl7e6exwi3v<>uid://dof7x02seb0fw<>uid://f3nsj0euj3l1<>uid://cf50s4eke4gsg
-main_screen.scn::PackedScene::6710313073095269189::1679014306::0::1::::<><>::res://Scripts/MainScene.cs<>res://Scripts/BackgroundManager.cs<>res://Scripts/Stage.cs<>uid://cj40l8ndfsfmx<>res://Scripts/TextArea.cs<>uid://bvslsn7l1wm1h<>uid://bo7a5y2j54r1a<>uid://xrdbbu5t3e8k<>res://Scripts/SfxPlayer.cs<>res://Scripts/OstPlayer.cs<>res://Scripts/MainButtons.cs<>uid://b7yg62a4y0tt3<>uid://bw8fr0uo4ks32<>uid://1xgs8vv88vr4<>res://Scripts/HoverButton.cs<>uid://dof7x02seb0fw<>uid://digyqpjdmdths<>uid://b7omxxr83eir6<>uid://coo0nnxjxs6xm<>uid://cikdqwqw1hg3s<>uid://c88knwno25d1x<>res://Scripts/AnimationManager.cs<>res://Scripts/InkCommandsManager.cs<>res://Scripts/InkHandler.cs<>uid://cbf4hbv44eu5q
-settings_menu.scn::PackedScene::1687269107511605398::1679014306::0::1::::<><>::res://Scripts/SettingsMenu.cs<>uid://b1mx21ttcgsen<>uid://b0ao4j5wl2np4<>uid://dof7x02seb0fw<>uid://dg6mjggg1pymy<>uid://brxtts7edbw3l<>res://Scripts/ToggleButton.cs<>uid://bpwxql04k3ave<>uid://do5rxdaavcy0i<>uid://6673amislh6k
-::res://Scenes/Props/::1679014307
+::res://Scenes/::1679058298
+confirm_popup.scn::PackedScene::1203024953402029042::1679058192::0::1::::<><>::res://Scripts/ConfirmPopup.cs<>uid://naxibvgltxc6<>uid://b0ao4j5wl2np4<>uid://dof7x02seb0fw<>uid://b7uiqml8siemo<>uid://c8bb6pbbi21tk<>res://Scripts/HoverButton.cs
+credits.scn::PackedScene::7730312945649105101::1679058191::0::1::::<><>::res://Scripts/Credits.cs<>uid://6673amislh6k
+load_selection.scn::PackedScene::409816516586736241::1679058191::0::1::::<><>::res://Scripts/LoadSelectScreen.cs<>uid://josk3onj1g01<>uid://b0ao4j5wl2np4<>uid://c76ouyi7kv18w<>uid://6673amislh6k
+main_menu.scn::PackedScene::676841895129598253::1679058191::0::1::::<><>::res://Scripts/MainMenu.cs<>uid://bi5vtwieud6ph<>uid://2kl7e6exwi3v<>uid://dof7x02seb0fw<>uid://f3nsj0euj3l1<>uid://cf50s4eke4gsg
+main_screen.scn::PackedScene::6710313073095269189::1679058298::0::1::::<><>::res://Scripts/MainScene.cs<>res://Scripts/BackgroundManager.cs<>res://Scripts/Stage.cs<>uid://cj40l8ndfsfmx<>res://Scripts/TextArea.cs<>uid://xrdbbu5t3e8k<>res://Scripts/SfxPlayer.cs<>res://Scripts/OstPlayer.cs<>uid://digyqpjdmdths<>uid://bvslsn7l1wm1h<>uid://bo7a5y2j54r1a<>res://Scripts/MainButtons.cs<>uid://b7yg62a4y0tt3<>uid://bw8fr0uo4ks32<>uid://1xgs8vv88vr4<>res://Scripts/HoverButton.cs<>uid://dof7x02seb0fw<>uid://b7omxxr83eir6<>uid://coo0nnxjxs6xm<>uid://cikdqwqw1hg3s<>uid://c88knwno25d1x<>res://Scripts/AnimationManager.cs<>res://Scripts/InkCommandsManager.cs<>res://Scripts/InkHandler.cs<>uid://cbf4hbv44eu5q
+settings_menu.scn::PackedScene::1687269107511605398::1679058191::0::1::::<><>::res://Scripts/SettingsMenu.cs<>uid://b1mx21ttcgsen<>uid://b0ao4j5wl2np4<>uid://dof7x02seb0fw<>uid://dg6mjggg1pymy<>uid://brxtts7edbw3l<>res://Scripts/ToggleButton.cs<>uid://bpwxql04k3ave<>uid://do5rxdaavcy0i<>uid://6673amislh6k
+::res://Scenes/Props/::1679058192
 back_button.tscn::PackedScene::2241842828078352828::1678890905::0::1::::<><>::uid://b3cmyh1mdspa<>uid://bgevp67kurqk6
-load_button.tscn::PackedScene::7083767102342912168::1679014307::0::1::::<><>::uid://dof7x02seb0fw<>uid://bcgyxraw1uak2
+load_button.tscn::PackedScene::7083767102342912168::1679058192::0::1::::<><>::uid://dof7x02seb0fw<>uid://bcgyxraw1uak2
 scene_name_label.tres::LabelSettings::4142044120635522711::1678890905::0::1::::<><>::uid://dof7x02seb0fw
 ::res://Scripts/::1678998021
-AnimationManager.cs::CSharpScript::-1::1679013941::0::1::::<><>::
+AnimationManager.cs::CSharpScript::-1::1679015695::0::1::::<><>::
 BackgroundManager.cs::CSharpScript::-1::1679003699::0::1::::<><>::
 ConfirmPopup.cs::CSharpScript::-1::1678890958::0::1::::<><>::
-Credits.cs::CSharpScript::-1::1678967837::0::1::::<><>::
+Credits.cs::CSharpScript::-1::1679051005::0::1::::<><>::
 HoverButton.cs::CSharpScript::-1::1678890958::0::1::::<><>::
-InkCommandsManager.cs::CSharpScript::-1::1679013905::0::1::::<><>::
-InkHandler.cs::CSharpScript::-1::1679001845::0::1::::<><>::
+InkCommandsManager.cs::CSharpScript::-1::1679057421::0::1::::<><>::
+InkHandler.cs::CSharpScript::-1::1679014803::0::1::::<><>::
 LoadSelectScreen.cs::CSharpScript::-1::1678898358::0::1::::<><>::
 MainButtons.cs::CSharpScript::-1::1678898358::0::1::::<><>::
 MainMenu.cs::CSharpScript::-1::1678967837::0::1::::<><>::
@@ -132,7 +136,7 @@ SettingsManager.cs::CSharpScript::-1::1678967837::0::1::::<><>::
 SettingsMenu.cs::CSharpScript::-1::1678890958::0::1::::<><>::
 SfxPlayer.cs::CSharpScript::-1::1679014293::0::1::::<><>::
 Stage.cs::CSharpScript::-1::1679013450::0::1::::<><>::
-TextArea.cs::CSharpScript::-1::1679013559::0::1::::<><>::
+TextArea.cs::CSharpScript::-1::1679058188::0::1::::<><>::
 ToggleButton.cs::CSharpScript::-1::1678890958::0::1::::<><>::
 ::res://Scripts/Global/::1678991202
 Character.cs::CSharpScript::-1::1678890905::0::1::::<><>::
