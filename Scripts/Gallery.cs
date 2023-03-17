@@ -14,4 +14,10 @@ public partial class Gallery : Control
 		GetNode<Sprite2D>("Left").Texture = GD.Load<Texture2D>("res://Art/Sprites/Kaede/kaede_neutral.png");
 		GetNode<Sprite2D>("Right").Texture = GD.Load<Texture2D>("res://Art/Sprites/Kaede/kaede_smile.png");
 	}
+
+	public void DisplayRonan()
+	{
+		GetNode<Sprite2D>("Left").Texture = GD.Load<Texture2D>("res://Art/Sprites/Ronan/ronan_army_smile.png");
+		GetNode<Sprite2D>("Right").Texture = GD.Load<Texture2D>("res://Art/Sprites/Ronan/ronan_home_smile.png");
+	}
 }
