@@ -7,9 +7,14 @@ public partial class SfxPlayer : AudioStreamPlayer
 
 	public override void _Ready()
 	{
+		var cmdManager = GetNode<InkCommandsManager>("%InkCommandsManager");
+
+		cmdManager.SfxTriggered += (string tag) => PlayEffectByTag(tag);
+		cmdManager.StaticTriggered += (string mode) => StaticEffect(mode);
+
 		effects = new Dictionary<string, AudioStreamWav>()
 		{
-
+			{ "static", GD.Load<AudioStreamWav>("res://Audio/Effects/static.sample") }
 		};
 
 		base._Ready();
@@ -19,5 +24,19 @@ public partial class SfxPlayer : AudioStreamPlayer
 	{
 		Stream = effects[tag];
 		Playing = true;
+	}
+
+	public void StaticEffect(string mode)
+	{
+		bool.TryParse(mode, out var state);
+
+		if(state)
+		{
+			PlayEffectByTag("static");
+		}
+		else
+		{
+			Playing = false;
+		}
 	}
 }
