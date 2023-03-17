@@ -7,6 +7,11 @@ public partial class OstPlayer : AudioStreamPlayer
 
 	public override void _Ready()
 	{
+		var cmdManager = GetNode<InkCommandsManager>("%InkCommandsManager");
+
+		cmdManager.OstStarted += (string tag) => PlaySongByTag(tag);
+		cmdManager.OstStoped += StopSong;
+
 		songs = new Dictionary<string, Ost>()
 		{
 			{ "croak", new Ost("A Dying Man's Croak") },
@@ -16,8 +21,6 @@ public partial class OstPlayer : AudioStreamPlayer
 			{ "lost", new Ost("Lost and Not Found") },
 			{ "illness", new Ost("Growing Illness") },
 		};
-
-		base._Ready();
 	}
 
 	public string PlaySongByTag(string tag)

@@ -1,6 +1,17 @@
+<<<<<<< HEAD
 Sprite2D
 AnimatedSprite2D
 TextureRect
+=======
+Control
+Timer
+Camera2D
+Sprite2D
+TextureRect
+AnimatedSprite2D
+TextureButton
+RichTextLabel
+>>>>>>> 25-act-2
 Label
 TextureButton
 VBoxContainer
@@ -10,7 +21,6 @@ AnimationPlayer
 CanvasLayer
 AudioStreamPlayer
 Button
-Control
 GridContainer
 CheckButton
 HBoxContainer
@@ -28,6 +38,3 @@ SpinBox
 ProgressBar
 ColorRect
 OptionButton
-Camera2D
-Node
-CanvasModulate

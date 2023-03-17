@@ -7,15 +7,23 @@ using static Enums;
 public partial class Stage : Control
 {
 	private List<Character> characters;
-	private Dictionary<StagePosition, TextureRect> stage;
+	private Dictionary<StagePosition, Sprite2D> stage;
 
 	public override void _Ready()
 	{
-		stage = new Dictionary<StagePosition, TextureRect>()
+		var cmdManager = GetNode<InkCommandsManager>("%InkCommandsManager");
+
+		cmdManager.SpriteAppeared += (string characterTag, string spriteTag, string position) => ShowCharacterAtPosition(characterTag, spriteTag, position);
+		cmdManager.SpritesWereCleared += HideAllCharacters;
+		cmdManager.ScreenCleared += HideAllCharacters;
+		cmdManager.SpriteWasZoomedIn += (string position, string pivotX, string pivotY) => ZoomPositionToPoint(position, pivotX, pivotY);
+		cmdManager.SpriteWasZoomedOut += (string position) => ResetZoom(position);
+
+		stage = new Dictionary<StagePosition, Sprite2D>()
 		{
-			{ StagePosition.Left, GetNode<TextureRect>("Left") },
-			{ StagePosition.Middle, GetNode<TextureRect>("Middle") },
-			{ StagePosition.Right, GetNode<TextureRect>("Right") }
+			{ StagePosition.Left, GetNode<Sprite2D>("Left") },
+			{ StagePosition.Middle, GetNode<Sprite2D>("Middle") },
+			{ StagePosition.Right, GetNode<Sprite2D>("Right") }
 		};
 
 		characters = new List<Character>()
@@ -38,9 +46,10 @@ public partial class Stage : Control
 					{ "home_neutral", GD.Load<Texture2D>($"res://Art/Sprites/Ronan/ronan_home_neutral.png") },
 					{ "home_smile", GD.Load<Texture2D>($"res://Art/Sprites/Ronan/ronan_home_smile.png") },
 					{ "home_tired", GD.Load<Texture2D>($"res://Art/Sprites/Ronan/ronan_home_tired.png") },
+
 					{ "army_neutral", GD.Load<Texture2D>($"res://Art/Sprites/Ronan/ronan_home_neutral.png") },
-					{ "army_smile", GD.Load<Texture2D>($"res://Art/Sprites/Ronan/ronan_home_smile.png") },
-					{ "army_tired", GD.Load<Texture2D>($"res://Art/Sprites/Ronan/ronan_home_tired.png") },
+					{ "army_smile", GD.Load<Texture2D>($"res://Art/Sprites/Ronan/ronan_army_smile.png") },
+					{ "army_tired", GD.Load<Texture2D>($"res://Art/Sprites/Ronan/ronan_army_pokertired.png") },
 					{ "army_serious", GD.Load<Texture2D>($"res://Art/Sprites/Ronan/ronan_home_tired.png") },
 				}
 			},
@@ -71,5 +80,22 @@ public partial class Stage : Control
 		stage[StagePosition.Left].Texture = null;
 		stage[StagePosition.Middle].Texture = null;
 		stage[StagePosition.Right].Texture = null;
+	}
+
+	public void ZoomPositionToPoint(string pos, string pivotX, string pivotY)
+	{
+		Enum.TryParse(pos, true, out StagePosition position);
+		var x = float.Parse(pivotX);
+		var y = float.Parse(pivotY);
+
+		stage[position].Offset = new Vector2(x, y);
+		stage[position].Scale = new Vector2(1, 1);
+	}
+
+	public void ResetZoom(string pos)
+	{
+		Enum.TryParse(pos, true, out StagePosition position);
+
+		stage[position].Scale = new Vector2(0.5f, 0.5f);
 	}
 }

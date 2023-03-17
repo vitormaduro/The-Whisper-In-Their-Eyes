@@ -9,6 +9,7 @@ public partial class MainScene : Control
 		GetNode<Button>("%UnpauseButton").Pressed += ResumeGame;
 		GetNode<Control>("%PauseMenu").Visible = false;
 		GetNode<RichTextLabel>("%History").Visible = false;
+		GetNode<TextureRect>("%Static").Visible = false;
 	}
 
 	public override void _Input(InputEvent @event)
