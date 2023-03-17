@@ -459,7 +459,6 @@ C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\
 C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\bin\ExportDebug\win-x64\hostfxr.dll
 C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\bin\ExportDebug\win-x64\hostpolicy.dll
 C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\bin\ExportDebug\win-x64\mscordaccore.dll
-C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\bin\ExportDebug\win-x64\mscordaccore_amd64_amd64_6.0.1122.52304.dll
 C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\bin\ExportDebug\win-x64\mscordbi.dll
 C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\bin\ExportDebug\win-x64\mscorrc.dll
 C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\bin\ExportDebug\win-x64\msquic.dll
@@ -476,3 +475,4 @@ C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\
 C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\obj\ExportDebug\win-x64\Whisper.pdb
 C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\obj\ExportDebug\win-x64\Whisper.genruntimeconfig.cache
 C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\obj\ExportDebug\win-x64\ref\Whisper.dll
+C:\Users\Vitor\Documents\Godot Stuff\The-Whisper-In-Their-Eyes\.godot\mono\temp\bin\ExportDebug\win-x64\mscordaccore_amd64_amd64_6.0.1523.11507.dll

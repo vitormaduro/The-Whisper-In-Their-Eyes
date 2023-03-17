@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "KfAiznIH5AU4rWLCTTEC2biHbxeH539KkcQ9qKkmktDHsToaelNi5hihJD4J81T22oO+hMcmhTAhmXyRPuIKAA==",
+  "dgSpecHash": "7VdqelPCv+kVYjdU3sugOPTdBrV6BMOpCYXMP26cWKcbXCHRBHlcsyP8xI2BMGSua6WTQuwRhguiccvTg5eT7Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Vitor\\Documents\\Godot Stuff\\The-Whisper-In-Their-Eyes\\Whisper.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vitor\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder\\godot.sourcegenerators\\4.0.0\\godot.sourcegenerators.4.0.0.nupkg.sha512",
     "C:\\Users\\Vitor\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder\\godotsharp\\4.0.0\\godotsharp.4.0.0.nupkg.sha512",
-    "C:\\Users\\Vitor\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder\\godotsharpeditor\\4.0.0\\godotsharpeditor.4.0.0.nupkg.sha512"
+    "C:\\Users\\Vitor\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.15\\microsoft.netcore.app.runtime.win-x64.6.0.15.nupkg.sha512",
+    "C:\\Users\\Vitor\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.15\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.15.nupkg.sha512",
+    "C:\\Users\\Vitor\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.15\\microsoft.aspnetcore.app.runtime.win-x64.6.0.15.nupkg.sha512"
   ],
   "logs": []
 }
