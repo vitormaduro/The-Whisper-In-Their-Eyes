@@ -1,6 +1,7 @@
 INCLUDE Ink/act_2.ink
+INCLUDE Ink/act_3.ink
 
--> Scene_1
+-> Scene_12
 
 == Scene_1 ==
 # SCENE:1

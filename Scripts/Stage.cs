@@ -58,9 +58,8 @@ public partial class Stage : Control
 				Id = "rikki",
 				Sprites = new Dictionary<string, Texture2D>()
 				{
-					{ "neutral", GD.Load<Texture2D>($"res://Art/Sprites/Ronan/ronan_home_neutral.png") },
-					{ "smile", GD.Load<Texture2D>($"res://Art/Sprites/Ronan/ronan_home_smile.png") },
-					{ "tired", GD.Load<Texture2D>($"res://Art/Sprites/Ronan/ronan_home_tired.png") }
+					{ "neutral", GD.Load<Texture2D>($"res://Art/Sprites/Rikki/rikki_neutral.png") },
+					{ "smile", GD.Load<Texture2D>($"res://Art/Sprites/Rikki/rikki_curious.png") },
 				}
 			}
 		};

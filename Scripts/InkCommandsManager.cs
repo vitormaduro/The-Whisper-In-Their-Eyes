@@ -74,7 +74,8 @@ public partial class InkCommandsManager : Control
 			{
 				Command = "sprite",
 				Signal = SignalName.SpriteAppeared,
-				ParamsNumber = 3
+				ParamsNumber = 3,
+				DelayTime = 0
 			},
 			new InkCommand()
 			{
@@ -136,7 +137,7 @@ public partial class InkCommandsManager : Control
 				Command = "static",
 				Signal = SignalName.StaticTriggered,
 				ParamsNumber = 1,
-				DelayTime = 0.3f
+				DelayTime = 0.2f
 			}
 		};
 	}
