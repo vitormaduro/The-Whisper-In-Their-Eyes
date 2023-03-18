@@ -15,7 +15,7 @@ run/main_scene="res://Scenes/main_menu.scn"
 config/features=PackedStringArray("4.0", "C#", "Forward Plus")
 boot_splash/image="res://Art/UI/Logo/logo.png"
 config/icon="res://icon.svg"
-boot_splash/minimum_display_time=2000
+boot_splash/minimum_display_time=5000
 
 [autoload]
 

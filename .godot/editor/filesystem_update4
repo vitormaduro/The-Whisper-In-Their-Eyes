@@ -1,9 +1,14 @@
-res://Scenes/main_screen.scn
 res://Scenes/settings_menu.scn
 res://Scenes/credits.scn
 res://Scenes/load_selection.scn
 res://Scenes/confirm_popup.scn
 res://Scenes/Props/load_button.tscn
 res://Scenes/gallery.scn
+res://Scenes/main_screen.scn
 res://Scenes/main_menu.scn
-res://Animations/screen_shake.res
+res://Translations/Act_1.en.translation
+res://Translations/Act_1.pt_BR.translation
+res://Translations/Act_3.en.translation
+res://Translations/Act_3.pt_BR.translation
+res://Translations/Act_2.en.translation
+res://Translations/Act_2.pt_BR.translation

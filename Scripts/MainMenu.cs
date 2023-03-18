@@ -1,11 +1,16 @@
 using Godot;
+using static Enums;
 
 public partial class MainMenu : Control
 {
 	public override void _Ready()
 	{
 		GetNode<Button>("%NewGameButton").Pressed += StartNewGame;
-		GetNode<Button>("%LoadGameButton").Pressed += () => OpenScene("load_selection");
+		GetNode<Button>("%LoadGameButton").Pressed += () =>
+		{
+			OpenScene("load_selection");
+			GetNode<LoadSelectScreen>("../SaveLoadScreen").SetScreenMode(SceneMode.Load);
+		};
 		GetNode<Button>("%SettingsButton").Pressed += () => OpenScene("settings_menu");
 		GetNode<Button>("%CreditsButton").Pressed += () => OpenScene("credits");
 		GetNode<Button>("%QuitButton").Pressed += () =>
@@ -28,13 +33,8 @@ public partial class MainMenu : Control
 			SaveManager.CurrentScene = null;
 			SaveManager.CurrentAct = "1";
 
-			LoadScene("main_screen");
+			GetTree().ChangeSceneToFile($"res://Scenes/main_screen.scn");
 		};
-	}
-
-	private void LoadScene(string scene)
-	{
-		GetTree().ChangeSceneToFile($"res://Scenes/{scene}.scn");
 	}
 
 	private void OpenScene(string sceneName)
