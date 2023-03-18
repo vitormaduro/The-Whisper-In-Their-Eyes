@@ -8,6 +8,7 @@ public partial class InkHandler : Node
 	[Export] private InkStory story;
 
 	[Signal] public delegate void CommandReceivedEventHandler(string commandName, string[] args);
+	[Signal] public delegate void StoryLoadedEventHandler();
 	
 	private InkCommandsManager cmdManager;
 
@@ -21,6 +22,8 @@ public partial class InkHandler : Node
 		{
 			JumpToScene(SaveManager.CurrentScene);
 		}
+
+		EmitSignal(SignalName.StoryLoaded);
 	}
 
 	public void JumpToScene(string scene)

@@ -47,10 +47,8 @@ public partial class Stage : Control
 					{ "home_smile", GD.Load<Texture2D>($"res://Art/Sprites/Ronan/ronan_home_smile.png") },
 					{ "home_tired", GD.Load<Texture2D>($"res://Art/Sprites/Ronan/ronan_home_tired.png") },
 
-					{ "army_neutral", GD.Load<Texture2D>($"res://Art/Sprites/Ronan/ronan_home_neutral.png") },
 					{ "army_smile", GD.Load<Texture2D>($"res://Art/Sprites/Ronan/ronan_army_smile.png") },
-					{ "army_tired", GD.Load<Texture2D>($"res://Art/Sprites/Ronan/ronan_army_pokertired.png") },
-					{ "army_serious", GD.Load<Texture2D>($"res://Art/Sprites/Ronan/ronan_home_tired.png") },
+					{ "army_tired", GD.Load<Texture2D>($"res://Art/Sprites/Ronan/ronan_army_tired.png") }
 				}
 			},
 			new Character()

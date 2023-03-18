@@ -18,7 +18,7 @@ public partial class InkCommandsManager : Control
 	[Signal] public delegate void DisclaimerDisplayedEventHandler(string line);
 	[Signal] public delegate void ScreenClearedEventHandler();
 	[Signal] public delegate void ScreenIsShakingEventHandler(string mode);
-	[Signal] public delegate void BackgroundWasZoomedInEventHandler(string pivotX, string pivotY);
+	[Signal] public delegate void BackgroundWasZoomedInEventHandler(string pivotX, string pivotY, string scale);
 	[Signal] public delegate void BackgroundWasZoomedOutEventHandler();
 	[Signal] public delegate void SpriteWasZoomedInEventHandler(string position, string pivotX, string pivotY);
 	[Signal] public delegate void SpriteWasZoomedOutEventHandler(string position);
@@ -26,6 +26,7 @@ public partial class InkCommandsManager : Control
 
 	private List<InkCommand> commands;
 	private bool commandAwaitingInput;
+	private bool isSkipping = false;
 
 	public override void _Ready()
 	{
@@ -37,7 +38,8 @@ public partial class InkCommandsManager : Control
 			{
 				Command = "change_bg",
 				Signal = SignalName.BackgroundChanged,
-				ParamsNumber = 1
+				ParamsNumber = 1,
+				DelayTime = 0
 			},
 			new InkCommand()
 			{
@@ -56,7 +58,8 @@ public partial class InkCommandsManager : Control
 			{
 				Command = "clear_text",
 				Signal = SignalName.TextCleared,
-				ParamsNumber = 0
+				ParamsNumber = 0,
+				DelayTime = 0
 			},
 			new InkCommand()
 			{
@@ -86,8 +89,9 @@ public partial class InkCommandsManager : Control
 			new InkCommand()
 			{
 				Command = "clear_sprites",
-				Signal = SignalName.SfxTriggered,
-				ParamsNumber = 0
+				Signal = SignalName.SpritesWereCleared,
+				ParamsNumber = 0,
+				DelayTime = 0
 			},
 			new InkCommand()
 			{
@@ -100,7 +104,8 @@ public partial class InkCommandsManager : Control
 			{
 				Command = "clear_all",
 				Signal = SignalName.ScreenCleared,
-				ParamsNumber = 0
+				ParamsNumber = 0,
+				DelayTime = 0
 			},
 			new InkCommand()
 			{
@@ -112,7 +117,7 @@ public partial class InkCommandsManager : Control
 			{
 				Command = "bg_zoom_in",
 				Signal = SignalName.BackgroundWasZoomedIn,
-				ParamsNumber = 2
+				ParamsNumber = 3
 			},
 			new InkCommand()
 			{
@@ -138,6 +143,13 @@ public partial class InkCommandsManager : Control
 				Signal = SignalName.StaticTriggered,
 				ParamsNumber = 1,
 				DelayTime = 0.2f
+			},
+			new InkCommand()
+			{
+				Command = "wait",
+				Signal = SignalName.StaticTriggered,
+				ParamsNumber = 1,
+				DelayTime = 0
 			}
 		};
 	}
@@ -149,6 +161,15 @@ public partial class InkCommandsManager : Control
 		if(cmd == null)
 		{
 			GD.PrintErr($"Command [{commandName}] not found");
+
+			GetTree().CreateTimer(isSkipping ? 0 : 0.5f).Timeout += () => EmitSignal(SignalName.CommandFinishedExecuting);
+
+			return;
+		}
+
+		if(cmd.Command == "wait")
+		{
+			GetTree().CreateTimer(isSkipping ? 0 : float.Parse(args[0])).Timeout += () => EmitSignal(SignalName.CommandFinishedExecuting);
 
 			return;
 		}
@@ -174,7 +195,7 @@ public partial class InkCommandsManager : Control
 
 		if(cmd.CanAutoAdvance)
 		{
-			GetTree().CreateTimer(cmd.DelayTime).Timeout += () => EmitSignal(SignalName.CommandFinishedExecuting);
+			GetTree().CreateTimer(isSkipping ? 0 : cmd.DelayTime).Timeout += () => EmitSignal(SignalName.CommandFinishedExecuting);
 		}
 		else 
 		{
@@ -192,6 +213,14 @@ public partial class InkCommandsManager : Control
 
 				commandAwaitingInput = false;
 			}
+		}
+		else if(@event.IsActionPressed("skip_text"))
+		{
+			isSkipping = true;
+		}
+		else if(@event.IsActionReleased("skip_text"))
+		{
+			isSkipping = false;
 		}
 	}
 }

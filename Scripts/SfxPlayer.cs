@@ -14,7 +14,9 @@ public partial class SfxPlayer : AudioStreamPlayer
 
 		effects = new Dictionary<string, AudioStreamWav>()
 		{
-			{ "static", GD.Load<AudioStreamWav>("res://Audio/Effects/static.sample") }
+			{ "static", GD.Load<AudioStreamWav>("res://Audio/Effects/static.sample") },
+			{ "phone_ring", GD.Load<AudioStreamWav>("res://Audio/Effects/phone_ring.sample") },
+			{ "phone_pickup", GD.Load<AudioStreamWav>("res://Audio/Effects/phone_pickup.sample") }
 		};
 
 		base._Ready();

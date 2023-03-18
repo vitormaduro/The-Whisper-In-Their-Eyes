@@ -1,4 +1,5 @@
 == Scene_6 ==
+>> clear_all
 >> change_bg red
 ACT_2_TITLE
 >> clear_text
@@ -35,7 +36,7 @@ ACT_2_6.1
 ACT_2_7.1
 ACT_2_7.2
 ACT_2_7.3
->> sprite ronan army_serious left
+>> sprite ronan army_tired left
 >> sprite rikki neutral right
 ACT_2_8.1
 ACT_2_8.2
@@ -143,7 +144,7 @@ ACT_2_24.1
 >> change_bg black
 ACT_2_25.1
 >> clear_text
->> sprite ronan army_serious middle
+>> sprite ronan army_tired middle
 ACT_2_25.2
 >> clear_text
 ACT_2_26.1
@@ -220,6 +221,7 @@ ACT_2_36.3
 >> clear_text
 >> sprite kaede sick middle
 >> static false
+>> wait 1
 >> static true
 >> sprite kaede smile middle
 >> static false
@@ -246,6 +248,7 @@ ACT_2_40.4
 >> static true
 >> sprite kaede sick middle
 >> static false
+>> wait 1
 >> static true
 >> sprite kaede smile middle
 >> static false
@@ -254,6 +257,7 @@ ACT_2_41.2
 >> static true
 >> sprite kaede scared middle
 >> static false
+>> wait 1
 >> static true
 >> sprite kaede smile middle
 >> static false
@@ -361,7 +365,7 @@ ACT_2_55.8
 ACT_2_55.9
 >> ost_off
 >> change_bg living_room
->> sprite home_neutral middle
+>> sprite ronan home_neutral middle
 ACT_2_56.1
 ACT_2_56.2
 ACT_2_56.3
@@ -480,6 +484,7 @@ ACT_2_70.6
 >> static true
 >> sprite kaede scared middle
 >> static false
+>> wait 1
 >> static true
 >> sprite kaede smile middle
 >> static false
@@ -633,8 +638,7 @@ ACT_2_88.3
 ACT_2_88.4
 ACT_2_88.5
 >> clear_text
->> change_bg 
->> bg_zoom_in 1458 621
+>> bg_zoom_in 1458 621 1.5
 ACT_2_89.1
 ACT_2_89.2
 >> static true
@@ -650,6 +654,7 @@ ACT_2_91.3
 >> static true
 >> sprite kaede scared middle
 >> static false
+>> wait 1
 >> static true
 >> sprite kaede smile middle
 >> static false
@@ -754,7 +759,7 @@ ACT_2_106.1
 ACT_2_106.2
 >> clear_all
 >> change_bg living_room
->> bg_zoom_in 1458 621
+>> bg_zoom_in 1458 621 1.5
 ACT_2_107.1
 >> clear_text
 >> ost_off

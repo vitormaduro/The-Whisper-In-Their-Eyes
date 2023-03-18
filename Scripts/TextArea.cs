@@ -20,6 +20,8 @@ public partial class TextArea : RichTextLabel
 		cmdManager.ScreenCleared += ClearText;
 		cmdManager.DisclaimerDisplayed += (string line) => PrintLine(Tr(line), true);
 		cmdManager.StaticTriggered += (string mode) => ClearText();
+
+		inkManager.StoryLoaded += GetNewLine;
 	}
 
 	private void ClearText()

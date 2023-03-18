@@ -26,7 +26,7 @@ public partial class OstPlayer : AudioStreamPlayer
 	public string PlaySongByTag(string tag)
 	{
 		var song = songs[tag];
-
+		
 		Stream = song.Audio;
 		Playing = true;
 
@@ -35,6 +35,9 @@ public partial class OstPlayer : AudioStreamPlayer
 
 	public void StopSong()
 	{
-		Playing = false;
+		GetTree().CreateTimer(1).Timeout += () =>
+		{
+			Playing = false;
+		};
 	}
 }

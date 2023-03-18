@@ -22,10 +22,14 @@ public partial class MainMenu : Control
 
 	private void StartNewGame()
 	{
-		SaveManager.CurrentScene = null;
-		SaveManager.CurrentAct = "1";
+		GetNode<AnimationPlayer>("%AnimationPlayer").Play("new_game");
+		GetTree().CreateTimer(2).Timeout += () =>
+		{
+			SaveManager.CurrentScene = null;
+			SaveManager.CurrentAct = "1";
 
-		LoadScene("main_screen");
+			LoadScene("main_screen");
+		};
 	}
 
 	private void LoadScene(string scene)

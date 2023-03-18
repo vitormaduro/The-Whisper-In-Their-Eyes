@@ -1,4 +1,5 @@
 == Scene_12 ==
+>> clear_all
 >> change_bg black
 ACT_3_TITLE
 >> clear_text
@@ -185,7 +186,7 @@ ACT_3_19.4
 ACT_3_19.5
 >> clear_text
 >> ost_off
->> change_bg bedroom
+>> change_bg bedroom1
 >> sfx phone_ring
 ACT_3_20.1
 >> clear_text
@@ -205,12 +206,12 @@ ACT_3_21.2
 ACT_3_21.3
 >> clear_all
 >> sfx heavy_breathing
->> bg_zoom_in ...
+>> bg_zoom_in 1575 655 1,2
 ACT_3_22.1
 >> clear_all
 >> sfx man_cough
 >> sfx heavy_breathing
->> bg_zoom_in ...
+>> bg_zoom_in 1575 655 1,4
 ACT_3_23.1
 ACT_3_23.2
 >> clear_all
@@ -237,7 +238,7 @@ ACT_3_26.5
 ACT_3_27.1
 ACT_3_27.2
 >> clear_all
->> bg_zoom_in ...
+>> bg_zoom_in 1575 655 1,6
 ACT_3_28.1
 ACT_3_28.2
 ACT_3_28.3
@@ -271,7 +272,7 @@ ACT_3_30.10
 ACT_3_30.11
 ACT_3_30.12
 >> clear_text
->> bg_zoom_in ...
+>> bg_zoom_in 1575 655 1,8
 ACT_3_31.1
 ACT_3_31.2
 ACT_3_31.3
@@ -283,8 +284,8 @@ ACT_3_31.8
 >> clear_text
 ACT_3_32.1
 ACT_3_32.2
+>> sfx phone_pickup
 ACT_3_32.3
->> sfx_off
 ACT_3_32.4
 ACT_3_32.5
 ACT_3_32.6
@@ -434,7 +435,7 @@ ACT_3_54.3
 ACT_3_55.1
 ACT_3_55.2
 >> clear_text
->> sprite_zoom_in ...
+>> sprite_zoom_in middle -390 -1388
 ACT_3_56.1
 ACT_3_56.2
 ACT_3_56.3
@@ -859,11 +860,13 @@ ACT_3_131.1
 >> static false
 ACT_3_132.1
 >> static true
+>> clear_sprites
 >> sprite kaede scared left
 >> sprite ronan home_smile right
 >> static false
 ACT_3_133.1
 >> static true
+>> clear_sprites
 >> sprite kaede smile left
 >> sprite ronan home_smile right
 >> static false
