@@ -1,4 +1,5 @@
 INCLUDE Ink/act_2.ink
+INCLUDE Ink/act_3.ink
 
 -> Scene_1
 
@@ -50,7 +51,7 @@ ACT_1_5.8
 ACT_1_5.9
 ACT_1_5.10
 >> clear_text
->> sprite ronan army_neutral middle
+>> sprite ronan army_tired middle
 >> sprite ronan army_smile middle
 ACT_1_6.1
 ACT_1_6.2
@@ -87,7 +88,7 @@ ACT_1_10.4
 ACT_1_10.5
 ACT_1_10.6
 >> clear_text
->> sprite ronan army_neutral middle
+>> sprite ronan army_tired middle
 ACT_1_11.1
 ACT_1_11.2
 ACT_1_11.3
@@ -135,6 +136,7 @@ ACT_1_18.1
 >> ost_off
 >> clear_all
 ACT_1_19.1
+>> clear_text
 -> Scene_2
 
 == Scene_2 ==
@@ -154,7 +156,7 @@ ACT_1_22.2
 ACT_1_22.3
 ACT_1_22.4
 ACT_1_22.5
->> sprite ronan army_neutral middle
+>> sprite ronan army_tired middle
 >> clear_text
 ACT_1_23.1
 ACT_1_23.2
@@ -172,9 +174,8 @@ ACT_1_25.4
 ACT_1_26.1
 ACT_1_26.2
 ACT_1_26.3
->> clear_sprites
->> clear_text
->> sprite ronan army_neutral left
+>> clear_all
+>> sprite ronan army_tired left
 >> sprite rikki neutral right
 ACT_1_27.1
 ACT_1_27.2
@@ -254,7 +255,7 @@ ACT_1_40.3
 ACT_1_40.4
 >> clear_text
 >> change_bg office
->> sprite ronan home_neutral left
+>> sprite ronan army_tired left
 >> sprite rikki neutral right
 ACT_1_41.1
 ACT_1_41.2
@@ -292,7 +293,7 @@ ACT_1_47.1
 >> clear_text
 ACT_1_48.1
 >> clear_all
->> sprite ronan army_neutral middle
+>> sprite ronan army_tired middle
 ACT_1_49.1
 ACT_1_49.2
 ACT_1_49.3
@@ -338,7 +339,7 @@ ACT_1_56.3
 ACT_1_57.1
 ACT_1_57.2
 >> clear_text
->> sprite ronan army_neutral middle
+>> sprite ronan army_tired middle
 ACT_1_58.1
 ACT_1_58.2
 >> clear_text
@@ -355,7 +356,7 @@ ACT_1_60.2
 == Scene_3 ==
 # SCENE:3
 >> change_bg office
->> sprite ronan army_neutral middle
+>> sprite ronan army_tired middle
 ACT_1_61.1
 ACT_1_61.2
 ACT_1_61.3
@@ -446,7 +447,7 @@ ACT_1_75.4
 ACT_1_75.5
 ACT_1_75.6
 >> clear_all
->> sprite ronan army_neutral middle
+>> sprite ronan army_tired middle
 ACT_1_76.1
 ACT_1_76.2
 ACT_1_76.3
@@ -519,7 +520,7 @@ ACT_1_84.3
 >> clear_text
 >> change_bg office
 >> screen_shake true
->> sprite ronan army_neutral middle
+>> sprite ronan army_tired middle
 >> screen_shake false
 ACT_1_85.1
 ACT_1_85.2
@@ -563,7 +564,7 @@ ACT_1_90.17
 ACT_1_90.18
 >> clear_text
 >> change_bg office
->> sprite ronan army_serious left
+>> sprite ronan army_tired left
 >> sprite rikki neutral right
 ACT_1_91.1
 ACT_1_91.2
@@ -628,13 +629,14 @@ ACT_1_101.1
 ACT_1_101.2
 ACT_1_101.3
 >> clear_text
->> sprite ronan army_serious left
+>> sprite ronan army_tired left
 >> sprite rikki neutral right
 ACT_1_102.1
 ACT_1_102.2
 ACT_1_102.3
 >> clear_all
 >> disclaimer LAST_DISCLAIMER
+>> clear_text
 >> change_bg office
 ACT_1_103.1
 ACT_1_103.2
@@ -772,7 +774,7 @@ ACT_1_117.1
 ACT_1_117.2
 ACT_1_117.3
 >> clear_all
->> sprite ronan army_serious middle
+>> sprite ronan army_tired middle
 ACT_1_118.1
 ACT_1_118.2
 ACT_1_118.3
@@ -813,4 +815,5 @@ ACT_1_124.3
 ACT_1_125.1
 >> sprite kaede smile middle
 ACT_1_126.1
+>> clear_all
 -> Scene_6

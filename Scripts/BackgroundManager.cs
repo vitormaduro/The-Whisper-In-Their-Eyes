@@ -15,7 +15,7 @@ public partial class BackgroundManager : TextureRect
 		cmdManager.BackgroundStoppedFlashing += StopFlashBackground;
 		cmdManager.BackgroundChanged += (string bgName) => ChangeBackground(bgName);
 		cmdManager.DisclaimerDisplayed += (string line) => ChangeBackground("black");
-		cmdManager.BackgroundWasZoomedIn += (string pivotX, string pivotY) => ZoomIn(pivotX, pivotY);
+		cmdManager.BackgroundWasZoomedIn += (string pivotX, string pivotY, string scale) => ZoomIn(pivotX, pivotY, scale);
 		cmdManager.BackgroundWasZoomedOut += ZoomOut;
 	}
 
@@ -42,10 +42,12 @@ public partial class BackgroundManager : TextureRect
 		currentBg = backgroundName;
 	}
 
-	private void ZoomIn(string pivotX, string pivotY)
+	private void ZoomIn(string pivotX, string pivotY, string scale)
 	{
+		var s = float.Parse(scale);
+
 		PivotOffset = new Vector2(float.Parse(pivotX), float.Parse(pivotY));
-		Scale = new Vector2(1.5f, 1.5f);
+		Scale = new Vector2(s, s);
 	}
 
 	private void ZoomOut()

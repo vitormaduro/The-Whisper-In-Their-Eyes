@@ -9,9 +9,11 @@ public partial class AnimationManager : AnimationPlayer
 
 		cmdManager.ScreenIsShaking += (string mode) => PlayAnimation("screen_shake", mode);
 		cmdManager.StaticTriggered += (string mode) => StaticEffect(mode);
+		cmdManager.OstStarted += (string song) => FadeOstVolume("fade_in");
+		cmdManager.OstStoped += () => FadeOstVolume("fade_out");
 	}
 
-	public void PlayAnimation(string animation, string mode)
+	private void PlayAnimation(string animation, string mode)
 	{
 		bool.TryParse(mode, out var state);
 
@@ -22,10 +24,11 @@ public partial class AnimationManager : AnimationPlayer
 		else
 		{
 			Stop();
+			Play("RESET");
 		}
 	}
 
-	public void StaticEffect(string mode)
+	private void StaticEffect(string mode)
 	{
 		bool.TryParse(mode, out var state);
 
@@ -37,5 +40,10 @@ public partial class AnimationManager : AnimationPlayer
 		{
 			Play("static_off");
 		}
+	}
+
+	private void FadeOstVolume(string fadeType)
+	{
+		Play($"{fadeType}_ost");
 	}
 }

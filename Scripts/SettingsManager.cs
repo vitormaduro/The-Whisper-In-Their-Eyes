@@ -42,8 +42,6 @@ public partial class SettingsManager : Node
 
 		root.Mode = DisplayMode;
 		root.Title = Tr("GAME_TITLE");
-
-		base._Ready();
 	}
 
 	/// <summary>
