@@ -1,5 +1,5 @@
 keys,en,pt_BR
-ACT_2_TITLE,[color=black][center]ACT TWO: A Photograph[/center][/color],ACT_2_TITLE_PT
+ACT_2_TITLE,[font_size=120][outline_size=5][color=black][center]\nACT TWO: \nA Photograph[/center][/color][/outline_size][/font_size],ACT_2_TITLE_PT
 ACT_2_1.1,"When I boarded the train home, I was accompanied by two officers as an escort.",ACT_2_1.1_PT
 ACT_2_1.2,"Times remained tough despite the successful victory at [i]Ufana[/i], and there was still a chance that any military officer, especially the head of any department was at risk of being shot.",ACT_2_1.2_PT
 ACT_2_1.3,Protests from [i]Conferri[/i] people were still appearing all over the country.,ACT_2_1.3_PT
@@ -106,7 +106,7 @@ ACT_2_21.1,...beloved.,ACT_2_21.1_PT
 ACT_2_22.1,"When the train finally moved, a man who boarded from the station sat near me.",ACT_2_22.1_PT
 ACT_2_22.2,"Both soldiers who were eating very casually by then, suddenly became alert, with their backs fully straight, and their eyes staring right at the man.",ACT_2_22.2_PT
 ACT_2_23.1,"'Excuse me,' the man slipped his hand inside his jacket, 'if you have some time, I have some....'",ACT_2_23.1_PT
-ACT_2_24.1,"[color=red][shake rate=5 level=10]He is going to kill you. He got a gun. He is going to kill you. He got a gun. He will shoot you. Yes, yes, he will shoot you. Right at the temple, right through your brains the bullet will fly, the blood will flow...it will flow and flow and flow, all over the fucking place. You will scream and gasp for air. Oh sorry, you won't. Until, until, he is not planning to make it a quick death, but a painful one. Then he will shoot right at the chest. One bullet. Two bullets. Three. Your lungs will puncture, the rib cage will break at so many places by the force of the bullet, that the bones will shatter like glass. The shattered bones will stab you everywhere in your meat. Every pulse will puncture, and blood will flow out. You will try to gasp for air, but the air will escape you outwards instead of going inwards. You will scream, scream, scream, or you will try to, but to no avail. The air will all go out, everything inside will swell and puncture, everything will die, the brain will heat up in panic and struggle, the heart will puncture, and then everything will start to die. Everything inside you will start to die! It will shut down and you will die...die.....DIE. Everything will be...[/shake][/color]",ACT_2_24.1_PT
+ACT_2_24.1,"[outline_size=2][color=red][shake rate=5 level=10]He is going to kill you. He got a gun. He is going to kill you. He got a gun. He will shoot you. Yes, yes, he will shoot you. Right at the temple, right through your brains the bullet will fly, the blood will flow...it will flow and flow and flow, all over the fucking place. You will scream and gasp for air. Oh sorry, you won't. Until, until, he is not planning to make it a quick death, but a painful one. Then he will shoot right at the chest. One bullet. Two bullets. Three. Your lungs will puncture, the rib cage will break at so many places by the force of the bullet, that the bones will shatter like glass. The shattered bones will stab you everywhere in your meat. Every pulse will puncture, and blood will flow out. You will try to gasp for air, but the air will escape you outwards instead of going inwards. You will scream, scream, scream, or you will try to, but to no avail. The air will all go out, everything inside will swell and puncture, everything will die, the brain will heat up in panic and struggle, the heart will puncture, and then everything will start to die. Everything inside you will start to die! It will shut down and you will die...die.....DIE. Everything will be...[/shake][/color][/outline_size]",ACT_2_24.1_PT
 ACT_2_25.1,"'...over with you,'",ACT_2_25.1_PT
 ACT_2_25.2,The man smiled and took out a notepad from his jacket pocket.,ACT_2_25.2_PT
 ACT_2_26.1,"'Huh,'",ACT_2_26.1_PT
@@ -269,19 +269,11 @@ ACT_2_62.4,How his Adam's apple crushed with every noise he attempted to make.,A
 ACT_2_62.5,"Whatever voice escaped him, was mixed in with the hasty grunts resulting from his ever breaking rib cage that wished for more air.",ACT_2_62.5_PT
 ACT_2_62.6,"The blood vessels panicked, and so did his skin, and the muscles contracted, and the stomach churned.",ACT_2_62.6_PT
 ACT_2_62.7,With every syllable he spoke...,ACT_2_62.7_PT
-<<<<<<< HEAD,,<<<<<<< HEAD_PT
-ACT_2_63.1,...it felt like one of his blood vessels burst.,ACT_2_63.1_PT
-ACT_2_63.2,"His voice became hastier, as he repeated.\n\n",ACT_2_63.2_PT
-ACT_2_63.3,'She could give birth any time!',ACT_2_63.3_PT
-ACT_2_63.4,"That shaking voice reverberated all over the place, and into",ACT_2_63.4_PT
-ACT_2_63.5,my ears.,ACT_2_63.5_PT
-Err:510,,Err:510
-ACT_2_63.1,[color=black]...it felt like one of his blood vessels burst.[/color],ACT_2_63.1_PT
-ACT_2_63.2,"[color=black]His voice became hastier, as he repeated.\n\n[/color]",ACT_2_63.2_PT
-ACT_2_63.3,[color=black]'She could give birth any time!'[/color],ACT_2_63.3_PT
-ACT_2_63.4,"[color=black]That shaking voice reverberated all over the place, and into[/color]",ACT_2_63.4_PT
-ACT_2_63.5,[color=black]my ears.[/color],ACT_2_63.5_PT
->>>>>>> 25-act-2,,>>>>>>> 25-act-2_PT
+ACT_2_63.1,[outline_size=2][color=black]...it felt like one of his blood vessels burst.[/color][/outline_size],ACT_2_63.1_PT
+ACT_2_63.2,"[outline_size=2][color=black]His voice became hastier, as he repeated.\n\n[/color][/outline_size]",ACT_2_63.2_PT
+ACT_2_63.3,[outline_size=2][color=black]'She could give birth any time!'[/color][/outline_size],ACT_2_63.3_PT
+ACT_2_63.4,"[outline_size=2][color=black]That shaking voice reverberated all over the place, and into[/color][/outline_size]",ACT_2_63.4_PT
+ACT_2_63.5,[outline_size=2][color=black]my ears.[/color][/outline_size],ACT_2_63.5_PT
 ACT_2_64.1,That terrible noise returned again.\n\n,ACT_2_64.1_PT
 ACT_2_64.2,'Who?',ACT_2_64.2_PT
 ACT_2_64.3,"my unconscious mind spoke, my voice echoed.",ACT_2_64.3_PT
@@ -600,11 +592,7 @@ ACT_2_118.1,"I decided not to follow the conversation of the Polaroid. Instead, 
 ACT_2_119.1,"'Yes, I went at your request. I will admit that at points she was a little sic...'",ACT_2_119.1_PT
 ACT_2_120.1,"'Yes, I was there with Mrs. Isidro, she was very brave I tell you.'",ACT_2_120.1_PT
 ACT_2_121.1,"'Well, did she collapse at any point?'",ACT_2_121.1_PT
-<<<<<<< HEAD,,<<<<<<< HEAD_PT
-ACT_2_122;1,"'Yes, in fact, there were ma...'",ACT_2_122;1_PT
-Err:510,,Err:510
 ACT_2_122.1,"'Yes, in fact, there were ma...'",ACT_2_122.1_PT
->>>>>>> 25-act-2,,>>>>>>> 25-act-2_PT
 ACT_2_123.1,"'No, not at all. There were moments where I and her friends were exhausted, but she remained active as ever and at that late of a stage I tell you, it's very brave. In fact...",ACT_2_123.1_PT
 ACT_2_124.1,"'There were moments, where she was cryi...'",ACT_2_124.1_PT
 ACT_2_125.1,"'There were moments where she was smiling. I tell you, she has a very active body. She kept shouting at us like a commander, making fun of us, saying that...'",ACT_2_125.1_PT
