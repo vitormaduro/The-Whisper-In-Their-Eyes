@@ -1,3 +1,5 @@
+TextureButton
+HBoxContainer
 Camera2D
 AnimationPlayer
 Sprite2D
@@ -8,10 +10,8 @@ Timer
 Sprite2D
 TextureRect
 AnimatedSprite2D
-TextureButton
 RichTextLabel
 Label
-TextureButton
 VBoxContainer
 RichTextLabel
 GridContainer
@@ -20,7 +20,6 @@ AudioStreamPlayer
 Button
 GridContainer
 CheckButton
-HBoxContainer
 ItemList
 Node2D
 MenuButton

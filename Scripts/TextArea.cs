@@ -3,11 +3,12 @@ using Godot;
 public partial class TextArea : RichTextLabel
 {
 	private bool canType = true;
-	private bool isSkipping = true;
+	private bool isSkipping = false;
 	private double timer = 0;
+	private bool isWaiting = false;
+
 	private InkHandler inkManager;
 	private RichTextLabel history;
-	private bool isWaiting = false;
 
 	public override void _Ready()
 	{
@@ -16,12 +17,17 @@ public partial class TextArea : RichTextLabel
 		inkManager = GetNode<InkHandler>("%InkScriptManager");
 		history = GetNode<RichTextLabel>("../History");
 
+		GetNode<TextureButton>("../../../QuickButtons/SkipButton").Pressed += () => isSkipping = !isSkipping;
+		GetNode<TextureButton>("../../../QuickButtons/PauseButton").Pressed += () => SettingsManager.IsGamePaused = !SettingsManager.IsGamePaused;
+
 		cmdManager.TextCleared += ClearText;
 		cmdManager.ScreenCleared += ClearText;
 		cmdManager.DisclaimerDisplayed += (string line) => PrintLine(Tr(line), true);
 		cmdManager.StaticTriggered += (string mode) => ClearText();
 
 		inkManager.StoryLoaded += GetNewLine;
+
+		GuiInput += (InputEvent @event) => ProcessInput(@event);
 	}
 
 	private void ClearText()
@@ -54,8 +60,6 @@ public partial class TextArea : RichTextLabel
 			return;
 		}
 
-		isSkipping = Input.IsActionPressed("skip_text");
-
 		timer += delta;
 
 		if(isSkipping || (canType && timer >= (1f / SettingsManager.TextSpeed) && VisibleCharacters >= 0))
@@ -70,7 +74,7 @@ public partial class TextArea : RichTextLabel
 			}
 		}
 
-		if(isSkipping || Input.IsActionJustPressed("text_advance"))
+		if(isSkipping)
 		{
 			if(canType)
 			{
@@ -96,5 +100,38 @@ public partial class TextArea : RichTextLabel
 		PrintLine(await inkManager.ContinueStory());
 
 		isWaiting = false;
+	}
+
+	private void ProcessInput(InputEvent @event)
+	{
+		if(SettingsManager.IsGamePaused)
+		{
+			return;
+		}
+
+		if(@event.IsActionPressed("text_advance"))
+		{
+			if(canType)
+			{
+				VisibleCharacters = GetTotalCharacterCount();
+				canType = false;
+			}
+			else
+			{
+				GetNewLine();
+			}
+		}
+	}
+
+	public override void _Input(InputEvent @event)
+	{
+		if(@event.IsActionPressed("skip_text"))
+		{
+			isSkipping = true;
+		}
+		else if(@event.IsActionReleased("skip_text"))
+		{
+			isSkipping = false;
+		}
 	}
 }
