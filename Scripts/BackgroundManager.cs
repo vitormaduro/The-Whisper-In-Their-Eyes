@@ -17,6 +17,7 @@ public partial class BackgroundManager : TextureRect
 		cmdManager.DisclaimerDisplayed += (string line) => ChangeBackground("black");
 		cmdManager.BackgroundWasZoomedIn += (string pivotX, string pivotY, string scale) => ZoomIn(pivotX, pivotY, scale);
 		cmdManager.BackgroundWasZoomedOut += ZoomOut;
+		cmdManager.SlowZoomWasTriggered += (string pivotX, string pivotY, string scale) => SlowZoomIn(pivotX, pivotY, scale);
 	}
 
 	private void StartFlashBackground(string bg1, string bg2)
@@ -54,5 +55,15 @@ public partial class BackgroundManager : TextureRect
 	{
 		PivotOffset = new Vector2(0, 0);
 		Scale = new Vector2(1, 1);
+	}
+
+	private void SlowZoomIn(string pivotX, string pivotY, string scale)
+	{
+		var s = float.Parse(scale);
+		var tween = CreateTween();
+
+		PivotOffset = new Vector2(float.Parse(pivotX), float.Parse(pivotY));
+
+		tween.TweenProperty(GetNode<TextureRect>("%BackgroundImage"), "scale", new Vector2(s, s), 5);
 	}
 }

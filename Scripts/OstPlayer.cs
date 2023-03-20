@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Godot;
+using static Godot.Tween;
 
 public partial class OstPlayer : AudioStreamPlayer
 {
@@ -23,18 +24,34 @@ public partial class OstPlayer : AudioStreamPlayer
 		};
 	}
 
-	public string PlaySongByTag(string tag)
+	public void PlaySongByTag(string tag)
 	{
 		var song = songs[tag];
-		
+		var volumeMin = -80 + (0.4 * SettingsManager.MusicVolume);
+		var volumeMax = -80 + (0.7 * SettingsManager.MusicVolume);
+
 		Stream = song.Audio;
 		Playing = true;
+		VolumeDb = (float) volumeMin;
 
-		return song.AudioName;
+		var infoCard = GetNode<Label>("OstInfo");
+		var tween = CreateTween().SetParallel(true).SetEase(EaseType.In);
+
+		infoCard.Text = song.AudioName;
+
+		tween.TweenProperty(infoCard, "position", new Vector2(0, 986), 0.5f);
+		tween.TweenProperty(this, "volume_db", (float) volumeMax, 1);
+		tween.TweenInterval(2f);
+		tween.Chain().TweenProperty(infoCard, "position", new Vector2(0, 1080), 0.5f);
 	}
 
 	public void StopSong()
 	{
+		var infoCard = GetNode<Label>("OstInfo");
+		var tween = CreateTween().SetParallel(true);
+
+		tween.TweenProperty(this, "volume_db", -40, 1);
+
 		GetTree().CreateTimer(1).Timeout += () =>
 		{
 			Playing = false;

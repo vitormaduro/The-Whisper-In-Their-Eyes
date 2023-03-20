@@ -3,7 +3,7 @@
 >> change_bg black
 ACT_3_TITLE
 >> clear_text
->> sfx clock_ricking
+>> sfx clock_ticking
 ACT_3_1.1
 ACT_3_1.2
 ACT_3_1.3
@@ -356,7 +356,7 @@ ACT_3_41.4
 ACT_3_41.5
 ACT_3_41.6
 >> clear_all
->> sprite_motion ronan home_shocked left right
+>> sprite_motion ronan home_shock left right
 ACT_3_42.1
 >> clear_all
 >> sprite kaede sick middle
@@ -515,6 +515,7 @@ ACT_3_67.2
 >> static true
 >> sprite kaede scared middle
 >> static false
+>> ost_on agony
 ACT_3_68.1
 ACT_3_68.2
 >> static true
@@ -952,6 +953,7 @@ ACT_3_141.1
 ACT_3_142.1
 ACT_3_142.2
 ACT_3_142.3
+>> ost_off
 ACT_3_142.4
 ACT_3_142.5
 >> clear_all
@@ -978,4 +980,4 @@ ACT_3_146.2
 ACT_3_147.1
 ACT_3_147.2
 >> clear_text
--> DONE
+-> Scene_13

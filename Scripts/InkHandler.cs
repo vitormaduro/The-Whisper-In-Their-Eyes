@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Godot;
@@ -31,20 +32,20 @@ public partial class InkHandler : Node
 		story.ChoosePathString($"Scene_{scene}");
 	}
 
-	public async Task<string> ContinueStory()
+	public async Task<InkLine> ContinueStory()
 	{
-		if(!story.CanContinue)
-		{
-			return null;
-		}
-
 		var line = "";
+		var tags = new List<string>();
 
 		do
 		{
-			line = story.Continue().Replace("\n", "");
+			if(!story.CanContinue)
+			{
+				return null;
+			}
 
-			var tags = story.CurrentTags;
+			line = story.Continue().Replace("\n", "");
+			tags = story.CurrentTags;
 
 			if (tags.Any(t => t.StartsWith("SCENE:")))
 			{
@@ -62,6 +63,10 @@ public partial class InkHandler : Node
 		} 
 		while(line.StartsWith(">>"));
 
-		return Tr(line);
+		return new InkLine()
+		{
+			Line = Tr(line),
+			Tags = tags
+		};
 	}
 }

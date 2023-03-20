@@ -19,6 +19,8 @@ public partial class SettingsManager : Node
 	public static bool IsGamePaused { get; set; } = false;
 	public static bool IsGalleryUnlocked { get; set; } = false;
 
+	[Signal] public delegate void MusicVolumeWasChangedEventHandler();
+
 	public override void _Ready()
 	{
 		var saveFile = FileAccess.Open("user://settings.save", FileAccess.ModeFlags.Read);

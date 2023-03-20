@@ -1,5 +1,6 @@
 INCLUDE Ink/act_2.ink
 INCLUDE Ink/act_3.ink
+INCLUDE Ink/act_4.ink
 
 -> Scene_1
 
