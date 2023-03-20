@@ -23,6 +23,10 @@ public partial class InkCommandsManager : Control
 	[Signal] public delegate void SpriteWasZoomedInEventHandler(string position, string pivotX, string pivotY);
 	[Signal] public delegate void SpriteWasZoomedOutEventHandler(string position);
 	[Signal] public delegate void StaticTriggeredEventHandler(string mode);
+	[Signal] public delegate void CgTriggeredEventHandler(string cgName);
+	[Signal] public delegate void NvlBoxWasHiddenEventHandler();
+	[Signal] public delegate void SlowZoomWasTriggeredEventHandler(string pivotX, string pivotY, string scale);
+	[Signal] public delegate void SpriteWasMovedEventHandler(string characterTag, string spriteTag, string positionFrom, string positionTo);
 
 	private List<InkCommand> commands;
 	private bool commandAwaitingInput;
@@ -147,9 +151,36 @@ public partial class InkCommandsManager : Control
 			new InkCommand()
 			{
 				Command = "wait",
-				Signal = SignalName.StaticTriggered,
 				ParamsNumber = 1,
 				DelayTime = 0
+			},
+			new InkCommand()
+			{
+				Command = "cg",
+				Signal = SignalName.CgTriggered,
+				ParamsNumber = 1,
+				DelayTime = 5
+			},
+			new InkCommand()
+			{
+				Command = "hide_nvl_box",
+				Signal = SignalName.NvlBoxWasHidden,
+				ParamsNumber = 0,
+				DelayTime = 5
+			},
+			new InkCommand()
+			{
+				Command = "slow_zoom",
+				Signal = SignalName.SlowZoomWasTriggered,
+				ParamsNumber = 3,
+				DelayTime = 5
+			},
+			new InkCommand()
+			{
+				Command = "sprite_motion",
+				Signal = SignalName.SpriteWasMoved,
+				ParamsNumber = 4,
+				DelayTime = 1
 			}
 		};
 	}
@@ -186,6 +217,10 @@ public partial class InkCommandsManager : Control
 
 			case 3:
 				EmitSignal(cmd.Signal, args[0], args[1], args[2]);
+				break;
+
+			case 4:
+				EmitSignal(cmd.Signal, args[0], args[1], args[2], args[3]);
 				break;
 
 			default:

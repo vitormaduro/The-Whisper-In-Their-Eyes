@@ -1,18 +1,32 @@
 using Godot;
-using System;
 
 public partial class MainScene : Control
 {
+	private Control nvlBox;
+	private InkCommandsManager cmdManager;
+	private RichTextLabel history;
+	private TextureRect bgImage;
+
 	public override void _Ready()
 	{
+		nvlBox = GetNode<Control>("NVLBox");
+		cmdManager = GetNode<InkCommandsManager>("%InkCommandsManager");
+		history = GetNode<RichTextLabel>("%History");
+		bgImage = GetNode<TextureRect>("%BackgroundImage");
+
 		GetNode<TextureButton>("%PageMarker").Pressed += PauseGame;
 		GetNode<Button>("%UnpauseButton").Pressed += ResumeGame;
-		GetNode<Control>("%PauseMenu").Visible = false;
-		GetNode<RichTextLabel>("%History").Visible = false;
-		GetNode<TextureRect>("%Static").Visible = false;
-
 		GetNode<TextureButton>("QuickButtons/LogButton").Pressed += ToggleHistory;
 		GetNode<TextureButton>("QuickButtons/NvlBoxButton").Pressed += ToggleText;
+
+		GetNode<Control>("%PauseMenu").Visible = false;
+		GetNode<TextureRect>("%Static").Visible = false;
+
+		history.Visible = false;
+
+		cmdManager.CgTriggered += (string cgName) => StartCg(cgName);
+		cmdManager.NvlBoxWasHidden += () => HideNvlBox(true);
+		cmdManager.SlowZoomWasTriggered += (string pivotX, string pivotY, string scale) => HideNvlBox(false);
 	}
 
 	public override void _Input(InputEvent @event)
@@ -46,8 +60,6 @@ public partial class MainScene : Control
 
 	private void ToggleHistory()
 	{
-		var history = GetNode<RichTextLabel>("%History");
-
 		history.Visible = !history.Visible;
 		GetNode<RichTextLabel>("%TextArea").Visible = !history.Visible;
 		SettingsManager.IsGamePaused = history.Visible;
@@ -55,8 +67,34 @@ public partial class MainScene : Control
 
 	private void ToggleText()
 	{
-		var nvlBox = GetNode<Control>("NVLBox");
-
 		nvlBox.Visible = !nvlBox.Visible;
+	}
+
+	private void StartCg(string cgName)
+	{
+		SettingsManager.IsGamePaused = true;
+
+		nvlBox.Visible = false;
+		history.Visible = false;
+		bgImage.Texture = GD.Load<Texture2D>($"res://Art/CGs/{cgName}.png");
+
+		GetTree().CreateTimer(10).Timeout += () =>
+		{
+			nvlBox.Visible = true;
+			SettingsManager.IsGamePaused = false;
+		};
+	}
+
+	private void HideNvlBox(bool autoRestore)
+	{
+		nvlBox.Visible = false;
+
+		if(autoRestore)
+		{
+			GetTree().CreateTimer(5).Timeout += () =>
+			{
+				nvlBox.Visible = true;
+			};
+		}
 	}
 }

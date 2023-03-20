@@ -1,3 +1,4 @@
+using System.Linq;
 using Godot;
 
 public partial class TextArea : RichTextLabel
@@ -97,7 +98,11 @@ public partial class TextArea : RichTextLabel
 
 		isWaiting = true;
 
-		PrintLine(await inkManager.ContinueStory());
+		var inkLine = await inkManager.ContinueStory();
+
+		var line = ProcessTags(inkLine);
+
+		PrintLine(line);
 
 		isWaiting = false;
 	}
@@ -133,5 +138,34 @@ public partial class TextArea : RichTextLabel
 		{
 			isSkipping = false;
 		}
+	}
+
+	private string ProcessTags(InkLine inkLine)
+	{
+		if(inkLine == null)
+		{
+			return null;
+		}
+
+		var temp = inkLine.Line;
+
+		if(inkLine.Tags.Contains("title"))
+		{
+			var blocks = temp.Split(": ");
+
+			temp = $"[font_size=120][center]\n{blocks[0]}: \n{blocks[1]}[/center][/font_size]";
+		}
+
+		if(inkLine.Tags.Contains("black"))
+		{
+			temp = $"[outline_size=5][color=black]{temp}[/color][/outline_size]";
+		}
+
+		if(inkLine.Tags.Contains("shake"))
+		{
+			temp = $"[shake rate=5 level=10]{temp}[/shake]";
+		}
+
+		return temp;
 	}
 }

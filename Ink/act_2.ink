@@ -638,7 +638,7 @@ ACT_2_88.3
 ACT_2_88.4
 ACT_2_88.5
 >> clear_text
->> bg_zoom_in 1458 621 1.5
+>> bg_zoom_in 1458 621 1,5
 ACT_2_89.1
 ACT_2_89.2
 >> static true
@@ -759,7 +759,7 @@ ACT_2_106.1
 ACT_2_106.2
 >> clear_all
 >> change_bg living_room
->> bg_zoom_in 1458 621 1.5
+>> bg_zoom_in 1458 621 1,5
 ACT_2_107.1
 >> clear_text
 >> ost_off

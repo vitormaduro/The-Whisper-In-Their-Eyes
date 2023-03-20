@@ -9,8 +9,6 @@ public partial class AnimationManager : AnimationPlayer
 
 		cmdManager.ScreenIsShaking += (string mode) => PlayAnimation("screen_shake", mode);
 		cmdManager.StaticTriggered += (string mode) => StaticEffect(mode);
-		cmdManager.OstStarted += (string song) => FadeOstVolume("fade_in");
-		cmdManager.OstStoped += () => FadeOstVolume("fade_out");
 	}
 
 	private void PlayAnimation(string animation, string mode)
@@ -40,10 +38,5 @@ public partial class AnimationManager : AnimationPlayer
 		{
 			Play("static_off");
 		}
-	}
-
-	private void FadeOstVolume(string fadeType)
-	{
-		Play($"{fadeType}_ost");
 	}
 }
