@@ -34,3 +34,9 @@ SKIP,Skip,Pular
 PAUSE,Pause,Pausar
 HISTORY,History,Histórico
 HIDE_TEXT,Hide Text,Ocultar Texto
+DIRECTOR_WRITER,Director / Writer,Escritor / Diretor
+PROGRAMMER,Programmer,Programador
+CHARACTER_ARTIST,Character Artist,Artista de Personagem
+BACKGROUND_ARTIST,Background Artist,Artista de Plano de Fundo
+UI_CG_ARTIST,UI and CG Artist,Artista de UI e Cenas Especiais
+COMPOSER,Composer,Compositora

@@ -1,9 +1,10 @@
+Label
+GridContainer
+TextureRect
 AnimationPlayer
 AnimationTree
-Label
 ColorRect
 RichTextLabel
-TextureRect
 TextureButton
 HBoxContainer
 Camera2D
@@ -14,11 +15,9 @@ Timer
 Sprite2D
 AnimatedSprite2D
 VBoxContainer
-GridContainer
 CanvasLayer
 AudioStreamPlayer
 Button
-GridContainer
 CheckButton
 ItemList
 Node2D

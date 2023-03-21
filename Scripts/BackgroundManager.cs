@@ -45,10 +45,11 @@ public partial class BackgroundManager : TextureRect
 
 	private void ZoomIn(string pivotX, string pivotY, string scale)
 	{
-		var s = float.Parse(scale);
-
 		PivotOffset = new Vector2(float.Parse(pivotX), float.Parse(pivotY));
-		Scale = new Vector2(s, s);
+
+		var tween = CreateTween();
+		
+		tween.TweenProperty(this, "scale", new Vector2(float.Parse(scale), float.Parse(scale)), 0.5f);
 	}
 
 	private void ZoomOut()

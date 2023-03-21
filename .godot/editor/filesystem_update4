@@ -6,3 +6,8 @@ res://Scenes/Props/load_button.tscn
 res://Scenes/gallery.scn
 res://Scenes/main_screen.scn
 res://Scenes/main_menu.scn
+res://Translations/Act_7.en.translation
+res://Translations/Act_7.pt_BR.translation
+res://Art/Styles/credits_name.res
+res://Translations/TranslationStrings.en.translation
+res://Translations/TranslationStrings.pt_BR.translation

@@ -10,6 +10,7 @@ public partial class TextArea : RichTextLabel
 
 	private InkHandler inkManager;
 	private RichTextLabel history;
+	private TextureButton skipButton;
 
 	public override void _Ready()
 	{
@@ -17,8 +18,10 @@ public partial class TextArea : RichTextLabel
 
 		inkManager = GetNode<InkHandler>("%InkScriptManager");
 		history = GetNode<RichTextLabel>("../History");
+		skipButton = GetNode<TextureButton>("../../../QuickButtons/SkipButton");
 
-		GetNode<TextureButton>("../../../QuickButtons/SkipButton").Pressed += () => isSkipping = !isSkipping;
+		skipButton.Pressed += ToggleSkip;
+		
 		GetNode<TextureButton>("../../../QuickButtons/PauseButton").Pressed += () => SettingsManager.IsGamePaused = !SettingsManager.IsGamePaused;
 
 		cmdManager.TextCleared += ClearText;
@@ -29,6 +32,14 @@ public partial class TextArea : RichTextLabel
 		inkManager.StoryLoaded += GetNewLine;
 
 		GuiInput += (InputEvent @event) => ProcessInput(@event);
+	}
+
+	private void ToggleSkip()
+	{
+		isSkipping = !isSkipping;
+
+		skipButton.TextureNormal = GD.Load<Texture2D>($"res://Art/UI/QuickButtons/{(isSkipping ? "skip_selected" : "skip")}.png");
+		skipButton.TextureHover = GD.Load<Texture2D>($"res://Art/UI/QuickButtons/{(isSkipping ? "skip_selected_hover" : "skip_hover")}.png");
 	}
 
 	private void ClearText()
@@ -154,6 +165,11 @@ public partial class TextArea : RichTextLabel
 			var blocks = temp.Split(": ");
 
 			temp = $"[font_size=120][center]\n{blocks[0]}: \n{blocks[1]}[/center][/font_size]";
+		}
+
+		if(inkLine.Tags.Contains("big"))
+		{
+			temp = $"[font_size=120][center]{temp}[/center][/font_size]";
 		}
 
 		if(inkLine.Tags.Contains("black"))

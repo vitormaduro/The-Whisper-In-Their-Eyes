@@ -127,7 +127,8 @@ public partial class InkCommandsManager : Control
 			{
 				Command = "bg_zoom_out",
 				Signal = SignalName.BackgroundWasZoomedOut,
-				ParamsNumber = 0
+				ParamsNumber = 0,
+				DelayTime = 0
 			},
 			new InkCommand()
 			{
@@ -193,14 +194,14 @@ public partial class InkCommandsManager : Control
 		{
 			GD.PrintErr($"Command [{commandName}] not found");
 
-			GetTree().CreateTimer(isSkipping ? 0 : 0.5f).Timeout += () => EmitSignal(SignalName.CommandFinishedExecuting);
+			GetTree().CreateTimer(isSkipping ? 0.01f : 0.5f).Timeout += () => EmitSignal(SignalName.CommandFinishedExecuting);
 
 			return;
 		}
 
 		if(cmd.Command == "wait")
 		{
-			GetTree().CreateTimer(isSkipping ? 0 : float.Parse(args[0])).Timeout += () => EmitSignal(SignalName.CommandFinishedExecuting);
+			GetTree().CreateTimer(isSkipping ? 0.01f : float.Parse(args[0])).Timeout += () => EmitSignal(SignalName.CommandFinishedExecuting);
 
 			return;
 		}
@@ -230,7 +231,7 @@ public partial class InkCommandsManager : Control
 
 		if(cmd.CanAutoAdvance)
 		{
-			GetTree().CreateTimer(isSkipping ? 0 : cmd.DelayTime).Timeout += () => EmitSignal(SignalName.CommandFinishedExecuting);
+			GetTree().CreateTimer(isSkipping ? 0.01f : cmd.DelayTime).Timeout += () => EmitSignal(SignalName.CommandFinishedExecuting);
 		}
 		else 
 		{

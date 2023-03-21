@@ -11,7 +11,7 @@ public partial class SettingsManager : Node
 	private const string DISPLAY_MODE = "DisplayMode";
 	private const string GALLERY_UNLOCKED = "GalleryUnlocked";
 
-	public static string Locale { get; set; } = null;
+	public static string Locale { get; set; } = "en";
 	public static double TextSpeed { get; set; } = 100;
 	public static double MusicVolume { get; set; } = 100;
 	public static double SfxVolume { get; set; } = 100;
@@ -23,11 +23,15 @@ public partial class SettingsManager : Node
 
 	public override void _Ready()
 	{
+		GD.Print("Looking for file [settings.save]");
+
 		var saveFile = FileAccess.Open("user://settings.save", FileAccess.ModeFlags.Read);
 
 		// Creates a new Settings save file if none are present
 		if(saveFile == null)
 		{
+			GD.PushWarning("File [settings.save] not found. Creating one with default values");
+
 			SaveSettings();
 		}
 
@@ -60,6 +64,7 @@ public partial class SettingsManager : Node
 				{ MUSIC_VOLUME, MusicVolume.ToString() },
 				{ SFX_VOLUME, SfxVolume.ToString() },
 				{ DISPLAY_MODE, DisplayMode.ToString() },
+				{ GALLERY_UNLOCKED, IsGalleryUnlocked.ToString() },
 			};
 
 			var json = Json.Stringify(saveData);
@@ -73,6 +78,8 @@ public partial class SettingsManager : Node
     /// </summary>
 	public static void LoadSettings()
 	{
+		GD.Print("Loading Settings from file [settings.file]");
+
 		using(var saveGame = FileAccess.Open("user://settings.save", FileAccess.ModeFlags.Read))
 		{
 			while (saveGame.GetPosition() < saveGame.GetLength())
@@ -87,6 +94,7 @@ public partial class SettingsManager : Node
 				TextSpeed = double.Parse(nodeData[TEXT_SPEED]);
 				MusicVolume = double.Parse(nodeData[MUSIC_VOLUME]);
 				SfxVolume = double.Parse(nodeData[SFX_VOLUME]);
+				IsGalleryUnlocked = bool.Parse(nodeData[GALLERY_UNLOCKED]);
 
 				if(Enum.TryParse(nodeData[DISPLAY_MODE], out Window.ModeEnum displayMode))
 				{
@@ -94,5 +102,12 @@ public partial class SettingsManager : Node
 				}
 			}
 		}
+
+		GD.Print($"\tLocale: {Locale}\n" +
+					$"\tTextSpeed: {TextSpeed}\n" +
+					$"\tMusicVolume: {MusicVolume}\n" +
+					$"\tSfxVolume: {SfxVolume}\n" +
+					$"\tDisplayMode: {DisplayMode.ToString()}\n" +
+					$"\tGalleryUnlocked: {IsGalleryUnlocked}");
 	}
 }

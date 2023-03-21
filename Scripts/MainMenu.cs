@@ -23,10 +23,14 @@ public partial class MainMenu : Control
 
 		galleryButton.Visible = SettingsManager.IsGalleryUnlocked;
 		galleryButton.Pressed += () => OpenScene("gallery");
+
+		GD.Print("Main Menu loaded successfully");
 	}
 
 	private void StartNewGame()
 	{
+		GD.Print("Starting new game");
+
 		GetNode<AnimationPlayer>("%AnimationPlayer").Play("new_game");
 		GetTree().CreateTimer(2).Timeout += () =>
 		{
@@ -39,6 +43,8 @@ public partial class MainMenu : Control
 
 	private void OpenScene(string sceneName)
 	{
+		GD.Print($"Opening scene {sceneName}");
+
 		var scene = GD.Load<PackedScene>($"res://Scenes/{sceneName}.scn");
 
 		GetTree().Root.AddChild(scene.Instantiate());
