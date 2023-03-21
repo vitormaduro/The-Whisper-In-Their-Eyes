@@ -1,4 +1,5 @@
 == Scene_12 ==
+# SCENE:12
 >> clear_all
 >> change_bg black
 ACT_3_TITLE

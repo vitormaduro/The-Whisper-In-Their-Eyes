@@ -161,9 +161,34 @@ public partial class TextArea : RichTextLabel
 			temp = $"[outline_size=5][color=black]{temp}[/color][/outline_size]";
 		}
 
+		if(inkLine.Tags.Contains("blue"))
+		{
+			temp = $"[color=blue]{temp}[/color]";
+		}
+
 		if(inkLine.Tags.Contains("shake"))
 		{
 			temp = $"[shake rate=5 level=10]{temp}[/shake]";
+		}
+
+		if(inkLine.Tags.Contains("center"))
+		{
+			temp = $"[center]{temp}[/center]";
+		}
+
+		if(inkLine.Tags.Contains("b"))
+		{
+			temp = $"[b]{temp}[/b]";
+		}
+
+		if(inkLine.Tags.Contains("i"))
+		{
+			temp = $"[i]{temp}[/i]";
+		}
+
+		if(inkLine.Tags.Contains("n"))
+		{
+			temp += "\n\n";
 		}
 
 		return temp;

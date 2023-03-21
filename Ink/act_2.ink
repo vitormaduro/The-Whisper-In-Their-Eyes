@@ -1,4 +1,5 @@
 == Scene_6 ==
+# SCENE:6
 >> clear_all
 >> change_bg red
 ACT_2_TITLE
@@ -176,6 +177,7 @@ ACT_2_30.5
 -> Scene_7
 
 == Scene_7 ==
+# SCENE:7
 >> change_bg black
 ACT_2_31.1
 ACT_2_31.2
@@ -276,6 +278,7 @@ ACT_2_43.6
 -> Scene_8
 
 == Scene_8 ==
+# SCENE:8
 >> change_bg living_room
 >> sprite ronan home_smile middle
 ACT_2_44.1
@@ -373,6 +376,7 @@ ACT_2_56.3
 -> Scene_9
 
 == Scene_9 ==
+# SCENE:9
 >> change_bg black
 >> ost_on illness
 >> sfx heart_thump
@@ -498,6 +502,7 @@ ACT_2_72.4
 -> Scene_10
 
 == Scene_10 ==
+# SCENE:10
 >> change_bg living_room
 >> sfx tv_tuning
 >> sfx plates_down
@@ -742,6 +747,7 @@ ACT_2_103.1
 -> Scene_11
 
 == Scene_11 ==
+# SCENE:11
 >> change_bg black
 >> ost_on illness
 ACT_2_104.1

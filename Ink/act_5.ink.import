@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://c61daelu2tefx"
+path="res://.godot/imported/act_5.ink-1aa7bd3ac300d1f1466a241f8ff6cddf.res"
+
+[deps]
+
+source_file="res://Ink/act_5.ink"
+dest_files=["res://.godot/imported/act_5.ink-1aa7bd3ac300d1f1466a241f8ff6cddf.res"]
+
+[params]
+
+is_main_file=false
+compress=true
