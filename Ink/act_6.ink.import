@@ -1,0 +1,16 @@
+[remap]
+
+importer="ink"
+type="Resource"
+uid="uid://dflge7rv0lece"
+path="res://.godot/imported/act_6.ink-7d84f266ddfbfa43b0d957b644285063.res"
+
+[deps]
+
+source_file="res://Ink/act_6.ink"
+dest_files=["res://.godot/imported/act_6.ink-7d84f266ddfbfa43b0d957b644285063.res"]
+
+[params]
+
+is_main_file=false
+compress=true
