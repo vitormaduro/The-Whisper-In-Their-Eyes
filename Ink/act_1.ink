@@ -3,6 +3,7 @@ INCLUDE Ink/act_3.ink
 INCLUDE Ink/act_4.ink
 INCLUDE Ink/act_5.ink
 INCLUDE Ink/act_6.ink
+INCLUDE Ink/act_7.ink
 
 -> Scene_1
 

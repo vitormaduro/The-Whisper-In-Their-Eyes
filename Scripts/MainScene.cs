@@ -26,7 +26,7 @@ public partial class MainScene : Control
 
 		cmdManager.CgTriggered += (string cgName) => StartCg(cgName);
 		cmdManager.NvlBoxWasHidden += () => HideNvlBox(true);
-		cmdManager.SlowZoomWasTriggered += (string pivotX, string pivotY, string scale) => HideNvlBox(false);
+		cmdManager.SlowZoomWasTriggered += (string pivotX, string pivotY, string scale) => HideNvlBox(true);
 	}
 
 	public override void _Input(InputEvent @event)

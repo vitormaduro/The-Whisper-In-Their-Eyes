@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://uk6v3ny0b2y1"
+
+[deps]
+
+files=["res://Translations/Act_7.en.translation", "res://Translations/Act_7.pt_BR.translation"]
+
+source_file="res://Translations/Act_7.csv"
+dest_files=["res://Translations/Act_7.en.translation", "res://Translations/Act_7.pt_BR.translation"]
+
+[params]
+
+compress=true
+delimiter=0

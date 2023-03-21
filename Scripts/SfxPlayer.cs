@@ -24,6 +24,13 @@ public partial class SfxPlayer : AudioStreamPlayer
 
 	public void PlayEffectByTag(string tag)
 	{
+		if(!effects.ContainsKey(tag))
+		{
+			GD.PushWarning($"Sound effect [{tag}] not implemented yet");
+
+			return;
+		}
+
 		Stream = effects[tag];
 		Playing = true;
 	}

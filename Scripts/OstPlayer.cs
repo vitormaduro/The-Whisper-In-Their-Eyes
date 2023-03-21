@@ -21,11 +21,19 @@ public partial class OstPlayer : AudioStreamPlayer
 			{ "photo2", new Ost("A Photograph (reprise)") },
 			{ "lost", new Ost("Lost and Not Found") },
 			{ "illness", new Ost("Growing Illness") },
+			{ "old_man", new Ost("For Our Old Men") },
 		};
 	}
 
 	public void PlaySongByTag(string tag)
 	{
+		if(!songs.ContainsKey(tag))
+		{
+			GD.PushWarning($"Song [{tag}] not implemented yet");
+
+			return;
+		}
+
 		var song = songs[tag];
 		var volumeMin = -80 + (0.4 * SettingsManager.MusicVolume);
 		var volumeMax = -80 + (0.7 * SettingsManager.MusicVolume);

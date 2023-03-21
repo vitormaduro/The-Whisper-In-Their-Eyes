@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using static Enums;
+using static Godot.Tween;
 
 public partial class Stage : Control
 {
@@ -61,7 +62,7 @@ public partial class Stage : Control
 				Sprites = new Dictionary<string, Texture2D>()
 				{
 					{ "neutral", GD.Load<Texture2D>($"res://Art/Sprites/Rikki/rikki_neutral.png") },
-					{ "smile", GD.Load<Texture2D>($"res://Art/Sprites/Rikki/rikki_curious.png") },
+					{ "curious", GD.Load<Texture2D>($"res://Art/Sprites/Rikki/rikki_curious.png") },
 				}
 			}
 		};
@@ -110,7 +111,7 @@ public partial class Stage : Control
 
 		stage[pos1].Texture = character.Sprites[spriteTag];
 
-		var tween = CreateTween();
+		var tween = CreateTween().SetEase(EaseType.InOut);
 
 		tween.TweenProperty(stage[pos1], "position", stage[pos2].Position, 0.5f);
 
