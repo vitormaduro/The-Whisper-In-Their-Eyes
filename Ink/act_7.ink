@@ -1,4 +1,5 @@
 == Scene_17 ==
+# SCENE:17
 >> clear_all
 >> change_bg black
 >> change_bg red
@@ -67,6 +68,7 @@ ACT_7_8.1
 ACT_7_8.2
 ACT_7_8.3
 >> clear_text
+>> change_bg puddle
 >> sfx road_pits
 >> sprite rikki neutral middle
 ACT_7_9.1

@@ -18,7 +18,7 @@ public partial class Stage : Control
 		cmdManager.SpriteAppeared += (string characterTag, string spriteTag, string position) => ShowCharacterAtPosition(characterTag, spriteTag, position);
 		cmdManager.SpritesWereCleared += HideAllCharacters;
 		cmdManager.ScreenCleared += HideAllCharacters;
-		cmdManager.SpriteWasZoomedIn += (string position, string pivotX, string pivotY) => ZoomPositionToPoint(position, pivotX, pivotY);
+		cmdManager.SpriteWasZoomedIn += (string position) => ZoomPosition(position);
 		cmdManager.SpriteWasZoomedOut += (string position) => ResetZoom(position);
 		cmdManager.SpriteWasMoved += (string characterTag, string spriteTag, string positionFrom, string positionTo) => MoveSprite(characterTag, spriteTag, positionFrom, positionTo);
 
@@ -84,13 +84,10 @@ public partial class Stage : Control
 		stage[StagePosition.Right].Texture = null;
 	}
 
-	private void ZoomPositionToPoint(string pos, string pivotX, string pivotY)
+	private void ZoomPosition(string pos)
 	{
 		Enum.TryParse(pos, true, out StagePosition position);
-		var x = float.Parse(pivotX);
-		var y = float.Parse(pivotY);
 
-		stage[position].Offset = new Vector2(x, y);
 		stage[position].Scale = new Vector2(1, 1);
 	}
 
@@ -113,7 +110,7 @@ public partial class Stage : Control
 
 		var tween = CreateTween().SetEase(EaseType.InOut);
 
-		tween.TweenProperty(stage[pos1], "position", stage[pos2].Position, 0.5f);
+		tween.TweenProperty(stage[pos1], "position:x", stage[pos2].Position.X, 0.5f);
 
 		await ToSignal(cmdManager, "ScreenCleared");
 

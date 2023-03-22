@@ -588,7 +588,9 @@ ACT_4_54.52
 ACT_4_55.1
 >> clear_text
 >> slow_zoom 1619 340 2
+>> wait 5
 >> ost_off
 >> change_bg black
 >> clear_all
+>> bg_zoom_out
 -> Scene_14

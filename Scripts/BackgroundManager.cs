@@ -4,6 +4,7 @@ public partial class BackgroundManager : TextureRect
 {
 	private Timer backgroundTimer;
 	private string currentBg;
+	private Tween zoomTween = null;
 
 	public override void _Ready()
 	{
@@ -41,30 +42,39 @@ public partial class BackgroundManager : TextureRect
 		Texture = GD.Load<Texture2D>($"res://Art/Backgrounds/{(backgroundName)}.jpg");
 
 		currentBg = backgroundName;
+		SaveManager.CurrentBg = backgroundName;
 	}
 
 	private void ZoomIn(string pivotX, string pivotY, string scale)
 	{
 		PivotOffset = new Vector2(float.Parse(pivotX), float.Parse(pivotY));
 
-		var tween = CreateTween();
+		zoomTween = CreateTween();
 		
-		tween.TweenProperty(this, "scale", new Vector2(float.Parse(scale), float.Parse(scale)), 0.5f);
+		zoomTween.TweenProperty(this, "scale", new Vector2(float.Parse(scale), float.Parse(scale)), 0.5f);
 	}
 
 	private void ZoomOut()
 	{
+		if(zoomTween != null)
+		{
+			zoomTween.Stop();
+		}
+
 		PivotOffset = new Vector2(0, 0);
 		Scale = new Vector2(1, 1);
+
+		zoomTween = null;
 	}
 
 	private void SlowZoomIn(string pivotX, string pivotY, string scale)
 	{
 		var s = float.Parse(scale);
-		var tween = CreateTween();
+
+		zoomTween = CreateTween();
 
 		PivotOffset = new Vector2(float.Parse(pivotX), float.Parse(pivotY));
 
-		tween.TweenProperty(GetNode<TextureRect>("%BackgroundImage"), "scale", new Vector2(s, s), 5);
+		zoomTween.TweenProperty(GetNode<TextureRect>("%BackgroundImage"), "scale", new Vector2(s, s), 5);
 	}
 }

@@ -35,7 +35,6 @@ public partial class MainMenu : Control
 		GetTree().CreateTimer(2).Timeout += () =>
 		{
 			SaveManager.CurrentScene = null;
-			SaveManager.CurrentAct = "1";
 
 			GetTree().ChangeSceneToFile($"res://Scenes/main_screen.scn");
 		};

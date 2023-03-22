@@ -60,6 +60,7 @@ public partial class LoadSelectScreen : Control
 					SettingsManager.IsGamePaused = false;
 
 					EmitSignal(SignalName.GameLoaded);
+					GetTree().ChangeSceneToFile("res://Scenes/main_screen.scn");
 					QueueFree();
 				};
 			}
