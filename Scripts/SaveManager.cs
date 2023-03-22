@@ -7,11 +7,9 @@ public partial class SaveManager : Node
 {
 	private const string CURRENT_SCENE = "CurrentScene";
 	private const string DATE = "Date";
-	private const string ACT = "Act";
 	private const string CURRENT_BG = "CurrentBg";
 
 	public static string CurrentScene { get; set; } = null;
-	public static string CurrentAct { get; set; }
 	public static string CurrentBg { get; set; } = "black";
 	public static DateTime SaveDate { get; private set; }
 	public static DateTime LastSaveDate { get; private set; }
@@ -24,7 +22,6 @@ public partial class SaveManager : Node
 			{
 				{ CURRENT_SCENE, CurrentScene },
 				{ DATE, DateTime.Now.ToString("yyyyMMddHHmmss") },
-				{ ACT, CurrentAct },
 				{ CURRENT_BG, CurrentBg }
 			};
 
@@ -44,7 +41,6 @@ public partial class SaveManager : Node
 		var nodeData = GetSaveFileData("quick");
 
 		CurrentScene = nodeData[CURRENT_SCENE];
-		CurrentAct = nodeData[ACT];
 
 		if(DateTime.TryParseExact(nodeData[DATE], "yyyyMMddHHmmss", CultureInfo.InvariantCulture, DateTimeStyles.None, out var date))
 		{

@@ -20,7 +20,7 @@ public partial class InkCommandsManager : Control
 	[Signal] public delegate void ScreenIsShakingEventHandler(string mode);
 	[Signal] public delegate void BackgroundWasZoomedInEventHandler(string pivotX, string pivotY, string scale);
 	[Signal] public delegate void BackgroundWasZoomedOutEventHandler();
-	[Signal] public delegate void SpriteWasZoomedInEventHandler(string position, string pivotX, string pivotY);
+	[Signal] public delegate void SpriteWasZoomedInEventHandler(string position);
 	[Signal] public delegate void SpriteWasZoomedOutEventHandler(string position);
 	[Signal] public delegate void StaticTriggeredEventHandler(string mode);
 	[Signal] public delegate void CgTriggeredEventHandler(string cgName);
@@ -134,7 +134,7 @@ public partial class InkCommandsManager : Control
 			{
 				Command = "sprite_zoom_in",
 				Signal = SignalName.SpriteWasZoomedIn,
-				ParamsNumber = 3
+				ParamsNumber = 1
 			},
 			new InkCommand()
 			{

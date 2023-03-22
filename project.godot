@@ -12,6 +12,8 @@ config_version=5
 
 config/name="Whisper"
 run/main_scene="res://Scenes/main_menu.scn"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="Team Awkward Smile/The Whisper In Their Eyes"
 config/features=PackedStringArray("4.0", "C#", "Forward Plus")
 boot_splash/image="res://Art/UI/Logo/logo.png"
 config/icon="res://icon.svg"
@@ -22,6 +24,10 @@ boot_splash/minimum_display_time=5000
 SaveManager="*res://Scripts/SaveManager.cs"
 SettingsManager="*res://Scripts/SettingsManager.cs"
 Ost="*res://Scripts/Global/Ost.cs"
+
+[debug]
+
+file_logging/enable_file_logging=true
 
 [display]
 
@@ -42,6 +48,79 @@ enabled=PackedStringArray("res://addons/GodotInk/plugin.cfg")
 
 [input]
 
+ui_accept={
+"deadzone": 0.5,
+"events": []
+}
+ui_select={
+"deadzone": 0.5,
+"events": []
+}
+ui_cancel={
+"deadzone": 0.5,
+"events": []
+}
+ui_focus_next={
+"deadzone": 0.5,
+"events": []
+}
+ui_focus_prev={
+"deadzone": 0.5,
+"events": []
+}
+ui_left={
+"deadzone": 0.5,
+"events": []
+}
+ui_right={
+"deadzone": 0.5,
+"events": []
+}
+ui_up={
+"deadzone": 0.5,
+"events": []
+}
+ui_down={
+"deadzone": 0.5,
+"events": []
+}
+ui_page_up={
+"deadzone": 0.5,
+"events": []
+}
+ui_page_down={
+"deadzone": 0.5,
+"events": []
+}
+ui_home={
+"deadzone": 0.5,
+"events": []
+}
+ui_end={
+"deadzone": 0.5,
+"events": []
+}
+ui_cut={
+"deadzone": 0.5,
+"events": []
+}
+ui_copy={
+"deadzone": 0.5,
+"events": []
+}
+ui_paste={
+"deadzone": 0.5,
+"events": []
+}
+ui_undo={
+"deadzone": 0.5,
+"events": []
+}
+ui_redo={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"command_or_control_autoremap":true,"alt_pressed":false,"shift_pressed":false,"pressed":false,"keycode":89,"physical_keycode":0,"key_label":0,"unicode":89,"echo":false,"script":null)
+]
+}
 text_advance={
 "deadzone": 0.5,
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"pressed":false,"double_click":false,"script":null)

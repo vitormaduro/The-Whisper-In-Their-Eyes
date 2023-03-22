@@ -436,7 +436,7 @@ ACT_3_54.3
 ACT_3_55.1
 ACT_3_55.2
 >> clear_text
->> sprite_zoom_in middle -390 -1388
+>> sprite_zoom_in middle
 ACT_3_56.1
 ACT_3_56.2
 ACT_3_56.3

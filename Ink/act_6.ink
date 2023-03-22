@@ -1,4 +1,5 @@
 == Scene_16 ==
+# SCENE:16
 >> clear_all
 >> change_bg fan
 ACT_6_TITLE # title
