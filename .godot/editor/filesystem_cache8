@@ -134,7 +134,7 @@ Whisper.deps.json::JSON::-1::1679423123::0::1::::<><>::
 Whisper.runtimeconfig.json::JSON::-1::1679423123::0::1::::<><>::
 ::res://Ink/::1679505817
 act_1.ink::Resource::4855125479462900396::1679505773::1679505817::1::::<><>::res://addons/GodotInk/Src/InkStory.cs
-act_2.ink::Resource::5345122850184148053::1679505814::1679505816::1::::<><>::res://addons/GodotInk/Src/StubInkStory.cs
+act_2.ink::Resource::5345122850184148053::1679508194::1679508813::1::::<><>::res://addons/GodotInk/Src/StubInkStory.cs
 act_3.ink::Resource::6815199452061238816::1679423821::1679423827::1::::<><>::res://addons/GodotInk/Src/StubInkStory.cs
 act_4.ink::Resource::4830310116651050090::1679424846::1679424857::1::::<><>::res://addons/GodotInk/Src/StubInkStory.cs
 act_5.ink::Resource::7002551720780849881::1679355871::1679357658::1::::<><>::
@@ -179,7 +179,7 @@ Enums.cs::CSharpScript::-1::1678898358::0::1::::<><>::
 InkCommand.cs::CSharpScript::-1::1679073959::0::1::::<><>::
 InkLine.cs::CSharpScript::-1::1679263799::0::1::::<><>::
 Ost.cs::CSharpScript::-1::1678890905::0::1::::<><>::
-::res://Translations/::1679508751
+::res://Translations/::1679508754
 Act_1.csv::Translation::1114975360317956785::1679183499::1679183530::1::::<><>::
 Act_1.en.translation::OptimizedTranslation::5861413308953747245::1679183530::0::1::::<><>::
 Act_1.pt_BR.translation::OptimizedTranslation::2390090004873988470::1679183530::0::1::::<><>::
