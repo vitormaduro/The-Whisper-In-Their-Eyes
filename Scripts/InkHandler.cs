@@ -18,18 +18,47 @@ public partial class InkHandler : Node
 		cmdManager = GetNode<InkCommandsManager>("%InkCommandsManager");
 
 		story.ResetState();
-		
+
+		story.ObserveVariable("currentScene", Callable.From((string varName, Variant sceneNumber) => 
+		{
+			var scene = (string) sceneNumber;
+
+			if(scene != "0")
+			{
+				SaveManager.CurrentScene = scene;
+				SaveManager.CurrentStitch = null;
+
+				GD.Print($"Entering scene [{SaveManager.CurrentScene}]");
+			}
+		}));
+
+		story.ObserveVariable("currentStitch", Callable.From((string varName, Variant stitchNumber) => 
+		{
+			var stitch = (string) stitchNumber;
+
+			if(stitch != "0")
+			{
+				SaveManager.CurrentStitch = stitch;
+
+				GD.Print($"Entering stitch [{SaveManager.CurrentScene}.{SaveManager.CurrentStitch}]");
+			}
+		}));
+
 		if(SaveManager.CurrentScene != null)
 		{
-			JumpToScene(SaveManager.CurrentScene);
+			JumpToScene(SaveManager.CurrentScene, SaveManager.CurrentStitch);
+		}
+		else
+		{
+			JumpToScene("1");
 		}
 
 		EmitSignal(SignalName.StoryLoaded);
 	}
 
-	public void JumpToScene(string scene)
+	public void JumpToScene(string scene, string stitch = null)
 	{
-		story.ChoosePathString($"Scene_{scene}");
+		story.ChoosePathString($"Scene_{scene}{(stitch != null ? $".stitch_{stitch}" : "")}");
 	}
 
 	public async Task<InkLine> ContinueStory()
@@ -47,11 +76,6 @@ public partial class InkHandler : Node
 			line = story.Continue().Replace("\n", "");
 			tags = story.CurrentTags;
 
-			if (tags.Any(t => t.StartsWith("SCENE:")))
-			{
-				SaveManager.CurrentScene = tags.Where(t => t.StartsWith("SCENE:")).First().Replace("SCENE:", "");
-			}
-
 			if(line.StartsWith(">>"))
 			{
 				var command = line.Replace(">> ", "").Split(' ');
@@ -63,9 +87,17 @@ public partial class InkHandler : Node
 		} 
 		while(line.StartsWith(">>"));
 
+		var translation = Tr(line);
+
+		if(translation == line)
+		{
+			GD.PushWarning($"No translation found for tag [{translation}] (locale: [{SettingsManager.Locale}])");
+		}
+
 		return new InkLine()
 		{
-			Line = Tr(line),
+			Id = line,
+			Line = translation,
 			Tags = tags
 		};
 	}

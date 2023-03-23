@@ -182,6 +182,11 @@ public partial class InkCommandsManager : Control
 				Signal = SignalName.SpriteWasMoved,
 				ParamsNumber = 4,
 				DelayTime = 1
+			},
+			new InkCommand()
+			{
+				Command = "unlock_gallery",
+				ParamsNumber = 0
 			}
 		};
 	}
@@ -198,10 +203,21 @@ public partial class InkCommandsManager : Control
 
 			return;
 		}
-
-		if(cmd.Command == "wait")
+		else if(cmd.Command == "wait")
 		{
 			GetTree().CreateTimer(isSkipping ? 0.01f : float.Parse(args[0])).Timeout += () => EmitSignal(SignalName.CommandFinishedExecuting);
+
+			return;
+		}
+		else if(cmd.Command == "unlock_gallery")
+		{
+			SettingsManager.IsGalleryUnlocked = true;
+			SettingsManager.SaveSettings();
+
+			GetTree().CreateTimer(3).Timeout += () =>
+			{
+				GetTree().ChangeSceneToFile("res://Scenes/main_menu.scn");
+			};
 
 			return;
 		}
@@ -241,7 +257,7 @@ public partial class InkCommandsManager : Control
 
 	public override void _Input(InputEvent @event)
 	{
-		if(@event.IsActionPressed("text_advance"))
+		if(@event.IsActionPressed("text_advance_mouse") || @event.IsActionPressed("text_advance_keyboard"))
 		{
 			if(commandAwaitingInput)
 			{

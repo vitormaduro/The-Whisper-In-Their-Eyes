@@ -16,6 +16,7 @@ public class Enums
 	public enum SceneMode
 	{
 		Save,
-		Load
+		LoadMainMenu,
+		LoadDuringGame
 	}
 }

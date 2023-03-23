@@ -19,6 +19,15 @@ public partial class BackgroundManager : TextureRect
 		cmdManager.BackgroundWasZoomedIn += (string pivotX, string pivotY, string scale) => ZoomIn(pivotX, pivotY, scale);
 		cmdManager.BackgroundWasZoomedOut += ZoomOut;
 		cmdManager.SlowZoomWasTriggered += (string pivotX, string pivotY, string scale) => SlowZoomIn(pivotX, pivotY, scale);
+
+		if(SaveManager.CurrentBg != null)
+		{
+			ChangeBackground(SaveManager.CurrentBg);
+		}
+		else 
+		{
+			ChangeBackground("black");
+		}
 	}
 
 	private void StartFlashBackground(string bg1, string bg2)
@@ -37,7 +46,7 @@ public partial class BackgroundManager : TextureRect
 		backgroundTimer.WaitTime = 0.5f;
 	}
 
-	private void ChangeBackground(string backgroundName)
+	public void ChangeBackground(string backgroundName)
 	{
 		Texture = GD.Load<Texture2D>($"res://Art/Backgrounds/{(backgroundName)}.jpg");
 

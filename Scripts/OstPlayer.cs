@@ -22,7 +22,13 @@ public partial class OstPlayer : AudioStreamPlayer
 			{ "lost", new Ost("Lost and Not Found") },
 			{ "illness", new Ost("Growing Illness") },
 			{ "old_man", new Ost("For Our Old Men") },
+			{ "children", new Ost("For Our Children") }
 		};
+
+		if(SaveManager.CurrentOst != null)
+		{
+			PlaySongByTag(SaveManager.CurrentOst);
+		}
 	}
 
 	public void PlaySongByTag(string tag)
@@ -33,6 +39,8 @@ public partial class OstPlayer : AudioStreamPlayer
 
 			return;
 		}
+
+		SaveManager.CurrentOst = tag;
 
 		var song = songs[tag];
 		var volumeMin = -80 + (0.4 * SettingsManager.MusicVolume);
@@ -55,6 +63,8 @@ public partial class OstPlayer : AudioStreamPlayer
 
 	public void StopSong()
 	{
+		SaveManager.CurrentOst = null;
+		
 		var infoCard = GetNode<Label>("OstInfo");
 		var tween = CreateTween().SetParallel(true);
 

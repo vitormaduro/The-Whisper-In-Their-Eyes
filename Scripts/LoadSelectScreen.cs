@@ -33,7 +33,7 @@ public partial class LoadSelectScreen : Control
 
 				button.GetNode<Label>("Label").Text = Tr("NO_DATA");
 
-				if(mode == SceneMode.Load)
+				if(mode is SceneMode.LoadDuringGame or SceneMode.LoadMainMenu)
 				{
 					button.Disabled = true;
 				}
@@ -50,7 +50,7 @@ public partial class LoadSelectScreen : Control
 				button.GetNode<TextureRect>("TextureRect").Texture = GD.Load<Texture2D>($"res://Art/Backgrounds/{saveData["CurrentBg"]}.jpg");
 			}
 
-			if(mode == SceneMode.Load)
+			if(mode is SceneMode.LoadDuringGame or SceneMode.LoadMainMenu)
 			{
 				button.Pressed += () =>
 				{
@@ -60,8 +60,15 @@ public partial class LoadSelectScreen : Control
 					SettingsManager.IsGamePaused = false;
 
 					EmitSignal(SignalName.GameLoaded);
-					GetTree().ChangeSceneToFile("res://Scenes/main_screen.scn");
-					QueueFree();
+
+					if(mode is SceneMode.LoadMainMenu)
+					{
+						GetTree().ChangeSceneToFile("res://Scenes/main_screen.scn");
+					}
+					else 
+					{
+						QueueFree();
+					}
 				};
 			}
 			else 

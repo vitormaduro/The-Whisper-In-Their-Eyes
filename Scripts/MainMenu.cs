@@ -5,11 +5,13 @@ public partial class MainMenu : Control
 {
 	public override void _Ready()
 	{
+		GetNode<AudioStreamPlayer>("AudioStreamPlayer").VolumeDb = -40;
+
 		GetNode<Button>("%NewGameButton").Pressed += StartNewGame;
 		GetNode<Button>("%LoadGameButton").Pressed += () =>
 		{
 			OpenScene("load_selection");
-			GetNode<LoadSelectScreen>("../SaveLoadScreen").SetScreenMode(SceneMode.Load);
+			GetNode<LoadSelectScreen>("../SaveLoadScreen").SetScreenMode(SceneMode.LoadMainMenu);
 		};
 		GetNode<Button>("%SettingsButton").Pressed += () => OpenScene("settings_menu");
 		GetNode<Button>("%CreditsButton").Pressed += () => OpenScene("credits");
@@ -24,6 +26,8 @@ public partial class MainMenu : Control
 		galleryButton.Visible = SettingsManager.IsGalleryUnlocked;
 		galleryButton.Pressed += () => OpenScene("gallery");
 
+		CreateTween().TweenProperty(GetNode<AudioStreamPlayer>("AudioStreamPlayer"), "volume_db", -10, 2);
+
 		GD.Print("Main Menu loaded successfully");
 	}
 
@@ -32,12 +36,14 @@ public partial class MainMenu : Control
 		GD.Print("Starting new game");
 
 		GetNode<AnimationPlayer>("%AnimationPlayer").Play("new_game");
-		GetTree().CreateTimer(2).Timeout += () =>
+		GetTree().CreateTimer(3).Timeout += () =>
 		{
 			SaveManager.CurrentScene = null;
 
 			GetTree().ChangeSceneToFile($"res://Scenes/main_screen.scn");
 		};
+
+		CreateTween().TweenProperty(GetNode<AudioStreamPlayer>("AudioStreamPlayer"), "volume_db", -40, 2);
 	}
 
 	private void OpenScene(string sceneName)

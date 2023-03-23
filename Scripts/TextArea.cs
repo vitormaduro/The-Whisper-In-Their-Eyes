@@ -125,7 +125,7 @@ public partial class TextArea : RichTextLabel
 			return;
 		}
 
-		if(@event.IsActionPressed("text_advance"))
+		if(@event.IsActionPressed("text_advance_mouse"))
 		{
 			if(canType)
 			{
@@ -141,7 +141,19 @@ public partial class TextArea : RichTextLabel
 
 	public override void _Input(InputEvent @event)
 	{
-		if(@event.IsActionPressed("skip_text"))
+		if(@event.IsActionPressed("text_advance_keyboard"))
+		{
+			if(canType)
+			{
+				VisibleCharacters = GetTotalCharacterCount();
+				canType = false;
+			}
+			else
+			{
+				GetNewLine();
+			}
+		}
+		else if(@event.IsActionPressed("skip_text"))
 		{
 			isSkipping = true;
 		}
