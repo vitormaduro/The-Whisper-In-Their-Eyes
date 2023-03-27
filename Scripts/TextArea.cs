@@ -194,6 +194,11 @@ public partial class TextArea : RichTextLabel
 			temp = $"[color=blue]{temp}[/color]";
 		}
 
+		if(inkLine.Tags.Contains("red"))
+		{
+			temp = $"[color=red]{temp}[/color]";
+		}
+
 		if(inkLine.Tags.Contains("shake"))
 		{
 			temp = $"[shake rate=5 level=10]{temp}[/shake]";

@@ -43,12 +43,9 @@ public partial class OstPlayer : AudioStreamPlayer
 		SaveManager.CurrentOst = tag;
 
 		var song = songs[tag];
-		var volumeMin = -80 + (0.4 * SettingsManager.MusicVolume);
-		var volumeMax = -80 + (0.7 * SettingsManager.MusicVolume);
 
 		Stream = song.Audio;
 		Playing = true;
-		VolumeDb = (float) volumeMin;
 
 		var infoCard = GetNode<Label>("OstInfo");
 		var tween = CreateTween().SetParallel(true).SetEase(EaseType.In);
@@ -56,7 +53,7 @@ public partial class OstPlayer : AudioStreamPlayer
 		infoCard.Text = song.AudioName;
 
 		tween.TweenProperty(infoCard, "position", new Vector2(0, 986), 0.5f);
-		tween.TweenProperty(this, "volume_db", (float) volumeMax, 1);
+		tween.TweenProperty(this, "volume_db", -10, 1);
 		tween.TweenInterval(2f);
 		tween.Chain().TweenProperty(infoCard, "position", new Vector2(0, 1080), 0.5f);
 	}

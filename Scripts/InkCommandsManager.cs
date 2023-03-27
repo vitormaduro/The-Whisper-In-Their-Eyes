@@ -75,7 +75,8 @@ public partial class InkCommandsManager : Control
 			{
 				Command = "ost_off",
 				Signal = SignalName.OstStoped,
-				ParamsNumber = 0
+				ParamsNumber = 0,
+				DelayTime = 1
 			},
 			new InkCommand()
 			{

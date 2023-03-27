@@ -16,7 +16,7 @@ VAR currentStitch = 0
 	>> clear_text
 	>> disclaimer DISCLAIMER_3
 	>> clear_text
-	ACT_1_TITLE
+	ACT_1_TITLE # title
 	>> ost_on agony
 	>> clear_text
 	-> stitch_1
@@ -218,7 +218,7 @@ VAR currentStitch = 0
 = stitch_21
 	~ currentStitch = 21
 	ACT_1_21.1
-	ACT_1_21.2
+	ACT_1_21.2 #n
 	-> stitch_22
 = stitch_22
 	~ currentStitch = 22
@@ -250,7 +250,7 @@ VAR currentStitch = 0
 	ACT_1_25.1
 	ACT_1_25.2
 	ACT_1_25.3
-	ACT_1_25.4
+	ACT_1_25.4 # n
 	-> stitch_26
 = stitch_26
 	~ currentStitch = 26
@@ -276,7 +276,7 @@ VAR currentStitch = 0
 	ACT_1_28.2
 	ACT_1_28.3
 	ACT_1_28.4
-	ACT_1_28.5
+	ACT_1_28.5 # n
 	-> stitch_29
 = stitch_29
 	~ currentStitch = 29
@@ -329,18 +329,18 @@ VAR currentStitch = 0
 = stitch_35
 	~ currentStitch = 35
 	ACT_1_35.1
-	ACT_1_35.2
-	ACT_1_35.3
-	ACT_1_35.4
-	ACT_1_35.5
-	ACT_1_35.6
-	ACT_1_35.7
-	ACT_1_35.8
-	ACT_1_35.9
+	ACT_1_35.2 # i 
+	ACT_1_35.3 # i
+	ACT_1_35.4 # i # n
+	ACT_1_35.5 # i
+	ACT_1_35.6 # i
+	ACT_1_35.7 # i
+	ACT_1_35.8 # i
+	ACT_1_35.9 # i # n
 	-> stitch_36
 = stitch_36
 	~ currentStitch = 36
-	ACT_1_36.1
+	ACT_1_36.1 # i
 	>> clear_text
 	-> stitch_37
 = stitch_37
@@ -370,7 +370,7 @@ VAR currentStitch = 0
 	ACT_1_39.1
 	ACT_1_39.2
 	ACT_1_39.3
-	ACT_1_39.4
+	ACT_1_39.4 # n
 	-> stitch_40
 = stitch_40
 	~ currentStitch = 40
@@ -401,7 +401,7 @@ VAR currentStitch = 0
 	~ currentStitch = 43
 	ACT_1_43.1
 	ACT_1_43.2
-	ACT_1_43.3
+	ACT_1_43.3 # n
 	-> stitch_44
 = stitch_44
 	~ currentStitch = 44
@@ -416,7 +416,7 @@ VAR currentStitch = 0
 	-> stitch_45
 = stitch_45
 	~ currentStitch = 45
-	ACT_1_45.1
+	ACT_1_45.1 # n
 	ACT_1_45.2
 	ACT_1_45.3
 	ACT_1_45.4
@@ -459,8 +459,8 @@ VAR currentStitch = 0
 	-> stitch_51
 = stitch_51
 	~ currentStitch = 51
-	ACT_1_51.1
-	ACT_1_51.2
+	ACT_1_51.1 # n
+	ACT_1_51.2 # n
 	ACT_1_51.3
 	ACT_1_51.4
 	>> clear_text
@@ -480,7 +480,7 @@ VAR currentStitch = 0
 	~ currentStitch = 53
 	ACT_1_53.1
 	ACT_1_53.2
-	ACT_1_53.3
+	ACT_1_53.3 # n
 	ACT_1_53.4
 	ACT_1_53.5
 	>> clear_text
@@ -488,7 +488,7 @@ VAR currentStitch = 0
 = stitch_54
 	~ currentStitch = 54
 	ACT_1_54.1
-	ACT_1_54.2
+	ACT_1_54.2 # n
 	ACT_1_54.3
 	ACT_1_54.4
 	ACT_1_54.5
@@ -547,11 +547,11 @@ VAR currentStitch = 0
 	~ currentStitch = 61
 	ACT_1_61.1
 	ACT_1_61.2
-	ACT_1_61.3
+	ACT_1_61.3 # n
 	-> stitch_62
 = stitch_62
 	~ currentStitch = 62
-	ACT_1_62.1
+	ACT_1_62.1 # i # n
 	ACT_1_62.1
 	ACT_1_62.1
 	-> stitch_63
@@ -573,9 +573,9 @@ VAR currentStitch = 0
 	ACT_1_65.2
 	ACT_1_65.3
 	ACT_1_65.4
-	ACT_1_65.5
+	ACT_1_65.5 # n
 	ACT_1_65.6
-	ACT_1_65.7
+	ACT_1_65.7 # n
 	ACT_1_65.8
 	ACT_1_65.9
 	>> clear_text
@@ -583,25 +583,25 @@ VAR currentStitch = 0
 = stitch_66
 	~ currentStitch = 66
 	ACT_1_66.1
-	ACT_1_66.2
-	ACT_1_66.3
-	ACT_1_66.4
+	ACT_1_66.2 # n
+	ACT_1_66.3 # n
+	ACT_1_66.4 # n
 	ACT_1_66.5
 	ACT_1_66.6
 	>> clear_text
 	-> stitch_67
 = stitch_67
 	~ currentStitch = 67
-	ACT_1_67.1
+	ACT_1_67.1 # n
 	ACT_1_67.2
 	ACT_1_67.3
 	ACT_1_67.4
 	ACT_1_67.5
-	ACT_1_67.6
+	ACT_1_67.6 # n
 	ACT_1_67.7
 	ACT_1_67.8
-	ACT_1_67.9
-	ACT_1_67.10
+	ACT_1_67.9 # n
+	ACT_1_67.10 # n
 	ACT_1_67.11
 	>> clear_text
 	-> stitch_68
@@ -613,7 +613,7 @@ VAR currentStitch = 0
 	-> stitch_69
 = stitch_69
 	~ currentStitch = 69
-	ACT_1_69.1
+	ACT_1_69.1 # n
 	ACT_1_69.2
 	ACT_1_69.3
 	ACT_1_69.4
@@ -631,11 +631,11 @@ VAR currentStitch = 0
 	-> stitch_71
 = stitch_71
 	~ currentStitch = 71
-	ACT_1_71.1
+	ACT_1_71.1 # n
 	ACT_1_71.2
 	ACT_1_71.2
 	ACT_1_71.5
-	ACT_1_71.3
+	ACT_1_71.3 # n
 	ACT_1_71.3
 	ACT_1_71.3
 	ACT_1_71.4
@@ -645,7 +645,7 @@ VAR currentStitch = 0
 	~ currentStitch = 72
 	ACT_1_72.1
 	ACT_1_72.2
-	ACT_1_72.3
+	ACT_1_72.3 # n
 	ACT_1_72.4
 	ACT_1_72.5
 	ACT_1_72.6
@@ -656,15 +656,15 @@ VAR currentStitch = 0
 = stitch_73
 	~ currentStitch = 73
 	ACT_1_73.1
-	ACT_1_73.2
+	ACT_1_73.2 # n
 	ACT_1_73.3
 	>> clear_text
 	-> stitch_74
 = stitch_74
 	~ currentStitch = 74
 	ACT_1_74.1
-	ACT_1_74.2
-	ACT_1_74.3
+	ACT_1_74.2 # n
+	ACT_1_74.3 # n
 	ACT_1_74.4
 	>> clear_text
 	-> stitch_75
@@ -681,31 +681,31 @@ VAR currentStitch = 0
 	-> stitch_76
 = stitch_76
 	~ currentStitch = 76
-	ACT_1_76.1
-	ACT_1_76.2
-	ACT_1_76.3
+	ACT_1_76.1 # n
+	ACT_1_76.2 # n
+	ACT_1_76.3 # n
 	ACT_1_76.4
 	>> clear_text
 	-> stitch_77
 = stitch_77
 	~ currentStitch = 77
-	ACT_1_77.1
+	ACT_1_77.1 # n
 	ACT_1_77.2
 	ACT_1_77.3
 	ACT_1_77.4
 	ACT_1_77.5
-	ACT_1_77.6
-	ACT_1_77.7
+	ACT_1_77.6 # n
+	ACT_1_77.7 # n
 	ACT_1_77.8
 	>> clear_text
 	-> stitch_78
 = stitch_78
 	~ currentStitch = 78
-	ACT_1_78.1
-	ACT_1_78.2
+	ACT_1_78.1 # n
+	ACT_1_78.2 # n
 	ACT_1_78.3
-	ACT_1_78.4
-	ACT_1_78.5
+	ACT_1_78.4 # n
+	ACT_1_78.5 # n
 	ACT_1_78.6
 	>> clear_text
 	-> stitch_79
@@ -713,15 +713,15 @@ VAR currentStitch = 0
 	~ currentStitch = 79
 	ACT_1_79.1
 	ACT_1_79.2
-	ACT_1_79.3
+	ACT_1_79.3 # n
 	ACT_1_79.4
 	>> clear_text
 	-> stitch_80
 = stitch_80
 	~ currentStitch = 80
 	ACT_1_80.1
-	ACT_1_80.2
-	ACT_1_80.3
+	ACT_1_80.2 # n
+	ACT_1_80.3 # n
 	ACT_1_80.4
 	>> clear_text
 	-> stitch_81
@@ -729,12 +729,12 @@ VAR currentStitch = 0
 	~ currentStitch = 81
 	ACT_1_81.1
 	ACT_1_81.2
-	ACT_1_81.3
-	ACT_1_81.4
-	ACT_1_81.5
-	ACT_1_81.6
-	ACT_1_81.7
-	ACT_1_81.8
+	ACT_1_81.3 # n
+	ACT_1_81.4 # n
+	ACT_1_81.5 # n
+	ACT_1_81.6 # n
+	ACT_1_81.7 # n
+	ACT_1_81.8 # n
 	ACT_1_81.9
 	>> clear_all
 	-> Scene_4
@@ -756,23 +756,23 @@ VAR currentStitch = 0
 	~ currentStitch = 83
 	ACT_1_83.1
 	ACT_1_83.2
-	ACT_1_83.3
-	ACT_1_83.4
+	ACT_1_83.3 # n
+	ACT_1_83.4 # n
 	ACT_1_83.5
 	>> clear_all
 	>> ost_on illness
 	-> stitch_84
 = stitch_84
 	~ currentStitch = 84
-	ACT_1_84.1
-	ACT_1_84.2
-	ACT_1_84.1
-	ACT_1_84.2
-	ACT_1_84.1
-	ACT_1_84.2
-	ACT_1_84.1
-	ACT_1_84.2
-	ACT_1_84.3
+	ACT_1_84.1 # red
+	ACT_1_84.2 # red # n
+	ACT_1_84.1 # red
+	ACT_1_84.2 # red # n
+	ACT_1_84.1 # red
+	ACT_1_84.2 # red # n
+	ACT_1_84.1 # red
+	ACT_1_84.2 # red # n
+	ACT_1_84.3 # red
 	>> ost_off
 	>> clear_text
 	>> change_bg office
@@ -783,8 +783,8 @@ VAR currentStitch = 0
 = stitch_85
 	~ currentStitch = 85
 	ACT_1_85.1
-	ACT_1_85.2
-	ACT_1_85.3
+	ACT_1_85.2 # n
+	ACT_1_85.3 # n
 	ACT_1_85.4
 	>> clear_text
 	-> stitch_86
@@ -796,14 +796,14 @@ VAR currentStitch = 0
 	-> stitch_87
 = stitch_87
 	~ currentStitch = 87
-	ACT_1_87.1
+	ACT_1_87.1 # n
 	ACT_1_87.2
 	ACT_1_87.3
 	>> clear_text
 	-> stitch_88
 = stitch_88
 	~ currentStitch = 88
-	ACT_1_88.1
+	ACT_1_88.1 # n
 	ACT_1_88.2
 	>> clear_all
 	>> change_bg black
@@ -812,7 +812,7 @@ VAR currentStitch = 0
 	~ currentStitch = 89
 	ACT_1_89.1
 	ACT_1_89.2
-	ACT_1_89.3
+	ACT_1_89.3 # n
 	ACT_1_89.4
 	ACT_1_89.5
 	>> clear_text
@@ -823,7 +823,7 @@ VAR currentStitch = 0
 	ACT_1_90.2
 	ACT_1_90.3
 	ACT_1_90.4
-	ACT_1_90.5
+	ACT_1_90.5 # n
 	ACT_1_90.6
 	ACT_1_90.7
 	ACT_1_90.8
@@ -835,7 +835,7 @@ VAR currentStitch = 0
 	ACT_1_90.14
 	ACT_1_90.15
 	ACT_1_90.16
-	ACT_1_90.17
+	ACT_1_90.17 # n
 	ACT_1_90.18
 	>> clear_text
 	>> change_bg office
@@ -845,7 +845,7 @@ VAR currentStitch = 0
 = stitch_91
 	~ currentStitch = 91
 	ACT_1_91.1
-	ACT_1_91.2
+	ACT_1_91.2 # n
 	ACT_1_91.3
 	>> clear_text
 	-> stitch_92
@@ -853,7 +853,7 @@ VAR currentStitch = 0
 	~ currentStitch = 92
 	ACT_1_92.1
 	ACT_1_92.2
-	ACT_1_92.3
+	ACT_1_92.3 # n
 	ACT_1_92.4
 	ACT_1_92.5
 	>> clear_text
@@ -878,11 +878,11 @@ VAR currentStitch = 0
 = stitch_95
 	~ currentStitch = 95
 	ACT_1_95.1
-	ACT_1_95.2
+	ACT_1_95.2 # n
 	ACT_1_95.3
 	ACT_1_95.4
-	ACT_1_95.5
-	ACT_1_95.6
+	ACT_1_95.5 # b
+	ACT_1_95.6 # n
 	ACT_1_95.7
 	>> clear_text
 	-> stitch_96
@@ -892,9 +892,9 @@ VAR currentStitch = 0
 	ACT_1_96.2
 	ACT_1_96.3
 	ACT_1_96.4
-	ACT_1_96.5
+	ACT_1_96.5 # n
 	ACT_1_96.6
-	ACT_1_96.7
+	ACT_1_96.7 # n
 	ACT_1_96.8
 	>> clear_text
 	-> stitch_97
@@ -926,15 +926,15 @@ VAR currentStitch = 0
 	ACT_1_100.2
 	ACT_1_100.3
 	ACT_1_100.4
-	ACT_1_100.5
+	ACT_1_100.5 # n
 	ACT_1_100.6
 	ACT_1_100.7
 	>> clear_text
 	-> stitch_101
 = stitch_101
 	~ currentStitch = 101
-	ACT_1_101.1
-	ACT_1_101.2
+	ACT_1_101.1 # n
+	ACT_1_101.2 # n
 	ACT_1_101.3
 	>> clear_text
 	>> sprite ronan army_tired left
@@ -943,7 +943,7 @@ VAR currentStitch = 0
 = stitch_102
 	~ currentStitch = 102
 	ACT_1_102.1
-	ACT_1_102.2
+	ACT_1_102.2 # n
 	ACT_1_102.3
 	>> clear_all
 	>> disclaimer LAST_DISCLAIMER
@@ -954,14 +954,14 @@ VAR currentStitch = 0
 	~ currentStitch = 103
 	ACT_1_103.1
 	ACT_1_103.2
-	ACT_1_103.3
+	ACT_1_103.3 # n
 	ACT_1_103.4
-	ACT_1_103.5
+	ACT_1_103.5 # n
 	ACT_1_103.6
 	ACT_1_103.7
-	ACT_1_103.8
+	ACT_1_103.8 # n
 	ACT_1_103.9
-	ACT_1_103.10
+	ACT_1_103.10 # n
 	ACT_1_103.11
 	>> clear_text
 	-> stitch_104
@@ -989,16 +989,16 @@ VAR currentStitch = 0
 = stitch_106
 	~ currentStitch = 106
 	ACT_1_106.1
-	ACT_1_106.2
+	ACT_1_106.2 # n
 	ACT_1_106.3
-	ACT_1_106.4
+	ACT_1_106.4 # n
 	ACT_1_106.5
 	ACT_1_106.6
 	>> clear_text
 	-> stitch_107
 = stitch_107
 	~ currentStitch = 107
-	ACT_1_107.1
+	ACT_1_107.1 # n
 	ACT_1_107.2
 	ACT_1_107.3
 	>> clear_text
@@ -1012,7 +1012,7 @@ VAR currentStitch = 0
 	ACT_1_108.5
 	ACT_1_108.6
 	ACT_1_108.7
-	ACT_1_108.8
+	ACT_1_108.8 # n
 	ACT_1_108.9
 	ACT_1_108.10
 	ACT_1_108.11
@@ -1026,41 +1026,41 @@ VAR currentStitch = 0
 	ACT_1_109.2
 	ACT_1_109.3
 	ACT_1_109.4
-	ACT_1_109.5
-	ACT_1_109.6
+	ACT_1_109.5 # n
+	ACT_1_109.6 # n
 	ACT_1_109.7
 	>> clear_text
 	-> stitch_110
 = stitch_110
 	~ currentStitch = 110
-	ACT_1_110.1
+	ACT_1_110.1 # n
 	ACT_1_110.2
 	ACT_1_110.3
-	ACT_1_110.4
-	ACT_1_110.5
-	ACT_1_110.6
+	ACT_1_110.4 # n
+	ACT_1_110.5 # n
+	ACT_1_110.6 # n
 	ACT_1_110.7
 	>> clear_text
 	-> stitch_111
 = stitch_111
 	~ currentStitch = 111
-	ACT_1_111.1
+	ACT_1_111.1 # n
 	ACT_1_111.2
 	ACT_1_111.3
-	ACT_1_111.4
-	ACT_1_111.5
+	ACT_1_111.4 # n
+	ACT_1_111.5 # n
 	ACT_1_111.6
 	ACT_1_111.7
-	ACT_1_111.8
-	ACT_1_111.9
+	ACT_1_111.8 # n
+	ACT_1_111.9 # n
 	ACT_1_111.10
 	>> clear_text
 	-> stitch_112
 = stitch_112
 	~ currentStitch = 112
 	ACT_1_112.1
-	ACT_1_112.2
-	ACT_1_112.3
+	ACT_1_112.2 # n
+	ACT_1_112.3 # n
 	ACT_1_112.4
 	ACT_1_112.5
 	ACT_1_112.6
@@ -1069,26 +1069,26 @@ VAR currentStitch = 0
 	-> stitch_113
 = stitch_113
 	~ currentStitch = 113
-	ACT_1_113.1
-	ACT_1_113.1
-	ACT_1_113.1
-	ACT_1_113.1
-	ACT_1_113.1
-	ACT_1_113.1
+	ACT_1_113.1 # red
+	ACT_1_113.1 # red
+	ACT_1_113.1 # red
+	ACT_1_113.1 # red
+	ACT_1_113.1 # red
+	ACT_1_113.1 # red
 	>> clear_text
-	ACT_1_113.1
-	ACT_1_113.1
-	ACT_1_113.1
-	ACT_1_113.1
-	ACT_1_113.1
-	ACT_1_113.1
+	ACT_1_113.1 # red
+	ACT_1_113.1 # red
+	ACT_1_113.1 # red
+	ACT_1_113.1 # red
+	ACT_1_113.1 # red
+	ACT_1_113.1 # red
 	>> clear_text
-	ACT_1_113.1
-	ACT_1_113.1
-	ACT_1_113.1
-	ACT_1_113.1
-	ACT_1_113.1
-	ACT_1_113.1
+	ACT_1_113.1 # red
+	ACT_1_113.1 # red
+	ACT_1_113.1 # red
+	ACT_1_113.1 # red
+	ACT_1_113.1 # red
+	ACT_1_113.1 # red
 	>> clear_text
 	-> stitch_114
 = stitch_114
@@ -1102,11 +1102,11 @@ VAR currentStitch = 0
 	-> stitch_115
 = stitch_115
 	~ currentStitch = 115
-	ACT_1_115.1
-	ACT_1_115.2
-	ACT_1_115.3
-	ACT_1_115.4
-	ACT_1_115.5
+	ACT_1_115.1 # n
+	ACT_1_115.2 # n
+	ACT_1_115.3 # n
+	ACT_1_115.4 # n
+	ACT_1_115.5 # n
 	ACT_1_115.6
 	>> clear_text
 	-> stitch_116
@@ -1126,8 +1126,8 @@ VAR currentStitch = 0
 	-> stitch_117
 = stitch_117
 	~ currentStitch = 117
-	ACT_1_117.1
-	ACT_1_117.2
+	ACT_1_117.1 # n
+	ACT_1_117.2 # n
 	ACT_1_117.3
 	>> clear_all
 	>> sprite ronan army_tired middle
@@ -1143,7 +1143,7 @@ VAR currentStitch = 0
 = stitch_119
 	~ currentStitch = 119
 	ACT_1_119.1
-	ACT_1_119.2
+	ACT_1_119.2 # n
 	ACT_1_119.3
 	ACT_1_119.4
 	>> clear_text
@@ -1171,13 +1171,13 @@ VAR currentStitch = 0
 	-> stitch_122
 = stitch_122
 	~ currentStitch = 122
-	ACT_1_122.1
+	ACT_1_122.1 # red
 	>> clear_text
 	>> change_bg office
 	-> stitch_123
 = stitch_123
 	~ currentStitch = 123
-	ACT_1_123.1
+	ACT_1_123.1 # n
 	ACT_1_123.2
 	ACT_1_123.3
 	>> clear_text

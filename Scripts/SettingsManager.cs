@@ -13,8 +13,8 @@ public partial class SettingsManager : Node
 
 	public static string Locale { get; set; } = "en";
 	public static double TextSpeed { get; set; } = 100;
-	public static double MusicVolume { get; set; } = 100;
-	public static double SfxVolume { get; set; } = 100;
+	public static double MusicVolume { get; set; } = 1;
+	public static double SfxVolume { get; set; } = 1;
 	public static Window.ModeEnum DisplayMode { get; set; } = Window.ModeEnum.Fullscreen;
 	public static bool IsGamePaused { get; set; } = false;
 	public static bool IsGalleryUnlocked { get; set; } = false;
@@ -38,6 +38,8 @@ public partial class SettingsManager : Node
 		LoadSettings();
 
 		TranslationServer.SetLocale(SettingsManager.Locale ?? "en");
+		AudioServer.SetBusVolumeDb(1, Mathf.LinearToDb((float) MusicVolume));
+		AudioServer.SetBusVolumeDb(2, Mathf.LinearToDb((float) SfxVolume));
 
 		var root = GetTree().Root;
 
