@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://s6txurrtbbav"
+path="res://.godot/imported/For Our Children.ogg-b04d06d2a075114fa7f42a9c4be1e486.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Soundtrack/For Our Children.ogg"
+dest_files=["res://.godot/imported/For Our Children.ogg-b04d06d2a075114fa7f42a9c4be1e486.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

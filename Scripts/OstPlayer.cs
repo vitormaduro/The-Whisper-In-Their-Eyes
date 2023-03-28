@@ -8,6 +8,8 @@ public partial class OstPlayer : AudioStreamPlayer
 
 	public override void _Ready()
 	{
+		GetNode<Label>("OstInfo").Visible = false;
+
 		var cmdManager = GetNode<InkCommandsManager>("%InkCommandsManager");
 
 		cmdManager.OstStarted += (string tag) => PlaySongByTag(tag);
@@ -22,7 +24,13 @@ public partial class OstPlayer : AudioStreamPlayer
 			{ "lost", new Ost("Lost and Not Found") },
 			{ "illness", new Ost("Growing Illness") },
 			{ "old_man", new Ost("For Our Old Men") },
+			{ "children", new Ost("For Our Children") }
 		};
+
+		if(SaveManager.CurrentOst != null)
+		{
+			PlaySongByTag(SaveManager.CurrentOst);
+		}
 	}
 
 	public void PlaySongByTag(string tag)
@@ -34,27 +42,34 @@ public partial class OstPlayer : AudioStreamPlayer
 			return;
 		}
 
+		SaveManager.CurrentOst = tag;
+
 		var song = songs[tag];
-		var volumeMin = -80 + (0.4 * SettingsManager.MusicVolume);
-		var volumeMax = -80 + (0.7 * SettingsManager.MusicVolume);
 
 		Stream = song.Audio;
 		Playing = true;
-		VolumeDb = (float) volumeMin;
 
 		var infoCard = GetNode<Label>("OstInfo");
 		var tween = CreateTween().SetParallel(true).SetEase(EaseType.In);
 
+		infoCard.Visible = true;
 		infoCard.Text = song.AudioName;
 
 		tween.TweenProperty(infoCard, "position", new Vector2(0, 986), 0.5f);
-		tween.TweenProperty(this, "volume_db", (float) volumeMax, 1);
+		tween.TweenProperty(this, "volume_db", -10, 1);
 		tween.TweenInterval(2f);
 		tween.Chain().TweenProperty(infoCard, "position", new Vector2(0, 1080), 0.5f);
+
+		GetTree().CreateTimer(2).Timeout += () =>
+		{
+			infoCard.Visible = false;
+		};
 	}
 
 	public void StopSong()
 	{
+		SaveManager.CurrentOst = null;
+		
 		var infoCard = GetNode<Label>("OstInfo");
 		var tween = CreateTween().SetParallel(true);
 

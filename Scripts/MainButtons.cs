@@ -6,9 +6,9 @@ public partial class MainButtons : Control
 	public override void _Ready()
 	{
 		GetNode<TextureButton>("%QuickSaveButton").Pressed += () => SaveManager.SaveGameAt("quick");
-		GetNode<TextureButton>("%QuickLoadButton").Pressed += SaveManager.LoadQuickSave;
+		GetNode<TextureButton>("%QuickLoadButton").Pressed += () => LoadQuickSave();
 		GetNode<TextureButton>("%ManualSaveButton").Pressed += () => OpenSaveLoadScene(SceneMode.Save);
-		GetNode<TextureButton>("%ManualLoadButton").Pressed += () => OpenSaveLoadScene(SceneMode.Load);
+		GetNode<TextureButton>("%ManualLoadButton").Pressed += () => OpenSaveLoadScene(SceneMode.LoadDuringGame);
 
 		GetNode<TextureButton>("%SettingsButton").Pressed += () =>
 		{
@@ -26,6 +26,13 @@ public partial class MainButtons : Control
 		};
 	}
 
+	private void LoadQuickSave()
+	{
+		SaveManager.LoadQuickSave();
+		SettingsManager.IsGamePaused = false;
+		GetTree().ChangeSceneToFile("res://Scenes/main_screen.scn");
+	}
+
 	private void OpenSaveLoadScene(SceneMode mode)
 	{
 		SettingsManager.IsGamePaused = true;
@@ -39,7 +46,9 @@ public partial class MainButtons : Control
 		instance.SetScreenMode(mode);
 		instance.GameLoaded += () =>
 		{
-			GetNode<InkHandler>("%TextArea").JumpToScene(SaveManager.CurrentScene);
+			GetNode<TextArea>("%TextArea").Clear();
+			GetNode<InkHandler>("%InkScriptManager").JumpToScene(SaveManager.CurrentScene, SaveManager.CurrentStitch);
+			GetNode<BackgroundManager>("%BackgroundImage").ChangeBackground(SaveManager.CurrentBg);
 		};
 	}
 
@@ -51,7 +60,7 @@ public partial class MainButtons : Control
 		}
 		else if(@event.IsActionPressed("load"))
 		{
-			OpenSaveLoadScene(SceneMode.Load);
+			OpenSaveLoadScene(SceneMode.LoadDuringGame);
 		}
 		else if(@event.IsActionPressed("quick_save"))
 		{

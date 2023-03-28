@@ -28,11 +28,11 @@ public partial class SettingsMenu : Control
 
 		GetNode<Slider>("%MusicVolumeSlider").ValueChanged += (value) => UpdateMusicVolume(value);
 		GetNode<Slider>("%MusicVolumeSlider").DragEnded += (value) => SettingsManager.SaveSettings();
-		GetNode<Slider>("%MusicVolumeSlider").Value = SettingsManager.MusicVolume;
+		GetNode<Slider>("%MusicVolumeSlider").Value = SettingsManager.MusicVolume * 100;
 
 		GetNode<Slider>("%SfxVolumeSlider").ValueChanged += (value) => UpdateSfxVolume(value);
 		GetNode<Slider>("%SfxVolumeSlider").DragEnded += (value) => SettingsManager.SaveSettings();
-		GetNode<Slider>("%SfxVolumeSlider").Value = SettingsManager.SfxVolume;
+		GetNode<Slider>("%SfxVolumeSlider").Value = SettingsManager.SfxVolume * 100;
 
 		GetNode<TextureButton>("%BackButton").Pressed += CloseScreen;
 
@@ -82,14 +82,18 @@ public partial class SettingsMenu : Control
     /// <param name="volume">The new volume, ranging from 0 (no sound) to 100 (regular volume)</param>
 	public void UpdateMusicVolume(double volume)
 	{
-		SettingsManager.MusicVolume = volume;
+		SettingsManager.MusicVolume = volume / 100;
+
+		AudioServer.SetBusVolumeDb(1, Mathf.LinearToDb((float) SettingsManager.MusicVolume));
 
 		musicVolumeLabel.Text = $"{volume}";
 	}
 
 	public void UpdateSfxVolume(double volume)
 	{
-		SettingsManager.SfxVolume = volume;
+		SettingsManager.SfxVolume = volume / 100;
+
+		AudioServer.SetBusVolumeDb(2, Mathf.LinearToDb((float) SettingsManager.SfxVolume));
 
 		sfxVolumeLabel.Text = $"{volume}";
 	}

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://yebctl4epj5o"
+path="res://.godot/imported/FX Phone Dialing (rotary).ogg-cb543a714cc9cf8b65d1bf95673be93b.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Effects/FX Phone Dialing (rotary).ogg"
+dest_files=["res://.godot/imported/FX Phone Dialing (rotary).ogg-cb543a714cc9cf8b65d1bf95673be93b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

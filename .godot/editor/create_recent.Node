@@ -1,6 +1,9 @@
+AudioStreamPlayer
+AnimatedSprite2D
+VideoStreamPlayer
+TextureRect
 Label
 GridContainer
-TextureRect
 AnimationPlayer
 AnimationTree
 ColorRect
@@ -9,14 +12,11 @@ TextureButton
 HBoxContainer
 Camera2D
 Sprite2D
-AnimatedSprite2D
 Control
 Timer
 Sprite2D
-AnimatedSprite2D
 VBoxContainer
 CanvasLayer
-AudioStreamPlayer
 Button
 CheckButton
 ItemList

@@ -25,8 +25,10 @@ public partial class InkCommandsManager : Control
 	[Signal] public delegate void StaticTriggeredEventHandler(string mode);
 	[Signal] public delegate void CgTriggeredEventHandler(string cgName);
 	[Signal] public delegate void NvlBoxWasHiddenEventHandler();
-	[Signal] public delegate void SlowZoomWasTriggeredEventHandler(string pivotX, string pivotY, string scale);
+	[Signal] public delegate void SlowZoomWasTriggeredEventHandler(string pivotX, string pivotY, string scale, string restoreNvlBox);
 	[Signal] public delegate void SpriteWasMovedEventHandler(string characterTag, string spriteTag, string positionFrom, string positionTo);
+	[Signal] public delegate void ScreenShatteredEventHandler();
+	[Signal] public delegate void SfxTurnedOffEventHandler();
 
 	private List<InkCommand> commands;
 	private bool commandAwaitingInput;
@@ -75,7 +77,8 @@ public partial class InkCommandsManager : Control
 			{
 				Command = "ost_off",
 				Signal = SignalName.OstStoped,
-				ParamsNumber = 0
+				ParamsNumber = 0,
+				DelayTime = 1
 			},
 			new InkCommand()
 			{
@@ -173,7 +176,7 @@ public partial class InkCommandsManager : Control
 			{
 				Command = "slow_zoom",
 				Signal = SignalName.SlowZoomWasTriggered,
-				ParamsNumber = 3,
+				ParamsNumber = 4,
 				DelayTime = 5
 			},
 			new InkCommand()
@@ -182,7 +185,26 @@ public partial class InkCommandsManager : Control
 				Signal = SignalName.SpriteWasMoved,
 				ParamsNumber = 4,
 				DelayTime = 1
-			}
+			},
+			new InkCommand()
+			{
+				Command = "unlock_gallery",
+				ParamsNumber = 0
+			},
+			new InkCommand()
+			{
+				Command = "screen_shatter",
+				Signal = SignalName.ScreenShattered,
+				ParamsNumber = 0,
+				DelayTime = 2
+			},
+			new InkCommand()
+			{
+				Command = "sfx_off",
+				Signal = SignalName.SfxTurnedOff,
+				ParamsNumber = 0,
+				DelayTime = 0
+			},
 		};
 	}
 
@@ -198,10 +220,21 @@ public partial class InkCommandsManager : Control
 
 			return;
 		}
-
-		if(cmd.Command == "wait")
+		else if(cmd.Command == "wait")
 		{
 			GetTree().CreateTimer(isSkipping ? 0.01f : float.Parse(args[0])).Timeout += () => EmitSignal(SignalName.CommandFinishedExecuting);
+
+			return;
+		}
+		else if(cmd.Command == "unlock_gallery")
+		{
+			SettingsManager.IsGalleryUnlocked = true;
+			SettingsManager.SaveSettings();
+
+			GetTree().CreateTimer(3).Timeout += () =>
+			{
+				GetTree().ChangeSceneToFile("res://Scenes/main_menu.scn");
+			};
 
 			return;
 		}
@@ -241,7 +274,7 @@ public partial class InkCommandsManager : Control
 
 	public override void _Input(InputEvent @event)
 	{
-		if(@event.IsActionPressed("text_advance"))
+		if(@event.IsActionPressed("text_advance_mouse") || @event.IsActionPressed("text_advance_keyboard"))
 		{
 			if(commandAwaitingInput)
 			{

@@ -7,6 +7,7 @@ public partial class TextArea : RichTextLabel
 	private bool isSkipping = false;
 	private double timer = 0;
 	private bool isWaiting = false;
+	private bool mustTab = true;
 
 	private InkHandler inkManager;
 	private RichTextLabel history;
@@ -48,16 +49,24 @@ public partial class TextArea : RichTextLabel
 
 		history.AppendText("\n\n");
 
+		using (var hist = FileAccess.Open($"user://history.txt", FileAccess.ModeFlags.ReadWrite))
+		{
+			hist.SeekEnd();
+			hist.StoreString("\n");
+		}
+
 		VisibleCharacters = 0;
+		mustTab = true;
 	}
 
 	private void PrintLine(string line, bool printAtOnce = false)
 	{
-		AppendText(" " + line);
+		AppendText((mustTab ? '\t' : ' ') + line);
 
-		history.AppendText(" " + line);
+		history.AppendText((mustTab ? '\t' : ' ') + line);
 
 		canType = true;
+		mustTab = false;
 
 		if(printAtOnce)
 		{
@@ -125,7 +134,7 @@ public partial class TextArea : RichTextLabel
 			return;
 		}
 
-		if(@event.IsActionPressed("text_advance"))
+		if(@event.IsActionPressed("text_advance_mouse"))
 		{
 			if(canType)
 			{
@@ -141,7 +150,19 @@ public partial class TextArea : RichTextLabel
 
 	public override void _Input(InputEvent @event)
 	{
-		if(@event.IsActionPressed("skip_text"))
+		if(@event.IsActionPressed("text_advance_keyboard"))
+		{
+			if(canType)
+			{
+				VisibleCharacters = GetTotalCharacterCount();
+				canType = false;
+			}
+			else
+			{
+				GetNewLine();
+			}
+		}
+		else if(@event.IsActionPressed("skip_text"))
 		{
 			isSkipping = true;
 		}
@@ -182,6 +203,11 @@ public partial class TextArea : RichTextLabel
 			temp = $"[color=blue]{temp}[/color]";
 		}
 
+		if(inkLine.Tags.Contains("red"))
+		{
+			temp = $"[color=red]{temp}[/color]";
+		}
+
 		if(inkLine.Tags.Contains("shake"))
 		{
 			temp = $"[shake rate=5 level=10]{temp}[/shake]";
@@ -204,7 +230,7 @@ public partial class TextArea : RichTextLabel
 
 		if(inkLine.Tags.Contains("n"))
 		{
-			temp += "\n\n";
+			temp += "\n\n\t";
 		}
 
 		return temp;
