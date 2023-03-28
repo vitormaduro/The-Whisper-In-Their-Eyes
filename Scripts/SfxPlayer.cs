@@ -11,6 +11,7 @@ public partial class SfxPlayer : AudioStreamPlayer
 
 		cmdManager.SfxTriggered += (string tag) => PlayEffectByTag(tag);
 		cmdManager.StaticTriggered += (string mode) => StaticEffect(mode);
+		cmdManager.SfxTurnedOff += Stop;
 
 		effects = new Dictionary<string, AudioStream>()
 		{

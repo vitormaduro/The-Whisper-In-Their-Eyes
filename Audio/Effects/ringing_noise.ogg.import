@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/ringing_noise.ogg-1b757099c3ab687aa4c6d604294
 
 [params]
 
-loop=false
-loop_offset=0
-bpm=0
-beat_count=0
+loop=true
+loop_offset=1.0
+bpm=120.0
+beat_count=21
 bar_beats=4

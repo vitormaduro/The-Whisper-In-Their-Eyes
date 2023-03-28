@@ -21,12 +21,14 @@ public partial class MainScene : Control
 
 		GetNode<Control>("%PauseMenu").Visible = false;
 		GetNode<TextureRect>("%Static").Visible = false;
+		GetNode<TextureRect>("Shatter").Visible = false;
 
 		history.Visible = false;
 
 		cmdManager.CgTriggered += (string cgName) => StartCg(cgName);
-		cmdManager.NvlBoxWasHidden += () => HideNvlBox(true);
-		cmdManager.SlowZoomWasTriggered += (string pivotX, string pivotY, string scale) => HideNvlBox(true);
+		cmdManager.NvlBoxWasHidden += () => HideNvlBox("true");
+		cmdManager.SlowZoomWasTriggered += (string pivotX, string pivotY, string scale, string restoreNvlBox) => HideNvlBox(restoreNvlBox);
+		cmdManager.ScreenShattered += DisplayScreenShatter;
 	}
 
 	public override void _Input(InputEvent @event)
@@ -85,9 +87,11 @@ public partial class MainScene : Control
 		};
 	}
 
-	private void HideNvlBox(bool autoRestore)
+	private void HideNvlBox(string restoreNvlBox)
 	{
 		nvlBox.Visible = false;
+
+		var autoRestore = bool.Parse(restoreNvlBox);
 
 		if(autoRestore)
 		{
@@ -96,5 +100,17 @@ public partial class MainScene : Control
 				nvlBox.Visible = true;
 			};
 		}
+	}
+
+	private void DisplayScreenShatter()
+	{
+		var shatter = GetNode<TextureRect>("Shatter");
+
+		shatter.Visible = true;
+
+		GetTree().CreateTimer(2).Timeout += () =>
+		{
+			shatter.Visible = false;
+		};
 	}
 }

@@ -18,7 +18,7 @@ public partial class BackgroundManager : TextureRect
 		cmdManager.DisclaimerDisplayed += (string line) => ChangeBackground("black");
 		cmdManager.BackgroundWasZoomedIn += (string pivotX, string pivotY, string scale) => ZoomIn(pivotX, pivotY, scale);
 		cmdManager.BackgroundWasZoomedOut += ZoomOut;
-		cmdManager.SlowZoomWasTriggered += (string pivotX, string pivotY, string scale) => SlowZoomIn(pivotX, pivotY, scale);
+		cmdManager.SlowZoomWasTriggered += (string pivotX, string pivotY, string scale, string restoreNvlBox) => SlowZoomIn(pivotX, pivotY, scale);
 
 		if(SaveManager.CurrentBg != null)
 		{

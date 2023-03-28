@@ -36,6 +36,7 @@ public partial class MainMenu : Control
 		GD.Print("Starting new game");
 
 		GetNode<AnimationPlayer>("%AnimationPlayer").Play("new_game");
+		GetNode<AudioStreamPlayer>("AudioStreamPlayer2").Play();
 		GetTree().CreateTimer(3).Timeout += () =>
 		{
 			SaveManager.CurrentScene = null;

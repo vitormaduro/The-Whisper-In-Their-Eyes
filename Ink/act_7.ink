@@ -259,15 +259,15 @@
 	>> change_bg black
 	>> wait 0,3
 	>> change_bg living_room
-	>> wait 0,7
+	>> wait 0,2
 	>> change_bg black
 	>> wait 0,5
 	>> change_bg living_room
-	>> wait 1,2
+	>> wait 0,6
 	>> change_bg black
-	>> wait 0,8
+	>> wait 0,4
 	>> change_bg living_room
-	>> wait 0,9
+	>> wait 0,3
 	>> change_bg black
 	>> wait 2
 	>> change_bg blood_cave
@@ -373,7 +373,7 @@
 	ACT_7_34.9
 	ACT_7_34.10
 	>> clear_text
-	>> slow_zoom 1430 282 2
+	>> slow_zoom 1430 282 2 true
 	-> stitch_35
 = stitch_35
 	~ currentStitch = 35

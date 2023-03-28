@@ -51,6 +51,7 @@
 = stitch_4
 	~ currentStitch = 4
 	ACT_4_4.1 #black
+	>> sfx_off
 	>> clear_text
 	>> change_bg bedroom1
 	>> sprite ronan home_tired middle
@@ -278,9 +279,9 @@
 	>> wait 1
 	>> sfx punch_mirror
 	>> screen_shake true
-	>> screen_shake false
-	>> anim crack_screen
 	>> sfx mirror_shatter
+	>> screen_shake false
+	>> screen_shatter
 	-> stitch_28
 = stitch_28
 	~ currentStitch = 28
@@ -635,6 +636,7 @@
 	ACT_4_50.7
 	ACT_4_50.8
 	>> clear_text
+	>> sfx_off
 	>> ost_on photo2
 	>> cg photo3
 	-> stitch_51
@@ -752,7 +754,7 @@
 	~ currentStitch = 55
 	ACT_4_55.1
 	>> clear_text
-	>> slow_zoom 1619 340 2
+	>> slow_zoom 1619 340 2 false
 	>> wait 5
 	>> ost_off
 	>> change_bg black

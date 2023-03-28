@@ -440,21 +440,21 @@
 	~ currentStitch = 44
 	ACT_5_44.1 # black 
 	>> clear_text
-	>> heart_thump
+	>> sfx heart_thump
 	>> sfx heavy_breathing
 	-> stitch_45
 = stitch_45
 	~ currentStitch = 45
 	ACT_5_45.1 # black 
 	>> clear_text
-	>> heart_thump
+	>> sfx heart_thump
 	>> sfx heavy_breathing
 	-> stitch_46
 = stitch_46
 	~ currentStitch = 46
 	ACT_5_46.1 # black 
 	>> clear_text
-	>> heart_thump
+	>> sfx heart_thump
 	>> sfx heavy_breathing
 	-> stitch_47
 = stitch_47
@@ -532,7 +532,7 @@
 	ACT_5_53.5
 	ACT_5_53.6
 	>> clear_text
-	>> man_cough
+	>> sfx man_cough
 	-> stitch_54
 = stitch_54
 	~ currentStitch = 54
@@ -853,8 +853,8 @@
 	>> wait 2
 	>> stop_flash_bg
 	>> sfx ringing_noise
-	>> wait 1
-	>> woman_shriek
+	>> wait 2
+	>> sfx woman_shriek
 	>> clear_all
 -> Scene_15
 

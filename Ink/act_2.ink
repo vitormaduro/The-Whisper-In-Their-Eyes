@@ -108,6 +108,7 @@
 	>> clear_text
 	-> stitch_12
 = stitch_12
+	>> sfx_off
 	~ currentStitch = 12
 	ACT_2_12.1
 	ACT_2_12.2
@@ -213,6 +214,7 @@
 	~ currentStitch = 24
 	ACT_2_24.1 # shake
 	>> ost_off
+	>> sfx_off
 	>> clear_text
 	>> change_bg black
 	-> stitch_25
@@ -463,6 +465,7 @@
 	~ currentStitch = 48
 	ACT_2_48.1
 	ACT_2_48.2 # n
+	>> sfx_off
 	ACT_2_48.3
 	>> ost_off
 	-> stitch_49
@@ -643,6 +646,7 @@
 	~ currentStitch = 66
 	ACT_2_66.1
 	ACT_2_66.2 # n
+	>> sfx_off
 	ACT_2_66.3
 	ACT_2_66.4 # n
 	ACT_2_66.5
@@ -972,6 +976,7 @@
 	ACT_2_95.1
 	ACT_2_95.2
 	ACT_2_95.3
+	>> sfx_off
 	ACT_2_95.4
 	>> clear_text
 	-> stitch_96
@@ -1208,6 +1213,7 @@
 	ACT_2_116.5
 	ACT_2_116.6
 	>> ost_off
+	>> sfx_off
 	>> bg_zoom_out
 	>> change_bg living_room
 	-> stitch_117

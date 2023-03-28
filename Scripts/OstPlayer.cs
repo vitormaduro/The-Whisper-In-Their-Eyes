@@ -8,6 +8,8 @@ public partial class OstPlayer : AudioStreamPlayer
 
 	public override void _Ready()
 	{
+		GetNode<Label>("OstInfo").Visible = false;
+
 		var cmdManager = GetNode<InkCommandsManager>("%InkCommandsManager");
 
 		cmdManager.OstStarted += (string tag) => PlaySongByTag(tag);
@@ -50,12 +52,18 @@ public partial class OstPlayer : AudioStreamPlayer
 		var infoCard = GetNode<Label>("OstInfo");
 		var tween = CreateTween().SetParallel(true).SetEase(EaseType.In);
 
+		infoCard.Visible = true;
 		infoCard.Text = song.AudioName;
 
 		tween.TweenProperty(infoCard, "position", new Vector2(0, 986), 0.5f);
 		tween.TweenProperty(this, "volume_db", -10, 1);
 		tween.TweenInterval(2f);
 		tween.Chain().TweenProperty(infoCard, "position", new Vector2(0, 1080), 0.5f);
+
+		GetTree().CreateTimer(2).Timeout += () =>
+		{
+			infoCard.Visible = false;
+		};
 	}
 
 	public void StopSong()

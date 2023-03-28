@@ -25,8 +25,10 @@ public partial class InkCommandsManager : Control
 	[Signal] public delegate void StaticTriggeredEventHandler(string mode);
 	[Signal] public delegate void CgTriggeredEventHandler(string cgName);
 	[Signal] public delegate void NvlBoxWasHiddenEventHandler();
-	[Signal] public delegate void SlowZoomWasTriggeredEventHandler(string pivotX, string pivotY, string scale);
+	[Signal] public delegate void SlowZoomWasTriggeredEventHandler(string pivotX, string pivotY, string scale, string restoreNvlBox);
 	[Signal] public delegate void SpriteWasMovedEventHandler(string characterTag, string spriteTag, string positionFrom, string positionTo);
+	[Signal] public delegate void ScreenShatteredEventHandler();
+	[Signal] public delegate void SfxTurnedOffEventHandler();
 
 	private List<InkCommand> commands;
 	private bool commandAwaitingInput;
@@ -174,7 +176,7 @@ public partial class InkCommandsManager : Control
 			{
 				Command = "slow_zoom",
 				Signal = SignalName.SlowZoomWasTriggered,
-				ParamsNumber = 3,
+				ParamsNumber = 4,
 				DelayTime = 5
 			},
 			new InkCommand()
@@ -188,7 +190,21 @@ public partial class InkCommandsManager : Control
 			{
 				Command = "unlock_gallery",
 				ParamsNumber = 0
-			}
+			},
+			new InkCommand()
+			{
+				Command = "screen_shatter",
+				Signal = SignalName.ScreenShattered,
+				ParamsNumber = 0,
+				DelayTime = 2
+			},
+			new InkCommand()
+			{
+				Command = "sfx_off",
+				Signal = SignalName.SfxTurnedOff,
+				ParamsNumber = 0,
+				DelayTime = 0
+			},
 		};
 	}
 

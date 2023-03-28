@@ -125,7 +125,6 @@
 	-> stitch_9
 = stitch_9
 	~ currentStitch = 9
-	ACT_3_9.1  # black
 	ACT_3_9.2  # black
 	ACT_3_9.3  # black
 	ACT_3_9.4  # black
@@ -143,7 +142,6 @@
 	-> stitch_10
 = stitch_10
 	~ currentStitch = 10
-	ACT_3_10.1  # black
 	ACT_3_10.2  # black
 	ACT_3_10.3  # black
 	ACT_3_10.4  # black
@@ -237,7 +235,6 @@
 	-> stitch_19
 = stitch_19
 	~ currentStitch = 19
-	ACT_3_19.1 # black
 	ACT_3_19.2 # black
 	ACT_3_19.3 # black
 	ACT_3_19.4 # black

@@ -1,3 +1,4 @@
+AudioStreamPlayer
 AnimatedSprite2D
 VideoStreamPlayer
 TextureRect
@@ -16,7 +17,6 @@ Timer
 Sprite2D
 VBoxContainer
 CanvasLayer
-AudioStreamPlayer
 Button
 CheckButton
 ItemList

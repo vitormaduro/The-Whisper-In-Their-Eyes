@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/fly_buzz.ogg-c625851fade74e8a6b39ddcadd9b7441
 
 [params]
 
-loop=false
-loop_offset=0
-bpm=0
-beat_count=0
-bar_beats=4
+loop=true
+loop_offset=0.15
+bpm=120.0
+beat_count=9
+bar_beats=2
