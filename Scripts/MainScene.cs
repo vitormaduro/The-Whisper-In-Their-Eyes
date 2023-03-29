@@ -6,6 +6,7 @@ public partial class MainScene : Control
 	private InkCommandsManager cmdManager;
 	private RichTextLabel history;
 	private TextureRect bgImage;
+	private LineEdit console;
 
 	public override void _Ready()
 	{
@@ -13,6 +14,7 @@ public partial class MainScene : Control
 		cmdManager = GetNode<InkCommandsManager>("%InkCommandsManager");
 		history = GetNode<RichTextLabel>("%History");
 		bgImage = GetNode<TextureRect>("%BackgroundImage");
+		console = GetNode<LineEdit>("Console");
 
 		GetNode<TextureButton>("%PageMarker").Pressed += PauseGame;
 		GetNode<Button>("%UnpauseButton").Pressed += ResumeGame;
@@ -24,11 +26,13 @@ public partial class MainScene : Control
 		GetNode<TextureRect>("Shatter").Visible = false;
 
 		history.Visible = false;
+		console.Visible = false;
 
 		cmdManager.CgTriggered += (string cgName) => StartCg(cgName);
 		cmdManager.NvlBoxWasHidden += () => HideNvlBox("true");
 		cmdManager.SlowZoomWasTriggered += (string pivotX, string pivotY, string scale, string restoreNvlBox) => HideNvlBox(restoreNvlBox);
 		cmdManager.ScreenShattered += DisplayScreenShatter;
+		cmdManager.NvlBoxWasRestored += () => nvlBox.Visible = true;
 	}
 
 	public override void _Input(InputEvent @event)
@@ -40,6 +44,15 @@ public partial class MainScene : Control
 		else if(@event.IsActionPressed("toggle_history"))
 		{
 			ToggleHistory();
+		}
+		else if(@event.IsActionPressed("open_console"))
+		{
+			SettingsManager.IsConsoleOpen = console.Visible = !console.Visible;
+			
+			if(console.Visible)
+			{
+				console.GrabFocus();
+			}
 		}
 	}
 

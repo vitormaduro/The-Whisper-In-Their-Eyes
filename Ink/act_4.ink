@@ -289,7 +289,7 @@
 	ACT_4_28.2
 	>> clear_text
 	>> sprite ronan home_injured middle
-	>> hide_nvl_box 5
+	>> hide_nvl_box
 	-> stitch_29
 = stitch_29
 	~ currentStitch = 29
@@ -362,7 +362,7 @@
 	ACT_4_31.45
 	ACT_4_31.46
 	>> clear_all
-	>> sfx man_collapse
+	>> sfx body_falling
 	-> stitch_32
 = stitch_32
 	~ currentStitch = 32
@@ -451,7 +451,7 @@
 	>> sfx heavy_breathing
 	>> sfx phone_ring
 	>> sfx woman_weep
-	>> sfx people_laugh
+	>> sfx laughter
 	-> stitch_36
 = stitch_36
 	~ currentStitch = 36
@@ -471,7 +471,7 @@
 	ACT_4_36.14
 	>> clear_text
 	>> sfx choking
-	>> sfx people_laugh
+	>> sfx laughter
 	-> stitch_37
 = stitch_37
 	~ currentStitch = 37

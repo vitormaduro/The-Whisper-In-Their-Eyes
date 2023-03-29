@@ -49,12 +49,6 @@ public partial class TextArea : RichTextLabel
 
 		history.AppendText("\n\n");
 
-		using (var hist = FileAccess.Open($"user://history.txt", FileAccess.ModeFlags.ReadWrite))
-		{
-			hist.SeekEnd();
-			hist.StoreString("\n");
-		}
-
 		VisibleCharacters = 0;
 		mustTab = true;
 	}
@@ -129,7 +123,7 @@ public partial class TextArea : RichTextLabel
 
 	private void ProcessInput(InputEvent @event)
 	{
-		if(SettingsManager.IsGamePaused)
+		if(SettingsManager.IsGamePaused || SettingsManager.IsConsoleOpen)
 		{
 			return;
 		}
@@ -150,6 +144,11 @@ public partial class TextArea : RichTextLabel
 
 	public override void _Input(InputEvent @event)
 	{
+		if(SettingsManager.IsConsoleOpen)
+		{
+			return;
+		}
+
 		if(@event.IsActionPressed("text_advance_keyboard"))
 		{
 			if(canType)

@@ -160,7 +160,7 @@
 	~ currentStitch = 14
 	ACT_7_14.1
 	>> clear_text
-	>> sfx door_knock
+	>> sfx knock_door
 	-> stitch_15
 = stitch_15
 	~ currentStitch = 15
@@ -207,7 +207,7 @@
 	ACT_7_20.3
 	>> clear_text
 	>> change_bg red
-	>> sfx man_scream
+	>> sfx man_painful_scream
 	>> wait 1
 	>> change_bg living_room
 	-> stitch_21
@@ -494,7 +494,9 @@
 	>> screen_shake true
 	>> wait 2
 	>> screen_shake false
+	>> change_bg black
 	>> ost_on old_man
+	>> credits
 	GALLERY_UNLOCKED # center
 	>> unlock_gallery
 -> DONE

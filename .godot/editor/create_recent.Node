@@ -1,13 +1,16 @@
+TextureRect
+Label
+RichTextLabel
+Panel
+ColorRect
+LineEdit
+CodeEdit
 AudioStreamPlayer
 AnimatedSprite2D
 VideoStreamPlayer
-TextureRect
-Label
 GridContainer
 AnimationPlayer
 AnimationTree
-ColorRect
-RichTextLabel
 TextureButton
 HBoxContainer
 Camera2D
@@ -27,4 +30,3 @@ SubViewport
 ConfirmationDialog
 AcceptDialog
 Popup
-MarginContainer

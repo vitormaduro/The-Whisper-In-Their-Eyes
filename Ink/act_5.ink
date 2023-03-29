@@ -1,5 +1,6 @@
 == Scene_14 ==
 	~ currentScene = 14
+	>> restore_nvl
 	>> clear_all
 	>> change_bg black
 	ACT_5_TITLE # title
@@ -38,7 +39,7 @@
 	~ currentStitch = 3
 	ACT_5_3.1
 	>> clear_text
-	>> sfx thousand_whisper
+	>> sfx thousand_whispers
 	-> stitch_4
 = stitch_4
 	~ currentStitch = 4
@@ -236,7 +237,7 @@
 	ACT_5_22.7
 	>> clear_text
 	>> sfx man_grunt_anger
-	>> sfx thousand_whisper
+	>> sfx thousand_whispers
 	-> stitch_23
 = stitch_23
 	~ currentStitch = 23
@@ -268,7 +269,7 @@
 	ACT_5_25.2
 	>> clear_text
 	>> sfx heart_thump
-	>> sfx_on croak
+	>> ost_on croak
 	>> sfx heavy_breathing
 	-> stitch_26
 = stitch_26
@@ -616,7 +617,7 @@
 	>> clear_text
 	>> sfx heavy_breathing
 	>> wait 1
-	>> sfx people_laught
+	>> sfx laughter
 	-> stitch_65
 = stitch_65
 	~ currentStitch = 65
@@ -628,7 +629,7 @@
 	ACT_5_65.6 # n
 	ACT_5_65.7
 	>> clear_text
-	>> sfx people_laught
+	>> sfx laughter
 	>> wait 1
 	-> stitch_66
 = stitch_66
@@ -712,7 +713,7 @@
 	ACT_5_71.16 # shake
 	ACT_5_71.17 # shake
 	>> clear_text
-	>> sfx people_laught
+	>> sfx laughter
 	>> wait 1
 	>> sfx malevolent_woman
 	>> wait 1
