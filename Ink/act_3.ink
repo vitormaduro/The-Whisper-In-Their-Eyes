@@ -449,7 +449,7 @@
 	ACT_3_38.7
 	ACT_3_38.8
 	>> clear_text
-	>> sfx slam_phone
+	>> sfx phone_slam
 	-> stitch_39
 = stitch_39
 	~ currentStitch = 39

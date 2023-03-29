@@ -18,6 +18,7 @@ public partial class SettingsManager : Node
 	public static Window.ModeEnum DisplayMode { get; set; } = Window.ModeEnum.Fullscreen;
 	public static bool IsGamePaused { get; set; } = false;
 	public static bool IsGalleryUnlocked { get; set; } = false;
+	public static bool IsConsoleOpen { get; set; } = false;
 
 	[Signal] public delegate void MusicVolumeWasChangedEventHandler();
 

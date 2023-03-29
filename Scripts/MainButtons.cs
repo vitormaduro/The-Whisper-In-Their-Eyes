@@ -54,6 +54,11 @@ public partial class MainButtons : Control
 
 	public override void _Input(InputEvent @event)
 	{
+		if(SettingsManager.IsConsoleOpen)
+		{
+			return;
+		}
+		
 		if(@event.IsActionPressed("save"))
 		{
 			OpenSaveLoadScene(SceneMode.Save);

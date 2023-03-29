@@ -29,6 +29,8 @@ public partial class InkCommandsManager : Control
 	[Signal] public delegate void SpriteWasMovedEventHandler(string characterTag, string spriteTag, string positionFrom, string positionTo);
 	[Signal] public delegate void ScreenShatteredEventHandler();
 	[Signal] public delegate void SfxTurnedOffEventHandler();
+	[Signal] public delegate void CreditsStartedEventHandler();
+	[Signal] public delegate void NvlBoxWasRestoredEventHandler();
 
 	private List<InkCommand> commands;
 	private bool commandAwaitingInput;
@@ -205,6 +207,20 @@ public partial class InkCommandsManager : Control
 				ParamsNumber = 0,
 				DelayTime = 0
 			},
+			new InkCommand()
+			{
+				Command = "credits",
+				Signal = SignalName.CreditsStarted,
+				ParamsNumber = 0,
+				DelayTime = 60
+			},
+			new InkCommand()
+			{
+				Command = "restore_nvl",
+				Signal = SignalName.NvlBoxWasRestored,
+				ParamsNumber = 0,
+				DelayTime = 0
+			}
 		};
 	}
 
@@ -225,6 +241,12 @@ public partial class InkCommandsManager : Control
 			GetTree().CreateTimer(isSkipping ? 0.01f : float.Parse(args[0])).Timeout += () => EmitSignal(SignalName.CommandFinishedExecuting);
 
 			return;
+		}
+		else if(cmd.Command == "credits")
+		{
+			var scene = GD.Load<PackedScene>($"res://Scenes/credits_roll.scn");
+
+			GetParent().AddChild(scene.Instantiate());
 		}
 		else if(cmd.Command == "unlock_gallery")
 		{

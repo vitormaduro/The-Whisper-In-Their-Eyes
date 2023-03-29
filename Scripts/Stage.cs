@@ -9,6 +9,7 @@ public partial class Stage : Control
 {
 	private List<Character> characters;
 	private Dictionary<StagePosition, Sprite2D> stage;
+	private Dictionary<StagePosition, Vector2> originalPositions;
 	private InkCommandsManager cmdManager;
 
 	public override void _Ready()
@@ -27,6 +28,13 @@ public partial class Stage : Control
 			{ StagePosition.Left, GetNode<Sprite2D>("Left") },
 			{ StagePosition.Middle, GetNode<Sprite2D>("Middle") },
 			{ StagePosition.Right, GetNode<Sprite2D>("Right") }
+		};
+
+		originalPositions = new Dictionary<StagePosition, Vector2>()
+		{
+			{ StagePosition.Left, GetNode<Sprite2D>("Left").Position },
+			{ StagePosition.Middle, GetNode<Sprite2D>("Middle").Position },
+			{ StagePosition.Right, GetNode<Sprite2D>("Right").Position },
 		};
 
 		characters = new List<Character>()
@@ -82,6 +90,10 @@ public partial class Stage : Control
 		stage[StagePosition.Left].Texture = null;
 		stage[StagePosition.Middle].Texture = null;
 		stage[StagePosition.Right].Texture = null;
+
+		stage[StagePosition.Left].Position = originalPositions[StagePosition.Left];
+		stage[StagePosition.Middle].Position = originalPositions[StagePosition.Middle];
+		stage[StagePosition.Right].Position = originalPositions[StagePosition.Right];
 	}
 
 	private void ZoomPosition(string pos)
@@ -98,22 +110,17 @@ public partial class Stage : Control
 		stage[position].Scale = new Vector2(0.5f, 0.5f);
 	}
 
-	private async void MoveSprite(string characterTag, string spriteTag, string positionFrom, string positionTo)
+	private void MoveSprite(string characterTag, string spriteTag, string positionFrom, string positionTo)
 	{
 		Enum.TryParse(positionFrom, true, out StagePosition pos1);
 		Enum.TryParse(positionTo, true, out StagePosition pos2);
 
 		var character = characters.Where(c => c.Id == characterTag).First();
-		var originalPosition = stage[pos1].Position;
 
 		stage[pos1].Texture = character.Sprites[spriteTag];
 
 		var tween = CreateTween().SetEase(EaseType.InOut);
 
 		tween.TweenProperty(stage[pos1], "position:x", stage[pos2].Position.X, 0.5f);
-
-		await ToSignal(cmdManager, "ScreenCleared");
-
-		stage[pos1].Position = originalPosition;
 	}
 }
