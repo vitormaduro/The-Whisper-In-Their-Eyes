@@ -20,6 +20,9 @@ public partial class SaveManager : Node
 	public static string CurrentOst { get; set; } = null;
 	public static DateTime SaveDate { get; private set; }
 	public static DateTime LastSaveDate { get; private set; }
+	public static (string, string) StageLeft { get; set; }
+	public static (string, string) StageMiddle { get; set; }
+	public static (string, string) StageRight { get; set; }
 
 	public static void SaveGameAt(string saveFile)
 	{
@@ -32,6 +35,9 @@ public partial class SaveManager : Node
 				{ CURRENT_BG, CurrentBg },
 				{ CURRENT_STITCH, CurrentStitch },
 				{ CURRENT_OST, CurrentOst },
+				{ STAGE_LEFT, $"{StageLeft.Item1}/{StageLeft.Item2}" },
+				{ STAGE_MIDDLE, $"{StageMiddle.Item1}/{StageMiddle.Item2}" },
+				{ STAGE_RIGHT, $"{StageRight.Item1}/{StageRight.Item2}" },
 			};
 
 			var json = Json.Stringify(saveData);
@@ -54,10 +60,26 @@ public partial class SaveManager : Node
 		CurrentBg = nodeData[CURRENT_BG];
 		CurrentOst = nodeData[CURRENT_OST];
 
+		var charLeft = nodeData[STAGE_LEFT].Split('/');
+		var charMiddle = nodeData[STAGE_MIDDLE].Split('/');
+		var charRight = nodeData[STAGE_RIGHT].Split('/');
+
+		StageLeft = (charLeft[0], charLeft[1]);
+		StageMiddle = (charMiddle[0], charMiddle[1]);
+		StageRight = (charRight[0], charRight[1]);
+
 		if(DateTime.TryParseExact(nodeData[DATE], "yyyyMMddHHmmss", CultureInfo.InvariantCulture, DateTimeStyles.None, out var date))
 		{
 			SaveDate = date;
 		}
+	}
+
+	public static void ResetSaveSettings()
+	{
+		CurrentScene = CurrentStitch = null;
+		StageLeft = StageMiddle = StageRight = (null, null);
+		CurrentBg = null;
+		CurrentOst = null;
 	}
 
 	public static void LoadSaveSlot(int slot)
@@ -68,6 +90,14 @@ public partial class SaveManager : Node
 		CurrentStitch = nodeData[CURRENT_STITCH];
 		CurrentBg = nodeData[CURRENT_BG];
 		CurrentOst = nodeData[CURRENT_OST];
+
+		var charLeft = nodeData[STAGE_LEFT].Split('/');
+		var charMiddle = nodeData[STAGE_MIDDLE].Split('/');
+		var charRight = nodeData[STAGE_RIGHT].Split('/');
+
+		StageLeft = (charLeft[0], charLeft[1]);
+		StageMiddle = (charMiddle[0], charMiddle[1]);
+		StageRight = (charRight[0], charRight[1]);
 
 		if(DateTime.TryParseExact(nodeData[DATE], "yyyyMMddHHmmss", CultureInfo.InvariantCulture, DateTimeStyles.None, out var date))
 		{

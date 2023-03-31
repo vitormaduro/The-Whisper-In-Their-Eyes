@@ -39,8 +39,8 @@ public partial class MainMenu : Control
 		GetNode<AudioStreamPlayer>("AudioStreamPlayer2").Play();
 		GetTree().CreateTimer(3).Timeout += () =>
 		{
-			SaveManager.CurrentScene = null;
-			SaveManager.CurrentStitch = null;
+			SaveManager.ResetSaveSettings();
+			SettingsManager.IsGamePaused = false;
 
 			GetTree().ChangeSceneToFile($"res://Scenes/main_screen.scn");
 		};

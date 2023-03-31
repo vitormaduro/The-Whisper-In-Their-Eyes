@@ -297,6 +297,7 @@
 	~ currentStitch = 33
 	ACT_2_33.1
 	>> sfx door_creak
+	>> wait 1
 	>> change_bg living_room
 	>> sfx bag_down
 	>> sprite ronan army_smile middle
@@ -723,8 +724,7 @@
 
 == Scene_10 ==
 	>> change_bg living_room
-	>> sfx tv_tuning
-	>> sfx plates_down
+	>> sfx tv_tuning/plates_down
 	-> stitch_73
 = stitch_73
 	~ currentStitch = 73

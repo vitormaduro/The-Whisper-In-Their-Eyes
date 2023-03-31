@@ -497,6 +497,4 @@
 	>> change_bg black
 	>> ost_on old_man
 	>> credits
-	GALLERY_UNLOCKED # center
-	>> unlock_gallery
 -> DONE

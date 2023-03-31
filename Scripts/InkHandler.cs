@@ -1,15 +1,15 @@
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Godot;
 using GodotInk;
 
 public partial class InkHandler : Node
 {
-	[Export] private InkStory story;
+	private InkStory story;
 
 	[Signal] public delegate void CommandReceivedEventHandler(string commandName, string[] args);
 	[Signal] public delegate void StoryLoadedEventHandler();
+	[Signal] public delegate void InkSceneChangedEventHandler();
 	
 	private InkCommandsManager cmdManager;
 
@@ -17,7 +17,7 @@ public partial class InkHandler : Node
 	{
 		cmdManager = GetNode<InkCommandsManager>("%InkCommandsManager");
 
-		story.ResetState();
+		story = GD.Load<InkStory>("res://Ink/act_1.ink");
 
 		story.ObserveVariable("currentScene", Callable.From((string varName, Variant sceneNumber) => 
 		{
@@ -27,6 +27,8 @@ public partial class InkHandler : Node
 			{
 				SaveManager.CurrentScene = scene;
 				SaveManager.CurrentStitch = null;
+
+				EmitSignal(SignalName.InkSceneChanged);
 
 				GD.Print($"Entering scene [{SaveManager.CurrentScene}]");
 			}

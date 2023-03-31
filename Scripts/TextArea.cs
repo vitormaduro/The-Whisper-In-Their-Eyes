@@ -23,7 +23,7 @@ public partial class TextArea : RichTextLabel
 
 		skipButton.Pressed += ToggleSkip;
 		
-		GetNode<TextureButton>("../../../QuickButtons/PauseButton").Pressed += () => SettingsManager.IsGamePaused = !SettingsManager.IsGamePaused;
+		GetNode<TextureButton>("../../../QuickButtons/PauseButton").Pressed += TogglePause;
 
 		cmdManager.TextCleared += ClearText;
 		cmdManager.ScreenCleared += ClearText;
@@ -35,9 +35,17 @@ public partial class TextArea : RichTextLabel
 		GuiInput += (InputEvent @event) => ProcessInput(@event);
 	}
 
+	private void TogglePause()
+	{
+		if(skipButton.ButtonPressed)
+		{
+			ToggleSkip();
+		}
+	}
+
 	private void ToggleSkip()
 	{
-		isSkipping = !isSkipping;
+		skipButton.ButtonPressed = isSkipping = !isSkipping;
 
 		skipButton.TextureNormal = GD.Load<Texture2D>($"res://Art/UI/QuickButtons/{(isSkipping ? "skip_selected" : "skip")}.png");
 		skipButton.TextureHover = GD.Load<Texture2D>($"res://Art/UI/QuickButtons/{(isSkipping ? "skip_selected_hover" : "skip_hover")}.png");

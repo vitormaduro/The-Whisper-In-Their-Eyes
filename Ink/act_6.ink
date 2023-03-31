@@ -1709,10 +1709,7 @@
 	ACT_6_135.15
 	ACT_6_135.16
 	>> clear_text
-	>> sfx laughter
-	>> sfx whistle
-	>> sfx claps
-	>> sfx oooo
+	>> sfx_multiple laughter/whistle/claps/oooo
 	-> stitch_136
 = stitch_136
 	~ currentStitch = 136
@@ -1738,10 +1735,7 @@
 	ACT_6_138.2
 	ACT_6_138.3
 	>> clear_text
-	>> sfx laughter
-	>> sfx whistle
-	>> sfx claps
-	>> sfx oooo
+	>> sfx_multiple laughter/whistle/claps/oooo
 	-> stitch_139
 = stitch_139
 	~ currentStitch = 139

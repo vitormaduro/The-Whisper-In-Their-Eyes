@@ -1,5 +1,6 @@
 using Godot;
 using System.Collections.Generic;
+using static Godot.AudioStreamWav;
 
 public partial class SfxPlayer : AudioStreamPlayer
 {
@@ -8,10 +9,13 @@ public partial class SfxPlayer : AudioStreamPlayer
 	public override void _Ready()
 	{
 		var cmdManager = GetNode<InkCommandsManager>("%InkCommandsManager");
+		var inkManager = GetNode<InkHandler>("%InkScriptManager");
 
 		cmdManager.SfxTriggered += (string tag) => PlayEffectByTag(tag);
 		cmdManager.StaticTriggered += (string mode) => StaticEffect(mode);
 		cmdManager.SfxTurnedOff += Stop;
+		cmdManager.MultipleSfxTriggered += (string sfxList) => PlaySfxList(sfxList);
+		inkManager.InkSceneChanged += Stop;
 
 		effects = new Dictionary<string, AudioStream>()
 		{
@@ -80,7 +84,51 @@ public partial class SfxPlayer : AudioStreamPlayer
 			{ "ketuk_cackle", GD.Load<AudioStreamOggVorbis>("res://Audio/Effects/ketuk_cackle.ogg") },
 			{ "man_turn_back_both", GD.Load<AudioStreamOggVorbis>("res://Audio/Effects/man_turn_back_both.ogg") },
 			{ "phone_slam", GD.Load<AudioStreamOggVorbis>("res://Audio/Effects/phone_slam.ogg") },
+			{ "plates_down", GD.Load<AudioStreamOggVorbis>("res://Audio/Effects/plates_down.ogg") },
+			{ "thing_on_ceiling", GD.Load<AudioStreamOggVorbis>("res://Audio/Effects/thing_on_ceiling.ogg") },
+			{ "break_stuff", GD.Load<AudioStreamOggVorbis>("res://Audio/Effects/break_stuff.ogg") },
+			{ "walk_away", GD.Load<AudioStreamOggVorbis>("res://Audio/Effects/walk_away.ogg") },
+			{ "oooo", GD.Load<AudioStreamOggVorbis>("res://Audio/Effects/oooo.ogg") },
+			{ "walk_down_stairs", GD.Load<AudioStreamOggVorbis>("res://Audio/Effects/walk_down_stairs.ogg") },
+			{ "run_down_stairs", GD.Load<AudioStreamOggVorbis>("res://Audio/Effects/run_down_stairs.ogg") },
+			{ "bag_down", GD.Load<AudioStreamOggVorbis>("res://Audio/Effects/bag_down.ogg") },
+			{ "leg_flop", GD.Load<AudioStreamOggVorbis>("res://Audio/Effects/leg_flop.ogg") },
 		};
+	}
+
+	private void PlaySfxList(string sfxList)
+	{
+		var list = sfxList.Split('/');
+
+		foreach(var sfx in list)
+		{
+			if(!effects.ContainsKey(sfx))
+			{
+				GD.PushWarning($"Sound effect [{sfx}] not implemented yet");
+
+				continue;
+			}
+
+			var player = new AudioStreamPlayer();
+			var effect = effects[sfx];
+
+			if(effect is AudioStreamOggVorbis ogg)
+			{
+				ogg.Loop = false;
+				player.Stream = ogg;
+			}
+			else if(effect is AudioStreamWav wav)
+			{
+				wav.LoopMode = LoopModeEnum.Disabled;
+				player.Stream = wav;
+			}
+
+			GetParent().AddChild(player);
+
+			player.Bus = "Sfx";
+			player.Playing = true;
+			player.Finished += player.QueueFree;
+		}
 	}
 
 	public void PlayEffectByTag(string tag)

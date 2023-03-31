@@ -19,8 +19,7 @@
 	ACT_5_1.8
 	ACT_5_1.9
 	>> clear_text
-	>> sfx break_stuff
-	>> sfx man_grunt_anger
+	>> sfx_multiple break_stuff/man_grunt_anger
 	-> stitch_2
 = stitch_2
 	~ currentStitch = 2
@@ -58,8 +57,7 @@
 	ACT_5_6.1
 	ACT_5_6.2
 	>> clear_text
-	>> sfx walk_down_stairs
-	>> sfx man_grunt_anger
+	>> sfx_multiple walk_down_stairs/man_grunt_anger
 	>> sprite ronan home_injured middle
 	-> stitch_7
 = stitch_7
@@ -81,8 +79,7 @@
 	~ currentStitch = 9
 	ACT_5_9.1
 	>> clear_text
-	>> sfx man_grunt_anger
-	>> sfx run_down_stairs
+	>> sfx_multiple man_grunt_anger/run_down_stairs
 	-> stitch_10
 = stitch_10
 	~ currentStitch = 10
@@ -223,8 +220,7 @@
 	ACT_5_21.1 # center
 	>> clear_text
 	>> change_bg blood_cave
-	>> sfx light_flicker
-	>> sfx woman_here_left
+	>> sfx_multiple light_flicker/woman_here_left
 	-> stitch_22
 = stitch_22
 	~ currentStitch = 22
@@ -236,8 +232,7 @@
 	ACT_5_22.6
 	ACT_5_22.7
 	>> clear_text
-	>> sfx man_grunt_anger
-	>> sfx thousand_whispers
+	>> sfx_multiple man_grunt_anger/thousand_whispers
 	-> stitch_23
 = stitch_23
 	~ currentStitch = 23
@@ -268,9 +263,8 @@
 	ACT_5_25.1
 	ACT_5_25.2
 	>> clear_text
-	>> sfx heart_thump
+	>> sfx_multiple heart_thump/heavy_breathing
 	>> ost_on croak
-	>> sfx heavy_breathing
 	-> stitch_26
 = stitch_26
 	~ currentStitch = 26
@@ -441,22 +435,19 @@
 	~ currentStitch = 44
 	ACT_5_44.1 # black 
 	>> clear_text
-	>> sfx heart_thump
-	>> sfx heavy_breathing
+	>> sfx_multiple heart_thump/heavy_breathing
 	-> stitch_45
 = stitch_45
 	~ currentStitch = 45
 	ACT_5_45.1 # black 
 	>> clear_text
-	>> sfx heart_thump
-	>> sfx heavy_breathing
+	>> sfx_multiple heart_thump/heavy_breathing
 	-> stitch_46
 = stitch_46
 	~ currentStitch = 46
 	ACT_5_46.1 # black 
 	>> clear_text
-	>> sfx heart_thump
-	>> sfx heavy_breathing
+	>> sfx_multiple heart_thump/heavy_breathing
 	-> stitch_47
 = stitch_47
 	~ currentStitch = 47

@@ -65,6 +65,10 @@ public partial class LoadSelectScreen : Control
 					{
 						GetTree().ChangeSceneToFile("res://Scenes/main_screen.scn");
 					}
+					else
+					{
+						GetTree().ReloadCurrentScene();
+					}
 
 					QueueFree();
 				};
