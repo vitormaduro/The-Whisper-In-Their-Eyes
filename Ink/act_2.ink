@@ -723,6 +723,7 @@
 -> Scene_10
 
 == Scene_10 ==
+	~ currentScene = 10
 	>> change_bg living_room
 	>> sfx tv_tuning/plates_down
 	-> stitch_73
@@ -1060,6 +1061,7 @@
 -> Scene_11
 
 == Scene_11 ==
+	~ currentScene = 11
 	>> change_bg black
 	>> ost_on illness
 	-> stitch_104

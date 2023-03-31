@@ -1,7 +1,7 @@
 0b1263761226a5a55b49c82e7456acd5
-::res://::1680273159
-default_bus_layout.tres::AudioBusLayout::5827500808674131351::1679667126::0::1::::<><>::
-export_presets.cfg::TextFile::-1::1680134311::0::1::::<><>::
+::res://::1680290407
+default_bus_layout.tres::AudioBusLayout::-1::1680290367::0::1::::<><>::
+export_presets.cfg::TextFile::-1::1680277326::0::1::::<><>::
 icon.svg::CompressedTexture2D::992952571825391275::1678890905::1678890905::1::::<><>::
 ::res://addons/::1678890905
 ::res://addons/GodotInk/::1678890905
@@ -21,43 +21,43 @@ MarshalUtils.cs::CSharpScript::-1::1678890905::0::1::::<><>::
 StubInkStory.cs::CSharpScript::-1::1678890905::0::1::::<><>::
 ::res://Animations/::1679181103
 screen_shake.res::Animation::4662135881675666241::1679181103::0::1::::<><>::
-::res://Art/::1679658478
-::res://Art/Backgrounds/::1680119829
+::res://Art/::1680290366
+::res://Art/Backgrounds/::1680290366
 bedroom1.jpg::CompressedTexture2D::6469022406342560830::1679073959::1679073959::1::::<><>::
-bedroom2.jpg::CompressedTexture2D::7430454375784638442::1679397580::1679397588::1::::<><>::
+bedroom2.jpg::CompressedTexture2D::-1::1680290366::1680290366::1::::<><>::
 black.jpg::CompressedTexture2D::2540683812511795183::1678890958::1678890958::1::::<><>::
-blood_cave.jpg::CompressedTexture2D::7360462991382486026::1679333290::1679333299::1::::<><>::
+blood_cave.jpg::CompressedTexture2D::-1::1680290366::1680290366::1::::<><>::
 deaths_omen.jpg::CompressedTexture2D::463381221774122434::1679073959::1679073959::1::::<><>::
-fan.jpg::CompressedTexture2D::2577143523809516774::1679357764::1679357769::1::::<><>::
-living_room.jpg::CompressedTexture2D::3893684578345714747::1680119824::1680119829::1::::<><>::
+fan.jpg::CompressedTexture2D::-1::1680290366::1680290366::1::::<><>::
+living_room.jpg::CompressedTexture2D::3893684578345714747::1680290366::1680290366::1::::<><>::
 office.jpg::CompressedTexture2D::3480526199825716377::1678890958::1678890958::1::::<><>::
-puddle.jpg::CompressedTexture2D::21592016974221884::1679427290::1679427294::1::::<><>::
+puddle.jpg::CompressedTexture2D::-1::1680290366::1680290366::1::::<><>::
 red.jpg::CompressedTexture2D::3580965484255291604::1679073959::1679073959::1::::<><>::
-shatter.png::CompressedTexture2D::6836952337106436508::1680016838::1680016843::1::::<><>::
+shatter.png::CompressedTexture2D::-1::1680290366::1680290366::1::::<><>::
 train.jpg::CompressedTexture2D::7428071738625819985::1679073959::1679073959::1::::<><>::
-::res://Art/Banner/::1679666450
-output-onlinegiftools.png::CompressedTexture2D::4436136430902321716::1679666430::1679666442::1::::<><>::
-::res://Art/CGs/::1679411023
-photo1.png::CompressedTexture2D::9071059729711549838::1679411021::1679411023::1::::<><>::
-photo1_color.png::CompressedTexture2D::8848020438267754400::1679304303::1679305274::1::::<><>::
-photo2.png::CompressedTexture2D::6416433747486009370::1679411021::1679411022::1::::<><>::
-photo2_color.png::CompressedTexture2D::3790137440184504501::1679304303::1679305301::1::::<><>::
-photo3.png::CompressedTexture2D::8699077761748091808::1679411021::1679411022::1::::<><>::
-photo3_color.png::CompressedTexture2D::3571479138300924825::1679304303::1679305260::1::::<><>::
-photo4.png::CompressedTexture2D::8554828557148661779::1679411021::1679411023::1::::<><>::
-photo4_color.png::CompressedTexture2D::7082221545967579550::1679304303::1679305307::1::::<><>::
-::res://Art/Fonts/::1679181936
+::res://Art/Banner/::1680290366
+output-onlinegiftools.png::CompressedTexture2D::4436136430902321716::1680290366::1680290366::1::::<><>::
+::res://Art/CGs/::1680290366
+photo1.png::CompressedTexture2D::9071059729711549838::1680290366::1680290366::1::::<><>::
+photo1_color.png::CompressedTexture2D::8848020438267754400::1680290366::1680290366::1::::<><>::
+photo2.png::CompressedTexture2D::6416433747486009370::1680290366::1680290366::1::::<><>::
+photo2_color.png::CompressedTexture2D::3790137440184504501::1680290366::1680290366::1::::<><>::
+photo3.png::CompressedTexture2D::8699077761748091808::1680290366::1680290366::1::::<><>::
+photo3_color.png::CompressedTexture2D::3571479138300924825::1680290366::1680290366::1::::<><>::
+photo4.png::CompressedTexture2D::8554828557148661779::1680290366::1680290366::1::::<><>::
+photo4_color.png::CompressedTexture2D::7082221545967579550::1680290366::1680290366::1::::<><>::
+::res://Art/Fonts/::1680290366
 JMH Typewriter.ttf::FontFile::8154213123427119084::1678890905::1678890905::1::::<><>::
-News Gothic Regular.otf::FontFile::1516583404711972882::1679181936::1679181936::1::::<><>::
+News Gothic Regular.otf::FontFile::-1::1680290366::1680290366::1::::<><>::
 ::res://Art/Sprites/::1679073959
 ::res://Art/Sprites/Kaede/::1678890958
 kaede_neutral.png::CompressedTexture2D::8735282230011360436::1678890958::1678890958::1::::<><>::
 kaede_scared.png::CompressedTexture2D::1094605637129001317::1678890958::1678890958::1::::<><>::
 kaede_sick.png::CompressedTexture2D::694992977944215833::1678890958::1678890958::1::::<><>::
 kaede_smile.png::CompressedTexture2D::8098735425136924663::1678890958::1678890958::1::::<><>::
-::res://Art/Sprites/Rikki/::1679414150
-rikki_curious.png::CompressedTexture2D::6370996727743444611::1679414143::1679414150::1::::<><>::
-rikki_neutral.png::CompressedTexture2D::8562369709592022028::1679414118::1679414150::1::::<><>::
+::res://Art/Sprites/Rikki/::1680290366
+rikki_curious.png::CompressedTexture2D::6370996727743444611::1680290366::1679414150::1::::<><>::
+rikki_neutral.png::CompressedTexture2D::8562369709592022028::1680290366::1679414150::1::::<><>::
 ::res://Art/Sprites/Ronan/::1679181103
 ronan_army_smile.png::CompressedTexture2D::6149535081145764844::1679073959::1679073959::1::::<><>::
 ronan_army_tired.png::CompressedTexture2D::1665475433889566078::1679073959::1679073959::1::::<><>::
@@ -66,9 +66,9 @@ ronan_home_neutral.png::CompressedTexture2D::3024932603385743431::1678890958::16
 ronan_home_shock.png::CompressedTexture2D::1010658551024119087::1679181103::1679181103::1::::<><>::
 ronan_home_smile.png::CompressedTexture2D::2772595873635066389::1678890958::1678890958::1::::<><>::
 ronan_home_tired.png::CompressedTexture2D::6636599907992601157::1678890958::1678890958::1::::<><>::
-::res://Art/Styles/::1680273307
-credits_name.res::LabelSettings::3343874714969690963::1680273307::0::1::::<><>::uid://dof7x02seb0fw
-::res://Art/UI/::1679241264
+::res://Art/Styles/::1680290366
+credits_name.res::LabelSettings::3343874714969690963::1680290366::0::1::::<><>::uid://dof7x02seb0fw
+::res://Art/UI/::1680290366
 bookmark_hover.png::CompressedTexture2D::3435179459292906080::1678890905::1678890905::1::::<><>::
 bookmark_idle_rev2.png::CompressedTexture2D::3898245963648283355::1678890905::1678890905::1::::<><>::
 NVL box.png::CompressedTexture2D::5465947237045056323::1678890905::1678890905::1::::<><>::
@@ -83,8 +83,8 @@ gallery_base.png::CompressedTexture2D::4598878618849699558::1679073959::16790739
 ::res://Art/UI/Load/::1678898358
 black box.png::CompressedTexture2D::7569377402949067030::1678891476::1678891476::1::::<><>::
 save load_base.png::CompressedTexture2D::661713137992756740::1678898358::1678898358::1::::<><>::
-::res://Art/UI/Logo/::1680132370
-godot.png::CompressedTexture2D::3034408374780900088::1680132367::1680132370::1::::<><>::
+::res://Art/UI/Logo/::1680290366
+godot.png::CompressedTexture2D::-1::1680290366::1680290366::1::::<><>::
 logo.png::CompressedTexture2D::428833183151684555::1679181103::1679181103::1::::<><>::
 ::res://Art/UI/Main Menu/::1678890905
 main menu_base.jpg::CompressedTexture2D::3011172920432203353::1678890905::1678890905::1::::<><>::
@@ -95,17 +95,17 @@ photo 3.png::CompressedTexture2D::5187268517124825834::1678890905::1678890905::1
 button_hover.png::CompressedTexture2D::1872788835890116139::1678890958::1678890958::1::::<><>::
 button_idle(1).png::CompressedTexture2D::3999034997729108091::1678890958::1678890958::1::::<><>::
 pause_base.png::CompressedTexture2D::4682429827256381014::1678890958::1678890958::1::::<><>::
-::res://Art/UI/QuickButtons/::1679413215
-hide hover.png::CompressedTexture2D::6445788575136491757::1679241264::1679241264::1::::<><>::
-hide.png::CompressedTexture2D::1719705599950304882::1679241264::1679241264::1::::<><>::
-log2 hover.png::CompressedTexture2D::4088584046687104762::1679241264::1679241264::1::::<><>::
-log2.png::CompressedTexture2D::1579829001022498156::1679241264::1679241264::1::::<><>::
-pause hover.png::CompressedTexture2D::4764523827111915350::1679241264::1679241264::1::::<><>::
-pause.png::CompressedTexture2D::1903024625322485691::1679241264::1679241264::1::::<><>::
-skip.png::CompressedTexture2D::5811075880443557527::1679241264::1679241264::1::::<><>::
-skip_hover.png::CompressedTexture2D::6140357004235772377::1679241264::1679413215::1::::<><>::
-skip_selected.png::CompressedTexture2D::1319070553864125329::1679413095::1679413113::1::::<><>::
-skip_selected_hover.png::CompressedTexture2D::8050999277070000936::1679413096::1679413103::1::::<><>::
+::res://Art/UI/QuickButtons/::1680290366
+hide hover.png::CompressedTexture2D::6445788575136491757::1680290366::1680290366::1::::<><>::
+hide.png::CompressedTexture2D::1719705599950304882::1680290366::1680290366::1::::<><>::
+log2 hover.png::CompressedTexture2D::4088584046687104762::1680290366::1680290366::1::::<><>::
+log2.png::CompressedTexture2D::1579829001022498156::1680290366::1680290366::1::::<><>::
+pause hover.png::CompressedTexture2D::4764523827111915350::1680290366::1680290366::1::::<><>::
+pause.png::CompressedTexture2D::1903024625322485691::1680290366::1680290366::1::::<><>::
+skip.png::CompressedTexture2D::5811075880443557527::1680290366::1680290366::1::::<><>::
+skip_hover.png::CompressedTexture2D::6140357004235772377::1680290366::1680290366::1::::<><>::
+skip_selected.png::CompressedTexture2D::1319070553864125329::1680290366::1680290366::1::::<><>::
+skip_selected_hover.png::CompressedTexture2D::8050999277070000936::1680290366::1680290366::1::::<><>::
 ::res://Art/UI/Settings/::1678890905
 button_idle.png::CompressedTexture2D::7645135824058594536::1678890905::1678890905::1::::<><>::
 button_selected.png::CompressedTexture2D::3628300261869642579::1678890905::1678890905::1::::<><>::
@@ -120,171 +120,171 @@ static2.jpg::CompressedTexture2D::5785928325789869686::1679073959::1679073959::1
 static3.jpg::CompressedTexture2D::5355207798977017594::1679073959::1679073959::1::::<><>::
 static4.jpg::CompressedTexture2D::7157829234843192759::1679073959::1679073959::1::::<><>::
 ::res://Audio/::1679073959
-::res://Audio/Effects/::1680274432
-bag_down.ogg::AudioStreamOggVorbis::512820759431257547::1680274378::1680274378::1::::<><>::
-body_falling.ogg::AudioStreamOggVorbis::8570774523616671882::1680109449::1680109459::1::::<><>::
-break_stuff.ogg::AudioStreamOggVorbis::2096603161139346055::1680271563::1680271564::1::::<><>::
-choking.ogg::AudioStreamOggVorbis::8245334080509058153::1679946985::1679948221::1::::<><>::
-claps.ogg::AudioStreamOggVorbis::4617994127353090698::1679946985::1679948648::1::::<><>::
-clock_ticking.ogg::AudioStreamOggVorbis::1139786051123642592::1679946985::1679947823::1::::<><>::
-doorbell.wav::AudioStreamWAV::6957586965479662633::1679946985::1679947479::1::::<><>::
-door_close.wav::AudioStreamWAV::2999648752516786434::1679946985::1679948593::1::::<><>::
-door_creak.ogg::AudioStreamOggVorbis::3038921783439671964::1680113978::1680113989::1::::<><>::
-fly_buzz.ogg::AudioStreamOggVorbis::9073672407419856428::1679946985::1680037844::1::::<><>::
-FX Phone Dialing (rotary).ogg::AudioStreamOggVorbis::1692855063169667526::1679946985::1679946985::1::::<><>::
-FX Phone Hanging Up (rotary).ogg::AudioStreamOggVorbis::5131924179622710530::1679946985::1679946985::1::::<><>::
-FX Rain and Thunder.ogg::AudioStreamOggVorbis::4368736605150945049::1679946985::1679946985::1::::<><>::
-ghost_cry.ogg::AudioStreamOggVorbis::7599638727905517599::1679946985::1679948755::1::::<><>::
-heartbeat.ogg::AudioStreamOggVorbis::1989858424388891247::1679946985::1679947387::1::::<><>::
-heart_thump_slow.ogg::AudioStreamOggVorbis::3811909138124560879::1680109407::1680109414::1::::<><>::
-heavy_breathing.ogg::AudioStreamOggVorbis::4469898611276709997::1680108880::1680108896::1::::<><>::
-heavy_breathing_loud.ogg::AudioStreamOggVorbis::6340126997905956200::1680108961::1680108968::1::::<><>::
-heavy_grunts.ogg::AudioStreamOggVorbis::5115003822255642944::1680109101::1680109108::1::::<><>::
-heavy_grunts_loud.ogg::AudioStreamOggVorbis::8690580318253648523::1680109146::1680109158::1::::<><>::
-heavy_gust.ogg::AudioStreamOggVorbis::4278749366205058823::1679946985::1679948711::1::::<><>::
-ketuk_cackle.ogg::AudioStreamOggVorbis::2329634537499447832::1680115175::1680115180::1::::<><>::
-knock_door.ogg::AudioStreamOggVorbis::5688270098089394253::1680114764::1680114771::1::::<><>::
-knock_wood.ogg::AudioStreamOggVorbis::5204944083688541139::1679946985::1679948297::1::::<><>::
-laughter.ogg::AudioStreamOggVorbis::4626626140516657217::1680114817::1680114822::1::::<><>::
-leg_flop.ogg::AudioStreamOggVorbis::421021672405430725::1680274431::1680274432::1::::<><>::
-light_flicker.ogg::AudioStreamOggVorbis::1397181772496200186::1679946985::1679948493::1::::<><>::
-malevolent_laugh_multiple.ogg::AudioStreamOggVorbis::3264166368700187751::1680109508::1680109513::1::::<><>::
-malevolent_woman.ogg::AudioStreamOggVorbis::7988644193685098872::1680109620::1680109630::1::::<><>::
-man_cough.ogg::AudioStreamOggVorbis::8652532119921957812::1679946985::1679947941::1::::<><>::
-man_grunt_anger.ogg::AudioStreamOggVorbis::1441040076477116844::1679946985::1679948408::1::::<><>::
-man_painful_scream.ogg::AudioStreamOggVorbis::5541949553055279683::1680114324::1680114331::1::::<><>::
-man_scream_echo.ogg::AudioStreamOggVorbis::3642539831677776831::1679946985::1679948524::1::::<><>::
-man_struggle.ogg::AudioStreamOggVorbis::4575782131551346002::1680109259::1680109266::1::::<><>::
-man_turn_back_both.ogg::AudioStreamOggVorbis::6124470420454014978::1680115227::1680115233::1::::<><>::
-man_turn_back_left.ogg::AudioStreamOggVorbis::4852870027260826396::1680114904::1680114916::1::::<><>::
-man_turn_back_right.ogg::AudioStreamOggVorbis::2320798861578182648::1680114951::1680114956::1::::<><>::
-man_violent_cough.ogg::AudioStreamOggVorbis::5413086060947908494::1679946985::1679948462::1::::<><>::
-mirror_shatter.ogg::AudioStreamOggVorbis::8845613367916733755::1679946985::1679948131::1::::<><>::
-oooo.ogg::AudioStreamOggVorbis::4276484439413505165::1680274205::1680274205::1::::<><>::
+::res://Audio/Effects/::1680290367
+bag_down.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+body_falling.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+break_stuff.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+choking.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+claps.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+clock_ticking.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+doorbell.wav::AudioStreamWAV::-1::1680290366::1680290366::1::::<><>::
+door_close.wav::AudioStreamWAV::-1::1680290366::1680290366::1::::<><>::
+door_creak.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+fly_buzz.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+FX Phone Dialing (rotary).ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+FX Phone Hanging Up (rotary).ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+FX Rain and Thunder.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+ghost_cry.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+heartbeat.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+heart_thump_slow.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+heavy_breathing.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+heavy_breathing_loud.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+heavy_grunts.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+heavy_grunts_loud.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+heavy_gust.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+ketuk_cackle.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+knock_door.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+knock_wood.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+laughter.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+leg_flop.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+light_flicker.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+malevolent_laugh_multiple.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+malevolent_woman.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+man_cough.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+man_grunt_anger.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+man_painful_scream.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+man_scream_echo.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+man_struggle.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+man_turn_back_both.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+man_turn_back_left.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+man_turn_back_right.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+man_violent_cough.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+mirror_shatter.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+oooo.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
 phone_pickup.sample::AudioStreamWAV::3351891184519203483::1679181103::0::1::::<><>::
 phone_ring.sample::AudioStreamWAV::7150253384035336954::1679181103::0::1::::<><>::
-phone_slam.ogg::AudioStreamOggVorbis::8415357277662800788::1680118645::1680118652::1::::<><>::
-plates_down.ogg::AudioStreamOggVorbis::4132147054415877614::1680271401::1680271401::1::::<><>::
-ringing_noise.ogg::AudioStreamOggVorbis::8451718933034327886::1679946985::1680038113::1::::<><>::
-run_down_stairs.ogg::AudioStreamOggVorbis::3562744566053547553::1680274324::1680274324::1::::<><>::
+phone_slam.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+plates_down.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+ringing_noise.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+run_down_stairs.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
 static.sample::AudioStreamWAV::1649621847074963148::1679073959::0::1::::<><>::
-thing_on_ceiling.ogg::AudioStreamOggVorbis::2491308667491218182::1680271502::1680271502::1::::<><>::
-thousand_whispers.ogg::AudioStreamOggVorbis::7778002200103307793::1680113636::1680113641::1::::<><>::
-tongue_licking.ogg::AudioStreamOggVorbis::6038198007236238051::1680114704::1680114712::1::::<><>::
-train_horn.ogg::AudioStreamOggVorbis::665482882045650663::1679946985::1679947078::1::::<><>::
-tv_changing.ogg::AudioStreamOggVorbis::5794481836024650735::1679946985::1679947719::1::::<><>::
-tv_tuning.ogg::AudioStreamOggVorbis::2762715431413353802::1679946985::1679947683::1::::<><>::
-walk_away.ogg::AudioStreamOggVorbis::5628200415097196723::1680271774::1680271775::1::::<><>::
-walk_down_stairs.ogg::AudioStreamOggVorbis::5757439171575749241::1680274280::1680274280::1::::<><>::
-whistle.ogg::AudioStreamOggVorbis::935235234057557669::1680114854::1680114858::1::::<><>::
-woman_above.ogg::AudioStreamOggVorbis::7302159031004985005::1680114662::1680114671::1::::<><>::
-woman_can_escape_left.ogg::AudioStreamOggVorbis::605450721308688850::1680114499::1680114506::1::::<><>::
-woman_come_here_right.ogg::AudioStreamOggVorbis::2187570580376690801::1680114212::1680114218::1::::<><>::
-woman_door_left.ogg::AudioStreamOggVorbis::7378978492446985029::1680114376::1680114382::1::::<><>::
-woman_front_door_right.ogg::AudioStreamOggVorbis::7899867791418131304::1680114435::1680114441::1::::<><>::
-woman_here_both.ogg::AudioStreamOggVorbis::2511089685101799074::1680114620::1680114625::1::::<><>::
-woman_here_here_left.ogg::AudioStreamOggVorbis::4621967596575302750::1680113785::1680113791::1::::<><>::
-woman_here_here_right.ogg::AudioStreamOggVorbis::6549471550716777716::1680113823::1680113834::1::::<><>::
-woman_here_high.ogg::AudioStreamOggVorbis::1122400900644829265::1680109717::1680109757::1::::<><>::
-woman_here_left.ogg::AudioStreamOggVorbis::591627964802136039::1680113881::1680113889::1::::<><>::
-woman_here_low.ogg::AudioStreamOggVorbis::4938266604527156507::1680109676::1680109682::1::::<><>::
-woman_here_right.ogg::AudioStreamOggVorbis::6860853389446120282::1680113921::1680113939::1::::<><>::
-woman_just_escape_right.ogg::AudioStreamOggVorbis::7566207987143899970::1680114540::1680114547::1::::<><>::
-woman_not_supposed_left.ogg::AudioStreamOggVorbis::7856782376716349629::1680114270::1680114275::1::::<><>::
-woman_no_here_left.ogg::AudioStreamOggVorbis::8007628097581273107::1680114102::1680114112::1::::<><>::
-woman_no_here_right.ogg::AudioStreamOggVorbis::8050508208021722394::1680114046::1680114053::1::::<><>::
-woman_right_here.ogg::AudioStreamOggVorbis::3799596258952779770::1680113734::1680113743::1::::<><>::
-woman_shriek.ogg::AudioStreamOggVorbis::194666331862213931::1680016697::1680016713::1::::<><>::
-woman_vomit.ogg::AudioStreamOggVorbis::7147237476331584334::1679946985::1679947775::1::::<><>::
-woman_weep.ogg::AudioStreamOggVorbis::87451815484342616::1679946985::1679948171::1::::<><>::
-woman_yes_here_left.ogg::AudioStreamOggVorbis::2715595716605474085::1680114163::1680114169::1::::<><>::
-::res://Audio/Soundtrack/::1679603035
-A Dying Man's Croak.ogg::AudioStreamOggVorbis::4332184579070999920::1678890905::1679304340::1::::<><>::
-A Photograph (reprise).ogg::AudioStreamOggVorbis::6978182954256751496::1678890958::1679304345::1::::<><>::
-A photograph.ogg::AudioStreamOggVorbis::3576296004382126151::1678890958::1679304348::1::::<><>::
-For Our Children.ogg::AudioStreamOggVorbis::1328590669509322417::1679603035::1679603035::1::::<><>::
-For Our Old Men.ogg::AudioStreamOggVorbis::9126346068376327235::1679411103::1679411103::1::::<><>::
-Growing Illness.ogg::AudioStreamOggVorbis::6173311808591533045::1678890905::1679304352::1::::<><>::
-Lost and Not Found.ogg::AudioStreamOggVorbis::7294498128102654600::1678890905::1679304354::1::::<><>::
-The Ecstasy Of Crushing Agony.ogg::AudioStreamOggVorbis::5785545849099979446::1678890905::1679304358::1::::<><>::
-::res://bin/::1680134318
-::res://bin/0.9.2/::1680134312
-::res://bin/0.9.2/data_Whisper_x86_64/::1680134317
-Whisper.deps.json::JSON::-1::1680134317::0::1::::<><>::
-Whisper.runtimeconfig.json::JSON::-1::1680134317::0::1::::<><>::
-::res://Ink/::1680274200
-act_1.ink::Resource::4855125479462900396::1680119004::1680274497::1::::<><>::res://addons/GodotInk/Src/InkStory.cs
-act_2.ink::Resource::5345122850184148053::1680274149::1680274200::1::::<><>::res://addons/GodotInk/Src/StubInkStory.cs
-act_3.ink::Resource::6815199452061238816::1680274109::1680274200::1::::<><>::res://addons/GodotInk/Src/StubInkStory.cs
-act_4.ink::Resource::7438094869007365305::1680274027::1680274200::1::::<><>::res://addons/GodotInk/Src/StubInkStory.cs
-act_5.ink::Resource::7002551720780849881::1680273017::1680273124::1::::<><>::res://addons/GodotInk/Src/StubInkStory.cs
-act_6.ink::Resource::7533287577693210016::1680272867::1680273124::1::::<><>::res://addons/GodotInk/Src/StubInkStory.cs
-act_7.ink::Resource::893926192296992260::1680187552::1680187597::1::::<><>::res://addons/GodotInk/Src/StubInkStory.cs
-::res://Scenes/::1680273949
-confirm_popup.scn::PackedScene::1203024953402029042::1680274486::0::1::::<><>::res://Scripts/ConfirmPopup.cs<>uid://naxibvgltxc6<>uid://b0ao4j5wl2np4<>uid://dof7x02seb0fw<>uid://b7uiqml8siemo<>uid://c8bb6pbbi21tk<>res://Scripts/HoverButton.cs
-credits.scn::PackedScene::7730312945649105101::1680274486::0::1::::<><>::res://Scripts/Credits.cs<>uid://b6ry4g7c8dj0i<>uid://b0ao4j5wl2np4<>uid://dof7x02seb0fw<>uid://bnv2el8jqw7jr<>uid://6673amislh6k
-credits_roll.scn::PackedScene::3546308282644261664::1680274491::0::1::::<><>::res://Scripts/CreditsRoll.cs<>uid://dof7x02seb0fw<>uid://gdy241kcj4mx<>uid://bjh5i6th4xkmq<>uid://b4g5rv3oqe44g
-gallery.scn::PackedScene::247590450909609472::1680274487::0::1::::<><>::res://Scripts/Gallery.cs<>uid://b6ry4g7c8dj0i<>uid://b0ao4j5wl2np4<>uid://6673amislh6k<>uid://b4g5rv3oqe44g<>uid://dtqmm3t6e320y<>uid://b0eyol5ywmdo6<>res://Scripts/HoverButton.cs<>uid://dof7x02seb0fw
-load_selection.scn::PackedScene::409816516586736241::1680274486::0::1::::<><>::res://Scripts/LoadSelectScreen.cs<>uid://josk3onj1g01<>uid://b0ao4j5wl2np4<>uid://c76ouyi7kv18w<>uid://6673amislh6k
-main_menu.scn::PackedScene::676841895129598253::1680274487::0::1::::<><>::res://Scripts/MainMenu.cs<>uid://bi5vtwieud6ph<>uid://2kl7e6exwi3v<>uid://dof7x02seb0fw<>uid://f3nsj0euj3l1<>uid://cf50s4eke4gsg<>uid://dsoctt4yh23cs
-main_screen.scn::PackedScene::6710313073095269189::1680274487::0::1::::<><>::res://Scripts/MainScene.cs<>uid://bcgyxraw1uak2<>res://Scripts/BackgroundManager.cs<>res://Scripts/Stage.cs<>uid://cj40l8ndfsfmx<>res://Scripts/TextArea.cs<>uid://c4n4uuwgpviqe<>uid://co16tn1phbcm6<>uid://ctqo1u3522h8t<>uid://2d3sjnu8g1vj<>uid://b848andgschlu<>uid://wrjs2cp46ow7<>uid://byism8qf3b4mg<>uid://yrbkg1m2jryg<>uid://cx3ngwxfp1y8l<>uid://bn0xfm0vq5pap<>res://Scripts/SfxPlayer.cs<>res://Scripts/OstPlayer.cs<>uid://dof7x02seb0fw<>uid://digyqpjdmdths<>uid://bvslsn7l1wm1h<>uid://bo7a5y2j54r1a<>res://Scripts/MainButtons.cs<>uid://b7yg62a4y0tt3<>uid://bw8fr0uo4ks32<>uid://1xgs8vv88vr4<>res://Scripts/HoverButton.cs<>res://Scripts/Console.cs<>uid://b7omxxr83eir6<>uid://coo0nnxjxs6xm<>uid://cikdqwqw1hg3s<>uid://c88knwno25d1x<>res://Scripts/AnimationManager.cs<>res://Scripts/InkCommandsManager.cs<>res://Scripts/InkHandler.cs
-settings_menu.scn::PackedScene::1687269107511605398::1680274486::0::1::::<><>::res://Scripts/SettingsMenu.cs<>uid://b1mx21ttcgsen<>uid://b0ao4j5wl2np4<>uid://dof7x02seb0fw<>uid://dg6mjggg1pymy<>uid://brxtts7edbw3l<>res://Scripts/ToggleButton.cs<>uid://bpwxql04k3ave<>uid://do5rxdaavcy0i<>uid://6673amislh6k
-::res://Scenes/Props/::1680273943
+thing_on_ceiling.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+thousand_whispers.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+tongue_licking.ogg::AudioStreamOggVorbis::-1::1680290366::1680290366::1::::<><>::
+train_horn.ogg::AudioStreamOggVorbis::-1::1680290367::1680290367::1::::<><>::
+tv_changing.ogg::AudioStreamOggVorbis::-1::1680290367::1680290367::1::::<><>::
+tv_tuning.ogg::AudioStreamOggVorbis::-1::1680290367::1680290367::1::::<><>::
+walk_away.ogg::AudioStreamOggVorbis::-1::1680290367::1680290367::1::::<><>::
+walk_down_stairs.ogg::AudioStreamOggVorbis::-1::1680290367::1680290367::1::::<><>::
+whistle.ogg::AudioStreamOggVorbis::-1::1680290367::1680290367::1::::<><>::
+woman_above.ogg::AudioStreamOggVorbis::-1::1680290367::1680290367::1::::<><>::
+woman_can_escape_left.ogg::AudioStreamOggVorbis::-1::1680290367::1680290367::1::::<><>::
+woman_come_here_right.ogg::AudioStreamOggVorbis::-1::1680290367::1680290367::1::::<><>::
+woman_door_left.ogg::AudioStreamOggVorbis::-1::1680290367::1680290367::1::::<><>::
+woman_front_door_right.ogg::AudioStreamOggVorbis::-1::1680290367::1680290367::1::::<><>::
+woman_here_both.ogg::AudioStreamOggVorbis::-1::1680290367::1680290367::1::::<><>::
+woman_here_here_left.ogg::AudioStreamOggVorbis::-1::1680290367::1680290367::1::::<><>::
+woman_here_here_right.ogg::AudioStreamOggVorbis::-1::1680290367::1680290367::1::::<><>::
+woman_here_high.ogg::AudioStreamOggVorbis::-1::1680290367::1680290367::1::::<><>::
+woman_here_left.ogg::AudioStreamOggVorbis::-1::1680290367::1680290367::1::::<><>::
+woman_here_low.ogg::AudioStreamOggVorbis::-1::1680290367::1680290367::1::::<><>::
+woman_here_right.ogg::AudioStreamOggVorbis::-1::1680290367::1680290367::1::::<><>::
+woman_just_escape_right.ogg::AudioStreamOggVorbis::-1::1680290367::1680290367::1::::<><>::
+woman_not_supposed_left.ogg::AudioStreamOggVorbis::-1::1680290367::1680290367::1::::<><>::
+woman_no_here_left.ogg::AudioStreamOggVorbis::-1::1680290367::1680290367::1::::<><>::
+woman_no_here_right.ogg::AudioStreamOggVorbis::-1::1680290367::1680290367::1::::<><>::
+woman_right_here.ogg::AudioStreamOggVorbis::-1::1680290367::1680290367::1::::<><>::
+woman_shriek.ogg::AudioStreamOggVorbis::-1::1680290367::1680290367::1::::<><>::
+woman_vomit.ogg::AudioStreamOggVorbis::-1::1680290367::1680290367::1::::<><>::
+woman_weep.ogg::AudioStreamOggVorbis::-1::1680290367::1680290367::1::::<><>::
+woman_yes_here_left.ogg::AudioStreamOggVorbis::-1::1680290367::1680290367::1::::<><>::
+::res://Audio/Soundtrack/::1680290367
+A Dying Man's Croak.ogg::AudioStreamOggVorbis::4332184579070999920::1678890905::1680290367::1::::<><>::
+A Photograph (reprise).ogg::AudioStreamOggVorbis::6978182954256751496::1678890958::1680290367::1::::<><>::
+A photograph.ogg::AudioStreamOggVorbis::3576296004382126151::1678890958::1680290367::1::::<><>::
+For Our Children.ogg::AudioStreamOggVorbis::-1::1680290367::1680290367::1::::<><>::
+For Our Old Men.ogg::AudioStreamOggVorbis::-1::1680290367::1680290367::1::::<><>::
+Growing Illness.ogg::AudioStreamOggVorbis::6173311808591533045::1678890905::1680290367::1::::<><>::
+Lost and Not Found.ogg::AudioStreamOggVorbis::7294498128102654600::1678890905::1680290367::1::::<><>::
+The Ecstasy Of Crushing Agony.ogg::AudioStreamOggVorbis::5785545849099979446::1678890905::1680290367::1::::<><>::
+::res://bin/::1680277614
+::res://bin/0.9.3/::1680277327
+::res://bin/0.9.3/data_Whisper_x86_64/::1680277333
+Whisper.deps.json::JSON::-1::1680277333::0::1::::<><>::
+Whisper.runtimeconfig.json::JSON::-1::1680277333::0::1::::<><>::
+::res://Ink/::1680290586
+act_1.ink::Resource::4855125479462900396::1680290367::1680290077::1::::<><>::res://addons/GodotInk/Src/InkStory.cs
+act_2.ink::Resource::5345122850184148053::1680290584::1680290586::1::::<><>::res://addons/GodotInk/Src/StubInkStory.cs
+act_3.ink::Resource::6815199452061238816::1680290367::1680274200::1::::<><>::res://addons/GodotInk/Src/StubInkStory.cs
+act_4.ink::Resource::7438094869007365305::1680290367::1680290420::1::::<><>::res://addons/GodotInk/Src/StubInkStory.cs
+act_5.ink::Resource::7002551720780849881::1680290367::1680290420::1::::<><>::res://addons/GodotInk/Src/StubInkStory.cs
+act_6.ink::Resource::7533287577693210016::1680290367::1680290420::1::::<><>::res://addons/GodotInk/Src/StubInkStory.cs
+act_7.ink::Resource::893926192296992260::1680290367::1680290420::1::::<><>::res://addons/GodotInk/Src/StubInkStory.cs
+::res://Scenes/::1680290407
+confirm_popup.scn::PackedScene::1203024953402029042::1680290402::0::1::::<><>::res://Scripts/ConfirmPopup.cs<>uid://naxibvgltxc6<>uid://b0ao4j5wl2np4<>uid://dof7x02seb0fw<>uid://b7uiqml8siemo<>uid://c8bb6pbbi21tk<>res://Scripts/HoverButton.cs
+credits.scn::PackedScene::7730312945649105101::1680290402::0::1::::<><>::res://Scripts/Credits.cs<>uid://b6ry4g7c8dj0i<>uid://b0ao4j5wl2np4<>uid://dof7x02seb0fw<>uid://bnv2el8jqw7jr<>uid://6673amislh6k
+credits_roll.scn::PackedScene::3172489786424134167::1680290407::0::1::::<><>::res://Scripts/CreditsRoll.cs<>uid://dof7x02seb0fw<>uid://gdy241kcj4mx<>res://Art/UI/Logo/godot.png<>uid://b4g5rv3oqe44g
+gallery.scn::PackedScene::247590450909609472::1680290403::0::1::::<><>::res://Scripts/Gallery.cs<>uid://b6ry4g7c8dj0i<>uid://b0ao4j5wl2np4<>uid://6673amislh6k<>uid://b4g5rv3oqe44g<>uid://dtqmm3t6e320y<>uid://b0eyol5ywmdo6<>res://Scripts/HoverButton.cs<>uid://dof7x02seb0fw
+load_selection.scn::PackedScene::409816516586736241::1680290402::0::1::::<><>::res://Scripts/LoadSelectScreen.cs<>uid://josk3onj1g01<>uid://b0ao4j5wl2np4<>uid://c76ouyi7kv18w<>uid://6673amislh6k
+main_menu.scn::PackedScene::676841895129598253::1680290403::0::1::::<><>::res://Scripts/MainMenu.cs<>uid://bi5vtwieud6ph<>uid://2kl7e6exwi3v<>uid://dof7x02seb0fw<>uid://f3nsj0euj3l1<>uid://cf50s4eke4gsg<>res://Audio/Effects/ringing_noise.ogg
+main_screen.scn::PackedScene::6710313073095269189::1680290403::0::1::::<><>::res://Scripts/MainScene.cs<>uid://bcgyxraw1uak2<>res://Scripts/BackgroundManager.cs<>res://Scripts/Stage.cs<>uid://cj40l8ndfsfmx<>res://Scripts/TextArea.cs<>res://Art/Backgrounds/shatter.png<>uid://co16tn1phbcm6<>uid://ctqo1u3522h8t<>uid://2d3sjnu8g1vj<>uid://b848andgschlu<>uid://wrjs2cp46ow7<>uid://byism8qf3b4mg<>uid://yrbkg1m2jryg<>uid://cx3ngwxfp1y8l<>uid://bn0xfm0vq5pap<>res://Scripts/SfxPlayer.cs<>res://Scripts/OstPlayer.cs<>uid://dof7x02seb0fw<>uid://digyqpjdmdths<>uid://bvslsn7l1wm1h<>uid://bo7a5y2j54r1a<>res://Scripts/MainButtons.cs<>uid://b7yg62a4y0tt3<>uid://bw8fr0uo4ks32<>uid://1xgs8vv88vr4<>res://Scripts/HoverButton.cs<>res://Scripts/Console.cs<>uid://b7omxxr83eir6<>uid://coo0nnxjxs6xm<>uid://cikdqwqw1hg3s<>uid://c88knwno25d1x<>res://Scripts/AnimationManager.cs<>res://Scripts/InkCommandsManager.cs<>res://Scripts/InkHandler.cs
+settings_menu.scn::PackedScene::1687269107511605398::1680290402::0::1::::<><>::res://Scripts/SettingsMenu.cs<>uid://b1mx21ttcgsen<>uid://b0ao4j5wl2np4<>uid://dof7x02seb0fw<>uid://dg6mjggg1pymy<>uid://brxtts7edbw3l<>res://Scripts/ToggleButton.cs<>uid://bpwxql04k3ave<>uid://do5rxdaavcy0i<>uid://6673amislh6k
+::res://Scenes/Props/::1680290402
 back_button.tscn::PackedScene::2241842828078352828::1678890905::0::1::::<><>::uid://b3cmyh1mdspa<>uid://bgevp67kurqk6
-load_button.tscn::PackedScene::7083767102342912168::1680274486::0::1::::<><>::uid://dof7x02seb0fw<>uid://bcgyxraw1uak2
+load_button.tscn::PackedScene::7083767102342912168::1680290402::0::1::::<><>::uid://dof7x02seb0fw<>uid://bcgyxraw1uak2
 scene_name_label.tres::LabelSettings::4142044120635522711::1678890905::0::1::::<><>::uid://dof7x02seb0fw
-::res://Scripts/::1680132445
-AnimationManager.cs::CSharpScript::-1::1679313555::0::1::::<><>::
-BackgroundManager.cs::CSharpScript::-1::1680036057::0::1::::<><>::
+::res://Scripts/::1680290367
+AnimationManager.cs::CSharpScript::-1::1680290367::0::1::::<><>::
+BackgroundManager.cs::CSharpScript::-1::1680290367::0::1::::<><>::
 ConfirmPopup.cs::CSharpScript::-1::1678890958::0::1::::<><>::
-Console.cs::CSharpScript::-1::1680107279::0::1::::<><>::
+Console.cs::CSharpScript::-1::1680290367::0::1::::<><>::
 Credits.cs::CSharpScript::-1::1679073959::0::1::::<><>::
-CreditsRoll.cs::CSharpScript::-1::1680188614::0::1::::<><>::
-Gallery.cs::CSharpScript::-1::1680200219::0::1::::<><>::
+CreditsRoll.cs::CSharpScript::-1::1680290367::0::1::::<><>::
+Gallery.cs::CSharpScript::-1::1680290367::0::1::::<><>::
 HoverButton.cs::CSharpScript::-1::1678890958::0::1::::<><>::
-InkCommandsManager.cs::CSharpScript::-1::1680271969::0::1::::<><>::
-InkHandler.cs::CSharpScript::-1::1680267772::0::1::::<><>::
-LoadSelectScreen.cs::CSharpScript::-1::1680269799::0::1::::<><>::
-MainButtons.cs::CSharpScript::-1::1680100183::0::1::::<><>::
-MainMenu.cs::CSharpScript::-1::1680268100::0::1::::<><>::
-MainScene.cs::CSharpScript::-1::1680270828::0::1::::<><>::
-OstPlayer.cs::CSharpScript::-1::1680200706::0::1::::<><>::
-SaveManager.cs::CSharpScript::-1::1680267479::0::1::::<><>::
-SettingsManager.cs::CSharpScript::-1::1680100145::0::1::::<><>::
-SettingsMenu.cs::CSharpScript::-1::1679669794::0::1::::<><>::
-SfxPlayer.cs::CSharpScript::-1::1680274441::0::1::::<><>::
-Stage.cs::CSharpScript::-1::1680201577::0::1::::<><>::
-TextArea.cs::CSharpScript::-1::1680199362::0::1::::<><>::
+InkCommandsManager.cs::CSharpScript::-1::1680290367::0::1::::<><>::
+InkHandler.cs::CSharpScript::-1::1680290523::0::1::::<><>::
+LoadSelectScreen.cs::CSharpScript::-1::1680290367::0::1::::<><>::
+MainButtons.cs::CSharpScript::-1::1680290367::0::1::::<><>::
+MainMenu.cs::CSharpScript::-1::1680290367::0::1::::<><>::
+MainScene.cs::CSharpScript::-1::1680290367::0::1::::<><>::
+OstPlayer.cs::CSharpScript::-1::1680290367::0::1::::<><>::
+SaveManager.cs::CSharpScript::-1::1680290367::0::1::::<><>::
+SettingsManager.cs::CSharpScript::-1::1680290367::0::1::::<><>::
+SettingsMenu.cs::CSharpScript::-1::1680290367::0::1::::<><>::
+SfxPlayer.cs::CSharpScript::-1::1680290367::0::1::::<><>::
+Stage.cs::CSharpScript::-1::1680290553::0::1::::<><>::
+TextArea.cs::CSharpScript::-1::1680290367::0::1::::<><>::
 ToggleButton.cs::CSharpScript::-1::1678890958::0::1::::<><>::
-::res://Scripts/Global/::1680198410
+::res://Scripts/Global/::1680290367
 Character.cs::CSharpScript::-1::1678890905::0::1::::<><>::
 Enums.cs::CSharpScript::-1::1679592798::0::1::::<><>::
-GalleryButton.cs::CSharpScript::-1::1680200031::0::1::::<><>::
+GalleryButton.cs::CSharpScript::-1::1680290367::0::1::::<><>::
 InkCommand.cs::CSharpScript::-1::1679073959::0::1::::<><>::
-InkLine.cs::CSharpScript::-1::1679597227::0::1::::<><>::
+InkLine.cs::CSharpScript::-1::1680290367::0::1::::<><>::
 Ost.cs::CSharpScript::-1::1678890905::0::1::::<><>::
-::res://Translations/::1680201647
-Act_1.csv::Translation::1114975360317956785::1680027342::1680027345::1::::<><>::
-Act_1.en.translation::OptimizedTranslation::5861413308953747245::1680027345::0::1::::<><>::
-Act_1.pt_BR.translation::OptimizedTranslation::2390090004873988470::1680027345::0::1::::<><>::
-Act_2.csv::Translation::7042618877021975898::1680027614::1680027617::1::::<><>::
-Act_2.en.translation::OptimizedTranslation::7633201848933340115::1680027617::0::1::::<><>::
-Act_2.pt_BR.translation::OptimizedTranslation::6288229937359349149::1680027617::0::1::::<><>::
-Act_3.csv::Translation::5473880765784597995::1680027814::1680027817::1::::<><>::
-Act_3.en.translation::OptimizedTranslation::3465199014242058004::1680027817::0::1::::<><>::
-Act_3.pt_BR.translation::OptimizedTranslation::1209892013022681446::1680027817::0::1::::<><>::
-Act_4 .csv::Translation::6715523220948911927::1680027892::1680027895::1::::<><>::
-Act_4 .en.translation::OptimizedTranslation::1876504231502680629::1680027895::0::1::::<><>::
-Act_4 .pt_BR.translation::OptimizedTranslation::9076633654336686979::1680027895::0::1::::<><>::
-Act_5.csv::Translation::4026400461112702462::1680027984::1680027987::1::::<><>::
-Act_5.en.translation::OptimizedTranslation::7106438769246048093::1680027987::0::1::::<><>::
-Act_5.pt_BR.translation::OptimizedTranslation::6678041096566553348::1680027987::0::1::::<><>::
-Act_6.csv::Translation::8321515086413118770::1680028191::1680028194::1::::<><>::
-Act_6.en.translation::OptimizedTranslation::8211243843642174393::1680028194::0::1::::<><>::
-Act_6.pt_BR.translation::OptimizedTranslation::7489357981135101583::1680028194::0::1::::<><>::
-Act_7.csv::Translation::1426341870609200014::1680028312::1680028331::1::::<><>::
-Act_7.en.translation::OptimizedTranslation::8146991371037512899::1680028331::0::1::::<><>::
-Act_7.pt_BR.translation::OptimizedTranslation::6407513121440445836::1680028331::0::1::::<><>::
-TranslationStrings.csv::Translation::3694103014179544243::1680200407::1680200408::1::::<><>::
-TranslationStrings.en.translation::OptimizedTranslation::2969568587310531778::1680200408::0::1::::<><>::
-TranslationStrings.pt_BR.translation::OptimizedTranslation::3694103014179544243::1680200408::0::1::::<><>::
+::res://Translations/::1680290612
+Act_1.csv::Translation::1114975360317956785::1680290367::1680290618::1::::<><>::
+Act_1.en.translation::OptimizedTranslation::5861413308953747245::1680290618::0::1::::<><>::
+Act_1.pt_BR.translation::OptimizedTranslation::2390090004873988470::1680290618::0::1::::<><>::
+Act_2.csv::Translation::7042618877021975898::1680290367::1680290623::1::::<><>::
+Act_2.en.translation::OptimizedTranslation::7633201848933340115::1680290623::0::1::::<><>::
+Act_2.pt_BR.translation::OptimizedTranslation::6288229937359349149::1680290623::0::1::::<><>::
+Act_3.csv::Translation::5473880765784597995::1680290367::1680290627::1::::<><>::
+Act_3.en.translation::OptimizedTranslation::3465199014242058004::1680290627::0::1::::<><>::
+Act_3.pt_BR.translation::OptimizedTranslation::1209892013022681446::1680290627::0::1::::<><>::
+Act_4 .csv::Translation::6715523220948911927::1680290367::1680290628::1::::<><>::
+Act_4 .en.translation::OptimizedTranslation::2220116448205272328::1680290628::0::1::::<><>::
+Act_4 .pt_BR.translation::OptimizedTranslation::633636744056531841::1680290628::0::1::::<><>::
+Act_5.csv::Translation::4026400461112702462::1680290367::1680290630::1::::<><>::
+Act_5.en.translation::OptimizedTranslation::3251160886449900164::1680290630::0::1::::<><>::
+Act_5.pt_BR.translation::OptimizedTranslation::4484024230991816278::1680290630::0::1::::<><>::
+Act_6.csv::Translation::8321515086413118770::1680290367::1680290631::1::::<><>::
+Act_6.en.translation::OptimizedTranslation::4832975144186720704::1680290631::0::1::::<><>::
+Act_6.pt_BR.translation::OptimizedTranslation::623222416333499963::1680290631::0::1::::<><>::
+Act_7.csv::Translation::1426341870609200014::1680290367::1680290633::1::::<><>::
+Act_7.en.translation::OptimizedTranslation::8622772365704132263::1680290633::0::1::::<><>::
+Act_7.pt_BR.translation::OptimizedTranslation::762920669934351211::1680290633::0::1::::<><>::
+TranslationStrings.csv::Translation::3694103014179544243::1680290367::1680290635::1::::<><>::
+TranslationStrings.en.translation::OptimizedTranslation::2969568587310531778::1680290634::0::1::::<><>::
+TranslationStrings.pt_BR.translation::OptimizedTranslation::3694103014179544243::1680290634::0::1::::<><>::
