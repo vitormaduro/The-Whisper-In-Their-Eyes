@@ -13,6 +13,12 @@ public partial class InkHandler : Node
 	
 	private InkCommandsManager cmdManager;
 
+	public override void _ExitTree()
+	{
+		story.RemoveVariableObserver("currentScene");
+		story.RemoveVariableObserver("currentStitch");
+	}
+
 	public override void _Ready()
 	{
 		cmdManager = GetNode<InkCommandsManager>("%InkCommandsManager");

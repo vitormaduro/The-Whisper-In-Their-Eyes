@@ -126,6 +126,8 @@ public partial class Stage : Control
 		stage[StagePosition.Left].Position = originalPositions[StagePosition.Left];
 		stage[StagePosition.Middle].Position = originalPositions[StagePosition.Middle];
 		stage[StagePosition.Right].Position = originalPositions[StagePosition.Right];
+
+		SaveManager.StageLeft = SaveManager.StageMiddle = SaveManager.StageRight = (null, null);
 	}
 
 	private void ZoomPosition(string pos)
