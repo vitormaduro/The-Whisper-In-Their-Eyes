@@ -11,9 +11,11 @@ public partial class OstPlayer : AudioStreamPlayer
 		GetNode<Label>("OstInfo").Visible = false;
 
 		var cmdManager = GetNode<InkCommandsManager>("%InkCommandsManager");
+		var inkManager = GetNode<InkHandler>("%InkScriptManager");
 
 		cmdManager.OstStarted += (string tag) => PlaySongByTag(tag);
 		cmdManager.OstStoped += StopSong;
+		inkManager.InkSceneChanged += Stop;
 
 		songs = new Dictionary<string, Ost>()
 		{

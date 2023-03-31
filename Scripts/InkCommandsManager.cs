@@ -31,6 +31,7 @@ public partial class InkCommandsManager : Control
 	[Signal] public delegate void SfxTurnedOffEventHandler();
 	[Signal] public delegate void CreditsStartedEventHandler();
 	[Signal] public delegate void NvlBoxWasRestoredEventHandler();
+	[Signal] public delegate void MultipleSfxTriggeredEventHandler(string sfxList);
 
 	private List<InkCommand> commands;
 	private bool commandAwaitingInput;
@@ -190,11 +191,6 @@ public partial class InkCommandsManager : Control
 			},
 			new InkCommand()
 			{
-				Command = "unlock_gallery",
-				ParamsNumber = 0
-			},
-			new InkCommand()
-			{
 				Command = "screen_shatter",
 				Signal = SignalName.ScreenShattered,
 				ParamsNumber = 0,
@@ -212,7 +208,7 @@ public partial class InkCommandsManager : Control
 				Command = "credits",
 				Signal = SignalName.CreditsStarted,
 				ParamsNumber = 0,
-				DelayTime = 60
+				DelayTime = 206
 			},
 			new InkCommand()
 			{
@@ -220,12 +216,21 @@ public partial class InkCommandsManager : Control
 				Signal = SignalName.NvlBoxWasRestored,
 				ParamsNumber = 0,
 				DelayTime = 0
+			},
+			new InkCommand()
+			{
+				Command = "sfx_multiple",
+				Signal = SignalName.MultipleSfxTriggered,
+				ParamsNumber = 1,
+				DelayTime = 1
 			}
 		};
 	}
 
 	private void ExecuteCommand(string commandName, string[] args)
 	{
+		GD.Print($"Running command [{commandName}] with parameters [{string.Join(", ", args)}]");
+
 		var cmd = commands.Where(c => c.Command == commandName).FirstOrDefault();
 
 		if(cmd == null)
@@ -247,18 +252,6 @@ public partial class InkCommandsManager : Control
 			var scene = GD.Load<PackedScene>($"res://Scenes/credits_roll.scn");
 
 			GetParent().AddChild(scene.Instantiate());
-		}
-		else if(cmd.Command == "unlock_gallery")
-		{
-			SettingsManager.IsGalleryUnlocked = true;
-			SettingsManager.SaveSettings();
-
-			GetTree().CreateTimer(3).Timeout += () =>
-			{
-				GetTree().ChangeSceneToFile("res://Scenes/main_menu.scn");
-			};
-
-			return;
 		}
 
 		switch(cmd.ParamsNumber)

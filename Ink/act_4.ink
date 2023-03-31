@@ -7,9 +7,8 @@
 	-> stitch_1
 = stitch_1
 	>> change_bg black
-	>> sfx malevolent_laugh_multiple
+	>> sfx_multiple malevolent_laugh_multiple/ringing_noise
 	>> sprite ronan home_shock middle
-	>> sfx ringing_noise
 	~ currentStitch = 1
 	ACT_4_1.1
 	ACT_4_1.2
@@ -446,12 +445,7 @@
 	ACT_4_35.25
 	ACT_4_35.26
 	>> clear_text
-	>> sfx woman_here_low
-	>> sfx ringing_noise
-	>> sfx heavy_breathing
-	>> sfx phone_ring
-	>> sfx woman_weep
-	>> sfx laughter
+	>> sfx_multiple woman_here_low/ringing_noise/heavy_breathing/phone_ring/woman_weep/laughter
 	-> stitch_36
 = stitch_36
 	~ currentStitch = 36
@@ -470,8 +464,7 @@
 	ACT_4_36.13
 	ACT_4_36.14
 	>> clear_text
-	>> sfx choking
-	>> sfx laughter
+	>> sfx_multiple choking/laughter
 	-> stitch_37
 = stitch_37
 	~ currentStitch = 37
@@ -622,8 +615,7 @@
 	ACT_4_49.4
 	ACT_4_49.5
 	>> clear_text
-	>> sfx knock_wood
-	>> sfx heart_thump
+	>> sfx_multiple knock_wood/heart_thump
 	-> stitch_50
 = stitch_50
 	~ currentStitch = 50

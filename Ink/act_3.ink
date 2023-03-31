@@ -175,8 +175,7 @@
 	ACT_3_12.1 # black
 	ACT_3_12.2 # black
 	>> clear_text
-	>> sfx heavy_breathing
-	>> sfx heart_thump_slow
+	>> sfx_multiple heavy_breathing/heart_thump_slow
 	-> stitch_13
 = stitch_13
 	~ currentStitch = 13
@@ -184,8 +183,7 @@
 	ACT_3_13.2 # black
 	ACT_3_13.3 # black
 	>> clear_text
-	>> sfx heavy_breathing
-	>> sfx man_struggle
+	>> sfx_multiple heavy_breathing/man_struggle
 	-> stitch_14
 = stitch_14
 	~ currentStitch = 14
@@ -197,8 +195,7 @@
 	ACT_3_14.6 # black
 	ACT_3_14.7 # black
 	>> clear_text
-	>> sfx heavy_breathing
-	>> sfx man_struggle
+	>> sfx heavy_breathing/man_struggle
 	-> stitch_15
 = stitch_15
 	~ currentStitch = 15
@@ -216,22 +213,19 @@
 	ACT_3_16.3 # black
 	ACT_3_16.4 # black
 	>> clear_text
-	>> sfx heavy_breathing
-	>> sfx man_struggle
+	>> sfx_multiple heavy_breathing/man_struggle
 	-> stitch_17
 = stitch_17
 	~ currentStitch = 17
 	ACT_3_17.1 # black
 	>> clear_text
-	>> sfx heavy_breathing
-	>> sfx man_struggle
+	>> sfx_multiple heavy_breathing/man_struggle
 	-> stitch_18
 = stitch_18
 	~ currentStitch = 18
 	ACT_3_18.1 # black
 	>> clear_text
-	>> sfx heavy_breathing
-	>> sfx man_struggle
+	>> sfx_multiple heavy_breathing/man_struggle
 	-> stitch_19
 = stitch_19
 	~ currentStitch = 19
@@ -257,8 +251,7 @@
 	ACT_3_20.4
 	ACT_3_20.5
 	>> clear_all
-	>> sfx man_cough
-	>> sfx heavy_breathing
+	>> sfx_multiple man_cough/heavy_breathing
 	-> stitch_21
 = stitch_21
 	~ currentStitch = 21
@@ -273,8 +266,7 @@
 	~ currentStitch = 22
 	ACT_3_22.1
 	>> clear_all
-	>> sfx man_cough
-	>> sfx heavy_breathing
+	>> sfx_multiple man_cough/heavy_breathing
 	>> bg_zoom_in 1575 655 1,4
 	-> stitch_23
 = stitch_23

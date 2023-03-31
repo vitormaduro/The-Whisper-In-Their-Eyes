@@ -1,5 +1,7 @@
-TextureRect
+TabBar
 Label
+ProgressBar
+TextureRect
 RichTextLabel
 Panel
 ColorRect
@@ -29,4 +31,3 @@ Window
 SubViewport
 ConfirmationDialog
 AcceptDialog
-Popup

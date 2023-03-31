@@ -15,6 +15,7 @@ public partial class Stage : Control
 	public override void _Ready()
 	{
 		cmdManager = GetNode<InkCommandsManager>("%InkCommandsManager");
+		var inkManager = GetNode<InkHandler>("%InkScriptManager");
 
 		cmdManager.SpriteAppeared += (string characterTag, string spriteTag, string position) => ShowCharacterAtPosition(characterTag, spriteTag, position);
 		cmdManager.SpritesWereCleared += HideAllCharacters;
@@ -22,6 +23,7 @@ public partial class Stage : Control
 		cmdManager.SpriteWasZoomedIn += (string position) => ZoomPosition(position);
 		cmdManager.SpriteWasZoomedOut += (string position) => ResetZoom(position);
 		cmdManager.SpriteWasMoved += (string characterTag, string spriteTag, string positionFrom, string positionTo) => MoveSprite(characterTag, spriteTag, positionFrom, positionTo);
+		inkManager.InkSceneChanged += HideAllCharacters;
 
 		stage = new Dictionary<StagePosition, Sprite2D>()
 		{
@@ -74,6 +76,21 @@ public partial class Stage : Control
 				}
 			}
 		};
+
+		if(!string.IsNullOrWhiteSpace(SaveManager.StageLeft.Item1))
+		{
+			ShowCharacterAtPosition(SaveManager.StageLeft.Item1, SaveManager.StageLeft.Item2, "Left");
+		}
+
+		if(!string.IsNullOrWhiteSpace(SaveManager.StageMiddle.Item1))
+		{
+			ShowCharacterAtPosition(SaveManager.StageMiddle.Item1, SaveManager.StageMiddle.Item2, "Middle");
+		}
+
+		if(!string.IsNullOrWhiteSpace(SaveManager.StageRight.Item1))
+		{
+			ShowCharacterAtPosition(SaveManager.StageRight.Item1, SaveManager.StageRight.Item2, "Right");
+		}
 	}
 
 	private void ShowCharacterAtPosition(string characterTag, string spriteTag, string position)
@@ -83,6 +100,21 @@ public partial class Stage : Control
 		var character = characters.Where(c => c.Id == characterTag).First();
 
 		stage[pos].Texture = character.Sprites[spriteTag];
+
+		switch(position.ToLower())
+		{
+			case "left":
+				SaveManager.StageLeft = (characterTag, spriteTag);
+				break;
+
+			case "middle":
+				SaveManager.StageMiddle = (characterTag, spriteTag);
+				break;
+
+			case "right":
+				SaveManager.StageRight = (characterTag, spriteTag);
+				break;
+		}
 	}
 
 	private void HideAllCharacters()
